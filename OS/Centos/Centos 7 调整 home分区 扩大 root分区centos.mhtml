@@ -1,0 +1,2325 @@
+From: <Saved by Blink>
+Subject: Centos 7 ?? home?? ?? root??centos
+Date: Fri, 27 Oct 2016 16:19:41 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----"
+
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: text/html
+Content-ID: <frame-43-F4BED8E1-87D1-4006-A148-3AFA1276535E@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.centoscn.com/CentOS/config/2016/0825/7833.html
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml"><head><meta http-equiv=3D"Content-Type" content=3D"text/htm=
+l; charset=3DGBK">
+
+<title>Centos 7 =B5=F7=D5=FB home=B7=D6=C7=F8 =C0=A9=B4=F3 root=B7=D6=C7=F8=
+centos</title>
+<meta name=3D"keywords" content=3D"Centos,=B5=F7=D5=FB,home,=B7=D6=C7=F8,=
+=C0=A9=B4=F3,root,home">
+<meta name=3D"description" content=3D"=B0=D1/home=C4=DA=C8=DD=B1=B8=B7=DD=
+=A3=AC=C8=BB=BA=F3=BD=AB/home=CE=C4=BC=FE=CF=B5=CD=B3=CB=F9=D4=DA=B5=C4=C2=
+=DF=BC=AD=BE=ED=C9=BE=B3=FD=A3=AC=C0=A9=B4=F3/root=CE=C4=BC=FE=CF=B5=CD=B3=
+=A3=AC=D0=C2=BD=A8/home =A3=AC=BB=D6=B8=B4/home=C4=DA=C8=DD 1.=B2=E9=BF=B4=
+=B7=D6=C7=F8 df -h 2.=B1=B8=B7=DDhome=B7=D6=C7=F8=CE=C4=BC=FE tar cvf /tmp/=
+home .tar /home 3.=D0=B6=D4=D8/home=A3=AC=C8=E7=B9=FB=CE=DE=B7=A8=D0=B6=D4=
+=D8=A3=AC=CF=C8=D6=D5=D6=B9=CA=B9=D3=C3/home=CE=C4=BC=FE=CF=B5=CD=B3=B5=C4=
+=BD=F8=B3=CC fuser -km /home/ u">
+<link href=3D"http://www.centoscn.com/templets/style/dedecms.css" rel=3D"st=
+ylesheet" media=3D"screen" type=3D"text/css">
+
+
+<style type=3D"text/css">
+.sonMenu + .threead:last-child {display:none!important;display:none}</style=
+>
+<style type=3D"text/css">#mytop {height:auto!important;} </style></head>
+<body class=3D"articleview">
+<div class=3D"header">
+ 	<div class=3D"top w960 center">
+       <div class=3D"title">
+         <h1> <a href=3D"http://www.centoscn.com/">centos</a> </h1>
+       </div>
+       <div class=3D"banner">
+ =20
+
+
+</div>
+       <div class=3D"rlink">
+         <ul>
+                                                                           =
+                                                            =20
+         </ul>
+       </div>
+ 	</div><!-- //top -->
+ 	<!-- //=B2=CB=B5=A5 -->
+ 	<div class=3D"module blue mT10 wrapper w963">
+   	<div class=3D"top" id=3D"mytop">
+     	<div class=3D"t_l"></div>
+     	<div class=3D"t_r"></div>
+     	<!-- //=C8=E7=B9=FB=B2=BB=CA=B9=D3=C3currentstyle=A3=AC=BF=C9=D2=D4=
+=D4=DAchannel=B1=EA=C7=A9=BC=D3=C8=EB cacheid=3D'channeltoplist' =CA=F4=D0=
+=D4=CC=E1=C9=FD=D0=D4=C4=DC -->
+     <div id=3D"navMenu">
+     	<ul>
+       	<li><a href=3D"http://www.centoscn.com/">=CA=D7=D2=B3</a></li>
+       	<li class=3D"hover"><a href=3D"http://www.centoscn.com/CentOS/" rel=
+=3D"dropmenu1">CentOS=C8=EB=C3=C5</a></li>
+       	<li><a href=3D"http://www.centoscn.com/CentosSoft/" rel=3D"dropmenu=
+6">CentOS=CF=C2=D4=D8</a></li>
+       =09
+       	<li><a href=3D"http://www.centoscn.com/image-text/" rel=3D"dropmenu=
+8">CentOS=BD=CC=B3=CC</a></li>
+       =09
+       	<li><a href=3D"http://www.centoscn.com/CentosServer/" rel=3D"dropme=
+nu7">CentOS=B7=FE=CE=F1=C6=F7</a></li>
+       =09
+       	<li><a href=3D"http://www.centoscn.com/shell/">shell=B1=E0=B3=CC</a=
+></li>
+       =09
+       	<li><a href=3D"http://www.centoscn.com/CentosSecurity/" rel=3D"drop=
+menu9">=B0=B2=C8=AB=B7=C0=D3=F9</a></li>
+       =09
+       	<li><a href=3D"http://www.centoscn.com/CentosBug/" rel=3D"dropmenu3=
+">=B9=CA=D5=CF=BD=E2=BE=F6</a></li>
+       =09
+       	<li><a href=3D"http://www.centoscn.com/yunwei/" rel=3D"dropmenu16">=
+=D4=CB=CE=AC=B9=DC=C0=ED</a></li>
+       =09
+       	<li><a href=3D"http://www.cncentos.com/">=D6=D0=CE=C4=C2=DB=CC=B3</=
+a></li>
+       =09
+     	</ul>
+     </div>=09
+      <!-- sonMenu =D7=D3=C0=B8=C4=BF =BF=AA=CA=BC-->
+     <link href=3D"http://www.centoscn.com/templets/style/tabs.css" type=3D=
+"text/css" rel=3D"stylesheet">
+=20
+     <div class=3D"sonMenu">
+ 		<ul>
+ 		  <li><a>=CD=C6=BC=F6:</a><a style=3D"color: #FF0000;"> </a>=20
+                          </li><li><a target=3D"_blank" href=3D"http://www.=
+jfedu.net/">=BE=A9=B7=E5linux=BD=CC=D3=FD</a></li>
+                          <li><a target=3D"_blank" href=3D"http://vbird.dic=
+.ksu.edu.tw/">=C4=F1=B8=E7linux=CB=BD=B7=BF=B2=CB</a></li>
+                         <li><a href=3D"http://www.centoscn.com/yunwei/news=
+/2012/1227/131.html">=BF=AA=D4=B4=BE=B5=CF=F1=B4=F3=C8=AB</a></li>
+                             <li><a target=3D"_blank" href=3D"http://linux.=
+51yip.com/">Linux=C3=FC=C1=EE=B2=E9=D1=AF</a></li>                   =20
+ 		  <li><a>Q=C8=BA=A3=BA 282491757</a></li>
+                         <li><a>=CE=A2=D0=C5=B9=AB=D6=DA=BA=C5=A3=BAcentosc=
+n </a></li>
+ 		</ul>
+ 		<!-- sonMenu =D7=D3=C0=B8=C4=BF =BD=E1=CA=F8-->    <!-- //search -->
+</div>
+=20
+     <div class=3D"threead">                                               =
+                                                                           =
+   =20
+
+ 	        </div>		 =09
+ =09
+ 	</div></div>                                                             =
+                                            =20
+
+
+<!-- //header -->
+=20
+ <div style=3D"margin-top:2px;padding-top:0px;border:solid 1px #9FD1F6;widt=
+h:958px;" class=3D"header">
+ <div style=3D"margin-top:0px;padding-top:0px;" class=3D"module blue mT10 w=
+rapper w963">
+   <div style=3D"margin-top:0px;padding-top:0px;" class=3D"search">
+       <form action=3D"http://www.centoscn.com/plus/search.php" name=3D"for=
+msearch">
+         <div class=3D"form">
+           <h4>=CB=D1=CB=F7</h4>
+            <input type=3D"hidden" name=3D"kwtype" value=3D"0">
+            <input name=3D"keyword" type=3D"text" class=3D"search-keyword" =
+id=3D"search-keyword">
+            <select name=3D"searchtype" class=3D"search-option" id=3D"searc=
+h-option">
+                <option value=3D"titlekeyword" selected=3D"1">=D6=C7=C4=DC=
+=C4=A3=BA=FD=CB=D1=CB=F7</option>
+                <option value=3D"title">=BD=F6=CB=D1=CB=F7=B1=EA=CC=E2</opt=
+ion>
+            </select>
+           <button type=3D"submit" class=3D"search-submit">=CB=D1=CB=F7</bu=
+tton>
+         </div>
+         </form>
+       <div class=3D"tags">
+         <h4>=C8=C8=C3=C5=B1=EA=C7=A9</h4>
+         <ul>
+          =20
+         </ul>
+         </div>
+         </div>
+     </div>
+     </div><!-- //search -->
+ </div>
+<!-- /header -->
+
+
+<!-- /channel-nav -->
+
+<div class=3D"w960 center clear mt1">
+	<div class=3D"pleft">
+		<div class=3D"place">
+			<strong>=B5=B1=C7=B0=CE=BB=D6=C3:</strong> <a href=3D"http://www.centosc=
+n.com/">=D6=F7=D2=B3</a> &gt; <a href=3D"http://www.centoscn.com/CentOS/">C=
+entOS=C8=EB=C3=C5</a> &gt; <a href=3D"http://www.centoscn.com/CentOS/config=
+/">=CF=B5=CD=B3=C5=E4=D6=C3</a> &gt;=20
+		</div><!-- /place -->
+		<div class=3D"viewbox">
+			<div class=3D"title">
+				<h2>Centos 7 =B5=F7=D5=FB home=B7=D6=C7=F8 =C0=A9=B4=F3 root=B7=D6=C7=
+=F8</h2>
+			</div><!-- /title -->
+			<div class=3D"info">
+				<small>=CA=B1=BC=E4:</small>2016-08-25 00:54<small>=C0=B4=D4=B4:</small=
+>blog.csdn.net  <small>=D7=F7=D5=DF:</small>Lochy=B5=C4=B2=A9=BF=CD <a href=
+=3D"http://www.centoscn.com/plus/erraddsave.php?aid=3D7833&amp;title=3DCent=
+os%207%20%B5%F7%D5%FB%20home%B7%D6%C7%F8%20%C0%A9%B4%F3%20root%B7%D6%C7%F8"=
+ target=3D"_blank">=BE=D9=B1=A8</a>   <small>=B5=E3=BB=F7:</small>327=B4=CE=
+</div><!-- /info -->
+
+			<div class=3D"content">
+
+
+
+<p style=3D"box-sizing: border-box; margin: 0px 0px 1.1em; padding: 0px; fo=
+nt-family: 'Microsoft YaHei'; border: 0px; outline: 0px; font-size: 15px; v=
+ertical-align: baseline; color: rgb(102, 102, 102); line-height: 26px; back=
+ground: transparent;">
+	=B0=D1/home=C4=DA=C8=DD=B1=B8=B7=DD=A3=AC=C8=BB=BA=F3=BD=AB/home=CE=C4=BC=
+=FE=CF=B5=CD=B3=CB=F9=D4=DA=B5=C4=C2=DF=BC=AD=BE=ED=C9=BE=B3=FD=A3=AC=C0=A9=
+=B4=F3/root=CE=C4=BC=FE=CF=B5=CD=B3=A3=AC=D0=C2=BD=A8/home =A3=AC=BB=D6=B8=
+=B4/home=C4=DA=C8=DD</p>
+<h3 id=3D"1=B2=E9=BF=B4=B7=D6=C7=F8" style=3D"box-sizing: border-box; font-=
+family: 'Microsoft YaHei'; font-weight: 100; line-height: 1.1; color: rgb(1=
+53, 153, 153); margin: 0.8em 0px; font-size: 14px; padding: 0px; border: 0p=
+x; outline: 0px; vertical-align: baseline; background: transparent;">
+	1.=B2=E9=BF=B4=B7=D6=C7=F8</h3>
+<pre class=3D"prettyprint" style=3D"box-sizing: border-box; font-family: 'S=
+ource Code Pro', monospace; font-size: 14px; white-space: nowrap; padding: =
+5px 5px 5px 60px; margin-top: 0px; margin-bottom: 1.1em; line-height: 1.45;=
+ color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; bord=
+er: 1px solid rgba(128, 128, 128, 0.0745098); border-radius: 0px; outline: =
+0px; vertical-align: baseline; position: relative; overflow-y: hidden; over=
+flow-x: auto; background: rgba(128, 128, 128, 0.0470588);"><code class=3D"h=
+ljs lasso has-numbering" style=3D"box-sizing: border-box; font-family: 'Sou=
+rce Code Pro', monospace; font-size: inherit; padding: 0px; color: inherit;=
+ white-space: pre; border-radius: 0px; margin: 0px; border: 0px; outline: 0=
+px; vertical-align: baseline; display: block; word-break: break-word; word-=
+wrap: normal; background: transparent;">df <span class=3D"hljs-attribute" s=
+tyle=3D"box-sizing: border-box; margin: 0px; padding: 0px; font-family: 'Mi=
+crosoft YaHei'; border: 0px; outline: 0px; vertical-align: baseline; backgr=
+ound: transparent;">-h</span></code></pre>
+<h3 id=3D"2=B1=B8=B7=DDhome=B7=D6=C7=F8=CE=C4=BC=FE" style=3D"box-sizing: b=
+order-box; font-family: 'Microsoft YaHei'; font-weight: 100; line-height: 1=
+.1; color: rgb(153, 153, 153); margin: 0.8em 0px; font-size: 14px; padding:=
+ 0px; border: 0px; outline: 0px; vertical-align: baseline; background: tran=
+sparent;">
+	2.=B1=B8=B7=DDhome=B7=D6=C7=F8=CE=C4=BC=FE</h3>
+<pre class=3D"prettyprint" style=3D"box-sizing: border-box; font-family: 'S=
+ource Code Pro', monospace; font-size: 14px; white-space: nowrap; padding: =
+5px 5px 5px 60px; margin-top: 0px; margin-bottom: 1.1em; line-height: 1.45;=
+ color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; bord=
+er: 1px solid rgba(128, 128, 128, 0.0745098); border-radius: 0px; outline: =
+0px; vertical-align: baseline; position: relative; overflow-y: hidden; over=
+flow-x: auto; background: rgba(128, 128, 128, 0.0470588);"><code class=3D"h=
+ljs avrasm has-numbering" style=3D"box-sizing: border-box; font-family: 'So=
+urce Code Pro', monospace; font-size: inherit; padding: 0px; color: inherit=
+; white-space: pre; border-radius: 0px; margin: 0px; border: 0px; outline: =
+0px; vertical-align: baseline; display: block; word-break: break-word; word=
+-wrap: normal; background: transparent;">tar cvf /tmp/home<span class=3D"hl=
+js-preprocessor" style=3D"box-sizing: border-box; margin: 0px; padding: 0px=
+; font-family: 'Microsoft YaHei'; border: 0px; outline: 0px; vertical-align=
+: baseline; color: rgb(68, 68, 68); background: transparent;">.tar</span> /=
+home</code></pre>
+<h3 id=3D"3=D0=B6=D4=D8home=C8=E7=B9=FB=CE=DE=B7=A8=D0=B6=D4=D8=CF=C8=D6=D5=
+=D6=B9=CA=B9=D3=C3home=CE=C4=BC=FE=CF=B5=CD=B3=B5=C4=BD=F8=B3=CC" style=3D"=
+box-sizing: border-box; font-family: 'Microsoft YaHei'; font-weight: 100; l=
+ine-height: 1.1; color: rgb(153, 153, 153); margin: 0.8em 0px; font-size: 1=
+4px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; bac=
+kground: transparent;">
+	3.=D0=B6=D4=D8/home=A3=AC=C8=E7=B9=FB=CE=DE=B7=A8=D0=B6=D4=D8=A3=AC=CF=C8=
+=D6=D5=D6=B9=CA=B9=D3=C3/home=CE=C4=BC=FE=CF=B5=CD=B3=B5=C4=BD=F8=B3=CC</h3=
+>
+<pre class=3D"prettyprint" style=3D"box-sizing: border-box; font-family: 'S=
+ource Code Pro', monospace; font-size: 14px; white-space: nowrap; padding: =
+5px 5px 5px 60px; margin-top: 0px; margin-bottom: 1.1em; line-height: 1.45;=
+ color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; bord=
+er: 1px solid rgba(128, 128, 128, 0.0745098); border-radius: 0px; outline: =
+0px; vertical-align: baseline; position: relative; overflow-y: hidden; over=
+flow-x: auto; background: rgba(128, 128, 128, 0.0470588);"><code class=3D"h=
+ljs coffeescript has-numbering" style=3D"box-sizing: border-box; font-famil=
+y: 'Source Code Pro', monospace; font-size: inherit; padding: 0px; color: i=
+nherit; white-space: pre; border-radius: 0px; margin: 0px; border: 0px; out=
+line: 0px; vertical-align: baseline; display: block; word-break: break-word=
+; word-wrap: normal; background: transparent;">fuser -km <span class=3D"hlj=
+s-regexp" style=3D"box-sizing: border-box; margin: 0px; padding: 0px; font-=
+family: 'Microsoft YaHei'; border: 0px; outline: 0px; vertical-align: basel=
+ine; color: rgb(0, 136, 0); background: transparent;">/home/</span>
+umount /home </code></pre>
+<h3 id=3D"4=C9=BE=B3=FDhome=CB=F9=D4=DA=B5=C4lv" style=3D"box-sizing: borde=
+r-box; font-family: 'Microsoft YaHei'; font-weight: 100; line-height: 1.1; =
+color: rgb(153, 153, 153); margin: 0.8em 0px; font-size: 14px; padding: 0px=
+; border: 0px; outline: 0px; vertical-align: baseline; background: transpar=
+ent;">
+	4.=C9=BE=B3=FD/home=CB=F9=D4=DA=B5=C4lv</h3>
+<pre class=3D"prettyprint" style=3D"box-sizing: border-box; font-family: 'S=
+ource Code Pro', monospace; font-size: 14px; white-space: nowrap; padding: =
+5px 5px 5px 60px; margin-top: 0px; margin-bottom: 1.1em; line-height: 1.45;=
+ color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; bord=
+er: 1px solid rgba(128, 128, 128, 0.0745098); border-radius: 0px; outline: =
+0px; vertical-align: baseline; position: relative; overflow-y: hidden; over=
+flow-x: auto; background: rgba(128, 128, 128, 0.0470588);"><code class=3D"h=
+ljs dos has-numbering" style=3D"box-sizing: border-box; font-family: 'Sourc=
+e Code Pro', monospace; font-size: inherit; padding: 0px; color: inherit; w=
+hite-space: pre; border-radius: 0px; margin: 0px; border: 0px; outline: 0px=
+; vertical-align: baseline; display: block; word-break: break-word; word-wr=
+ap: normal; background: transparent;">lv<span class=3D"hljs-comment" style=
+=3D"box-sizing: border-box; margin: 0px; padding: 0px; font-family: 'Micros=
+oft YaHei'; border: 0px; outline: 0px; vertical-align: baseline; color: rgb=
+(136, 0, 0); background: transparent;">remove /dev/mapper/centos-home</span=
+></code></pre>
+<h3 id=3D"5=C0=A9=D5=B9root=CB=F9=D4=DA=B5=C4lv=D4=F6=BC=D3800g" style=3D"b=
+ox-sizing: border-box; font-family: 'Microsoft YaHei'; font-weight: 100; li=
+ne-height: 1.1; color: rgb(153, 153, 153); margin: 0.8em 0px; font-size: 14=
+px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; back=
+ground: transparent;">
+	5.=C0=A9=D5=B9/root=CB=F9=D4=DA=B5=C4lv=A3=AC=D4=F6=BC=D3800G</h3>
+<pre class=3D"prettyprint" style=3D"box-sizing: border-box; font-family: 'S=
+ource Code Pro', monospace; font-size: 14px; white-space: nowrap; padding: =
+5px 5px 5px 60px; margin-top: 0px; margin-bottom: 1.1em; line-height: 1.45;=
+ color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; bord=
+er: 1px solid rgba(128, 128, 128, 0.0745098); border-radius: 0px; outline: =
+0px; vertical-align: baseline; position: relative; overflow-y: hidden; over=
+flow-x: auto; background: rgba(128, 128, 128, 0.0470588);"><code class=3D"h=
+ljs lasso has-numbering" style=3D"box-sizing: border-box; font-family: 'Sou=
+rce Code Pro', monospace; font-size: inherit; padding: 0px; color: inherit;=
+ white-space: pre; border-radius: 0px; margin: 0px; border: 0px; outline: 0=
+px; vertical-align: baseline; display: block; word-break: break-word; word-=
+wrap: normal; background: transparent;"> lvextend <span class=3D"hljs-attri=
+bute" style=3D"box-sizing: border-box; margin: 0px; padding: 0px; font-fami=
+ly: 'Microsoft YaHei'; border: 0px; outline: 0px; vertical-align: baseline;=
+ background: transparent;">-L</span> <span class=3D"hljs-subst" style=3D"bo=
+x-sizing: border-box; margin: 0px; padding: 0px; font-family: 'Microsoft Ya=
+Hei'; border: 0px; outline: 0px; vertical-align: baseline; color: rgb(0, 0,=
+ 0); background: transparent;">+</span><span class=3D"hljs-number" style=3D=
+"box-sizing: border-box; margin: 0px; padding: 0px; font-family: 'Microsoft=
+ YaHei'; border: 0px; outline: 0px; vertical-align: baseline; color: rgb(0,=
+ 102, 102); background: transparent;">800</span>G /dev/mapper/centos<span c=
+lass=3D"hljs-attribute" style=3D"box-sizing: border-box; margin: 0px; paddi=
+ng: 0px; font-family: 'Microsoft YaHei'; border: 0px; outline: 0px; vertica=
+l-align: baseline; background: transparent;">-root</span></code></pre>
+<h3 id=3D"6=C0=A9=D5=B9root=CE=C4=BC=FE=CF=B5=CD=B3" style=3D"box-sizing: b=
+order-box; font-family: 'Microsoft YaHei'; font-weight: 100; line-height: 1=
+.1; color: rgb(153, 153, 153); margin: 0.8em 0px; font-size: 14px; padding:=
+ 0px; border: 0px; outline: 0px; vertical-align: baseline; background: tran=
+sparent;">
+	6.=C0=A9=D5=B9/root=CE=C4=BC=FE=CF=B5=CD=B3</h3>
+<pre class=3D"prettyprint" style=3D"box-sizing: border-box; font-family: 'S=
+ource Code Pro', monospace; font-size: 14px; white-space: nowrap; padding: =
+5px 5px 5px 60px; margin-top: 0px; margin-bottom: 1.1em; line-height: 1.45;=
+ color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; bord=
+er: 1px solid rgba(128, 128, 128, 0.0745098); border-radius: 0px; outline: =
+0px; vertical-align: baseline; position: relative; overflow-y: hidden; over=
+flow-x: auto; background: rgba(128, 128, 128, 0.0470588);"><code class=3D"h=
+ljs lasso has-numbering" style=3D"box-sizing: border-box; font-family: 'Sou=
+rce Code Pro', monospace; font-size: inherit; padding: 0px; color: inherit;=
+ white-space: pre; border-radius: 0px; margin: 0px; border: 0px; outline: 0=
+px; vertical-align: baseline; display: block; word-break: break-word; word-=
+wrap: normal; background: transparent;">xfs_growfs /dev/mapper/centos<span =
+class=3D"hljs-attribute" style=3D"box-sizing: border-box; margin: 0px; padd=
+ing: 0px; font-family: 'Microsoft YaHei'; border: 0px; outline: 0px; vertic=
+al-align: baseline; background: transparent;">-root</span></code></pre>
+<h3 id=3D"7=D6=D8=D0=C2=B4=B4=BD=A8home-lv" style=3D"box-sizing: border-box=
+; font-family: 'Microsoft YaHei'; font-weight: 100; line-height: 1.1; color=
+: rgb(153, 153, 153); margin: 0.8em 0px; font-size: 14px; padding: 0px; bor=
+der: 0px; outline: 0px; vertical-align: baseline; background: transparent;"=
+>
+	7.=D6=D8=D0=C2=B4=B4=BD=A8home lv</h3>
+<pre class=3D"prettyprint" style=3D"box-sizing: border-box; font-family: 'S=
+ource Code Pro', monospace; font-size: 14px; white-space: nowrap; padding: =
+5px 5px 5px 60px; margin-top: 0px; margin-bottom: 1.1em; line-height: 1.45;=
+ color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; bord=
+er: 1px solid rgba(128, 128, 128, 0.0745098); border-radius: 0px; outline: =
+0px; vertical-align: baseline; position: relative; overflow-y: hidden; over=
+flow-x: auto; background: rgba(128, 128, 128, 0.0470588);"><code class=3D"h=
+ljs lasso has-numbering" style=3D"box-sizing: border-box; font-family: 'Sou=
+rce Code Pro', monospace; font-size: inherit; padding: 0px; color: inherit;=
+ white-space: pre; border-radius: 0px; margin: 0px; border: 0px; outline: 0=
+px; vertical-align: baseline; display: block; word-break: break-word; word-=
+wrap: normal; background: transparent;">lvcreate <span class=3D"hljs-attrib=
+ute" style=3D"box-sizing: border-box; margin: 0px; padding: 0px; font-famil=
+y: 'Microsoft YaHei'; border: 0px; outline: 0px; vertical-align: baseline; =
+background: transparent;">-L</span> <span class=3D"hljs-number" style=3D"bo=
+x-sizing: border-box; margin: 0px; padding: 0px; font-family: 'Microsoft Ya=
+Hei'; border: 0px; outline: 0px; vertical-align: baseline; color: rgb(0, 10=
+2, 102); background: transparent;">73</span>G <span class=3D"hljs-attribute=
+" style=3D"box-sizing: border-box; margin: 0px; padding: 0px; font-family: =
+'Microsoft YaHei'; border: 0px; outline: 0px; vertical-align: baseline; bac=
+kground: transparent;">-n</span> /dev/mapper/centos<span class=3D"hljs-attr=
+ibute" style=3D"box-sizing: border-box; margin: 0px; padding: 0px; font-fam=
+ily: 'Microsoft YaHei'; border: 0px; outline: 0px; vertical-align: baseline=
+; background: transparent;">-home</span> </code></pre>
+<h3 id=3D"8-=B4=B4=BD=A8=CE=C4=BC=FE=CF=B5=CD=B3" style=3D"box-sizing: bord=
+er-box; font-family: 'Microsoft YaHei'; font-weight: 100; line-height: 1.1;=
+ color: rgb(153, 153, 153); margin: 0.8em 0px; font-size: 14px; padding: 0p=
+x; border: 0px; outline: 0px; vertical-align: baseline; background: transpa=
+rent;">
+	8. =B4=B4=BD=A8=CE=C4=BC=FE=CF=B5=CD=B3</h3>
+<pre class=3D"prettyprint" style=3D"box-sizing: border-box; font-family: 'S=
+ource Code Pro', monospace; font-size: 14px; white-space: nowrap; padding: =
+5px 5px 5px 60px; margin-top: 0px; margin-bottom: 1.1em; line-height: 1.45;=
+ color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; bord=
+er: 1px solid rgba(128, 128, 128, 0.0745098); border-radius: 0px; outline: =
+0px; vertical-align: baseline; position: relative; overflow-y: hidden; over=
+flow-x: auto; background: rgba(128, 128, 128, 0.0470588);"><code class=3D"h=
+ljs avrasm has-numbering" style=3D"box-sizing: border-box; font-family: 'So=
+urce Code Pro', monospace; font-size: inherit; padding: 0px; color: inherit=
+; white-space: pre; border-radius: 0px; margin: 0px; border: 0px; outline: =
+0px; vertical-align: baseline; display: block; word-break: break-word; word=
+-wrap: normal; background: transparent;"> mkfs<span class=3D"hljs-preproces=
+sor" style=3D"box-sizing: border-box; margin: 0px; padding: 0px; font-famil=
+y: 'Microsoft YaHei'; border: 0px; outline: 0px; vertical-align: baseline; =
+color: rgb(68, 68, 68); background: transparent;">.xfs</span>  /dev/mapper/=
+centos-home</code></pre>
+<h3 id=3D"9=B9=D2=D4=D8home" style=3D"box-sizing: border-box; font-family: =
+'Microsoft YaHei'; font-weight: 100; line-height: 1.1; color: rgb(153, 153,=
+ 153); margin: 0.8em 0px; font-size: 14px; padding: 0px; border: 0px; outli=
+ne: 0px; vertical-align: baseline; background: transparent;">
+	9.=B9=D2=D4=D8home</h3>
+<pre class=3D"prettyprint" style=3D"box-sizing: border-box; font-family: 'S=
+ource Code Pro', monospace; font-size: 14px; white-space: nowrap; padding: =
+5px 5px 5px 60px; margin-top: 0px; margin-bottom: 1.1em; line-height: 1.45;=
+ color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; bord=
+er: 1px solid rgba(128, 128, 128, 0.0745098); border-radius: 0px; outline: =
+0px; vertical-align: baseline; position: relative; overflow-y: hidden; over=
+flow-x: auto; background: rgba(128, 128, 128, 0.0470588);"><code class=3D"h=
+ljs lasso has-numbering" style=3D"box-sizing: border-box; font-family: 'Sou=
+rce Code Pro', monospace; font-size: inherit; padding: 0px; color: inherit;=
+ white-space: pre; border-radius: 0px; margin: 0px; border: 0px; outline: 0=
+px; vertical-align: baseline; display: block; word-break: break-word; word-=
+wrap: normal; background: transparent;">mount /dev/mapper/centos<span class=
+=3D"hljs-attribute" style=3D"box-sizing: border-box; margin: 0px; padding: =
+0px; font-family: 'Microsoft YaHei'; border: 0px; outline: 0px; vertical-al=
+ign: baseline; background: transparent;">-home</span></code></pre>
+<h3 id=3D"10home=CE=C4=BC=FE=BB=D6=B8=B4" style=3D"box-sizing: border-box; =
+font-family: 'Microsoft YaHei'; font-weight: 100; line-height: 1.1; color: =
+rgb(153, 153, 153); margin: 0.8em 0px; font-size: 14px; padding: 0px; borde=
+r: 0px; outline: 0px; vertical-align: baseline; background: transparent;">
+	10.home=CE=C4=BC=FE=BB=D6=B8=B4</h3>
+<pre class=3D"prettyprint" style=3D"box-sizing: border-box; font-family: 'S=
+ource Code Pro', monospace; font-size: 14px; white-space: nowrap; padding: =
+5px 5px 5px 60px; margin-top: 0px; margin-bottom: 1.1em; line-height: 1.45;=
+ color: rgb(51, 51, 51); word-break: break-all; word-wrap: break-word; bord=
+er: 1px solid rgba(128, 128, 128, 0.0745098); border-radius: 0px; outline: =
+0px; vertical-align: baseline; position: relative; overflow-y: hidden; over=
+flow-x: auto; background: rgba(128, 128, 128, 0.0470588);"><code class=3D"h=
+ljs coffeescript has-numbering" style=3D"box-sizing: border-box; font-famil=
+y: 'Source Code Pro', monospace; font-size: inherit; padding: 0px; color: i=
+nherit; white-space: pre; border-radius: 0px; margin: 0px; border: 0px; out=
+line: 0px; vertical-align: baseline; display: block; word-break: break-word=
+; word-wrap: normal; background: transparent;">tar xvf <span class=3D"hljs-=
+regexp" style=3D"box-sizing: border-box; margin: 0px; padding: 0px; font-fa=
+mily: 'Microsoft YaHei'; border: 0px; outline: 0px; vertical-align: baselin=
+e; color: rgb(0, 136, 0); background: transparent;">/tmp/home.tar -C /home/=
+</span>
+cd <span class=3D"hljs-regexp" style=3D"box-sizing: border-box; margin: 0px=
+; padding: 0px; font-family: 'Microsoft YaHei'; border: 0px; outline: 0px; =
+vertical-align: baseline; color: rgb(0, 136, 0); background: transparent;">=
+/home/home/</span>
+mv * ../</code></pre>
+
+			<table width=3D"100%">
+			=09
+			</table>
+			</div><!-- /content --><div class=3D"dede_pages">
+				<ul class=3D"pagelist">
+         =20
+				</ul>
+			</div><!-- /pages -->
+		=09
+			<!-- //=B6=A5=B2=C8 -->
+			<div class=3D"newdigg" id=3D"newdigg">
+
+	<!-- //=B6=A5=B2=C8=B2=BF=B7=DD=B5=C4=D4=B4=C2=EB=BD=E1=CA=F8 -->
+		=09
+			<div class=3D"boxoff">				<strong>------=B7=D6=B8=F4=CF=DF--------------=
+--------------</strong>
+			</div>
+			<div class=3D"handle"></div>
+				<div class=3D"context">
+					<ul>
+						<li>=C9=CF=D2=BB=C6=AA=A3=BA<a href=3D"http://www.centoscn.com/CentOS=
+/config/2016/0822/7824.html">Centos=C5=E4=D6=C3sudo=D3=C3=BB=A7</a> </li>
+						<li>=CF=C2=D2=BB=C6=AA=A3=BA<a href=3D"http://www.centoscn.com/CentOS=
+/config/2016/0826/7840.html">Centos=CA=B1=C7=F8=C9=E8=D6=C3</a> </li>
+					</ul>
+				</div><!-- /context -->
+				<div class=3D"actbox">
+					<ul>
+						<li id=3D"act-fav"><a href=3D"http://www.centoscn.com/plus/stow.php?a=
+id=3D7833" target=3D"_blank">=CA=D5=B2=D8</a></li>
+						<li id=3D"act-err"><a href=3D"http://www.centoscn.com/plus/erraddsave=
+.php?aid=3D7833&amp;title=3DCentos%207%20%B5%F7%D5%FB%20home%B7%D6%C7%F8%20=
+%C0%A9%B4%F3%20root%B7%D6%C7%F8" target=3D"_blank">=BE=D9=B1=A8</a></li>
+						<li id=3D"act-pus"><a href=3D"http://www.centoscn.com/plus/recommend.=
+php?aid=3D7833" target=3D"_blank">=CD=C6=BC=F6</a></li>
+						<li id=3D"act-pnt"><a href=3D"http://www.centoscn.com/CentOS/config/2=
+016/0825/7833.html#" onclick=3D"window.print();">=B4=F2=D3=A1</a></li>
+					</ul>
+				</div><!-- /actbox -->
+			</div><!-- /handle -->
+		</div><!-- /viewbox -->
+
+<!-- //AJAX=C6=C0=C2=DB=C7=F8 -->
+<!-- //=D6=F7=C4=A3=B0=E5=B1=D8=D0=EB=D2=AA=D2=FD=C8=EB/include/dedeajax2.j=
+s -->
+<a name=3D"postform"></a>
+<div class=3D"mt1">
+		<dl class=3D"tbox">
+			<dt>
+				<strong>=B7=A2=B1=ED=C6=C0=C2=DB</strong>
+				<span class=3D"more"></span>
+			</dt>
+			<dd>
+				<div class=3D"dede_comment_post">
+          <form action=3D"http://www.centoscn.com/CentOS/config/2016/0825/7=
+833.html#" method=3D"post" name=3D"feedback">
+          <input type=3D"hidden" name=3D"dopost" value=3D"send">
+          <input type=3D"hidden" name=3D"comtype" value=3D"comments">
+          <input type=3D"hidden" name=3D"aid" value=3D"7833">
+          <input type=3D"hidden" name=3D"fid" id=3D"feedbackfid" value=3D"0=
+">
+          <div class=3D"dcmp-title">
+						<small>=CE=AA=C1=CB=BA=CD=D2=E8=B5=C4=C9=FA=BB=EE=A3=AC=CE=D2=B9=D8=
+=B1=D5=C1=CB=C6=C0=C2=DB=D2=B3=C3=E6=A3=AC=C7=EB=B4=F3=BC=D2=B5=BDQQ=C8=BA=
+=C0=EF=BD=BB=C1=F7=B0=C9=A3=BA348944156,=D2=B2=BB=B6=D3=AD=B9=D8=D7=A2=B1=
+=BE=D5=BE=CE=A2=D0=C5=B9=AB=D6=DA=BA=C5=A3=BAcentoscn </small>
+				=09
+			=09
+			</div></form></div></dd>
+		</dl>
+	</div><!-- //=C6=C0=C2=DB=B1=ED=B5=A5=C7=F8=BD=E1=CA=F8 -->
+
+
+
+</div><!-- //=D7=F3=B1=DF=C4=DA=C8=DD=BD=E1=CA=F8 -->
+
+<!-- //=D3=D2=B1=DF=C4=DA=C8=DD=BF=AA=CA=BC -->
+<div class=3D"pright">
+ 	=09
+
+<div class=3D"commend mt1"><dl class=3D"tbox light">
+				<dt class=3D"light"><strong>=C0=B8=C4=BF=B7=D6=C0=E0</strong></dt>
+				<dd class=3D"light">
+					<ul class=3D"c1 ico2">
+             <ul>
+                   =20
+                    <li><a href=3D"http://www.centoscn.com/CentOS/help/" ta=
+rget=3D"_blank">=BB=F9=B4=A1=C3=FC=C1=EE<span></span></a></li>
+                    =20
+                    <li><a href=3D"http://www.centoscn.com/CentOS/config/" =
+target=3D"_blank">=CF=B5=CD=B3=C5=E4=D6=C3<span></span></a></li>
+                    =20
+                    <li><a href=3D"http://www.centoscn.com/CentOS/Intermedi=
+ate/" target=3D"_blank">=D6=D0=BC=B6=BD=F8=BD=E9<span></span></a></li>
+                     </ul>					</ul>
+				</dd>
+			</dl>
+		</div><!-- /commend -->
+
+		<div class=3D"commend mt1"><dl class=3D"tbox light">
+				<dt class=3D"light"><strong>=B1=BE=D4=C2=C8=C8=B5=E3</strong></dt>
+				<dd class=3D"light">
+					<ul class=3D"c1 ico2">
+             <li><a href=3D"http://www.centoscn.com/CentOS/config/2015/0416=
+/5189.html">=BD=ABCentos=B5=C4yum=D4=B4=B8=FC=BB=BB=CE=AA=B9=FA=C4=DA=B5=C4=
+=B0=A2</a></li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2013/1017/1878.html">C=
+entOS=B7=FE=CE=F1=C6=F7=CA=B1=BC=E4=CD=AC=B2=BD=B5=C42=D6=D6=B7=BD=B7=A8</a=
+></li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2013/0926/1713.html">C=
+entOS SSH=B0=B2=D7=B0=D3=EB=C5=E4=D6=C3</a></li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2014/1105/4060.html">=
+=BD=ABcentos7=B4=F2=D4=EC=B3=C9=D7=C0=C3=E6=CF=B5=CD=B3</a></li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2014/1112/4112.html">=
+=D0=E9=C4=E2=BB=FA=CF=C2CentOS 6.5=C5=E4=D6=C3IP=B5=D8=D6=B7=B5=C4</a></li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2015/0310/4848.html">C=
+entos7 =BF=AA=B7=C5=B6=CB=BF=DA</a></li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2015/0507/5374.html">C=
+entOS 7.x=C9=E8=D6=C3=D7=D4=B6=A8=D2=E5=BF=AA=BB=FA=C6=F4=B6=AF,</a></li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2014/1012/3923.html">C=
+entos7=CD=F8=C2=E7=C5=E4=D6=C3</a></li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2014/1031/4039.html">C=
+entOS7=D0=DE=B8=C4=D6=F7=BB=FA=C3=FB</a></li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2014/0920/3793.html">C=
+entOS6.5=CF=C2=CC=ED=BC=D3epel=D4=B4</a></li>
+
+					</ul>
+				</dd>
+			</dl>
+		</div><!-- /commend -->
+
+		<div class=3D"hot mt1">
+			<dl class=3D"tbox light">
+
+				<dt class=3D"light"><strong>=CD=C6=BC=F6=C4=DA=C8=DD</strong></dt>
+				<dd class=3D"light">
+					<ul class=3D"d4">
+           <li><a href=3D"http://www.centoscn.com/CentOS/config/2016/0413/7=
+044.html">=C8=E7=BA=CE=C5=E4=D6=C3Ubuntu 16.04 GRUB 2=D2=FD=B5=BC=BC=D3=D4=
+=D8=B3=CC=D0=F2</a>
+            	<p>...</p>
+            </li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2015/0717/5876.html">C=
+entOS-6.5=CF=B5=CD=B3=BB=F9=B4=A1=D3=C5=BB=AF=B8=BD=B4=F8=D3=C5=BB=AF=BD=C5=
+=B1=BE</a>
+            	<p>...</p>
+            </li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2015/0604/5593.html"> =
+CentOS=CD=F8=C2=E7=C5=E4=D6=C3=CF=EA=BD=E2</a>
+            	<p>...</p>
+            </li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2015/0504/5360.html">6=
+=B8=F6=D0=A1=B2=BD=D6=E8=CA=B5=CF=D6CentOS=CF=B5=CD=B3=BB=B7=BE=B3=BE=AB=BC=
+=F2=D3=C5=BB=AF</a>
+            	<p>...</p>
+            </li>
+<li><a href=3D"http://www.centoscn.com/CentOS/config/2015/0428/5288.html">C=
+entOS=CF=B5=CD=B3=B0=B2=D7=B0=CD=EA=B3=A3=B9=E6=B3=F5=CA=BC=BB=AF=B2=D9=D7=
+=F7</a>
+            	<p>...</p>
+            </li>
+
+					</ul>
+				</dd>
+			</dl>
+		</div></div></div>
+<!-- //=B6=FE=BC=B6=D7=D3=C0=E0=CF=C2=C0=AD=B2=CB=B5=A5=A3=AC=BF=BC=C2=C7SE=
+O=D4=AD=D2=F2=B7=C5=D6=C3=D3=DA=B5=D7=B2=BF  -->
+
+<!-- //=B5=D7=B2=BF=C4=A3=B0=E5 -->
+
+<div class=3D"footer w960 center mt1 clear">
+
+<a target=3D"_blank" href=3D"http://www.centoscn.com/CentOS/config/2016/082=
+5/about.html">=B9=D8=D3=DA=CE=D2=C3=C7</a> -
+
+<a target=3D"_blank" href=3D"http://www.centoscn.com/CentOS/config/2016/082=
+5/about.html">=C1=AA=CF=B5=CE=D2=C3=C7</a> -
+
+<a target=3D"_blank" href=3D"http://www.centoscn.com/CentOS/config/2016/082=
+5/about.html">=B9=E3=B8=E6=B7=FE=CE=F1</a> -
+
+<a target=3D"_blank" href=3D"http://www.centoscn.com/CentOS/config/2016/082=
+5/about.html">=C3=E2=D4=F0=C9=EA=C3=F7</a> -
+
+<a target=3D"_blank" href=3D"http://www.centoscn.com/CentOS/config/2016/082=
+5/about.html">=B0=E6=C8=A8=C9=EA=C3=F7</a> -
+
+<a target=3D"_blank" href=3D"http://www.centoscn.com/CentOS/config/2016/082=
+5/about.html">TAG=B1=EA=C7=A9</a> -
+
+<a target=3D"_blank" href=3D"http://www.centoscn.com/CentOS/config/2016/082=
+5/about.html">=CD=F8=D5=BE=B5=D8=CD=BC</a> -
+
+<a href=3D"http://www.centoscn.com/CentOS/config/2016/0825/7833.html#top">=
+=B7=B5=BB=D8=B6=A5=B2=BF</a> <p></p>
+
+<!-- /powered -->
+
+	<p class=3D"copyright">
+
+		Copyright 2012-2013(CentOS=D6=D0=CE=C4=CD=F8) CentOScn.Com <a target=3D"_=
+blank" href=3D"http://www.miibeian.gov.cn/">=D4=C1ICP=B1=B816045568=BA=C5-1=
+</a> Powered by DedeCMS 1.0=20
+
+  </p>
+
+=20
+
+</div>
+
+<!-- /footer -->
+</body></html>
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/fl-bg.gif
+
+R0lGODlhBgAaALMAAAAAAP///+n1/un1/fT6/un2/er2/PX7/un2/PT7/vb7/fX7/f///wAAAAAA
+AAAAACH5BAEAAAwALAAAAAAGABoAAAQlUMlJ5br46M27/2AijmQ5EmhqrCzivkUsz3Rt30OuC3zv
+/8BeBAA7
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/fbico.gif
+
+R0lGODlhDAAOANUhAOD2//z9/fj9/djw/+T5/+H3/+/+/9fw/8rn//H9/vX+/mq02uv8/+P4/6XR
+/3G34dPt/+3+/9Xv/2+33m633cjm/3C439z0/2u12uz9//D+/931/9vy/+X6//f+/vP+/qPR////
+/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACEALAAAAAAMAA4AAAZhwJAD
+RCwWQ6CPcskkfjzQKFTg9GgCCk9AI6AmtZrHR2P4dKqaBGUCyDDO30xmgbFkNpyqIYLBADgXeV8d
+BBgEBQUcgmYdDQADkBASRB0dG5cbBwcIFSBIRqAhoqOkpaakQQA7
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/fr-bg2.gif
+
+R0lGODlhCgAcAOYAAO34/+P0/+z3//L6/u/4/+Hz/+74//D5/uj1//b8/uL0//X7/uv4/+n3//P6
+/vj8/uLz/+T1/+X1//D5/+f2/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAAAAAAALAAAAAAKABwAAAdjgA+Cg4QJhoeIC4qLjA6Oj5ADkpOUB5aXmBOam5wEnp+gBqKjpACm
+p6gCqqusra0IsLGyAbS1tgW4uboQvL2+CsDBwrbEARHHyMkSy8zNFM/Q0Q3T1NUM19jZqNvc3d7f
+4ACBADs=
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/fbico2.gif
+
+R0lGODlhDQANAOZQAPr7/rTM5efu983e77fP5OTs9ujx+LjO5+Xt93Wdxsba7LLJ5cbY7NDf77TN
+5e7z+fT3+5e12Ojv+Ory+ISozp6829/q9fb5+3Kbxb/S6djl83mdyOPr9WaRvZy62eHr9YKmzHSd
+xfj7/Ozy+u/0+nefyIir0Pv8/cPW63yhyu3y+rnP6LrR57jQ55e32LfO5Ozz+YOpzdTi8WaPvXOc
+xHedyGWQvJm52nmfyHugydXj8H+ny3mex7jP5bfP5naex46x06O/3dfk8t7p9Mzc7M7e7mmSwP7+
+/vD2+XCYwenx93Ocxl2Jt87g7nqgycTX7P///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAEAAFAALAAAAAANAA0AAAeSgBkBg4QBDk1QiQRHAI2OJy2JUAQAEhk3EREuHiAVFT2UDzEoA6Wm
+AzyUCD8GAgWvBQgXCZQqTgYaB7oHRBC0AEobBkMMxUUCvi8ACDUGFg3QOhMkGA4iIzkGQgvcBwVP
+Mz4cHzgSAucFNiklTBoKCksI5xMPJkgsSZI7FjAPFzIUVlBwIClIAhoYQhjpAEQBlEAAOw==
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/ico-3.gif
+
+R0lGODlhBAAFAJEAAAAAAP///3Wu1f///yH5BAEAAAMALAAAAAAEAAUAAAIHlIaGo31TAAA7
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/ico-2.gif
+
+R0lGODlhBAAGAKIAAAAAAP///26w3W+x3P///wAAAAAAAAAAACH5BAEAAAQALAAAAAAEAAYAAAMK
+SEI8oyLK5dgiCQA7
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.centoscn.com/templets/style/layout.css
+
+@charset "gbk";
+
+.tbox { margin: 0px 0px 8px; border-bottom-width: 1px; border-bottom-style:=
+ solid; border-bottom-color: rgb(223, 242, 245); overflow: hidden; backgrou=
+nd: url("../images/fl-bg.gif") 0px 0px repeat-x; }
+
+.tbox dt { height: 25px; border: 1px solid rgb(223, 242, 245); overflow: hi=
+dden; clear: both; }
+
+.tbox dd { border-left-width: 1px; border-left-style: solid; border-left-co=
+lor: rgb(223, 242, 245); border-right-width: 1px; border-right-style: solid=
+; border-right-color: rgb(223, 242, 245); padding: 4px 4px 0px; overflow: h=
+idden; }
+
+.tbox dt strong { height: 26px; line-height: 25px; padding-left: 22px; padd=
+ing-right: 4px; display: block; float: left; color: rgb(57, 124, 190); lett=
+er-spacing: 1px; background: url("../images/fbico.gif") 5px 6px no-repeat; =
+}
+
+.tbox dt strong a { color: rgb(57, 124, 190); }
+
+.tbox dt strong a:hover { color: rgb(76, 148, 246); text-decoration: none; =
+}
+
+.tbox dt span.more { float: right; position: relative; line-height: 26px; p=
+adding-right: 8px; color: rgb(57, 124, 190); }
+
+.tbox dt span.more a { color: rgb(57, 124, 190); text-decoration: none; }
+
+.tbox dt span.more a:hover { color: rgb(51, 51, 51); }
+
+.tbox dt span.label { height: 24px; float: right; overflow: hidden; padding=
+-right: 1px; padding-top: 2px; }
+
+.tbox dt span.label a { height: 25px; display: block; padding: 0px 7px 0px =
+8px; line-height: 23px; border-left-width: 1px; border-left-style: solid; b=
+order-left-color: rgb(191, 224, 249); float: left; color: rgb(102, 102, 102=
+); text-decoration: none; overflow: hidden; letter-spacing: 1px; }
+
+.tbox dt span.label a:hover { color: rgb(51, 102, 0); }
+
+.tbox dt span.label a.thisclass { color: rgb(51, 51, 51); border-top-width:=
+ 3px; border-top-style: solid; border-top-color: rgb(191, 224, 249); backgr=
+ound: rgb(255, 255, 255); }
+
+.light { border: none; background: none; }
+
+.light dt { height: 25px; border: 1px solid rgb(191, 224, 249); overflow: h=
+idden; clear: both; background: url("../images/fr-bg2.gif") 0px 0px repeat-=
+x; }
+
+.light dd { border-left-width: 1px; border-left-style: solid; border-left-c=
+olor: rgb(191, 224, 249); border-right-width: 1px; border-right-style: soli=
+d; border-right-color: rgb(191, 224, 249); border-bottom-width: 1px; border=
+-bottom-style: solid; border-bottom-color: rgb(191, 224, 249); padding: 4px=
+ 4px 0px; overflow: hidden; }
+
+dt.light strong { background: url("../images/fbico2.gif") 5px 5px no-repeat=
+; }
+
+.c1 { padding: 4px 0px; clear: right; }
+
+.c1 li { height: 27px; line-height: 27px; overflow: hidden; padding-left: 1=
+6px; background: url("../images/ico-2.gif") 7px 11px no-repeat; }
+
+.c111 { padding: 4px 0px; clear: right; }
+
+.c111 li { height: 27px; line-height: 27px; overflow: hidden; padding-left:=
+ 16px; background: url("../images/cmt-good.gif") 7px 11px no-repeat; }
+
+.c2 { width: 100%; padding: 4px 0px; overflow: hidden; clear: both; }
+
+.c2 li { width: 44%; margin-right: 1%; float: left; height: 27px; line-heig=
+ht: 27px; overflow: hidden; padding-left: 16px; background: url("../images/=
+ico-2.gif") 7px 11px no-repeat; }
+
+.d1 { padding: 4px 0px; }
+
+.d1 li { height: 27px; line-height: 27px; overflow: hidden; }
+
+.d1 li span { color: rgb(119, 119, 119); margin-right: 5px; float: left; }
+
+.d1 li a { }
+
+.d2 { padding: 4px 0px; }
+
+.d2 li { height: 27px; line-height: 27px; overflow: hidden; }
+
+.d2 li span { color: rgb(119, 119, 119); float: right; padding-right: 10px;=
+ margin-left: 10px; }
+
+.d2 li a { overflow: hidden; }
+
+.d4 { padding: 0px; }
+
+.d4 li { height: 60px; padding: 4px 8px; border-bottom-width: 1px; border-b=
+ottom-style: dashed; border-bottom-color: rgb(220, 235, 215); overflow: hid=
+den; }
+
+.d4 li a { display: block; line-height: 23px; overflow: hidden; text-indent=
+: 14px; background: url("../images/ico-3.gif") 4px 9px no-repeat; }
+
+.d4 li p { color: rgb(136, 136, 136); line-height: 17px; height: 33px; over=
+flow: hidden; }
+
+.d5 { padding: 8px; border-bottom-width: 1px; border-bottom-style: solid; b=
+order-bottom-color: rgb(238, 238, 238); }
+
+.d5 li { height: 41px; line-height: 41px; padding-left: 16px; background: u=
+rl("../images/ico-2.gif") 2px 17px no-repeat; }
+
+.d5 li a { font-size: 14px; }
+
+.d5 li span { margin-left: 10px; color: rgb(119, 119, 119); }
+
+.e1 { width: 100%; overflow: hidden; clear: both; padding-top: 10px; paddin=
+g-bottom: 8px; }
+
+.e1 li { width: 126px; overflow: hidden; padding-left: 12px; float: left; t=
+ext-align: center; }
+
+.e1 li a { display: block; }
+
+.e1 li a:hover img { border: 1px solid rgb(153, 153, 153); padding: 2px; }
+
+.e1 li a img { display: block; border: 1px solid rgb(227, 227, 227); paddin=
+g: 2px; width: 120px; height: 90px; }
+
+.e1 li a span { display: block; line-height: 17px; padding-top: 6px; }
+
+.e1 li span { }
+
+.e2 { }
+
+.e2 li { width: 100%; overflow: hidden; clear: both; padding: 12px 0px; bor=
+der-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb=
+(238, 238, 238); }
+
+.e2 li a.preview { width: 84px; float: left; margin-right: 7px; margin-bott=
+om: 3px; margin-left: 10px; display: inline; }
+
+.e2 li a.preview img { width: 80px; display: block; padding: 1px; border: 1=
+px solid rgb(238, 238, 238); }
+
+.e2 li a.preview:hover img { border: 1px solid rgb(170, 170, 170); }
+
+.e2 li a.title { overflow: hidden; line-height: 25px; font-weight: bold; fo=
+nt-size: 14px; margin-left: 2px; }
+
+.e2 span.info { display: block; line-height: 23px; color: rgb(85, 85, 85); =
+padding-left: 12px; }
+
+.e2 span.info small { color: rgb(170, 170, 170); font-size: 12px; margin-le=
+ft: 3px; }
+
+.e2 span.info a { color: rgb(102, 153, 0); }
+
+.e2 p.intro { color: rgb(119, 105, 85); line-height: 20px; margin-left: 5px=
+; padding-left: 10px; padding-right: 10px; }
+
+.e3 { clear: both; overflow: hidden; }
+
+.e3 li { height: 50px; overflow: hidden; padding: 6px; border-bottom-width:=
+ 1px; border-bottom-style: dashed; border-bottom-color: rgb(220, 235, 215);=
+ }
+
+.e3 li a.preview { width: 58px; height: 48px; float: left; display: block; =
+margin-right: 6px; overflow: hidden; }
+
+.e3 li a.preview img { width: 58px; height: 48px; }
+
+.e3 li a.title { height: 21px; display: block; line-height: 21px; overflow:=
+ hidden; }
+
+.e3 li .intro { color: rgb(119, 119, 119); display: block; float: left; lin=
+e-height: 23px; }
+
+.e5 { padding-left: 8px; width: 112px; float: left; font-size: 0px; line-he=
+ight: 0px; }
+
+.e5 li { display: block; width: 104px; overflow: hidden; padding-top: 8px; =
+}
+
+.e6 { height: 81px; padding-left: 6px; clear: both; overflow: hidden; }
+
+.e6 li { display: block; width: 104px; padding-top: 8px; padding-right: 8px=
+; overflow: hidden; float: left; }
+
+.e5 li a, .e6 li a { width: 102px; height: 70px; overflow: hidden; display:=
+ block; border: 1px solid rgb(103, 103, 103); }
+
+.e5 li a img, .e6 li a img { display: block; width: 102px; height: 70px; }
+
+.e5 li a:hover, .e6 li a:hover { border: 1px solid rgb(51, 51, 51); }
+
+.e7 { clear: both; overflow: hidden; }
+
+.e7 li { width: 60px; height: 86px; float: left; overflow: hidden; padding-=
+left: 11px; }
+
+.e7 li a { display: block; margin: 0px auto; text-align: center; }
+
+.e7 li a img { width: 52px; height: 52px; display: block; margin: 0px auto =
+6px; padding: 2px; border: 1px solid rgb(221, 221, 221); }
+
+.e7 li a:hover img { border: 1px solid rgb(170, 170, 170); }
+
+.e8 { width: 100%; overflow: hidden; clear: both; margin-left: 12px; margin=
+-top: 16px; }
+
+.e8 li { width: 168px; height: 184px; float: left; display: block; overflow=
+: hidden; margin-right: 8px; text-align: center; }
+
+.e8 li .pic { width: 160px; height: 120px; display: block; text-align: left=
+; overflow: hidden; background: url("../images/picbox-listbg.gif") no-repea=
+t; }
+
+.e8 li .pic img { width: 152px; height: 112px; display: block; margin-left:=
+ 3px; margin-top: 3px; border: none; }
+
+.e8 li .title { height: 31px; display: block; line-height: 31px; font-weigh=
+t: bold; overflow: hidden; }
+
+.e8 li .date { color: rgb(102, 102, 102); }
+
+.e8 li .date small { line-height: 17px; font-size: 12px; color: rgb(153, 15=
+3, 153); }
+
+.e9 { width: 100%; clear: both; overflow: hidden; padding-top: 4px; }
+
+.e9 li { width: 106px; height: 110px; float: left; text-align: center; over=
+flow: hidden; margin-left: 6px; display: inline; }
+
+.e9 li a { color: rgb(119, 119, 119); }
+
+.e9 li a img { width: 102px; height: 76px; display: block; padding: 1px; bo=
+rder: 1px solid rgb(221, 221, 221); }
+
+.e9 li a span.title { display: block; height: 29px; line-height: 29px; over=
+flow: hidden; }
+
+.f1 { overflow: hidden; background: url("../images/number-range.gif") 5px 5=
+px no-repeat; }
+
+.f1 li { height: 38px; display: block; padding: 3px 0px 4px 38px; border-bo=
+ttom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(220,=
+ 235, 215); overflow: hidden; }
+
+.f1 li a { height: 21px; line-height: 21px; overflow: hidden; display: bloc=
+k; }
+
+.f1 li span { line-height: 15px; color: rgb(102, 102, 102); margin-left: 5p=
+x; }
+
+.f1 li span small { font-size: 12px; color: rgb(153, 153, 153); }
+
+.f1 li span a { display: inline; line-height: 15px; color: rgb(102, 153, 0)=
+; }
+
+.f2 { overflow: hidden; }
+
+.f2 li { height: 73px; clear: both; overflow: hidden; border-bottom-width: =
+1px; border-bottom-style: dashed; border-bottom-color: rgb(220, 235, 215); =
+padding: 0px 8px; }
+
+.f2 small { display: block; height: 21px; padding-top: 6px; line-height: 21=
+px; overflow: hidden; font-size: 12px; color: rgb(153, 153, 153); }
+
+.f2 small a.username { color: rgb(102, 102, 102); }
+
+.f2 p { height: 42px; overflow: hidden; line-height: 21px; color: rgb(136, =
+136, 136); text-indent: 17px; background: url("../images/ico-comment-quote.=
+gif") 0px 4px no-repeat; }
+
+.f4 { }
+
+.f4 li { width: 94px; height: 37px; display: block; float: left; overflow: =
+hidden; margin: 10px 12px 2px 8px; }
+
+.f4 li a { width: 88px; height: 31px; overflow: hidden; float: left; border=
+: 3px solid rgb(255, 255, 255); }
+
+.f4 li a:hover { border: 3px solid rgb(238, 238, 238); }
+
+.f5 { width: 100%; overflow: hidden; clear: both; padding-bottom: 10px; }
+
+.f5 li { float: left; line-height: 14px; padding: 8px 10px 0px; white-space=
+: nowrap; }
+
+.f5 li a { color: rgb(102, 102, 102); float: left; }
+
+.f6 { width: 100%; overflow: hidden; clear: both; padding-bottom: 10px; }
+
+.f6 li { float: left; line-height: 14px; padding: 8px 10px 0px; white-space=
+: nowrap; }
+
+.f6 li a { color: rgb(102, 102, 102); float: left; }
+
+.ico1 li { padding-left: 16px; background: url("../images/ico-1.gif") 7px 1=
+1px no-repeat; }
+
+.ico2 li { padding-left: 16px; background: url("../images/ico-2.gif") 6px 1=
+1px no-repeat; }
+
+.ico3 li { padding-left: 16px; background: url("../images/ico-3.gif") 7px 1=
+1px no-repeat; }
+
+li.dotline { border-bottom-width: 1px; border-bottom-style: dashed; border-=
+bottom-color: rgb(205, 224, 250); height: 26px; line-height: 26px; }
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/boxoff.gif
+
+R0lGODlhCAAUAKIAAP////b29tzc3NTU1MzMzJSUlAAAAAAAACH5BAEHAAAALAAAAAAIABQAAAMl
+CECkrDDKSau9mJa9YQlgB3yhUIzBEHAb6K7fIKvtC6fzbbN8AgA7
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/actbox-ico.gif
+
+R0lGODlhDQB4AMQAACQkJG3B/fqsFlaE2I66afnTqUWBw////1eIOKzF5evz+v/Na9Tm/JWxsP/I
+UjhsIcHc+JKx33qJhP7z47jT+c2vWb7Vqf7CN0ZGRv/mf5yRQvrot8fX7lZlY36f2/zCKCH5BAEH
+AAcALAAAAAANAHgAAAX/YOIZxjB40aGqnuK6jOetx6BAOHVQ8mooDAZEF4zMDr8gjvEyqJJKilTh
+RAKDjIYEgeg8r1mCxUJAEKyBNGJ8IBAeaOl6ZYEbGOnAw91+W19lYoEHCQMkJB0PihI0jY6PkJGS
+k5SVlpeYmZqbnJ2en6CXG5AToxsOB6WODgsLDgUfo40ZrLQfNBMLHw4ZFb4XAgs0tBUqFboTKxMO
+GBYKHMcCshMYGB0SDRoZAhcZKhgS1QAaAuXeB+AAGAAHpyqjHRzq7O80HRYS9I8N66H+/wADChxI
+sKBBTrIiLUv4qBsqSKcyZCjQqMCFXbRolVsw4QIviQ4+XHC1ANgBB7xEil4UgPLCio8XLo58+DLD
+hw8sHSRTtoCWK5QUVxRohZLVKxo/VywQUGzFhp3KGB6cSrWq1atYB77Y6oKGgkcMvB7AEoSDWQ4q
+vjJ5wYADgwRpx94YkqCu3a8cFFBoazeCCLx6zfb9G7hvBCMRBqhwW/ewERSKD3DoK0NGYhp+Ezg+
+HFnFYQ8mQg8IAQA7
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.centoscn.com/templets/style/page.css
+
+@charset "gbk";
+
+.pleft { width: 712px; float: left; overflow: hidden; }
+
+.pleft .place { width: 712px; height: 24px; line-height: 24px; border-top-w=
+idth: 1px; border-top-style: solid; border-top-color: rgb(224, 236, 243); b=
+order-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: r=
+gb(224, 236, 243); text-indent: 12px; color: rgb(204, 204, 204); overflow: =
+hidden; background: rgb(242, 252, 254); }
+
+.pleft .place strong { color: rgb(57, 124, 190); font-weight: normal; lette=
+r-spacing: 1px; }
+
+.pleft .place a { color: rgb(57, 124, 190); margin: 0px 2px; }
+
+.pleft .place a:hover { color: rgb(70, 156, 242); text-decoration: none; }
+
+.pleft .place small { display: inline-block; vertical-align: middle; width:=
+ 8px; height: 20px; overflow: hidden; font-size: 0px; background: url("../i=
+mages/ico-3.gif") 2px 8px no-repeat; }
+
+.pright { width: 240px; float: right; overflow: hidden; }
+
+.dede_pages { }
+
+.dede_pages ul { float: left; padding: 12px 0px 12px 16px; }
+
+.dede_pages ul li { float: left; font-family: Tahoma; line-height: 17px; ma=
+rgin-right: 6px; }
+
+.dede_pages ul li a { float: left; padding: 2px 4px; color: rgb(85, 85, 85)=
+; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color=
+: rgb(238, 238, 238); }
+
+.dede_pages ul li a:hover { color: rgb(102, 153, 0); text-decoration: none;=
+ padding: 2px 4px 1px; border-bottom-width: 2px; border-bottom-style: solid=
+; border-bottom-color: rgb(102, 153, 0); }
+
+.dede_pages ul li.thisclass a, .pagebox ul li.thisclass a:hover { color: rg=
+b(255, 102, 51); padding: 2px 4px 1px; border-bottom-width: 2px; border-bot=
+tom-style: solid; border-bottom-color: rgb(255, 102, 51); font-weight: bold=
+; }
+
+.dede_pages .pageinfo { line-height: 21px; padding: 12px 10px 12px 16px; co=
+lor: rgb(153, 153, 153); }
+
+.dede_pages .pageinfo strong { color: rgb(85, 85, 85); font-weight: normal;=
+ margin: 0px 2px; }
+
+.index .bignews { width: 424px; height: 400px; float: right; border: 1px so=
+lid rgb(223, 242, 245); overflow: hidden; background: url("../images/headbg=
+-top.gif") repeat-x; }
+
+.index .bignews a { color: rgb(85, 85, 85); }
+
+.index .bignews .onenews { margin: 0px 3px; padding: 7px 6px; border-bottom=
+-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(235, 235=
+, 235); }
+
+.index .bignews .onenews h2 { text-align: center; display: block; height: 3=
+2px; line-height: 28px; }
+
+.index .bignews .onenews h2 a { font-size: 16px; }
+
+.index .bignews .onenews p { line-height: 19px; color: rgb(102, 102, 102); =
+}
+
+.index .bignews div.newarticle { font-size: 15px; color: rgb(255, 255, 255)=
+; }
+
+.index .bignews div.d1 { padding: 6px 10px; clear: both; width: 406px; over=
+flow: hidden; }
+
+.index .bignews div.d1arc { margin-right: 12px; width: 190px; float: left; =
+height: 24px; line-height: 24px; overflow: hidden; }
+
+.index .bignews div.d1arc a { }
+
+.index .bignews ul.c2 { width: 416px; padding: 0px 4px; clear: both; overfl=
+ow: hidden; }
+
+.index .bignews ul.c2 a { font-size: 13px; }
+
+.index .flashnews { width: 280px; height: 192px; overflow: hidden; float: l=
+eft; }
+
+.index .latestnews { width: 280px; height: 200px; margin-top: 8px; float: l=
+eft; }
+
+.index .latestnews dl dd { padding: 2px 5px; }
+
+.index .latestnews ul a { color: rgb(85, 85, 85); }
+
+.index .picnews { width: 712px; float: left; clear: both; overflow: hidden;=
+ margin-top: 10px; }
+
+.index .listbox { width: 720px; float: left; clear: both; overflow: hidden;=
+ }
+
+.index .listbox dl { width: 352px; margin-right: 8px; margin-top: 8px; floa=
+t: left; }
+
+.index .listbox ul a { color: rgb(102, 102, 102); }
+
+.index .usercenter .tbox dd { height: 370px; display: none; }
+
+.index .usercenter .tbox dd#loading { display: block; text-align: center; l=
+ine-height: 200px; letter-spacing: 2px; color: rgb(153, 153, 153); }
+
+.index .userlogin { padding-top: 10px; }
+
+.index .userlogin .fb { height: 37px; }
+
+.index .userlogin .fb span { float: left; width: 60px; text-align: right; p=
+adding-right: 6px; color: rgb(136, 136, 136); }
+
+.index .userlogin .fb img { vertical-align: middle; margin-left: 5px; }
+
+.index .userlogin .submit { text-align: center; padding-top: 3px; }
+
+.index .userlogin .submit a { color: rgb(0, 51, 0); margin-left: 7px; }
+
+.index .userinfo { }
+
+.index .userinfo .welcome { width: 220px; height: 24px; margin: 12px auto; =
+border-top-width: 1px; border-top-style: solid; border-top-color: rgb(238, =
+238, 238); border-bottom-width: 1px; border-bottom-style: solid; border-bot=
+tom-color: rgb(238, 238, 238); line-height: 23px; text-indent: 10px; color:=
+ rgb(102, 102, 102); background: rgb(249, 249, 249); }
+
+.index .userinfo .welcome strong { color: rgb(255, 102, 0); font-weight: bo=
+ld; }
+
+.index .userinfo .userface { width: 60px; height: 64px; overflow: hidden; p=
+adding-left: 16px; padding-top: 2px; float: left; }
+
+.index .userinfo .userface a { display: block; margin: 0px auto; text-align=
+: center; }
+
+.index .userinfo .userface a img { width: 52px; height: 52px; display: bloc=
+k; margin: 0px auto 6px; padding: 2px; border: 1px solid rgb(221, 221, 221)=
+; }
+
+.index .userinfo .mylink { width: 144px; float: left; overflow: hidden; }
+
+.index .userinfo .mylink ul { }
+
+.index .userinfo .mylink ul li { width: 72px; float: left; line-height: 21p=
+x; text-indent: 12px; }
+
+.index .userinfo .mylink ul li a { color: rgb(85, 85, 85); }
+
+.index .userinfo .uclink { height: 31px; line-height: 31px; clear: both; ov=
+erflow: hidden; text-align: center; color: rgb(221, 221, 221); }
+
+.index .userinfo .uclink a { color: rgb(102, 153, 0); margin: 0px 2px; }
+
+.index .latestlogin { padding-top: 16px; }
+
+.index .latestlogin strong { width: 102px; padding-left: 6px; letter-spacin=
+g: 1px; color: rgb(85, 85, 85); display: block; line-height: 21px; position=
+: relative; z-index: 5; background: rgb(255, 255, 255); }
+
+.index .latestlogin ul { width: 224px; border-top-width: 1px; border-top-st=
+yle: solid; border-top-color: rgb(197, 221, 188); padding-top: 20px; z-inde=
+x: 3; margin: -12px auto 0px; }
+
+.index .commend dl dd { padding-top: 0px; }
+
+.index .hot dl dd { padding-top: 0px; }
+
+.index .hot dl dd .c1 li { width: 210px; overflow: hidden; }
+
+.index .vote dl dd strong { display: block; line-height: 27px; padding-left=
+: 8px; letter-spacing: 1px; color: rgb(57, 124, 190); border-bottom-width: =
+1px; border-bottom-style: solid; border-bottom-color: rgb(218, 237, 248); m=
+argin: 0px 4px; }
+
+.index .vote dl dd .fb { padding-top: 10px; height: 21px; padding-left: 10p=
+x; color: rgb(85, 85, 85); }
+
+.index .vote dl dd .fb input { margin-right: 4px; }
+
+.index .vote dl dd .submit { text-align: center; height: 35px; padding-top:=
+ 8px; }
+
+.index .vote dl dd .submit button { margin-right: 10px; }
+
+.index .vote dl dd .submit a { color: rgb(0, 51, 0); }
+
+.channel .flashnews { width: 280px; height: 192px; overflow: hidden; float:=
+ left; background: rgb(255, 0, 0); }
+
+.channel .topcommand { width: 424px; float: right; overflow: hidden; }
+
+.channel .topcommand dl dd { height: 162px; }
+
+.channel .topcommand a { color: rgb(102, 102, 102); }
+
+.channel .topcommand .onenews { padding: 3px 12px; border-bottom-width: 1px=
+; border-bottom-style: solid; border-bottom-color: rgb(235, 235, 235); }
+
+.channel .topcommand .onenews h2 { display: block; height: 28px; line-heigh=
+t: 25px; }
+
+.channel .topcommand .onenews h2 a { font-size: 16px; }
+
+.channel .topcommand .onenews p { line-height: 19px; color: rgb(102, 102, 1=
+02); }
+
+.channel .picnews { width: 712px; float: left; clear: both; overflow: hidde=
+n; margin-top: 8px; }
+
+.channel .listbox { width: 720px; float: left; clear: both; overflow: hidde=
+n; }
+
+.channel .listbox dl { width: 352px; margin-right: 8px; margin-top: 8px; fl=
+oat: left; }
+
+.channel .listbox ul a { color: rgb(102, 102, 102); }
+
+.viewbox { width: 712px; overflow: hidden; padding-bottom: 8px; }
+
+.viewbox .title { height: 56px; line-height: 56px; text-align: center; over=
+flow: hidden; padding-top: 10px; }
+
+.viewbox .title h2 { font-size: 24px; color: rgb(51, 102, 153); }
+
+.viewbox .info { height: 24px; line-height: 17px; text-align: center; overf=
+low: hidden; color: rgb(102, 102, 102); }
+
+.viewbox .info small { margin-left: 8px; margin-right: 3px; color: rgb(153,=
+ 153, 153); font-size: 12px; }
+
+.viewbox .info a { color: rgb(102, 153, 0); }
+
+.viewbox .intro { padding: 8px 16px; line-height: 25px; border: 1px solid r=
+gb(221, 221, 221); font-size: 14px; color: rgb(85, 85, 85); margin-top: 8px=
+; background: rgb(250, 253, 254); }
+
+.viewbox .infolist { width: 368px; float: left; }
+
+.viewbox .infolist small { width: 100px; text-align: right; display: block;=
+ float: left; font-size: 12px; line-height: 31px; color: rgb(153, 153, 153)=
+; clear: left; height: 31px; overflow: hidden; }
+
+.viewbox .infolist span { width: 200px; line-height: 30px; float: left; hei=
+ght: 31px; overflow: hidden; }
+
+.viewbox .picview { width: 320px; float: right; padding-right: 24px; paddin=
+g-top: 16px; }
+
+.viewbox .labeltitle { height: 23px; clear: both; overflow: hidden; margin:=
+ 0px auto; padding-top: 10px; background: url("../images/view-labeltitle-bg=
+.gif") 0% 10px repeat-x; }
+
+.viewbox .labeltitle strong { width: 80px; height: 23px; line-height: 23px;=
+ text-align: center; color: rgb(255, 255, 255); letter-spacing: 1px; displa=
+y: block; float: left; overflow: hidden; background: url("../images/view-la=
+beltitle-bg.gif") 0% -44px no-repeat; }
+
+.viewbox .content { font-size: 14px; padding: 12px 16px; line-height: 25px;=
+ color: rgb(51, 51, 51); }
+
+.viewbox .dede_pages { width: 712px; float: none; overflow: hidden; text-al=
+ign: center; }
+
+.viewbox .dede_pages ul { margin: 0px auto; float: none; clear: both; overf=
+low: hidden; text-align: center; white-space: nowrap; }
+
+.viewbox .dede_pages ul li, .viewbox .dede_pages ul li a { float: none; dis=
+play: inline; }
+
+.viewbox .boxoff { height: 10px; overflow: hidden; clear: both; margin: 4px=
+ auto; padding-top: 10px; background: url("../images/boxoff.gif") 0% 15px r=
+epeat-x; }
+
+.viewbox .boxoff strong { display: block; width: 8px; height: 10px; overflo=
+w: hidden; font-size: 0px; line-height: 100px; float: left; background: url=
+("../images/boxoff.gif") 100% -10px no-repeat; }
+
+.viewbox .newdigg { width: 710px; height: 90px; margin: 8px auto; clear: bo=
+th; overflow: hidden; padding-left: 8px; }
+
+.viewbox .diggbox { width: 195px; height: 51px; float: left; margin-right: =
+8px; overflow: hidden; cursor: pointer; }
+
+.viewbox .diggbox .digg_act { font-size: 14px; float: left; line-height: 31=
+px; text-indent: 32px; height: 29px; overflow: hidden; font-weight: bold; }
+
+.viewbox .diggbox .digg_num { float: left; line-height: 29px; text-indent: =
+5px; }
+
+.viewbox .diggbox .digg_percent { width: 180px; clear: both; padding-left: =
+10px; overflow: hidden; }
+
+.viewbox .diggbox .digg_percent .digg_percent_bar { width: 100px; height: 7=
+px; border-right-width: 1px; border-right-style: solid; border-right-color:=
+ rgb(204, 204, 204); float: left; overflow: hidden; margin-top: 3px; backgr=
+ound: rgb(232, 232, 232); }
+
+.viewbox .diggbox .digg_percent .digg_percent_num { font-size: 10px; float:=
+ left; padding-left: 10px; }
+
+.viewbox .diggbox .digg_percent .digg_percent_bar span { display: block; he=
+ight: 5px; overflow: hidden; background: rgb(0, 0, 0); }
+
+.viewbox .newdigg .digg_good { background: url("../images/newdigg-bg.png") =
+0% 0% no-repeat; }
+
+.viewbox .newdigg .digg_bad { background: url("../images/newdigg-bg.png") 1=
+00% 0% no-repeat; }
+
+.viewbox .newdigg .digg_good .digg_act { color: rgb(204, 51, 0); }
+
+.viewbox .newdigg .digg_good .digg_num { color: rgb(204, 102, 51); }
+
+.viewbox .newdigg .digg_bad .digg_act { color: rgb(51, 102, 204); }
+
+.viewbox .newdigg .digg_bad .digg_num { color: rgb(51, 153, 204); }
+
+.viewbox .newdigg .digg_good .digg_percent .digg_percent_bar span { border:=
+ 1px solid rgb(227, 127, 36); background: rgb(255, 197, 53); }
+
+.viewbox .newdigg .digg_bad .digg_percent .digg_percent_bar span { border: =
+1px solid rgb(104, 154, 204); background: rgb(148, 192, 228); }
+
+.viewbox .handle { height: 59px; padding-top: 12px; overflow: hidden; clear=
+: both; }
+
+.viewbox .handle .digg { width: 59px; height: 59px; float: left; margin-rig=
+ht: 12px; background: url("../images/digg-bg.gif") no-repeat; }
+
+.viewbox .handle .digg .digg_num { width: 56px; height: 34px; font-size: 20=
+px; text-align: center; line-height: 34px; overflow: hidden; color: rgb(107=
+, 145, 105); }
+
+.viewbox .handle .digg .digg_act { width: 56px; height: 22px; line-height: =
+23px; overflow: hidden; }
+
+.viewbox .handle .digg .digg_act a { margin-left: 11px; color: rgb(102, 102=
+, 102); float: left; }
+
+.viewbox .handle .context { float: left; }
+
+.viewbox .handle .context ul li { line-height: 29px; color: rgb(136, 136, 1=
+36); }
+
+.viewbox .actbox { width: 260px; text-align: center; float: right; padding-=
+top: 20px; padding-right: 10px; }
+
+.viewbox .actbox ul li { display: inline; padding-left: 22px; margin-right:=
+ 10px; background-image: url("../images/actbox-ico.gif"); background-repeat=
+: no-repeat; }
+
+.viewbox .actbox ul li a { color: rgb(102, 102, 102); }
+
+.viewbox .actbox ul li#act-fav { background-position: 4px 0px; }
+
+.viewbox .actbox ul li#act-err { background-position: 4px -37px; }
+
+.viewbox .actbox ul li#act-pus { background-position: 4px -73px; }
+
+.viewbox .actbox ul li#act-pnt { background-position: 4px -109px; }
+
+.viewbox .downurllist { width: 100%; clear: both; overflow: hidden; }
+
+.viewbox .downurllist li { height: 27px; padding-right: 4px; float: left; m=
+argin-right: 10px; overflow: hidden; margin-top: 10px; background: url("../=
+images/downurl-bg.gif") 100% 0% no-repeat; }
+
+.viewbox .downurllist li a { height: 27px; display: block; font-size: 12px;=
+ color: rgb(85, 85, 85); text-indent: 30px; line-height: 27px; float: left;=
+ padding-right: 5px; background: url("../images/downurl-bg.gif") 0% 0% no-r=
+epeat; }
+
+.viewbox .downurllist li a:hover { color: rgb(255, 102, 51); text-decoratio=
+n: none; }
+
+.viewbox .picbox { width: 100%; text-align: center; padding-top: 10px; font=
+-size: 14px; line-height: 31px; overflow: hidden; }
+
+.viewbox .picbox img { display: block; margin: 16px auto 6px; }
+
+.viewbox .picbox ul.e8 { font-size: 12px; line-height: normal; }
+
+.viewbox .picbox ul.e8 li .pic { border: 1px solid rgb(238, 238, 238); over=
+flow: hidden; background: none; }
+
+.viewbox .picbox ul.e8 img { margin: 3px; border: none; }
+
+.viewbox .picbox ul.e8 li .title { padding-top: 0px; }
+
+.specialpic { width: 200px; overflow: hidden; float: left; margin-right: 20=
+px; padding-top: 10px; }
+
+.specialpic img { width: 200px; display: block; }
+
+.speciallist { width: 720px; overflow: hidden; }
+
+.speciallist dl.tbox { width: 352px; margin-right: 8px; margin-top: 8px; fl=
+oat: left; }
+
+.storypic { width: 160px; overflow: hidden; float: left; margin-right: 20px=
+; padding-top: 10px; }
+
+.storypic img { width: 160px; display: block; }
+
+.infos_userinfo { width: 240px; overflow: hidden; }
+
+.infos_userinfo dd { padding: 12px; overflow: hidden; background: rgb(255, =
+255, 255); }
+
+.infos_userinfo dd .userface { width: 52px; height: 52px; padding: 1px; bor=
+der: 1px solid rgb(221, 221, 221); overflow: hidden; float: left; margin-ri=
+ght: 8px; }
+
+.infos_userinfo dd .userface img { width: 52px; height: 52px; overflow: hid=
+den; display: block; }
+
+.infos_userinfo dd .username { height: 19px; line-height: 19px; display: bl=
+ock; overflow: hidden; font-weight: bold; color: rgb(255, 102, 0); }
+
+.infos_userinfo dd .useract { width: 140px; height: 44px; overflow: hidden;=
+ float: left; padding-left: 4px; }
+
+.infos_userinfo dd .useract-pm, .infos_userinfo dd .useract-af { width: 70p=
+x; float: left; line-height: 19px; height: 19px; overflow: hidden; }
+
+.infos_userinfo dd .useract-vi { display: block; clear: both; line-height: =
+19px; height: 19px; overflow: hidden; color: rgb(102, 102, 102); }
+
+.infos_userinfo dd .userinfo-sp { height: 25px; line-height: 25px; clear: b=
+oth; display: block; padding-left: 10px; }
+
+.infos_userinfo dd .userinfo-sp small { font-size: 12px; color: rgb(170, 17=
+0, 170); margin-right: 5px; }
+
+.infos_search dd { padding: 4px 4px 12px 8px; }
+
+.infos_search dd select, .infos_search dd input, .infos_search dd button { =
+margin-left: 4px; margin-top: 8px; }
+
+.infos_search dd select { font-size: 14px; }
+
+.tags_list dd { padding: 4px 12px; line-height: 220%; }
+
+.tags_list dd a { margin-right: 10px; white-space: nowrap; }
+
+.tagc1 { font-size: 12px; color: rgb(102, 102, 102); }
+
+.tagc2 { font-size: 14px; font-weight: bold; color: rgb(85, 85, 85); }
+
+.sp-title { color: rgb(136, 136, 136); padding: 4px 12px; border-top-width:=
+ 1px; border-top-style: solid; border-top-color: rgb(238, 238, 238); border=
+-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(23=
+8, 238, 238); margin-bottom: 8px; background: rgb(250, 250, 250); }
+
+.sp-title h2 { font-size: 16px; line-height: 27px; }
+
+.sp-title h2 a { margin-left: 6px; }
+
+.sp-title .more { float: right; margin: -27px 0px; line-height: 27px; }
+
+.linkbox { padding: 10px 8px; border-bottom-width: 1px; border-bottom-style=
+: solid; border-bottom-color: rgb(238, 238, 238); }
+
+.linkbox h3, .linkbox h3 a { font-size: 14px; color: rgb(102, 153, 51); }
+
+.buycar { }
+
+.buycar h2 { font-size: 14px; color: rgb(255, 102, 0); line-height: 31px; }
+
+.buycar .flow { width: 100%; border-left-width: 1px; border-left-style: sol=
+id; border-left-color: rgb(222, 231, 158); border-right-width: 1px; border-=
+right-style: solid; border-right-color: rgb(222, 231, 158); border-top-widt=
+h: 1px; border-top-style: solid; border-top-color: rgb(222, 231, 158); marg=
+in-bottom: 16px; }
+
+.buycar .flow td { height: 23px; line-height: 19px; text-align: center; col=
+or: rgb(136, 136, 136); overflow: hidden; border-right-width: 1px; border-r=
+ight-style: solid; border-right-color: rgb(239, 243, 207); border-bottom-wi=
+dth: 1px; border-bottom-style: solid; border-bottom-color: rgb(239, 243, 20=
+7); border-top-width: 3px; border-top-style: solid; border-top-color: rgb(2=
+55, 255, 255); letter-spacing: 3px; background: rgb(248, 250, 235); }
+
+.buycar .flow td.thisclass { border-bottom-width: 1px; border-bottom-style:=
+ solid; border-bottom-color: rgb(255, 255, 255); border-top-width: 3px; bor=
+der-top-style: solid; border-top-color: rgb(248, 250, 235); font-weight: bo=
+ld; color: rgb(51, 51, 51); background: rgb(255, 255, 255); }
+
+.flinkbox { padding: 4px 10px; }
+
+.formbox { width: 90%; margin: 0px auto; }
+
+.formbox .fb { width: 100%; clear: both; overflow: hidden; padding-top: 10p=
+x; margin: 0px auto; }
+
+.formbox .fb .name { width: 180px; float: left; height: 31px; text-align: r=
+ight; padding-right: 10px; line-height: 31px; font-size: 14px; color: rgb(1=
+02, 102, 102); display: block; }
+
+.formbox .fb .value { float: left; }
+
+.formbox .fb .value img { vertical-align: middle; }
+
+.dede_comment { padding-bottom: 6px; }
+
+.dede_comment .decmt-box { width: 98%; padding: 6px 5px 8px; margin: 0px au=
+to; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-col=
+or: rgb(229, 229, 229); overflow: hidden; clear: both; }
+
+.dede_comment .decmt-box .decmt-title { line-height: 19px; color: rgb(153, =
+153, 153); font-family: Tahoma; }
+
+.dede_comment .decmt-box .decmt-title span { margin-right: 2px; vertical-al=
+ign: middle; }
+
+.dede_comment .decmt-box .decmt-title .moodico { height: 18px; width: 18px;=
+ display: inline-block; }
+
+.dede_comment .decmt-box .decmt-title .username { color: rgb(102, 102, 153)=
+; }
+
+.dede_comment .decmt-box .decmt-title .username a { color: rgb(102, 102, 15=
+3); }
+
+.dede_comment .decmt-box .decmt-title .username a:hover { text-decoration: =
+none; color: rgb(102, 153, 0); }
+
+.dede_comment .decmt-box .decmt-title .ip { color: rgb(102, 102, 153); font=
+-size: 11px; }
+
+.dede_comment .decmt-box .decmt-title .date { color: rgb(85, 85, 85); font-=
+size: 11px; }
+
+.dede_comment .decmt-box .decmt-act { float: right; margin-top: -18px; padd=
+ing-right: 10px; position: relative; clear: both; color: rgb(153, 153, 153)=
+; }
+
+.dede_comment .decmt-box .decmt-act span { margin-right: 7px; }
+
+.dede_comment .decmt-box .decmt-act span a { color: rgb(136, 136, 136); }
+
+.dede_comment .decmt-box .decmt-content { color: rgb(85, 85, 85); line-heig=
+ht: 21px; clear: both; width: 99%; margin: 2px auto 0px; }
+
+.dede_comment .decmt-box .decmt-content img { vertical-align: middle; }
+
+.dede_comment .decmt-box .decmt-box { border: 1px solid rgb(204, 204, 204);=
+ margin: 6px auto; background: rgb(255, 255, 238); }
+
+.dede_comment .decmt-box .decmt-box .decmt-title { text-indent: 4px; }
+
+.dede_comment .decmt-box .decmt-box .decmt-content { color: rgb(85, 85, 85)=
+; }
+
+.nocomment { padding: 10px; color: rgb(102, 102, 102); }
+
+.dede_comment_post { padding: 5px; }
+
+.dcmp-title { line-height: 25px; }
+
+.dcmp-title strong { color: rgb(68, 68, 68); font-weight: normal; }
+
+.dcmp-title small { font-size: 12px; color: rgb(153, 153, 153); }
+
+.dcmp-stand { float: right; margin-top: -18px; padding-right: 10px; positio=
+n: relative; clear: both; color: rgb(153, 153, 153); }
+
+.dcmp-stand strong { font-weight: normal; color: rgb(68, 68, 68); }
+
+.dcmp-stand input { margin-right: 2px; }
+
+.dcmp-stand img { vertical-align: middle; margin-right: 2px; }
+
+.dcmp-content { padding-top: 8px; }
+
+.dcmp-content textarea { width: 96%; height: 60px; }
+
+.dcmp-mood { height: 25px; width: 80%; overflow: hidden; clear: both; paddi=
+ng-top: 12px; }
+
+.dcmp-mood strong { float: left; color: rgb(68, 68, 68); font-weight: norma=
+l; line-height: 25px; }
+
+.dcmp-mood ul { float: left; }
+
+.dcmp-mood ul li { float: left; margin-right: 8px; }
+
+.dcmp-mood ul li input, .dcmp-mood ul li img { vertical-align: middle; marg=
+in-right: 4px; }
+
+.dcmp-post { height: 35px; overflow: hidden; clear: both; color: rgb(68, 68=
+, 68); }
+
+.dcmp-post .dcmp-userinfo { float: left; margin-right: 6px; }
+
+.dcmp-post .dcmp-userinfo input { height: 13px; padding-right: 0px; }
+
+.dcmp-post .dcmp-userinfo input, .dcmp-post .dcmp-userinfo img { vertical-a=
+lign: middle; margin: 5px; }
+
+.dcmp-post .dcmp-submit { float: left; padding-top: 6px; }
+
+.dcmp-post .dcmp-submit input, .dcmp-post .dcmp-submit button { vertical-al=
+ign: middle; }
+
+.dcmp-post .dcmp-submit button { width: 70px; height: 25px; border: none; l=
+ine-height: 25px; letter-spacing: 1px; overflow: hidden; color: rgb(68, 68,=
+ 68); cursor: pointer; margin-left: 5px; background: url("../images/btn-bg2=
+.gif") no-repeat; }
+
+pre { font-family: 'Courier New', monospace; font-size: 12px; width: 99%; o=
+verflow: auto; margin: 0px 0px 1em; background: rgb(247, 247, 247); }
+
+pre ol, pre ol li, pre ol li span { margin: 0px; padding: 0px; border: none=
+; }
+
+pre a, pre a:hover { border: none; padding: 0px; margin: 0px; background: n=
+one; }
+
+pre ol { list-style: decimal; padding: 5px 0px; color: rgb(92, 92, 92); bor=
+der-left-width: 3px; border-left-style: solid; border-left-color: rgb(20, 1=
+07, 0); margin: 0px 0px 1px 3em !important; background: rgb(247, 247, 247);=
+ }
+
+pre ol li { list-style: decimal-leading-zero outside; color: rgb(92, 92, 92=
+); line-height: 1.3em; padding: 0px 3px 0px 10px !important; margin: 0px !i=
+mportant; }
+
+pre ol li.alt { color: inherit; }
+
+pre ol li span { color: black; background-color: inherit; }
+
+pre .comment, pre .comments { color: rgb(0, 130, 0); background-color: inhe=
+rit; }
+
+pre .string { color: blue; background-color: inherit; }
+
+pre .keyword { color: rgb(0, 102, 153); font-weight: bold; background-color=
+: inherit; }
+
+pre .preprocessor { color: gray; background-color: inherit; }
+
+pre .dp-xml .cdata { color: rgb(255, 20, 147); }
+
+pre .dp-xml .tag, pre .dp-xml .tag-name { color: rgb(0, 102, 153); font-wei=
+ght: bold; }
+
+pre .dp-xml .attribute { color: red; }
+
+pre .dp-xml .attribute-value { color: blue; }
+
+pre .dp-sql .func { color: rgb(255, 20, 147); }
+
+pre .dp-sql .op { color: rgb(128, 128, 128); }
+
+pre .dp-rb .symbol { color: rgb(170, 119, 0); }
+
+pre .dp-rb .variable { color: rgb(170, 119, 0); font-weight: bold; }
+
+pre .dp-py .builtins { color: rgb(255, 20, 147); }
+
+pre .dp-py .magicmethods { color: rgb(128, 128, 128); }
+
+pre .dp-py .exceptions { color: brown; }
+
+pre .dp-py .types { color: brown; font-style: italic; }
+
+pre .dp-py .commonlibs { color: rgb(138, 43, 226); font-style: italic; }
+
+pre .dp-j .annotation { color: rgb(100, 100, 100); }
+
+pre .dp-j .number { color: rgb(192, 0, 0); }
+
+pre .dp-delphi .number { color: blue; }
+
+pre .dp-delphi .directive { color: rgb(0, 130, 132); }
+
+pre .dp-delphi .vars { color: rgb(0, 0, 0); }
+
+pre .dp-css .value { color: black; }
+
+pre .dp-css .important { color: red; }
+
+pre .dp-c .vars { color: rgb(221, 0, 0); }
+
+pre .dp-cpp .datatypes { color: rgb(46, 139, 87); font-weight: bold; }
+
+#commetpages { text-align: center; line-height: 28px; }
+
+#commetpages a { border: 1px solid rgb(100, 177, 223); padding: 0px 3px; }
+
+.d99 { padding: 4px 0px; }
+
+.d99 li { font-size: 14px; height: 27px; line-height: 22px; overflow: hidde=
+n; }
+
+.d99 li span { font-size: 14px; color: rgb(119, 119, 119); float: right; pa=
+dding-right: 10px; margin-left: 10px; }
+
+.d99 li a { overflow: hidden; }
+
+#xuxian { border-top-width: 1px; border-top-style: dashed; border-top-color=
+: rgb(51, 180, 236); height: 1px; overflow: hidden; }
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/top-logo.gif
+
+R0lGODlhyABBAPcAAAAAAP///6t7uJ4BApwBBJoBA5cBAoMBAqILDaQQEpIRE6NucD4SG/r5+ubc
+5+HV4+jh6ePZ5dS72tS92dW+2tfC3NbB29rH3unc7LGEvbaNwdS92tO82dK72NjB3sGey8eq0Mux
+08611dK52dO72tC419G62NLB19C/1djK3LqYxcClycSpzcy409zN4fPt9evl7fn2+qiKtK2PubOX
+vrqhxMW2y9LF1+7m8ZFxn5p7p6KDr2xSeWRMcHdbhYRmk35oiczB0dDI1JyPo4J5iJKMlnBleIyG
+kZiVm5+dofv6/K+usfz7/hMQZQEAZQEAUBIQWhYVXAABXAABVAEBawEBYQ8PWiYmcBoaJ/39/sTE
+xbu7vKWlpgEEYQIGcQIGagcJcBMVeicoWgIHZgcR6AILewcQbBsxzgEUfgwifAIfhUZixkpfrwUo
+hxIvhgMtlBU5kwExnB1MuhBw4RxRjZqxvRyo30OmyFigsTJbZBD//1bj1BGahxv11kV0ak9gWwFS
+LgFbMQ5iOwFnNAFgMQJkMhBaNN7g3wBkMAJkMQNnMgRmMhKSTg1rOhZyQmWSegBmLQFuMQFnMAFZ
+KQJmMA10PAJEHg18PAB7MQF1MQuJPktaUQRSIMrNywGOLAKaMgKBKA2iOgGbLQ6cNwVmHeLk4uDi
+4P7//v3+/fz9/Pr7+vj5+Pf49+jp6OXm5dvc29jZ2M/Qz9TW0/z9++vs6ouUeu/0g/z+D/7/Av39
+IvLzcf///vf39vnyH//yAv3vEfLjQv7nAvbiH/3dA/7jEf3TBP7aG/7OAP3PA/zMA/rJBPrMBP3L
+Bf3PE/bLH9m+U//KAv3GAv3KCOm9FWpkTvvCDP66A8KnX/q4EpSGZPynDcSGEvKqJfuVDPp/C+qB
+J7dYDVI+MPldCYhQO88wAuNUK/UzCrgsDcIeAbsYA6obCr5nXa8KA6wHA7AMBPIPCbAUDowAAKED
+AZIBAYkBAaYFAqgMC5wKCpQKCqYaGd8uKv7+/vT09PHx8e7u7v///yH5BAEAAP8ALAAAAADIAEEA
+AAj/AAMIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3GhR37uPIEGaGymupDhv3rppw1atGbGX
+L4EByNOnps2bOHPq7LOHo8+fQCnqG0qUaLmj5b4p/catKTdnwoT1mtrrF7BNePbs3MqVZ9CvYMMS
+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
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/header_bg.png
+
+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
+SUVORK5CYII=
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/header_interval.png
+
+iVBORw0KGgoAAAANSUhEUgAAAAIAAAAWCAIAAABlk9r+AAAABGdBTUEAAK/INwWK6QAAABl0RVh0
+U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACxSURBVHjaYnTY+4GNmQkggJh+/vrNyvgf
+IICY/vz8zcv+FyCAmH5+/yH8nwUggJh+//jDwMAAEEBMv3//4WFlAgggpu8/fwF5AAHExAAGAAEE
+pQACCEoBBBCUAgggEPXl9z+AAILyAAIIRH37yQAQQCDq568/AAEEpv78BQggpp/MLF++/wAIIBDv
+PcNfgAACUT9+/QMIIBD14fd/gABi+sPI8Of3b4AAAvF+//sPEGAAcvs0QUES0sAAAAAASUVORK5C
+YII=
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/header_hover.png
+
+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
+DADBGoUCx5tmgwAAAABJRU5ErkJggg==
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/search-bg.gif
+
+R0lGODlh2AAXANUAAP///8DAwNra2jSAwtjY2MHBwTqKyziLyzeKyjyMyuHr9EuV0P39/fz8/NHi
+8cPY7EGQzWSj1Nrn9P39/qHG4z6NzDmJys7Ozvv7++Tk5Pr8/UeTzc3NzfPz81ic0u/v7+zz+cDX
+6/T4/HKq2G2n1net2fn5+dXk8lud0ufn56bI5mWj1dzo9UmUz6nJ5EiUzv7+/j6OzFOa0UOQzYKz
+3MTZ7N7q9H6z28nJybDO53qu2Vmc0X6x21qc0gAAAAAAACH5BAAAAAAALAAAAADYABcAAAb/wMYl
+QCwaj8ikcslsOp/QqHRKrVqJlwYHxwB4v+CweEwum8/otHrNbrvfcEbqU+jC7/i8fs/v5xsEBX6D
+hIWGh4WBiIuMjY6IimISIxsJEDoKj5qbnI6RYCoJCQakpC5mAwNfqWesna+wjJ9eEqIRDhonKAgQ
+NmWpwMGqq8LBscfIerMAIwcRYBMRByVjxQCsrmLZydzdbMszBw5hDwYLv8XAxOnq3u7vYMsICBph
+IqTo2KrZrvrXw/ACdlsWw8I4MOU2kGHXbl1DgRC5LSNxYMWELxNkHKBRreG2jv8iijy2TAIECz0e
+iAixY16NfNbAMAQ4suajZQByVKhQqpSHfEwg/XU0ZrPoTUFiWNx4kaAFjxAeDiwAAfIfTZn7shrd
+uggnGQULECwA6iWdVYDq2n3kynaPVzIgFhig0LZuwLdfKRy0y1ci0r6AjRIIYCew4YiAOGTAAOOw
+43cYMnww0UGA5cuYM2vezLmz58+gQ4seTbq06dOoLXdgEAQAOw==
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/search-bt.gif
+
+R0lGODlhRAAVANUAAPr6+vj4+P///zMzM5mZmZqamvv7+/z8/P39/fn5+aSkpP38/G1ra+Xl5TEs
+LzcyNfv5+ff09Xl3d3NxcWdjZGtpaU5JTHdydXd1ddbW1lRSUlpYWGlnZ/Pu8EhDRjs5OTk0N0E8
+P2dhZFBLTu7u7tzc3C0rKz86PUpFSGBbXu3t7VJNUE5MTN7e3l5cXERAQXFvb1ZRVODg4ExHSgAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABEABUAAAb/QJKC
+UCgaj8ikcslsLhUqhUxArVqv2Kx2y92WhoKDAUAum8/otHrNRiMEBIKgTa/b7XD5fc/f5+dqEhIT
+E3cDZod2iXR/ahhWHIoAA4eUlGqWmZdrjWgXVAxVKW2aZImLa6hsnWcwAhVWG4BslbWbZ5q5nHGz
+ZqEiVQsavZibp2mLx5O7emgUwRARI8Rol7mqiJl1fwHd3t0uC9EdFigC3+gBA+rf6+nv7PHwAdzw
+MSssMx4vIfPe67nmXaPkrx48Kyc+gHiXoGGCAQ0hPnToMB1AefMM+uv24IGDBKnK3EoVsZu7jLw2
+UkzgwMQcAzBjWjJACebMmDJPJSuYkiFIUjRUcB4YSrSo0aI4k45Bg05jt5UJlB5FQLWq1atUjw5V
+CpOiNzgFBBh4R4argalY06Y9yrWhtwNwFLToQreuXbsZFDQYEqev37+AAwseTHiw3iAAOw==
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.centoscn.com/templets/images/search-tags-title.gif
+
+R0lGODlhQgATAMQAAPz9/f////v8/bzF3Wtskfz9/vr7/fr8/fj5/WtrkWxskf39/v7///39/f7+
+/v3+/vz8/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAA
+AAAALAAAAABCABMAAAX/oDOMZGmeaKquZuC6w/LOdG3feF4vw9wHgKBwSCwaj8hk8PGDAZXQqNQY
+aFafRUVhq81uv+CweEzeXl+9o5ZL1ire8C1hTid85+J6uNpABwSAgXUAdQRChoZEiYdFc4pDiwAI
+Z1eBlgKLiZlCl5GEj59BnkQIkz89l4KImoypmKCMobJGpaaVnY6iurqunpG/u4S5QbWmqL26q7yp
+vpDOs7O1V8e40KzIz6KFwdylZ9SWUIbYsdChwEK2Tgfs7QcJAvDxgPLz7u31gASCzKpzl5Su3HsX
+SJ5BegLuJVjoqqFDgFZ6DJxI8d7DixcDDmCwwIDHjyBDihxJsqRJjzx8FAhgoKOly5c2BFiBwKKm
+zZsraIQAADs=
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.centoscn.com/templets/style/dedecms.css
+
+@charset "gbk";
+
+@import url("http://www.centoscn.com/templets/style/layout.css");
+
+@import url("http://www.centoscn.com/templets/style/page.css");
+
+* { padding: 0px; margin: 0px; }
+
+html { background: rgb(255, 255, 255); }
+
+body { font-style: normal; font-variant: normal; font-weight: normal; font-=
+stretch: normal; font-size: 12px; line-height: normal; font-family: Verdana=
+, Arial, Tahoma; }
+
+img { border: none; }
+
+a { color: rgb(37, 110, 177); text-decoration: none; }
+
+a:hover { color: rgb(255, 51, 51); text-decoration: underline; }
+
+ul { list-style: none; }
+
+input, select, button { font-style: normal; font-variant: normal; font-weig=
+ht: normal; font-stretch: normal; font-size: 12px; line-height: normal; fon=
+t-family: Verdana, Arial, Tahoma; vertical-align: middle; }
+
+.center { margin: 0px auto; }
+
+.w960 { width: 960px; }
+
+.pright .infos_userinfo { margin-bottom: 0px; }
+
+.mt1 { margin-top: 8px; }
+
+.pright .mt1 { margin-top: 0px; }
+
+.mt2 { margin-top: 16px; }
+
+.clear { overflow: hidden; }
+
+.fs-12 { font-size: 12px; }
+
+.fc-f60 { color: rgb(255, 102, 0); }
+
+.fc-f90 { color: rgb(255, 153, 0); }
+
+.ipt-txt { line-height: 15px; padding: 4px 5px; border-width: 1px; border-s=
+tyle: solid; border-color: rgb(102, 102, 102) rgb(187, 187, 187) rgb(187, 1=
+87, 187) rgb(102, 102, 102); font-size: 12px; margin-right: 2px; }
+
+.btn-1 { width: 56px; height: 23px; border: none; line-height: 25px; letter=
+-spacing: 1px; cursor: pointer; overflow: hidden; color: rgb(47, 89, 46); b=
+ackground: url("../images/btn-bg1.gif") no-repeat; }
+
+.btn-2 { width: 70px; height: 25px; border: none; line-height: 25px; overfl=
+ow: hidden; color: rgb(68, 68, 68); margin-right: 2px; background: url("../=
+images/btn-bg2.gif") 0% 0% no-repeat; }
+
+.header { padding-top: 16px; width: 960px; margin: auto; overflow: hidden; =
+}
+
+.header .search { margin-top: 5px; }
+
+.header a { color: rgb(119, 119, 119); }
+
+.header a:hover { color: rgb(51, 153, 0); text-decoration: none; }
+
+.header .top { clear: both; overflow: hidden; }
+
+.header .title { float: left; padding-left: 16px; }
+
+.header .title h1 a { width: 200px; height: 65px; display: block; font-size=
+: 0px; text-indent: -200px; overflow: hidden; background: url("../images/to=
+p-logo.gif") 50% 50% no-repeat; }
+
+.header .banner { width: 480px; height: 65px; float: left; margin-left: 40p=
+x; overflow: hidden; }
+
+.header .banner img { width: 480px; height: 65px; display: block; }
+
+.header .rlink { width: 169px; height: 65px; float: left; margin-left: 32px=
+; overflow: hidden; padding-top: 4px; }
+
+.header .rlink ul li { width: 78px; height: 21px; float: left; margin-right=
+: 8px; margin-bottom: 8px; overflow: hidden; background: url("../images/top=
+rlink-bg.gif") 0% 0% no-repeat; }
+
+.header .rlink ul li a { display: block; color: rgb(119, 119, 119); line-he=
+ight: 21px; text-indent: 22px; background-image: url("../images/toprlink-bg=
+.gif"); background-repeat: no-repeat; }
+
+.header .rlink ul li a:hover { color: rgb(0, 0, 0); }
+
+.header .rlink ul li.r1 a { background-position: 0px -21px; }
+
+.header .rlink ul li.r2 a { background-position: 0px -42px; }
+
+.header .rlink ul li.r3 a { background-position: 0px -63px; }
+
+.header .rlink ul li.r4 a { background-position: 0px -84px; }
+
+.header .welcome { float: right; margin-top: 20px; padding-right: 10px; col=
+or: rgb(153, 153, 153); }
+
+.header .welcome a { margin: 0px 3px; }
+
+.header .nav { }
+
+.module, .module .mid { overflow: hidden; }
+
+.module .top .t_l, .module .bottom .b_l { float: left; overflow: hidden; }
+
+.module .top .t_r, .module .bottom .b_r { float: right; overflow: hidden; }
+
+.module .top em { float: left; font-size: 13px; font-weight: bold; font-fam=
+ily: Arial, Helvetica, sans-serif; margin-left: 5px; }
+
+.module .top em a:link, .module .top em a:visited { font-size: 13px; font-w=
+eight: bold; }
+
+.module .top span { float: right; }
+
+.module .top strong { cursor: pointer; float: right; font-weight: normal; m=
+argin-right: 4px; }
+
+.module .mid .m_l, .module .mid .m_r { overflow: hidden; }
+
+.module .mid .content { overflow: hidden; height: 100%; clear: both; margin=
+-right: 8px; margin-left: 8px; padding-top: 8px; }
+
+.module .top, .module .top .t_l, .module .top .t_r, .module .bottom, .modul=
+e .bottom .b_l, .module .bottom .b_r { background-image: url("../images/hea=
+der_bg.png"); }
+
+.blue .top { height: 77px; background-position: 0px -87px; background-repea=
+t: repeat-x; }
+
+.blue .top .t_l { height: 77px; width: 7px; background-position: -13px 0px;=
+ background-repeat: no-repeat; }
+
+.blue .top .t_r { height: 77px; width: 10px; background-position: 0px 0px; =
+background-repeat: no-repeat; }
+
+.w963 { width: 963px; margin-top: 8px; margin-bottom: 0px; }
+
+#navMenu { width: 940px; overflow: hidden; }
+
+#navMenu li { float: left; line-height: 34px; height: 34px; margin-left: -2=
+px; background-image: url("../images/header_interval.png"); background-posi=
+tion: 0px 50%; background-repeat: no-repeat; }
+
+#navMenu li a { font-size: 14px; color: rgb(255, 255, 255); padding-right: =
+1em; padding-left: 1em; margin-left: 2px; display: block; }
+
+#navMenu li a:hover, #navMenu li.hover a { text-decoration: none; backgroun=
+d-image: url("../images/header_hover.png"); background-position: 50% 0%; ba=
+ckground-repeat: no-repeat; }
+
+.dropMenu { position: absolute; top: 0px; z-index: 100; width: 120px; visib=
+ility: hidden; margin-top: -1px; border-width: 0px 1px 1px; border-style: s=
+olid; border-color: rgb(60, 162, 220) rgb(147, 225, 235) rgb(147, 225, 235)=
+; padding-top: 6px; padding-bottom: 6px; background: url("../images/mmenubg=
+.gif"); }
+
+.dropMenu li { margin-top: 2px; margin-bottom: 4px; padding-left: 6px; }
+
+.dropMenu a { width: auto; display: block; color: black; padding: 2px 0px 2=
+px 1.2em; }
+
+* html .dropMenu a { width: 100%; }
+
+.dropMenu a:hover { color: red; text-decoration: underline; }
+
+.search-keyword { width: 160px; height: 19px; padding-top: 5px; padding-lef=
+t: 56px; border: 0px; background: url("../images/search-bg.gif") no-repeat;=
+ }
+
+.search-submit { cursor: pointer; width: 68px; height: 22px; font-size: 0px=
+; color: rgb(250, 250, 250); border: 0px; background: url("../images/search=
+-bt.gif") no-repeat; }
+
+.search-option { margin-left: 3px; margin-right: 3px; height: 22px; }
+
+.w963 .search { padding-left: 10px; line-height: 32px; }
+
+.w963 .form h4 { display: none; }
+
+.w963 .form { float: left; margin-right: 10px; }
+
+.w963 .tags { width: 500px; overflow: hidden; }
+
+.w963 .tags h4 { float: left; margin-right: 6px; width: 66px; height: 26px;=
+ font-size: 0px; color: rgb(250, 250, 250); background: url("../images/sear=
+ch-tags-title.gif") 0px 6px no-repeat; }
+
+.w963 .tags li { float: left; margin-right: 6px; }
+
+.header .nav .end { }
+
+.channel-nav { margin-top: 8px; border: 1px solid rgb(213, 236, 251); paddi=
+ng-left: 6px; width: 950px; overflow: hidden; background: url("../images/na=
+vbg.gif") repeat-x; }
+
+.channel-nav .sonnav { padding-top: 2px; width: 830px; line-height: 26px; f=
+loat: left; }
+
+.channel-nav .sonnav span { padding-left: 14px; margin-right: 8px; overflow=
+: hidden; background: url("../../images/dd2.gif") 0px 1px no-repeat; }
+
+.channel-nav .sonnav a { color: rgb(51, 51, 51); text-decoration: none; }
+
+.channel-nav .back { display: block; height: 22px; line-height: 21px; paddi=
+ng-top: 6px; padding-right: 10px; padding-left: 20px; letter-spacing: 2px; =
+float: right; background: url("../images/ico-home.gif") 4px 10px no-repeat;=
+ }
+
+.channel-nav .back a { color: rgb(57, 124, 190); }
+
+.channel-nav .back a:hover { text-decoration: none; color: rgb(119, 119, 11=
+9); }
+
+.footer { width: 960px; margin: 8px auto auto; color: rgb(153, 153, 153); t=
+ext-align: center; padding-bottom: 10px; border-top-width: 1px; border-top-=
+style: solid; border-top-color: rgb(229, 239, 214); padding-top: 10px; }
+
+.footer .link { text-align: center; padding: 5px 0px; }
+
+.footer .link a { margin: 0px 5px; color: rgb(102, 102, 102); }
+
+.footer .powered { font-size: 10px; line-height: 25px; }
+
+.footer .powered strong { color: rgb(102, 153, 0); }
+
+.footer .powered strong span { color: rgb(255, 153, 51); }
+
+.footer .copyright { color: rgb(102, 102, 102); line-height: 23px; }
+
+#index_one_l { float: left; width: 360px; overflow: hidden; }
+
+#index_one_l .tbox { height: 255px; overflow: hidden; border-left-width: 1p=
+x; border-left-style: solid; border-left-color: rgb(223, 242, 245); border-=
+right-width: 1px; border-right-style: solid; border-right-color: rgb(223, 2=
+42, 245); border-bottom-width: 1px; border-bottom-style: solid; border-bott=
+om-color: rgb(223, 242, 245); }
+
+#index_one_r { float: right; width: 360px; overflow: hidden; }
+
+.inwrap05 { float: left; display: inline; margin: 9px 8px 9px 10px; height:=
+ 215px; width: 272px !important; }
+
+.tjimg { float: left; width: 297px; padding: 5px 0px; background: rgb(255, =
+255, 255); }
+
+.tjimg img { float: left; border: 1px solid rgb(221, 221, 221); margin-bott=
+om: 5px; padding: 2px; }
+
+.tjimg li { float: left; width: 126px; padding: 0px 6px 0px 8px; line-heigh=
+t: 14px; text-align: center; }
+
+.rw { float: left; width: 126px; text-align: center; padding: 0px; line-hei=
+ght: 17px; }
+
+.rw img { float: left; width: 126px; border: 1px solid rgb(102, 102, 102); =
+}
+
+.dg_title { float: left; padding: 0px 0px 0px 12px; margin-top: 5px; width:=
+ 267px !important; }
+
+.dg_list { float: left; width: 277px; padding: 5px 0px; margin-left: 0px; m=
+argin-right: 8px; margin-top: 0px; line-height: 19px; }
+
+.dg_list li { border-bottom-width: 1px; border-bottom-style: dashed; border=
+-bottom-color: rgb(182, 202, 229); height: 22px; line-height: 22px; }
+
+.dg_list li span { margin-right: 3px; color: rgb(119, 119, 119); }
+
+.tbox li em { font-style: normal; padding-right: 5px; }
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.centoscn.com/templets/style/tabs.css
+
+@charset "gbk";
+
+.sonMenu { height: 42px; }
+
+.sonMenu ul { height: 42px; }
+
+.sonMenu ul li { float: left; }
+
+.sonMenu ul li a { line-height: 42px; color: rgb(32, 162, 217); font-size: =
+13px; padding: 2px 10px; }
+
+.sonMenu ul li a:hover { color: rgb(255, 255, 255); background-color: rgb(7=
+2, 181, 228); }
+
+#mytop { height: 148px; }
+
+.threead { padding: 0px; border: 1px solid rgb(190, 223, 248); height: 90px=
+; width: 958px; margin-top: 4px; }
+
+.threead a { display: block; float: left; padding: 2px; }
+------MultipartBoundary--F50eQZWbdR4MmxMI9qGxy2Z0mMO6SGkazDOZbiH7eI------

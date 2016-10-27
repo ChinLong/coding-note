@@ -1,0 +1,97 @@
+﻿http://git.oschina.net/progit/
+###常用
+
+00.初始化配置
+   //用户名
+   git config --global user.name "{userName}"
+   //邮箱
+   git config --global user.email "{email}"
+   // 颜色
+   git config --global color.ui true
+   //别名
+   $ git config --global alias.{aliasName} {commandName}
+01.初始化版本库
+   git init {pathName}
+02.克隆版本库
+   git clone  {xxx.git}
+03.添加远程仓库
+   git remote add origin {git@github.com:userName/ProjectName.git}
+04.SSH生成
+   ssh-keygen -t rsa -C "youremail@example.com"
+05.更新
+   git pull
+06.查看状态
+   git status
+07.添加文件到暂存区
+   git add {fileName}
+08.撤销修改
+   git checkout -- {fileName}
+   git reset HEAD  {fileName} 
+09.删除文件 
+   git rm {fileName}
+10.提交
+   //本地仓库
+   git commit -m "{comment}"
+   //远程仓库
+   git push {-u} origin {branchName}
+11.查看修改日志
+   git log   或  git log --pretty=oneline
+12.返回某个版本
+  git reset --hard HEAD[^,^^] (^上个版本)(^^上上个版本)
+  git reset --hard {hashcode}
+13.查看最近几次操作
+  git reflog
+  
+  
+### 分支
+00.查看分支
+   git branch
+01.创建分支
+   git branch  {branchName}
+02.切换分支
+   git checkout{branchName}
+03.创建+切换分支
+   git checkout -b {branchName}
+04.合并到当前分支
+   //默认方式合并
+   git merge {branchName}
+   //以普通提交合并分支
+   git merge --no-ff -m "{comment}" {branchName}
+05.删除分支
+   git branch -d {branchName}
+06.查看分支合并图
+   git log --graph --pretty=oneline --abbrev-commit
+07.保存当前镜像并恢复到上次commit时镜像
+   git stash
+08.回复到当时保存镜像
+   git stash apply
+09.删除保存的镜像
+   git stash apply
+10.恢复并删除镜像
+   git stash pop
+11.查看远程信息
+   git remote -v
+12.设置分支关联
+   git branch --set-upstream {branchName} origin/{branchName}
+
+###标签
+00.查看看标签
+   git tag
+01.增加标签
+   git tag {tagName}
+   git tag {tagName} {hashCode}
+02.提送标签到远程
+   git push origin {tagName}
+03.提送全部标签到远程
+   git push origin --tags
+04.查看标签信息
+   git show {tagName}
+05.添加标签备注
+   git tag -a {tagName} -m "{comment}"
+06.用PGP签名标签
+  git tag -s {tagName} -m "{comment}"
+07.删除标签
+   //删除本地标签
+   git tag -d {tagName}
+   //删除远程标签
+   git push origin :refs/tags/{tagName}
