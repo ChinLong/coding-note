@@ -1,0 +1,2609 @@
+From: <Saved by Blink>
+Subject: SQL ????????????????????? :: by and for engineers
+Date: Fri, 25 Aug 2016 03:05:39 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_7689_CAB974BC.FC1CFBC7"
+
+------=_NextPart_000_7689_CAB974BC.FC1CFBC7
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://yulii.github.io/sql-style-guide-20160327.html
+
+<!DOCTYPE html><html lang=3D"ja"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=3D"wid=
+th=3Ddevice-width,initial-scale=3D1"><meta http-equiv=3D"X-UA-Compatible" c=
+ontent=3D"IE=3Dedge"><meta name=3D"msvalidate.01" content=3D"6E81753B125323=
+D79D85D7F71BE6E8DB"><title>SQL =E3=82=AF=E3=82=A8=E3=83=AA=E3=81=AE=E3=82=
+=B3=E3=83=BC=E3=83=87=E3=82=A3=E3=83=B3=E3=82=B0=E8=A6=8F=E7=B4=84=EF=BC=88=
+=E3=82=B9=E3=82=BF=E3=82=A4=E3=83=AB=E3=82=AC=E3=82=A4=E3=83=89=EF=BC=89 ::=
+ by and for engineers</title><meta name=3D"description" content=3D"SQL=E3=
+=82=92=E8=AA=AD=E3=81=BF=E3=82=84=E3=81=99=E3=81=8F=E3=81=99=E3=82=8B=E3=81=
+=9F=E3=82=81=E3=81=AE=E3=82=A4=E3=83=B3=E3=83=87=E3=83=B3=E3=83=88=E3=82=84=
+=E8=A8=98=E6=B3=95=E3=81=AB=E9=96=A2=E3=81=99=E3=82=8B=E3=82=AC=E3=82=A4=E3=
+=83=89=E3=81=A7=E3=81=99=E3=80=82=E5=80=8B=E4=BA=BA=E7=9A=84=E3=81=AA=E3=83=
+=AB=E3=83=BC=E3=83=AB=E3=81=8B=E3=81=A4=E3=80=81=E5=8E=B3=E6=A0=BC=E3=81=AB=
+=E6=B1=BA=E3=82=81=E3=81=A6=E3=81=84=E3=81=AA=E3=81=84=E3=81=AE=E3=81=A7=E8=
+=AA=AD=E3=81=BF=E3=82=84=E3=81=99=E3=81=95=E3=82=92=E6=84=8F=E8=AD=98=E3=81=
+=97=E3=81=A6=E8=AA=BF=E6=95=B4=E3=81=97=E3=81=9F=E3=82=8A=E3=81=97=E3=81=BE=
+=E3=81=99=E3=80=82=E5=90=84=E3=82=B5=E3=83=B3=E3=83=97=E3=83=AB=E3=81=AE=E3=
+=82=AF=E3=82=A8=E3=83=AA=E3=81=AFMySQL =E3=81=A7=E5=AE=9F=E8=A1=8C=E7=A2=BA=
+=E8=AA=8D..."><meta property=3D"og:locale" content=3D"ja_JP"><meta property=
+=3D"og:type" content=3D"article"><meta property=3D"og:url" content=3D"https=
+://yulii.github.io/sql-style-guide-20160327.html"><meta property=3D"og:titl=
+e" content=3D"SQL =E3=82=AF=E3=82=A8=E3=83=AA=E3=81=AE=E3=82=B3=E3=83=BC=E3=
+=83=87=E3=82=A3=E3=83=B3=E3=82=B0=E8=A6=8F=E7=B4=84=EF=BC=88=E3=82=B9=E3=82=
+=BF=E3=82=A4=E3=83=AB=E3=82=AC=E3=82=A4=E3=83=89=EF=BC=89 :: by and for eng=
+ineers"><meta property=3D"og:description" content=3D"SQL=E3=82=92=E8=AA=AD=
+=E3=81=BF=E3=82=84=E3=81=99=E3=81=8F=E3=81=99=E3=82=8B=E3=81=9F=E3=82=81=E3=
+=81=AE=E3=82=A4=E3=83=B3=E3=83=87=E3=83=B3=E3=83=88=E3=82=84=E8=A8=98=E6=B3=
+=95=E3=81=AB=E9=96=A2=E3=81=99=E3=82=8B=E3=82=AC=E3=82=A4=E3=83=89=E3=81=A7=
+=E3=81=99=E3=80=82=E5=80=8B=E4=BA=BA=E7=9A=84=E3=81=AA=E3=83=AB=E3=83=BC=E3=
+=83=AB=E3=81=8B=E3=81=A4=E3=80=81=E5=8E=B3=E6=A0=BC=E3=81=AB=E6=B1=BA=E3=82=
+=81=E3=81=A6=E3=81=84=E3=81=AA=E3=81=84=E3=81=AE=E3=81=A7=E8=AA=AD=E3=81=BF=
+=E3=82=84=E3=81=99=E3=81=95=E3=82=92=E6=84=8F=E8=AD=98=E3=81=97=E3=81=A6=E8=
+=AA=BF=E6=95=B4=E3=81=97=E3=81=9F=E3=82=8A=E3=81=97=E3=81=BE=E3=81=99=E3=80=
+=82=E5=90=84=E3=82=B5=E3=83=B3=E3=83=97=E3=83=AB=E3=81=AE=E3=82=AF=E3=82=A8=
+=E3=83=AA=E3=81=AFMySQL =E3=81=A7=E5=AE=9F=E8=A1=8C=E7=A2=BA=E8=AA=8D..."><=
+meta property=3D"og:site_name" content=3D"by and for engineers"><meta prope=
+rty=3D"og:image" content=3D"https://yulii.github.io/img/site/by-and-for-eng=
+ineers.jpg"><link rel=3D"stylesheet" href=3D"https://yulii.github.io/css/ma=
+in.css"><link rel=3D"canonical" href=3D"https://yulii.github.io/sql-style-g=
+uide-20160327.html"><link rel=3D"icon" type=3D"image/x-icon" href=3D"https:=
+//yulii.github.io/favicon.ico"><link rel=3D"apple-touch-icon" sizes=3D"256x=
+256" href=3D"https://yulii.github.io/img/icon/apple-touch-icon-256.png"></h=
+ead><body> <header class=3D"site-header"><div class=3D"wrapper"> <a class=
+=3D"site-title" href=3D"https://yulii.github.io/">by and for engineers</a><=
+nav class=3D"site-nav"> <a href=3D"https://yulii.github.io/sql-style-guide-=
+20160327.html#" class=3D"menu-icon"> <svg viewBox=3D"0 0 18 15"><path fill=
+=3D"#424242" d=3D"M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.96=
+9,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,=
+1.484L18,1.484z"></path><path fill=3D"#424242" d=3D"M18,7.516C18,8.335,17.3=
+35,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.=
+484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path><path fill=3D"=
+#424242" d=3D"M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.=
+335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12=
+.696,18,13.516L18,13.516z"></path> </svg> </a><div class=3D"trigger"> </div=
+></nav></div></header><div class=3D"wrapper"><article class=3D"content"><he=
+ader><h1>SQL =E3=82=AF=E3=82=A8=E3=83=AA=E3=81=AE=E3=82=B3=E3=83=BC=E3=83=
+=87=E3=82=A3=E3=83=B3=E3=82=B0=E8=A6=8F=E7=B4=84=EF=BC=88=E3=82=B9=E3=82=BF=
+=E3=82=A4=E3=83=AB=E3=82=AC=E3=82=A4=E3=83=89=EF=BC=89</h1><p><time class=
+=3D"muted" datetime=3D"2016-03-27T19:14:28+09:00">Mar 27, 2016</time></p></=
+header><section class=3D"markdown"><p>SQL=E3=82=92=E8=AA=AD=E3=81=BF=E3=82=
+=84=E3=81=99=E3=81=8F=E3=81=99=E3=82=8B=E3=81=9F=E3=82=81=E3=81=AE=E3=82=A4=
+=E3=83=B3=E3=83=87=E3=83=B3=E3=83=88=E3=82=84=E8=A8=98=E6=B3=95=E3=81=AB=E9=
+=96=A2=E3=81=99=E3=82=8B=E3=82=AC=E3=82=A4=E3=83=89=E3=81=A7=E3=81=99=E3=80=
+=82=E5=80=8B=E4=BA=BA=E7=9A=84=E3=81=AA=E3=83=AB=E3=83=BC=E3=83=AB=E3=81=8B=
+=E3=81=A4=E3=80=81=E5=8E=B3=E6=A0=BC=E3=81=AB=E6=B1=BA=E3=82=81=E3=81=A6=E3=
+=81=84=E3=81=AA=E3=81=84=E3=81=AE=E3=81=A7=E8=AA=AD=E3=81=BF=E3=82=84=E3=81=
+=99=E3=81=95=E3=82=92=E6=84=8F=E8=AD=98=E3=81=97=E3=81=A6=E8=AA=BF=E6=95=B4=
+=E3=81=97=E3=81=9F=E3=82=8A=E3=81=97=E3=81=BE=E3=81=99=E3=80=82=E5=90=84=E3=
+=82=B5=E3=83=B3=E3=83=97=E3=83=AB=E3=81=AE=E3=82=AF=E3=82=A8=E3=83=AA=E3=81=
+=AFMySQL =E3=81=A7=E5=AE=9F=E8=A1=8C=E7=A2=BA=E8=AA=8D=E3=81=97=E3=81=A6=E3=
+=81=84=E3=81=BE=E3=81=99=E3=80=82</p><p><em>=E3=82=B3=E3=83=BC=E3=83=87=E3=
+=82=A3=E3=83=B3=E3=82=B0=E3=82=B9=E3=82=BF=E3=82=A4=E3=83=AB=E3=81=AE=E8=AA=
+=AC=E6=98=8E=E3=81=AE=E3=81=9F=E3=82=81=E3=80=81=E3=82=AF=E3=82=A8=E3=83=AA=
+=E8=87=AA=E4=BD=93=E3=81=AB=E3=81=AF=E3=81=82=E3=81=BE=E3=82=8A=E6=84=8F=E5=
+=91=B3=E3=81=AF=E3=81=AA=E3=81=84=E3=81=A7=E3=81=99=E3=80=82=E3=83=91=E3=83=
+=95=E3=82=A9=E3=83=BC=E3=83=9E=E3=83=B3=E3=82=B9=E3=81=AE=E6=82=AA=E3=81=84=
+=E3=82=AF=E3=82=A8=E3=83=AA=E3=82=82=E3=81=82=E3=82=8A=E3=81=BE=E3=81=99=E3=
+=81=8C=E3=81=94=E4=BA=86=E6=89=BF=E3=81=8F=E3=81=A0=E3=81=95=E3=81=84=E3=80=
+=82</em></p><h2 id=3D"sql-">SQL =E3=82=B9=E3=82=BF=E3=82=A4=E3=83=AB=E3=82=
+=AC=E3=82=A4=E3=83=89</h2><ul><li>=E4=BA=88=E7=B4=84=E8=AA=9E/=E9=96=A2=E6=
+=95=B0=E3=81=AF=E5=A4=A7=E6=96=87=E5=AD=97<ul><li><code class=3D"highlighte=
+r-rouge">SELECT</code>, <code class=3D"highlighter-rouge">INSERT</code>, <c=
+ode class=3D"highlighter-rouge">UPDATE</code>, <code class=3D"highlighter-r=
+ouge">FROM</code>, <code class=3D"highlighter-rouge">WHERE</code> =E3=81=AA=
+=E3=81=A9</li></ul></li><li>=E3=82=A4=E3=83=B3=E3=83=87=E3=83=B3=E3=83=88=
+=E3=81=AF=E3=82=B9=E3=83=9A=E3=83=BC=E3=82=B92=E3=81=A4</li><li>SELECT =E5=
+=8F=A5=E3=81=AE=E3=82=AB=E3=83=A9=E3=83=A0=E6=8C=87=E5=AE=9A=E3=81=AE=E3=82=
+=AB=E3=83=B3=E3=83=9E <code class=3D"highlighter-rouge">,</code> =E3=81=AF=
+=E5=85=88=E9=A0=AD</li><li>=E6=9D=A1=E4=BB=B6=E3=81=AE <code class=3D"highl=
+ighter-rouge">AND</code> / <code class=3D"highlighter-rouge">OR</code> =E3=
+=81=AF=E5=85=88=E9=A0=AD</li><li>=E3=82=BB=E3=83=9F=E3=82=B3=E3=83=AD=E3=83=
+=B3 <code class=3D"highlighter-rouge">;</code> =E3=81=AF=E6=9C=80=E7=B5=82=
+=E8=A1=8C</li><li><code class=3D"highlighter-rouge">AS</code> =E3=81=AF=E8=
+=AA=AD=E3=81=BF=E3=82=84=E3=81=99=E3=81=8F=E3=81=99=E3=82=8B=E3=81=9F=E3=82=
+=81=E3=81=AB=E9=81=A9=E5=AE=9C=E4=BD=BF=E3=81=86<ul><li>AS =E8=87=AA=E4=BD=
+=93=E3=81=AF=E7=9C=81=E7=95=A5=E3=81=97=E3=81=A6=E6=9B=B8=E3=81=84=E3=81=9F=
+=E3=82=8A=E3=81=97=E3=81=BE=E3=81=99</li></ul></li></ul><h2 id=3D"sql--1">S=
+QL =E3=83=95=E3=82=A9=E3=83=BC=E3=83=9E=E3=83=83=E3=83=88</h2><p>1=E8=A1=8C=
+=E3=81=8C1=E3=82=AB=E3=83=A9=E3=83=A0=E3=81=AB=E5=AF=BE=E3=81=99=E3=82=8B=
+=E8=A8=98=E8=BF=B0=E3=81=AB=E3=81=BE=E3=81=A8=E3=81=BE=E3=82=8B=E6=A7=98=E3=
+=81=AB=E6=84=8F=E8=AD=98=E3=81=97=E3=81=A6=E6=9B=B8=E3=81=84=E3=81=A6=E3=81=
+=84=E3=81=BE=E3=81=99=E3=80=82</p><h3 id=3D"select-">SELECT =E3=82=AF=E3=82=
+=A8=E3=83=AA=E3=81=AE=E3=83=95=E3=82=A9=E3=83=BC=E3=83=9E=E3=83=83=E3=83=88=
+</h3><div class=3D"language-sql highlighter-rouge"><pre class=3D"highlight"=
+><code><span class=3D"k">SELECT</span>
+  <span class=3D"n">id</span>
+<span class=3D"p">,</span> <span class=3D"n">name</span>
+<span class=3D"k">FROM</span>
+  <span class=3D"n">users</span>
+<span class=3D"k">WHERE</span>
+  <span class=3D"k">admin</span> <span class=3D"o">=3D</span> <span class=
+=3D"mi">1</span>
+  <span class=3D"k">AND</span> <span class=3D"n">password_digest</span> <sp=
+an class=3D"k">IS</span> <span class=3D"k">NULL</span>
+  <span class=3D"k">AND</span> <span class=3D"n">created_at</span> <span cl=
+ass=3D"o">&gt;=3D</span> <span class=3D"s1">'2016-01-01 00:00:00'</span>
+  <span class=3D"k">AND</span> <span class=3D"n">created_at</span> <span cl=
+ass=3D"o">&lt;</span>  <span class=3D"s1">'2016-12-01 00:00:00'</span>
+<span class=3D"k">ORDER</span> <span class=3D"k">BY</span>
+  <span class=3D"n">id</span> <span class=3D"k">ASC</span>
+<span class=3D"k">LIMIT</span>
+  <span class=3D"mi">0</span><span class=3D"p">,</span> <span class=3D"mi">=
+10</span>
+<span class=3D"p">;</span>
+</code></pre></div><p><code class=3D"highlighter-rouge">LIMIT</code> =E3=81=
+=AE=E6=8C=87=E5=AE=9A=E3=81=AF=E3=82=AB=E3=83=B3=E3=83=9E=E3=81=A7=E6=94=B9=
+=E8=A1=8C=E3=82=92=E5=85=A5=E3=82=8C=E3=81=A6=E3=82=82=E8=89=AF=E3=81=84=E3=
+=81=A7=E3=81=99=E3=81=8C=E3=80=81=E3=82=84=E3=82=84=E5=86=97=E9=95=B7=E3=81=
+=AA=E6=B0=97=E3=81=8C=E3=81=99=E3=82=8B=E3=81=AE=E3=81=A7=E3=81=BE=E3=81=A8=
+=E3=82=81=E3=81=A61=E8=A1=8C=E3=81=A7=E6=9B=B8=E3=81=84=E3=81=A6=E3=81=84=
+=E3=81=BE=E3=81=99=E3=80=82</p><h3 id=3D"insert-">INSERT =E3=82=AF=E3=82=A8=
+=E3=83=AA=E3=81=AE=E3=83=95=E3=82=A9=E3=83=BC=E3=83=9E=E3=83=83=E3=83=88</h=
+3><p>=E3=81=82=E3=81=BE=E3=82=8A=E6=9B=B8=E3=81=8B=E3=81=AA=E3=81=84=E3=81=
+=A7=E3=81=99=E3=81=8C=E3=80=81=E3=81=9F=E3=81=BE=E3=81=AB=E3=83=9E=E3=82=B9=
+=E3=82=BF=E3=83=BC=E3=83=87=E3=83=BC=E3=82=BF=E3=82=84=E3=83=86=E3=82=B9=E3=
+=83=88=E7=94=A8=E3=81=AB=E3=83=87=E3=83=BC=E3=82=BF=E3=82=92=E4=B8=80=E6=8B=
+=AC=E3=81=A7=E5=85=A5=E3=82=8C=E3=82=8B=E6=99=82=E3=81=AB=E3=81=AF=E4=B8=8B=
+=E8=A8=98=E3=81=AE=E6=A7=98=E3=81=AA=E5=BD=A2=E5=BC=8F=E3=81=A7=E6=9B=B8=E3=
+=81=84=E3=81=A6=E3=81=84=E3=81=BE=E3=81=99=E3=80=82</p><div class=3D"langua=
+ge-sql highlighter-rouge"><pre class=3D"highlight"><code><span class=3D"k">=
+INSERT</span> <span class=3D"k">INTO</span>
+  <span class=3D"n">users</span> <span class=3D"p">(</span><span class=3D"n=
+v">`name`</span><span class=3D"p">,</span> <span class=3D"nv">`email`</span=
+><span class=3D"p">,</span> <span class=3D"nv">`admin`</span><span class=3D=
+"p">,</span> <span class=3D"nv">`created_at`</span><span class=3D"p">,</spa=
+n> <span class=3D"nv">`updated_at`</span><span class=3D"p">)</span>
+<span class=3D"k">VALUES</span>
+  <span class=3D"p">(</span><span class=3D"s1">'John'</span><span class=3D"=
+p">,</span> <span class=3D"s1">'john@example.com'</span><span class=3D"p">,=
+</span> <span class=3D"mi">1</span><span class=3D"p">,</span> <span class=
+=3D"n">NOW</span><span class=3D"p">(),</span> <span class=3D"n">NOW</span><=
+span class=3D"p">())</span>
+<span class=3D"p">,</span> <span class=3D"p">(</span><span class=3D"s1">'To=
+m'</span><span class=3D"p">,</span> <span class=3D"s1">'tom@example.com'</s=
+pan><span class=3D"p">,</span> <span class=3D"mi">0</span><span class=3D"p"=
+>,</span> <span class=3D"n">NOW</span><span class=3D"p">(),</span> <span cl=
+ass=3D"n">NOW</span><span class=3D"p">())</span>
+<span class=3D"p">,</span> <span class=3D"p">(</span><span class=3D"s1">'Ro=
+bin'</span><span class=3D"p">,</span> <span class=3D"s1">'robin@example.com=
+'</span><span class=3D"p">,</span> <span class=3D"mi">0</span><span class=
+=3D"p">,</span> <span class=3D"n">NOW</span><span class=3D"p">(),</span> <s=
+pan class=3D"n">NOW</span><span class=3D"p">())</span>
+<span class=3D"p">;</span>
+</code></pre></div><h3 id=3D"update-">UPDATE =E3=82=AF=E3=82=A8=E3=83=AA=E3=
+=81=AE=E3=83=95=E3=82=A9=E3=83=BC=E3=83=9E=E3=83=83=E3=83=88</h3><p>=E5=9E=
+=82=E7=9B=B4=E6=96=B9=E5=90=91=E3=81=AB=E3=81=9D=E3=82=8D=E3=81=88=E3=82=8B=
+=E3=82=A4=E3=83=B3=E3=83=87=E3=83=B3=E3=83=88=E3=81=8C=E5=A5=BD=E3=81=8D=E3=
+=81=AA=E3=81=AE=E3=81=A7=E3=80=81 <code class=3D"highlighter-rouge">=3D</co=
+de> =E3=81=AA=E3=81=A9=E8=A6=8B=E3=82=84=E3=81=99=E3=81=8F=E3=81=AA=E3=82=
+=8A=E3=81=9D=E3=81=86=E3=81=AA=E4=BD=8D=E7=BD=AE=E3=81=A7=E6=8F=83=E3=81=88=
+=E3=81=BE=E3=81=99=E3=80=82</p><div class=3D"language-sql highlighter-rouge=
+"><pre class=3D"highlight"><code><span class=3D"k">UPDATE</span>
+  <span class=3D"n">microposts</span>
+<span class=3D"k">SET</span>
+  <span class=3D"n">content</span>    <span class=3D"o">=3D</span> <span cl=
+ass=3D"s1">'tweet'</span>
+<span class=3D"p">,</span> <span class=3D"n">updated_at</span> <span class=
+=3D"o">=3D</span> <span class=3D"n">NOW</span><span class=3D"p">()</span>
+<span class=3D"k">WHERE</span>
+  <span class=3D"n">id</span> <span class=3D"o">=3D</span> <span class=3D"m=
+i">5</span>
+<span class=3D"p">;</span>
+</code></pre></div><h2 id=3D"case-11">CASE =E5=8F=A5=E3=81=AA=E3=81=A9=E3=
+=80=811=E8=A1=8C1=E3=82=AB=E3=83=A9=E3=83=A0=E3=81=AB=E3=81=AA=E3=82=89=E3=
+=81=AA=E3=81=84=E4=BE=8B=E5=A4=96=E7=9A=84=E3=81=AA=E3=82=B9=E3=82=BF=E3=82=
+=A4=E3=83=AB</h2><p>=E6=94=B9=E8=A1=8C=E3=81=AE=E3=82=BF=E3=82=A4=E3=83=9F=
+=E3=83=B3=E3=82=B0=E3=81=AB=E3=81=AF=E5=8E=B3=E6=A0=BC=E3=81=AA=E3=83=AB=E3=
+=83=BC=E3=83=AB=E3=81=AF=E3=81=AA=E3=81=84=E3=81=A7=E3=81=99=E3=81=8C=E3=80=
+=81=E4=B8=80=E8=A1=8C=E5=8D=98=E4=BD=8D=E3=81=A7=E3=81=BE=E3=81=A8=E3=81=BE=
+=E3=82=8A=E3=81=AB=E3=81=AA=E3=82=8B=E6=A7=98=E3=81=AB=E9=81=A9=E5=AE=9C=E6=
+=94=B9=E8=A1=8C=E3=81=97=E3=81=A6=E3=81=BE=E3=81=99=E3=80=82=E3=81=82=E3=81=
+=A8=E3=80=81=E6=8B=AC=E5=BC=A7 <code class=3D"highlighter-rouge">()</code> =
+=E3=81=A0=E3=81=91=E3=81=A7=E3=82=A4=E3=83=B3=E3=83=87=E3=83=B3=E3=83=88=E3=
+=81=AF=E3=81=82=E3=82=93=E3=81=BE=E3=82=8A=E3=81=97=E3=81=AA=E3=81=84=E3=81=
+=A7=E3=81=99=E3=80=82</p><div class=3D"language-sql highlighter-rouge"><pre=
+ class=3D"highlight"><code><span class=3D"k">SELECT</span>
+  <span class=3D"p">(</span><span class=3D"k">CASE</span> <span class=3D"n"=
+>u</span><span class=3D"p">.</span><span class=3D"k">admin</span>
+    <span class=3D"k">WHEN</span> <span class=3D"mi">0</span> <span class=
+=3D"k">THEN</span> <span class=3D"s1">'member'</span>
+    <span class=3D"k">WHEN</span> <span class=3D"mi">1</span> <span class=
+=3D"k">THEN</span> <span class=3D"s1">'admin'</span>
+    <span class=3D"k">ELSE</span> <span class=3D"s1">'unknown'</span>
+  <span class=3D"k">END</span><span class=3D"p">)</span>     <span class=3D=
+"k">AS</span> <span class=3D"n">user_type</span>
+<span class=3D"p">,</span> <span class=3D"k">COUNT</span><span class=3D"p">=
+(</span><span class=3D"o">*</span><span class=3D"p">)</span> <span class=3D=
+"k">AS</span> <span class=3D"n">user_count</span>
+<span class=3D"k">FROM</span>
+  <span class=3D"n">users</span> <span class=3D"n">u</span>
+<span class=3D"k">GROUP</span> <span class=3D"k">BY</span>
+  <span class=3D"n">u</span><span class=3D"p">.</span><span class=3D"k">adm=
+in</span>
+<span class=3D"p">;</span>
+</code></pre></div><h2 id=3D"join">=E3=83=86=E3=83=BC=E3=83=96=E3=83=AB=E7=
+=B5=90=E5=90=88 (JOIN)</h2><p><code class=3D"highlighter-rouge">JOIN</code>=
+ =E3=81=AF=E7=B5=90=E5=90=88=E6=9D=A1=E4=BB=B6=E3=81=8C=E6=AF=94=E8=BC=83=
+=E7=9A=84=E3=82=B7=E3=83=B3=E3=83=97=E3=83=AB=E3=81=AA=E5=A0=B4=E5=90=88=E3=
+=81=8C=E5=A4=9A=E3=81=84=E3=81=AE=E3=81=A7=E3=80=81 <code class=3D"highligh=
+ter-rouge">ON</code> =E5=8F=A5=E3=82=92=E5=90=AB=E3=82=81=E3=81=A61=E8=A1=
+=8C=E3=81=AB=E6=9B=B8=E3=81=8F=E6=A7=98=E3=81=AB=E3=81=97=E3=81=A6=E3=81=84=
+=E3=81=BE=E3=81=99=E3=80=82=E8=A4=87=E6=95=B0=E3=81=AE=E3=83=86=E3=83=BC=E3=
+=83=96=E3=83=AB=E3=82=92=E7=B5=90=E5=90=88=E3=81=99=E3=82=8B=E3=81=A8=E3=81=
+=8D=E3=81=AB=E3=81=AF=E8=AA=AD=E3=81=BF=E3=82=84=E3=81=99=E3=81=8F=E3=81=AA=
+=E3=82=8B=E3=81=A8=E6=80=9D=E3=81=84=E3=81=BE=E3=81=99=E3=80=82</p><div cla=
+ss=3D"language-sql highlighter-rouge"><pre class=3D"highlight"><code><span =
+class=3D"k">SELECT</span>
+  <span class=3D"n">m</span><span class=3D"p">.</span><span class=3D"n">use=
+r_id</span>
+<span class=3D"p">,</span> <span class=3D"k">COUNT</span><span class=3D"p">=
+(</span><span class=3D"o">*</span><span class=3D"p">)</span> <span class=3D=
+"n">post_count</span>
+<span class=3D"k">FROM</span>
+  <span class=3D"n">microposts</span> <span class=3D"n">m</span>
+  <span class=3D"k">INNER</span> <span class=3D"k">JOIN</span> <span class=
+=3D"n">users</span> <span class=3D"n">u</span> <span class=3D"k">ON</span> =
+<span class=3D"n">u</span><span class=3D"p">.</span><span class=3D"n">id</s=
+pan> <span class=3D"o">=3D</span> <span class=3D"n">m</span><span class=3D"=
+p">.</span><span class=3D"n">user_id</span>
+<span class=3D"k">WHERE</span>
+  <span class=3D"n">u</span><span class=3D"p">.</span><span class=3D"k">adm=
+in</span> <span class=3D"o">=3D</span> <span class=3D"mi">0</span>
+<span class=3D"k">GROUP</span> <span class=3D"k">BY</span>
+  <span class=3D"n">m</span><span class=3D"p">.</span><span class=3D"n">use=
+r_id</span>
+<span class=3D"p">;</span>
+</code></pre></div><h2 id=3D"section">=E3=82=B5=E3=83=96=E3=82=AF=E3=82=A8=
+=E3=83=AA</h2><p>=E3=83=8D=E3=82=B9=E3=83=88=E3=81=AE=E6=B7=B1=E3=81=84SQL =
+=E3=81=AF=E8=AA=AD=E3=81=BF=E3=81=A5=E3=82=89=E3=81=84=E3=81=AE=E3=81=A7=E3=
+=80=81=E3=81=A7=E3=81=8D=E3=82=8B=E3=81=A0=E3=81=91=E3=83=8D=E3=82=B9=E3=83=
+=88=E3=82=92=E6=B5=85=E3=81=8F=E3=81=97=E3=81=BE=E3=81=99=E3=80=82 <code cl=
+ass=3D"highlighter-rouge">WITH</code> =E3=81=AB=E3=82=88=E3=81=A3=E3=81=A6=
+=E3=82=B5=E3=83=96=E3=82=AF=E3=82=A8=E3=83=AA=E9=83=A8=E5=88=86=E3=82=92=E5=
+=A4=96=E3=81=AB=E5=87=BA=E3=81=99=E3=81=93=E3=81=A8=E3=82=92=E3=81=8A=E5=8B=
+=A7=E3=82=81=E3=81=97=E3=81=BE=E3=81=99=E3=80=82=E3=81=9F=E3=81=A0=E3=80=81=
+MySQL =E3=81=AB=E3=81=AF <code class=3D"highlighter-rouge">WITH</code> =E3=
+=81=8C=E5=AE=9F=E8=A3=85=E3=81=95=E3=82=8C=E3=81=A6=E3=81=84=E3=81=AA=E3=81=
+=84=E3=81=AE=E3=81=A7=E3=80=81=E4=BB=95=E6=96=B9=E3=81=AA=E3=81=8F=E3=83=8D=
+=E3=82=B9=E3=83=88=E3=81=99=E3=82=8B=E5=A0=B4=E5=90=88=E3=81=AF=E3=80=81=E3=
+=82=B9=E3=83=9A=E3=83=BC=E3=82=B92=E3=81=A4=E3=81=A7=E3=82=A4=E3=83=B3=E3=
+=83=87=E3=83=B3=E3=83=88=E3=81=97=E3=81=A6=E6=9B=B8=E3=81=8D=E3=81=BE=E3=81=
+=99=E3=80=82</p><div class=3D"language-sql highlighter-rouge"><pre class=3D=
+"highlight"><code><span class=3D"k">SELECT</span>
+  <span class=3D"o">*</span>
+<span class=3D"k">FROM</span>
+  <span class=3D"n">users</span> <span class=3D"n">u</span>
+<span class=3D"k">WHERE</span>
+  <span class=3D"k">NOT</span> <span class=3D"k">EXISTS</span> <span class=
+=3D"p">(</span>
+    <span class=3D"k">SELECT</span>
+      <span class=3D"mi">1</span>
+    <span class=3D"k">FROM</span>
+      <span class=3D"n">relationships</span> <span class=3D"n">r</span>
+    <span class=3D"k">WHERE</span>
+      <span class=3D"n">r</span><span class=3D"p">.</span><span class=3D"n"=
+>followed_id</span> <span class=3D"o">=3D</span> <span class=3D"n">u</span>=
+<span class=3D"p">.</span><span class=3D"n">id</span>
+  <span class=3D"p">)</span>
+<span class=3D"p">;</span>
+</code></pre></div><h2 id=3D"as-"><code class=3D"highlighter-rouge">AS</cod=
+e> =E3=81=AE=E5=91=BD=E5=90=8D=E8=A6=8F=E7=B4=84</h2><p>=E5=8E=B3=E6=A0=BC=
+=E3=81=A7=E3=81=AF=E3=81=AA=E3=81=84=E3=81=A7=E3=81=99=E3=81=8C=E3=80=81=E3=
+=83=86=E3=83=BC=E3=83=96=E3=83=AB=E5=90=8D=E3=81=AE=E5=88=A5=E5=90=8D=E3=81=
+=AF=E5=85=83=E3=81=AE=E3=83=86=E3=83=BC=E3=83=96=E3=83=AB=E3=81=8C=E3=81=82=
+=E3=82=8B=E7=A8=8B=E5=BA=A6=E5=88=86=E3=81=8B=E3=82=8B=E5=90=8D=E5=89=8D=E3=
+=81=AB=E3=81=97=E3=81=BE=E3=81=99=E3=80=82=E3=82=B5=E3=83=96=E3=82=AF=E3=82=
+=A8=E3=83=AA=E3=81=AA=E3=81=A9=E3=81=A7=E4=B8=80=E6=99=82=E7=9A=84=E3=81=AA=
+=E9=9B=86=E8=A8=88=E3=83=86=E3=83=BC=E3=83=96=E3=83=AB=E3=81=8C=E7=99=BA=E7=
+=94=9F=E3=81=99=E3=82=8B=E5=A0=B4=E5=90=88=E3=81=AF=E3=80=81=E4=BD=95=E3=81=
+=A8=E3=81=AA=E3=81=8F=E5=A4=A7=E6=96=87=E5=AD=97=E3=81=A7=E5=88=A5=E5=90=8D=
+=E3=82=92=E4=BB=98=E3=81=91=E3=81=A6=E3=81=84=E3=81=BE=E3=81=99=E3=80=82=E5=
+=90=8D=E5=89=8D=E3=81=8C=E8=A2=AB=E3=81=A3=E3=81=A6=E5=9B=B0=E3=82=8B=E5=A0=
+=B4=E5=90=88=E3=81=AF=E3=80=81=E9=81=A9=E5=BD=93=E3=81=AB=E4=B8=8A=E3=81=8B=
+=E3=82=89=E9=A0=86=E7=95=AA=E3=81=AB=E9=80=A3=E7=95=AA=E3=82=92=E6=8C=AF=E3=
+=82=8A=E3=81=BE=E3=81=99=E3=80=82</p><div class=3D"language-sql highlighter=
+-rouge"><pre class=3D"highlight"><code><span class=3D"k">SELECT</span>
+  <span class=3D"n">U</span><span class=3D"p">.</span><span class=3D"n">cre=
+ated_date</span>
+<span class=3D"p">,</span> <span class=3D"k">SUM</span><span class=3D"p">(<=
+/span><span class=3D"n">U</span><span class=3D"p">.</span><span class=3D"n"=
+>user_count</span><span class=3D"p">)</span>  <span class=3D"k">AS</span> <=
+span class=3D"n">user_count</span>
+<span class=3D"p">,</span> <span class=3D"k">SUM</span><span class=3D"p">(<=
+/span><span class=3D"n">U</span><span class=3D"p">.</span><span class=3D"n"=
+>post_count</span><span class=3D"p">)</span>  <span class=3D"k">AS</span> <=
+span class=3D"n">post_count</span>
+<span class=3D"k">FROM</span>
+  <span class=3D"c1">-- =E6=97=A5=E6=AC=A1=E4=BC=9A=E5=93=A1=E7=99=BB=E9=8C=
+=B2=E6=95=B0</span>
+  <span class=3D"p">(</span><span class=3D"k">SELECT</span>
+    <span class=3D"n">T1</span><span class=3D"p">.</span><span class=3D"n">=
+created_date</span>
+  <span class=3D"p">,</span> <span class=3D"k">COUNT</span><span class=3D"p=
+">(</span><span class=3D"mi">1</span><span class=3D"p">)</span>  <span clas=
+s=3D"k">AS</span> <span class=3D"n">user_count</span>
+  <span class=3D"p">,</span> <span class=3D"mi">0</span>         <span clas=
+s=3D"k">AS</span> <span class=3D"n">post_count</span>
+  <span class=3D"k">FROM</span>
+    <span class=3D"p">(</span><span class=3D"k">SELECT</span>
+      <span class=3D"n">u</span><span class=3D"p">.</span><span class=3D"n"=
+>id</span>
+    <span class=3D"p">,</span> <span class=3D"k">CAST</span><span class=3D"=
+p">(</span><span class=3D"n">u</span><span class=3D"p">.</span><span class=
+=3D"n">created_at</span> <span class=3D"k">AS</span> <span class=3D"n">DATE=
+</span><span class=3D"p">)</span> <span class=3D"k">AS</span> <span class=
+=3D"n">created_date</span>
+    <span class=3D"k">FROM</span>
+      <span class=3D"n">users</span> <span class=3D"n">u</span>
+    <span class=3D"p">)</span> <span class=3D"n">T1</span>
+  <span class=3D"k">GROUP</span> <span class=3D"k">BY</span>
+    <span class=3D"n">T1</span><span class=3D"p">.</span><span class=3D"n">=
+created_date</span>
+  <span class=3D"c1">-- =E6=97=A5=E6=AC=A1=E6=8A=95=E7=A8=BF=E6=95=B0</span=
+>
+  <span class=3D"k">UNION</span> <span class=3D"k">ALL</span> <span class=
+=3D"k">SELECT</span>
+    <span class=3D"n">T2</span><span class=3D"p">.</span><span class=3D"n">=
+created_date</span>
+  <span class=3D"p">,</span> <span class=3D"mi">0</span>         <span clas=
+s=3D"k">AS</span> <span class=3D"n">user_count</span>
+  <span class=3D"p">,</span> <span class=3D"k">COUNT</span><span class=3D"p=
+">(</span><span class=3D"mi">1</span><span class=3D"p">)</span>  <span clas=
+s=3D"k">AS</span> <span class=3D"n">post_count</span>
+  <span class=3D"k">FROM</span>
+    <span class=3D"p">(</span><span class=3D"k">SELECT</span>
+      <span class=3D"n">m</span><span class=3D"p">.</span><span class=3D"n"=
+>id</span>
+    <span class=3D"p">,</span> <span class=3D"k">CAST</span><span class=3D"=
+p">(</span><span class=3D"n">m</span><span class=3D"p">.</span><span class=
+=3D"n">created_at</span> <span class=3D"k">AS</span> <span class=3D"n">DATE=
+</span><span class=3D"p">)</span> <span class=3D"k">AS</span> <span class=
+=3D"n">created_date</span>
+    <span class=3D"k">FROM</span>
+      <span class=3D"n">microposts</span> <span class=3D"n">m</span>
+    <span class=3D"p">)</span> <span class=3D"n">T2</span>
+  <span class=3D"k">GROUP</span> <span class=3D"k">BY</span>
+    <span class=3D"n">T2</span><span class=3D"p">.</span><span class=3D"n">=
+created_date</span>
+  <span class=3D"p">)</span> <span class=3D"n">U</span>
+<span class=3D"k">GROUP</span> <span class=3D"k">BY</span>
+  <span class=3D"n">U</span><span class=3D"p">.</span><span class=3D"n">cre=
+ated_date</span>
+<span class=3D"p">;</span>
+</code></pre></div><p>=E3=81=95=E3=81=99=E3=81=8C=E3=81=AB=E3=83=AB=E3=83=
+=BC=E3=83=AB=E3=81=AB=E6=B2=BF=E3=81=A3=E3=81=A6=E6=9B=B8=E3=81=84=E3=81=A6=
+=E3=82=82=E8=AA=AD=E3=81=BF=E3=81=A5=E3=82=89=E3=81=84=E3=80=82=E3=83=91=E3=
+=83=95=E3=82=A9=E3=83=BC=E3=83=9E=E3=83=B3=E3=82=B9=E3=81=AE=E3=81=9F=E3=82=
+=81=E3=81=AB=E3=82=82=E3=80=81=E7=9F=AD=E3=81=8F=E3=82=B7=E3=83=B3=E3=83=97=
+=E3=83=AB=E3=81=AASQL =E3=81=AB=E3=81=97=E3=81=9F=E6=96=B9=E3=81=8C=E8=89=
+=AF=E3=81=84=E3=81=A8=E6=80=9D=E3=81=84=E3=81=BE=E3=81=99=E3=80=82</p><h2 i=
+d=3D"section-1">=E5=8F=82=E8=80=83=EF=BC=9A=E3=83=86=E3=83=BC=E3=83=96=E3=
+=83=AB=E6=A7=8B=E6=88=90</h2><p>=E3=82=B5=E3=83=B3=E3=83=97=E3=83=AB=E3=82=
+=B3=E3=83=BC=E3=83=89=E3=81=AESQL =E3=81=AF<a href=3D"http://railstutorial.=
+jp/">Rails =E3=83=81=E3=83=A5=E3=83=BC=E3=83=88=E3=83=AA=E3=82=A2=E3=83=AB<=
+/a>=E3=81=AE=E3=83=86=E3=83=BC=E3=83=96=E3=83=AB=E5=AE=9A=E7=BE=A9=E3=82=92=
+=E4=BD=BF=E3=81=A3=E3=81=A6=E3=81=84=E3=81=BE=E3=81=99=E3=80=82</p><div cla=
+ss=3D"language-sql highlighter-rouge"><pre class=3D"highlight"><code><span =
+class=3D"n">mysql</span><span class=3D"o">&gt;</span> <span class=3D"k">des=
+c</span> <span class=3D"n">users</span><span class=3D"p">;</span>
+<span class=3D"o">+</span><span class=3D"c1">-----------------+------------=
+--+------+-----+---------+----------------+</span>
+<span class=3D"o">|</span> <span class=3D"n">Field</span>           <span c=
+lass=3D"o">|</span> <span class=3D"k">Type</span>         <span class=3D"o"=
+>|</span> <span class=3D"k">Null</span> <span class=3D"o">|</span> <span cl=
+ass=3D"k">Key</span> <span class=3D"o">|</span> <span class=3D"k">Default</=
+span> <span class=3D"o">|</span> <span class=3D"n">Extra</span>          <s=
+pan class=3D"o">|</span>
+<span class=3D"o">+</span><span class=3D"c1">-----------------+------------=
+--+------+-----+---------+----------------+</span>
+<span class=3D"o">|</span> <span class=3D"n">id</span>              <span c=
+lass=3D"o">|</span> <span class=3D"n">int</span><span class=3D"p">(</span><=
+span class=3D"mi">11</span><span class=3D"p">)</span>      <span class=3D"o=
+">|</span> <span class=3D"k">NO</span>   <span class=3D"o">|</span> <span c=
+lass=3D"n">PRI</span> <span class=3D"o">|</span> <span class=3D"k">NULL</sp=
+an>    <span class=3D"o">|</span> <span class=3D"n">auto_increment</span> <=
+span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">name</span>            <span c=
+lass=3D"o">|</span> <span class=3D"n">varchar</span><span class=3D"p">(</sp=
+an><span class=3D"mi">255</span><span class=3D"p">)</span> <span class=3D"o=
+">|</span> <span class=3D"n">YES</span>  <span class=3D"o">|</span>     <sp=
+an class=3D"o">|</span> <span class=3D"k">NULL</span>    <span class=3D"o">=
+|</span>                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">email</span>           <span c=
+lass=3D"o">|</span> <span class=3D"n">varchar</span><span class=3D"p">(</sp=
+an><span class=3D"mi">255</span><span class=3D"p">)</span> <span class=3D"o=
+">|</span> <span class=3D"n">YES</span>  <span class=3D"o">|</span> <span c=
+lass=3D"n">UNI</span> <span class=3D"o">|</span> <span class=3D"k">NULL</sp=
+an>    <span class=3D"o">|</span>                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">created_at</span>      <span c=
+lass=3D"o">|</span> <span class=3D"n">datetime</span>     <span class=3D"o"=
+>|</span> <span class=3D"n">YES</span>  <span class=3D"o">|</span>     <spa=
+n class=3D"o">|</span> <span class=3D"k">NULL</span>    <span class=3D"o">|=
+</span>                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">updated_at</span>      <span c=
+lass=3D"o">|</span> <span class=3D"n">datetime</span>     <span class=3D"o"=
+>|</span> <span class=3D"n">YES</span>  <span class=3D"o">|</span>     <spa=
+n class=3D"o">|</span> <span class=3D"k">NULL</span>    <span class=3D"o">|=
+</span>                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">password_digest</span> <span c=
+lass=3D"o">|</span> <span class=3D"n">varchar</span><span class=3D"p">(</sp=
+an><span class=3D"mi">255</span><span class=3D"p">)</span> <span class=3D"o=
+">|</span> <span class=3D"n">YES</span>  <span class=3D"o">|</span>     <sp=
+an class=3D"o">|</span> <span class=3D"k">NULL</span>    <span class=3D"o">=
+|</span>                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">remember_token</span>  <span c=
+lass=3D"o">|</span> <span class=3D"n">varchar</span><span class=3D"p">(</sp=
+an><span class=3D"mi">255</span><span class=3D"p">)</span> <span class=3D"o=
+">|</span> <span class=3D"n">YES</span>  <span class=3D"o">|</span> <span c=
+lass=3D"n">MUL</span> <span class=3D"o">|</span> <span class=3D"k">NULL</sp=
+an>    <span class=3D"o">|</span>                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"k">admin</span>           <span c=
+lass=3D"o">|</span> <span class=3D"n">tinyint</span><span class=3D"p">(</sp=
+an><span class=3D"mi">1</span><span class=3D"p">)</span>   <span class=3D"o=
+">|</span> <span class=3D"n">YES</span>  <span class=3D"o">|</span>     <sp=
+an class=3D"o">|</span> <span class=3D"k">NULL</span>    <span class=3D"o">=
+|</span>                <span class=3D"o">|</span>
+<span class=3D"o">+</span><span class=3D"c1">-----------------+------------=
+--+------+-----+---------+----------------+</span>
+
+<span class=3D"n">mysql</span><span class=3D"o">&gt;</span> <span class=3D"=
+k">desc</span> <span class=3D"n">microposts</span><span class=3D"p">;</span=
+>
+<span class=3D"o">+</span><span class=3D"c1">------------+--------------+--=
+----+-----+---------+----------------+</span>
+<span class=3D"o">|</span> <span class=3D"n">Field</span>      <span class=
+=3D"o">|</span> <span class=3D"k">Type</span>         <span class=3D"o">|</=
+span> <span class=3D"k">Null</span> <span class=3D"o">|</span> <span class=
+=3D"k">Key</span> <span class=3D"o">|</span> <span class=3D"k">Default</spa=
+n> <span class=3D"o">|</span> <span class=3D"n">Extra</span>          <span=
+ class=3D"o">|</span>
+<span class=3D"o">+</span><span class=3D"c1">------------+--------------+--=
+----+-----+---------+----------------+</span>
+<span class=3D"o">|</span> <span class=3D"n">id</span>         <span class=
+=3D"o">|</span> <span class=3D"n">int</span><span class=3D"p">(</span><span=
+ class=3D"mi">11</span><span class=3D"p">)</span>      <span class=3D"o">|<=
+/span> <span class=3D"k">NO</span>   <span class=3D"o">|</span> <span class=
+=3D"n">PRI</span> <span class=3D"o">|</span> <span class=3D"k">NULL</span> =
+   <span class=3D"o">|</span> <span class=3D"n">auto_increment</span> <span=
+ class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">content</span>    <span class=
+=3D"o">|</span> <span class=3D"n">varchar</span><span class=3D"p">(</span><=
+span class=3D"mi">255</span><span class=3D"p">)</span> <span class=3D"o">|<=
+/span> <span class=3D"n">YES</span>  <span class=3D"o">|</span>     <span c=
+lass=3D"o">|</span> <span class=3D"k">NULL</span>    <span class=3D"o">|</s=
+pan>                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">user_id</span>    <span class=
+=3D"o">|</span> <span class=3D"n">int</span><span class=3D"p">(</span><span=
+ class=3D"mi">11</span><span class=3D"p">)</span>      <span class=3D"o">|<=
+/span> <span class=3D"n">YES</span>  <span class=3D"o">|</span> <span class=
+=3D"n">MUL</span> <span class=3D"o">|</span> <span class=3D"k">NULL</span> =
+   <span class=3D"o">|</span>                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">created_at</span> <span class=
+=3D"o">|</span> <span class=3D"n">datetime</span>     <span class=3D"o">|</=
+span> <span class=3D"n">YES</span>  <span class=3D"o">|</span>     <span cl=
+ass=3D"o">|</span> <span class=3D"k">NULL</span>    <span class=3D"o">|</sp=
+an>                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">updated_at</span> <span class=
+=3D"o">|</span> <span class=3D"n">datetime</span>     <span class=3D"o">|</=
+span> <span class=3D"n">YES</span>  <span class=3D"o">|</span>     <span cl=
+ass=3D"o">|</span> <span class=3D"k">NULL</span>    <span class=3D"o">|</sp=
+an>                <span class=3D"o">|</span>
+<span class=3D"o">+</span><span class=3D"c1">------------+--------------+--=
+----+-----+---------+----------------+</span>
+
+<span class=3D"n">mysql</span><span class=3D"o">&gt;</span> <span class=3D"=
+k">desc</span> <span class=3D"n">relationships</span><span class=3D"p">;</s=
+pan>
+<span class=3D"o">+</span><span class=3D"c1">-------------+----------+-----=
+-+-----+---------+----------------+</span>
+<span class=3D"o">|</span> <span class=3D"n">Field</span>       <span class=
+=3D"o">|</span> <span class=3D"k">Type</span>     <span class=3D"o">|</span=
+> <span class=3D"k">Null</span> <span class=3D"o">|</span> <span class=3D"k=
+">Key</span> <span class=3D"o">|</span> <span class=3D"k">Default</span> <s=
+pan class=3D"o">|</span> <span class=3D"n">Extra</span>          <span clas=
+s=3D"o">|</span>
+<span class=3D"o">+</span><span class=3D"c1">-------------+----------+-----=
+-+-----+---------+----------------+</span>
+<span class=3D"o">|</span> <span class=3D"n">id</span>          <span class=
+=3D"o">|</span> <span class=3D"n">int</span><span class=3D"p">(</span><span=
+ class=3D"mi">11</span><span class=3D"p">)</span>  <span class=3D"o">|</spa=
+n> <span class=3D"k">NO</span>   <span class=3D"o">|</span> <span class=3D"=
+n">PRI</span> <span class=3D"o">|</span> <span class=3D"k">NULL</span>    <=
+span class=3D"o">|</span> <span class=3D"n">auto_increment</span> <span cla=
+ss=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">follower_id</span> <span class=
+=3D"o">|</span> <span class=3D"n">int</span><span class=3D"p">(</span><span=
+ class=3D"mi">11</span><span class=3D"p">)</span>  <span class=3D"o">|</spa=
+n> <span class=3D"n">YES</span>  <span class=3D"o">|</span> <span class=3D"=
+n">MUL</span> <span class=3D"o">|</span> <span class=3D"k">NULL</span>    <=
+span class=3D"o">|</span>                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">followed_id</span> <span class=
+=3D"o">|</span> <span class=3D"n">int</span><span class=3D"p">(</span><span=
+ class=3D"mi">11</span><span class=3D"p">)</span>  <span class=3D"o">|</spa=
+n> <span class=3D"n">YES</span>  <span class=3D"o">|</span> <span class=3D"=
+n">MUL</span> <span class=3D"o">|</span> <span class=3D"k">NULL</span>    <=
+span class=3D"o">|</span>                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">created_at</span>  <span class=
+=3D"o">|</span> <span class=3D"n">datetime</span> <span class=3D"o">|</span=
+> <span class=3D"n">YES</span>  <span class=3D"o">|</span>     <span class=
+=3D"o">|</span> <span class=3D"k">NULL</span>    <span class=3D"o">|</span>=
+                <span class=3D"o">|</span>
+<span class=3D"o">|</span> <span class=3D"n">updated_at</span>  <span class=
+=3D"o">|</span> <span class=3D"n">datetime</span> <span class=3D"o">|</span=
+> <span class=3D"n">YES</span>  <span class=3D"o">|</span>     <span class=
+=3D"o">|</span> <span class=3D"k">NULL</span>    <span class=3D"o">|</span>=
+                <span class=3D"o">|</span>
+<span class=3D"o">+</span><span class=3D"c1">-------------+----------+-----=
+-+-----+---------+----------------+</span>
+</code></pre></div></section><footer><ul class=3D"share-buttons"><li> <ifra=
+me class=3D"hatena-bookmark-button-frame" title=3D"=E3=81=93=E3=81=AE=E3=82=
+=A8=E3=83=B3=E3=83=88=E3=83=AA=E3=83=BC=E3=82=92=E3=81=AF=E3=81=A6=E3=81=AA=
+=E3=83=96=E3=83=83=E3=82=AF=E3=83=9E=E3=83=BC=E3=82=AF=E3=81=AB=E8=BF=BD=E5=
+=8A=A0" frameborder=3D"0" scrolling=3D"no" width=3D"70" height=3D"20" src=
+=3D"javascript:false" style=3D"width: 47px; height: 20px;"></iframe></li><l=
+i> <a href=3D"https://twitter.com/share" class=3D"twitter-share-button" dat=
+a-lang=3D"ja" data-url=3D"https://yulii.github.io/sql-style-guide-20160327.=
+html" data-via=3D"yulii">Tweet</a></li><li><div id=3D"fb-root"></div><div c=
+lass=3D"fb-like fb_iframe_widget" data-href=3D"https://yulii.github.io/sql-=
+style-guide-20160327.html" data-layout=3D"button_count" data-action=3D"like=
+" data-show-faces=3D"false"></div></li><li><div class=3D"g-plusone" data-hr=
+ef=3D"https://yulii.github.io/sql-style-guide-20160327.html" data-size=3D"m=
+edium"></div></li></ul><ul class=3D"tag"><li><a href=3D"https://yulii.githu=
+b.io/tags/sql.html"> <i class=3D"fa fa-tag"></i><span>SQL</span> </a></li><=
+/ul></footer></article><ol class=3D"breadcrumb"><li><a href=3D"https://yuli=
+i.github.io/">yulii</a></li><li> <span>&nbsp;/&nbsp;</span> <a href=3D"http=
+s://yulii.github.io/database.html"> =E3=83=87=E3=83=BC=E3=82=BF=E3=83=99=E3=
+=83=BC=E3=82=B9 </a></li><li><span>&nbsp;/&nbsp;</span><strong>SQL =E3=82=
+=AF=E3=82=A8=E3=83=AA=E3=81=AE=E3=82=B3=E3=83=BC=E3=83=87=E3=82=A3=E3=83=B3=
+=E3=82=B0=E8=A6=8F=E7=B4=84=EF=BC=88=E3=82=B9=E3=82=BF=E3=82=A4=E3=83=AB=E3=
+=82=AC=E3=82=A4=E3=83=89=EF=BC=89</strong></li></ol></div><footer class=3D"=
+site-footer"><div class=3D"wrapper"><div class=3D"footer-col-wrapper"><div =
+class=3D"footer-col footer-col-3"><article class=3D"profile"> <img src=3D"h=
+ttps://yulii.github.io/img/site/yulii.jpg" alt=3D"yulii" width=3D"100" heig=
+ht=3D"100" class=3D"profile--photo"><h3>Ryo Yoneyama</h3><ul class=3D"profi=
+le--social"><li><a href=3D"https://github.com/yulii" rel=3D"nofollow"><i cl=
+ass=3D"fa fa-github fa-2x"></i></a></li><li><a href=3D"https://twitter.com/=
+yulii" rel=3D"nofollow"><i class=3D"fa fa-twitter fa-2x"></i></a></li><li><=
+a href=3D"https://www.facebook.com/ryo.yoneyama" rel=3D"nofollow"><i class=
+=3D"fa fa-facebook-official fa-2x"></i></a></li></ul></article></div><div c=
+lass=3D"footer-col footer-col-3"><h2 class=3D"footer-heading">by and for en=
+gineers</h2><p class=3D"text">=E6=8A=80=E8=A1=93=E3=82=84=E6=B0=97=E3=81=AB=
+=E3=81=AA=E3=81=A3=E3=81=9F=E3=82=82=E3=81=AE=E3=82=92=E6=80=9D=E3=81=84=E3=
+=81=A4=E3=81=8D=E3=81=A8=E6=B0=97=E3=81=BE=E3=81=90=E3=82=8C=E3=81=A7=E6=9B=
+=B8=E3=81=84=E3=81=A6=E3=81=84=E3=81=BE=E3=81=99</p></div></div><p><small><=
+i class=3D"fa fa-copyright"></i>&nbsp;2008-2016, yulii</small></p></div></f=
+ooter> <link rel=3D"stylesheet" property=3D"stylesheet" type=3D"text/css" h=
+ref=3D"https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.=
+min.css">
+<div id=3D"qb-sougou-search" style=3D"display: none; opacity: 0;"><p>=E6=90=
+=9C=E7=B4=A2</p><p class=3D"last-btn">=E5=A4=8D=E5=88=B6</p><iframe src=3D"=
+https://yulii.github.io/sql-style-guide-20160327.html" src=3D"wyciwyg://fra=
+me/0"></iframe></div></body></html>
+------=_NextPart_000_7689_CAB974BC.FC1CFBC7
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://yulii.github.io/css/main.css
+
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figur=
+e { margin: 0px; padding: 0px; }
+
+body { font-family: 'Hiragino Kaku Gothic ProN', Meiryo, Helvetica, Arial, =
+sans-serif; font-size: 16px; line-height: 1.8; font-weight: 300; color: rgb=
+(51, 51, 51); text-shadow: white -1px 1px 0px; }
+
+img { max-width: 100%; vertical-align: middle; }
+
+table { border-collapse: collapse; border: 0px; }
+
+li { list-style-type: none; }
+
+figure > img { display: block; }
+
+figcaption { font-size: 0.75em; }
+
+h1 { margin-top: 1em; margin-bottom: 0.5em; font-size: 1.5em; }
+
+h2, h3, h4, h5, h6 { margin-top: 2em; margin-bottom: 1em; }
+
+h2 { font-size: 1.25em; }
+
+a { color: rgb(42, 122, 226); text-decoration: none; }
+
+a:visited { color: rgb(23, 86, 169); }
+
+a:hover { color: rgb(51, 51, 51); text-decoration: underline; }
+
+p { margin-bottom: 1em; }
+
+blockquote { color: rgb(130, 130, 130); border-left-width: 4px; border-left=
+-style: solid; border-left-color: rgb(232, 232, 232); padding-left: 1em; fo=
+nt-size: 18px; letter-spacing: -1px; font-style: italic; }
+
+blockquote > :last-child { margin-bottom: 0px; }
+
+pre, code { font-family: Consolas, 'Courier New', Courier, Monaco, monospac=
+e; text-shadow: none; letter-spacing: 0px; line-height: 1.2; }
+
+.wrapper { max-width: calc(800px - 4em); margin-right: auto; margin-left: a=
+uto; padding-right: 2em; padding-left: 2em; }
+
+@media screen and (max-width: 800px) {=20
+  .wrapper { max-width: calc(800px - 2em); padding-right: 1em; padding-left=
+: 1em; }
+}
+
+.wrapper::after, .footer-col-wrapper::after, .profile::after { content: "";=
+ display: table; clear: both; }
+
+.highlight { margin-bottom: 1em; }
+
+.muted { font-size: 0.75em; color: rgb(153, 153, 153); }
+
+.pagination span, .pagination a { padding: 0.25em 1em; border-radius: 1.5em=
+; }
+
+.profile--photo, .photo-box { margin-bottom: 1em; border: 1px solid rgb(221=
+, 221, 221); border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2=
+px 1px -1px; }
+
+.cassette img { box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 2px -2px; }
+
+h1 i, h2 i, h3 i, h4 i, h5 i, h6 i { margin-right: 0.25em; }
+
+.content { margin-bottom: 1em; }
+
+.site-header { border-top-width: 5px; border-top-style: solid; border-top-c=
+olor: rgb(66, 66, 66); border-bottom-width: 1px; border-bottom-style: solid=
+; border-bottom-color: rgb(232, 232, 232); min-height: 56px; position: rela=
+tive; }
+
+.site-title { font-size: 26px; line-height: 56px; letter-spacing: -1px; mar=
+gin-bottom: 0px; float: left; }
+
+.site-title, .site-title:visited { color: rgb(66, 66, 66); }
+
+.site-nav { float: right; line-height: 56px; }
+
+.site-nav .menu-icon { display: none; }
+
+.site-nav .page-link { color: rgb(51, 51, 51); line-height: 1.8; }
+
+.site-nav .page-link:not(:first-child) { margin-left: 20px; }
+
+@media screen and (max-width: 600px) {=20
+  .site-nav { position: absolute; top: 9px; right: 30px; border: 1px solid =
+rgb(232, 232, 232); border-radius: 5px; text-align: right; background-color=
+: rgb(248, 248, 248); }
+  .site-nav .menu-icon { display: block; float: right; width: 36px; height:=
+ 26px; line-height: 0; padding-top: 10px; text-align: center; }
+  .site-nav .menu-icon > svg { width: 18px; height: 15px; }
+  .site-nav .menu-icon > svg path { fill: rgb(66, 66, 66); }
+  .site-nav .trigger { clear: both; display: none; }
+  .site-nav:hover .trigger { display: block; padding-bottom: 5px; }
+  .site-nav .page-link { display: block; padding: 5px 10px; }
+}
+
+.site-footer { border-top-width: 1px; border-top-style: solid; border-top-c=
+olor: rgb(232, 232, 232); background-color: rgb(248, 248, 248); }
+
+.footer-heading { font-size: 18px; margin-bottom: 1em; }
+
+.footer-col-wrapper { font-size: 15px; margin-left: -1em; }
+
+.footer-col { float: left; margin-bottom: 1em; padding-left: 1em; }
+
+.footer-col-1 { width: calc(35% - 1em); }
+
+.footer-col-2 { width: calc(20% - 1em); }
+
+.footer-col-3 { width: calc(45% - 1em); }
+
+@media screen and (max-width: 800px) {=20
+  .footer-col-1, .footer-col-2 { width: calc(50% - 1em); }
+  .footer-col-3 { width: calc(100% - 1em); }
+}
+
+@media screen and (max-width: 600px) {=20
+  .footer-col { float: none; width: calc(100% - 1em); }
+}
+
+.markdown { margin-bottom: 2em; }
+
+.markdown h2 { margin-left: -16px; padding-left: 16px; border-left-width: 6=
+px; border-left-style: solid; border-left-color: rgb(66, 66, 66); }
+
+.markdown h3 { padding-top: 0.5em; border-top-width: 1px; border-top-style:=
+ dashed; border-top-color: rgb(221, 221, 221); }
+
+.markdown ol, .markdown ul { margin-left: 0px; margin-bottom: 1em; padding-=
+left: 1.5em; }
+
+.markdown ol > li { list-style: decimal; }
+
+.markdown ul > li { list-style: circle; }
+
+.markdown li > ul { margin-bottom: 0px; }
+
+.markdown table { border-bottom-width: 2px; border-bottom-style: solid; bor=
+der-bottom-color: rgb(153, 153, 153); line-height: 1.4; }
+
+.markdown th { padding: 0.25em 0.5em; border-top-width: 2px; border-top-sty=
+le: solid; border-top-color: rgb(153, 153, 153); border-bottom-width: 2px; =
+border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); }
+
+.markdown td { padding: 0.5em; vertical-align: top; }
+
+.markdown pre { margin-bottom: 1em; padding: 0.5em 1em; border: 1px solid r=
+gb(221, 221, 221); overflow: auto; border-radius: 4px; background-color: rg=
+b(248, 248, 248); }
+
+.markdown pre code { padding: 0px; border: none; }
+
+.markdown code { padding-left: 0.33333em; padding-right: 0.33333em; border:=
+ 1px solid rgb(221, 221, 221); border-radius: 4px; background-color: rgb(24=
+8, 248, 248); }
+
+.markdown .footnotes { font-size: 0.75em; }
+
+.markdown .footnotes hr { margin-bottom: 0.33333em; }
+
+.markdown .footnotes li { list-style: decimal inside; }
+
+.profile--photo { float: left; margin-right: 1em; margin-bottom: 1em; }
+
+.profile--social { margin: 0px; }
+
+.profile--social li { display: inline-block; margin-right: 0.5em; }
+
+.profile--social a { color: rgb(51, 51, 51); text-decoration: none; }
+
+.profile--social a:hover { color: rgb(89, 177, 235); }
+
+.pagination { font-size: 0.8em; }
+
+.pagination li { display: inline-block; margin-right: 0.5em; }
+
+.pagination span { display: block; border: 1px solid rgb(232, 232, 232); }
+
+.pagination a { display: block; color: rgb(51, 51, 51); text-decoration: no=
+ne; border: 1px solid rgb(232, 232, 232); background-color: rgb(248, 248, 2=
+48); }
+
+.pagination a:hover { color: rgb(89, 177, 235); border: 1px solid rgb(89, 1=
+77, 235); background-color: rgb(248, 248, 255); }
+
+.breadcrumb { margin: 0px; }
+
+.breadcrumb li { display: inline-block; vertical-align: middle; height: 2em=
+; line-height: 2em; letter-spacing: normal; color: rgb(153, 153, 153); font=
+-size: 0.75em; }
+
+.breadcrumb a { color: rgb(153, 153, 153); }
+
+.cassette { margin-top: 0.5em; margin-bottom: 1em; border: 1px solid rgb(22=
+1, 221, 221); border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px =
+8px 4px -4px; }
+
+.cassette img:hover { opacity: 0.75; }
+
+.cassette .cassette--wrapper { padding: 1em; }
+
+.cassette h1 { margin: 0px; font-size: 1.25em; }
+
+.category { margin: 0px; }
+
+.category li { list-style-type: none; }
+
+.category span { margin-left: 0.5em; }
+
+.tag { margin: 0px; text-shadow: none; }
+
+.tag li { display: inline-block; margin-right: 0.5em; vertical-align: middl=
+e; height: 1.5em; line-height: 1.5em; letter-spacing: normal; font-size: 0.=
+75em; }
+
+.tag a { display: inline-block; outline: none; padding-left: 0.5em; padding=
+-right: 0.5em; border: 2px solid rgb(25, 25, 112); border-radius: 4px; colo=
+r: rgb(255, 255, 255); text-align: center; text-decoration: none; backgroun=
+d-color: rgb(25, 25, 112); }
+
+.tag a:hover { border-color: rgb(89, 177, 235); color: rgb(89, 177, 235); b=
+ackground-color: rgb(255, 255, 255); }
+
+.tag a::before, .tag a::after { position: absolute; z-index: -1; display: b=
+lock; content: ""; }
+
+.tag a, .tag a::before, .tag a::after { box-sizing: border-box; transition:=
+ all 0.3s; }
+
+.tag i { margin-right: 0.5em; }
+
+.share-buttons { margin: 0px; }
+
+.share-buttons li { display: inline-block; margin-right: 0.5em; vertical-al=
+ign: top; }
+
+.share-buttons .fb_iframe_widget > span { vertical-align: baseline !importa=
+nt; }
+
+.highlight { background: rgb(255, 255, 255); }
+
+.highlight .c { color: rgb(153, 153, 136); font-style: italic; }
+
+.highlight .err { color: rgb(166, 23, 23); background-color: rgb(227, 210, =
+210); }
+
+.highlight .k { font-weight: bold; }
+
+.highlight .o { font-weight: bold; }
+
+.highlight .cm { color: rgb(153, 153, 136); font-style: italic; }
+
+.highlight .cp { color: rgb(153, 153, 153); font-weight: bold; }
+
+.highlight .c1 { color: rgb(153, 153, 136); font-style: italic; }
+
+.highlight .cs { color: rgb(153, 153, 153); font-weight: bold; font-style: =
+italic; }
+
+.highlight .gd { color: rgb(0, 0, 0); background-color: rgb(255, 221, 221);=
+ }
+
+.highlight .gd .x { color: rgb(0, 0, 0); background-color: rgb(255, 170, 17=
+0); }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .gr { color: rgb(170, 0, 0); }
+
+.highlight .gh { color: rgb(153, 153, 153); }
+
+.highlight .gi { color: rgb(0, 0, 0); background-color: rgb(221, 255, 221);=
+ }
+
+.highlight .gi .x { color: rgb(0, 0, 0); background-color: rgb(170, 255, 17=
+0); }
+
+.highlight .go { color: rgb(136, 136, 136); }
+
+.highlight .gp { color: rgb(85, 85, 85); }
+
+.highlight .gs { font-weight: bold; }
+
+.highlight .gu { color: rgb(170, 170, 170); }
+
+.highlight .gt { color: rgb(170, 0, 0); }
+
+.highlight .kc { font-weight: bold; }
+
+.highlight .kd { font-weight: bold; }
+
+.highlight .kp { font-weight: bold; }
+
+.highlight .kr { font-weight: bold; }
+
+.highlight .kt { color: rgb(68, 85, 136); font-weight: bold; }
+
+.highlight .m { color: rgb(0, 153, 153); }
+
+.highlight .s { color: rgb(221, 17, 68); }
+
+.highlight .na { color: rgb(0, 128, 128); }
+
+.highlight .nb { color: rgb(0, 134, 179); }
+
+.highlight .nc { color: rgb(68, 85, 136); font-weight: bold; }
+
+.highlight .no { color: rgb(0, 128, 128); }
+
+.highlight .ni { color: rgb(128, 0, 128); }
+
+.highlight .ne { color: rgb(153, 0, 0); font-weight: bold; }
+
+.highlight .nf { color: rgb(153, 0, 0); font-weight: bold; }
+
+.highlight .nn { color: rgb(85, 85, 85); }
+
+.highlight .nt { color: rgb(0, 0, 128); }
+
+.highlight .nv { color: rgb(0, 128, 128); }
+
+.highlight .ow { font-weight: bold; }
+
+.highlight .w { color: rgb(187, 187, 187); }
+
+.highlight .mf { color: rgb(0, 153, 153); }
+
+.highlight .mh { color: rgb(0, 153, 153); }
+
+.highlight .mi { color: rgb(0, 153, 153); }
+
+.highlight .mo { color: rgb(0, 153, 153); }
+
+.highlight .sb { color: rgb(221, 17, 68); }
+
+.highlight .sc { color: rgb(221, 17, 68); }
+
+.highlight .sd { color: rgb(221, 17, 68); }
+
+.highlight .s2 { color: rgb(221, 17, 68); }
+
+.highlight .se { color: rgb(221, 17, 68); }
+
+.highlight .sh { color: rgb(221, 17, 68); }
+
+.highlight .si { color: rgb(221, 17, 68); }
+
+.highlight .sx { color: rgb(221, 17, 68); }
+
+.highlight .sr { color: rgb(0, 153, 38); }
+
+.highlight .s1 { color: rgb(221, 17, 68); }
+
+.highlight .ss { color: rgb(153, 0, 115); }
+
+.highlight .bp { color: rgb(153, 153, 153); }
+
+.highlight .vc { color: rgb(0, 128, 128); }
+
+.highlight .vg { color: rgb(0, 128, 128); }
+
+.highlight .vi { color: rgb(0, 128, 128); }
+
+.highlight .il { color: rgb(0, 153, 153); }
+------=_NextPart_000_7689_CAB974BC.FC1CFBC7
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: https://yulii.github.io/img/site/yulii.jpg
+
+/9j/4AAQSkZJRgABAQEASABIAAD/4QCMRXhpZgAATU0AKgAAAAgABQEaAAUAAAABAAAASgEbAAUA
+AAABAAAAUgEoAAMAAAABAAIAAAITAAMAAAABAAEAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAA
+AEgAAAABAAOQAAAHAAAABDAyMTCgAAAHAAAABDAxMDCgAQADAAAAAf//AAAAAAAA/+EMYmh0dHA6
+Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBD
+ZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLycg
+eDp4bXB0az0nSW1hZ2U6OkV4aWZUb29sIDguNTYnPgo8cmRmOlJERiB4bWxuczpyZGY9J2h0dHA6
+Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMnPgoKIDxyZGY6RGVzY3JpcHRp
+b24gcmRmOmFib3V0PScnCiAgeG1sbnM6dGlmZj0naHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEu
+MC8nPgogIDx0aWZmOkJpdHNQZXJTYW1wbGU+CiAgIDxyZGY6U2VxPgogICAgPHJkZjpsaT44PC9y
+ZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L3RpZmY6Qml0c1BlclNhbXBsZT4KICA8dGlmZjpJbWFn
+ZUxlbmd0aD4xPC90aWZmOkltYWdlTGVuZ3RoPgogIDx0aWZmOkltYWdlV2lkdGg+MTwvdGlmZjpJ
+bWFnZVdpZHRoPgogIDx0aWZmOllDYkNyUG9zaXRpb25pbmc+MTwvdGlmZjpZQ2JDclBvc2l0aW9u
+aW5nPgogIDx0aWZmOllDYkNyU3ViU2FtcGxpbmc+MiAyPC90aWZmOllDYkNyU3ViU2FtcGxpbmc+
+CiAgPHRpZmY6WUNiQ3JTdWJTYW1wbGluZz4KICAgPHJkZjpTZXE+CiAgICA8cmRmOmxpPjIgMjwv
+cmRmOmxpPgogICA8L3JkZjpTZXE+CiAgPC90aWZmOllDYkNyU3ViU2FtcGxpbmc+CiA8L3JkZjpE
+ZXNjcmlwdGlvbj4KPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAKPD94cGFja2V0IGVuZD0ndyc/Pv/bAEMABQMEBAQDBQQEBAUFBQYHDAgHBwcHDwsL
+CQwRDxISEQ8RERMWHBcTFBoVEREYIRgaHR0fHx8TFyIkIh4kHB4fHv/bAEMBBQUFBwYHDggIDh4U
+ERQeHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHv/AABEI
+AGQAZAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAGAAIDBAUHAQj/xAA4EAACAQMCBAQE
+BAQGAwAAAAABAgMABBEFIQYSMUETUWFxIjKBkQcUQlIVI7HRJTNEYqHwVMHh/8QAGgEAAgMBAQAA
+AAAAAAAAAAAAAQIAAwQFBv/EACERAAICAgICAwEAAAAAAAAAAAABAhEDMQQhEkEiUWFx/9oADAMB
+AAIRAxEAPwCAAdMU/oNvtSQDO1OAGazFtDkpxA5c16ABQ7x3rq6PYJbw73VwCR/tQdT/AGohSI+L
+OKv4LEFtrQXMvmzhQB6Dqax+G/xE/iFx4N5aJByAuzq3wcncnPTeuc61NPfXv82d+aXYk9RtsPav
+dDtbaK+R7kSNashE5U4Y46gds57U6imLbOz6dxho15ceEs5B6ZAyPvROoDxiRCGUjII7189Jax6b
+q0q2M5mtVCyRuBuysenuO4rs/CV34McMMkjtFeLmNX35HAycHyI7elRxrRLCFFLdtqcVAFTAA9KR
+UY70gSrzKh6EmvAw5vftUki79NzXgjIIJHWoShwAx0pVJy0qhDHwcA96kA8xXigmvVGTg1Akqrn0
+rlP4pzs3FLxgZEcSqP6/+66wi7YFCercKDiPikwqGDXiERsdgpVd/ptRRFZzSGwaRxJyq0iZJU+2
+auRwjxLeCQNHFIQdjshIOSfLJq9Dpl7psrllLRkEFj1GDit3TrGO7VZEChlI8NiMjPQqftViI6MO
+LhpLZIpVbmglYGPH6CT39j/waJ7hrjTBp9kFCyRXsZjPUcvfHnscVZt3a3Np4saCJ+YOvzBQcjGP
+ff61Qu4Wm4r0OxAEgjmknPx/KgGcj0yQKL0IdJhdXAKqd+hqQgkedRx7RqoPQCpVOR1qkYgdeU+t
+SjfGRvSYb705FyPM1AjSD5Uql5B5UqgaRhjYDrUiAE5xvUY/47U/PkagrJSN/SpbUTpqdlc2rcs8
+Fykgz0IBPMPYgmokOFzUmM8pBI32x1BqPQ0XTGfi5oK8O8QLOgB0nU0MtuzfKr9Xj+nUehoQP5dN
+IlS1gbEx5QIwS252UDz9aIOK9fu9d0y20PUjHNb2MrNHKdnLdNz7dhWNHctBcRz28xg8FgVEPwKG
+HQ+ef/tXwxTcQTlCwf1yS90/X0t3jCwxNhw3QHAyN/0gnGfMVtcCq1xxfrcrkTC0SOOJxghQ55sZ
++gp08ttcSSPclZ5JRh2dslhnfP8AWorKOOwuRcaYyW8mRsAAHAGAGx12p3hlXYrknoNQzpIcgjep
+EkDUyzmS8so7mNcLIuQDvj0p/hkDK1lfWwjyxY4bbFWIccgAIxVYjbcb1IoCHmGTUCiydjtSqLLH
+cUqhDFWvUyDivD2IrN4jv5bKzSK3OLm4JVD+0AZJoxi5OkK2XtQ1Ox08D81OqsflQbsfYVkz8UfA
+RbWMh2IVpGx9cVg6faJPP4kztIQvMzEnLHtvWnBbqJQrjmb9DY6j+9a4YF7E8n6KCG5kPPJIGJ3x
+jb6VciijcYMRDdcb7+tEfD3DWoa5NJFp1shWAc008riOGFfN3Oy/1Nakmg8J2Q8K+40M0o+ZdO09
+pIwfR2IzVvkgfoGvAnKcY9cqKqyxZDiLJwNyBgUbnQ+EphiHjRomYf6zTXjT6spOKz9b4a1XRoEn
+vIY3s5seDeWziW3lHblcbZ9Dg0fJMlMEreW+smzbXEsOMkcjbA+1bOm8T30fLHeJHct1B+Vj9fOq
+l5Fy7nYEjeojbGTm5EBKvtvQcIsNsM9K1G21NHa2bJj/AM2M7OnuPL2q/EhzntXNoWubK9W8tHMc
+sWxYHY+h9KP9C1SDVrQzx/BInwzRk7o39jWTJi8CyMi9yY7A/WlTl6bg0qrDYPjbvQ9rrNJqtyTv
+4FqAo9W3NEByO1YGfG1fUubpziMH0AxirOOrkJLRHpqKtuETBaPBY+eRvRNwjob67qSWbTi1tIoj
+c3l0RkW0K/M/v2A7k0M2eFvFBxiVAD7/APQaPImGm/hWnIQs+vX5ikbv4EAB5fYuQfpWyTorDPQ9
+bsNR4fk0vRrJbHSLO65FikjDNcKQOWSQnZnJBJHbah/WuEra81xZbeSPT7OSAyzLGnNysH5cInkT
+v5CtThL8vccL2aWzoRbry3EQOGSUk5Zu55tsN6Y7Vp3EMAZ7uIkTvGBKhOQIUIACeXxnmK9z51hl
+OUZM9Bi40MnHxp12zC0fhrTLETPBDJqVygyJJ4AViB6BU3BY+ZNbunSmylaztvAkilIjkVYgYZc9
+RJH8r+RxuOxqG3WW4kS2STwoJyH5QCfFIGOg6he/YZpmoW7TWVxp1vcmwnkYxi6iwwIO3IfJT+5c
+Heq1OTabLp8TFGMoxV0c+450jTxZQ67oSldMu5WgkgzzGzuFPxRk9SpA5lPce1CoADmRds/MAdqK
+7KO7GicT6PL/ACzBBHcSRns8MoXI8jhiM+VCvIzglBu3wknYV0oHmpdMqytyJEvTxSxx6Uyyvp9M
+1GO+t8kEASIOjr3H/e9TahETLbZKkREcyjyO1QXMBiQoMsFPw+lGSTQLOlW8yXEEdxAymKRQynzF
+Kueadr+q6VAbW18JouYsocfLnsPSlWV4XZZYTyuEiZ26IObbyFDGjXHirNMVOZJS/wB962uJZHtt
+CnmTZnIjG/7jvWHpvKiugHw4BH0o8ePsE9nl+xt28RdgCTGQOhzn+9HmpxvP+GHDFwuCsVzdwvj9
+L5Vx9xQJqfMbdQpJKOrD1U7Gug8Cf4zw9qnCIwbuYLqGmAnHPPGpDxj1ZM7elaJCIJ+F4UteGrFL
+YqWnjFzM37pGGwz5KNse9bRd763uNKSPkNmyO8uQFMzDJiz3YAq2PU0FcD6hcGwntbhB4Vo6pG5U
+hlVifhbzAPT7UXyTQxLNJDHh5GE0zM2fEl5Quw7DAHv1rnT6k7PT8ZPLhxrH0lsjiWZdUuEbNtIp
+WNwSWyg3AAzsvko7nfNT3YsZPzRWSdWthzpGLf8AmzYHxKcnGdiVG1V9Pc2LzTRXSM0hwAyA8wI3
+Ydfh7b4OxqO1lzcJPM5ywLtgbJsQoA74229KRfppeNyj8Ov59/wD+HJxrHEPE1+8XLDNo15I6ncq
+OUcu/c5xQLAxhk8N90bp6HFdEudMl4U4R1aW8kRrzWXWzs2jbaS2Uh5ZR6E8q7+tAN0eaM75weh6
+108f2eRnfk72Zuqyst7AVbJOB9M1dl5XDMBnO/uKxdSZn1O0C5yc7+WK14XBTYEFRjFPYhAIUbdl
+3pVYRSRknFKiQuccEjh6Ej/yP6A1mWo5IFZeyjb3FKlWfj6HybI7on8m3+3IFa1rcz2UlteWsrw3
+FvIrxSKcFWG4I+tKlV7FOv31pb3F/pGqCNYJuI9Kkub9YhyoZo8MHUfpJPXzod1LijULLiWHSI4b
+OS2QxxHxIAXZCoyC3XudxvSpVgku2b8U5RxKn7CvXtPttB0zU9Qtg08kKgqk7cynPnjBP3ob/DfW
+b/iLiyz0TV5FuLa8Jbm5Arw43whGMLtjByKVKjFfBmzkTkpR79A7x9qNzf8AFN6kzAR2MjWltGuy
+xxocAD16knuTQpfkghcnGM0qVa8ekcWWzEvXIuUkAHNy4H3qeGVwwyebI70qVMKWw5IzSpUqYh//
+2Q==
+------=_NextPart_000_7689_CAB974BC.FC1CFBC7
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
+
+@font-face { font-family: FontAwesome; src: url(https://maxcdn.bootstrapcdn=
+.com/font-awesome/4.4.0/fonts/fontawesome-webfont.eot?#iefix&v=3D4.4.0) for=
+mat(embedded-opentype), url(https://maxcdn.bootstrapcdn.com/font-awesome/4.=
+4.0/fonts/fontawesome-webfont.woff2?v=3D4.4.0) format(woff2), url(https://m=
+axcdn.bootstrapcdn.com/font-awesome/4.4.0/fonts/fontawesome-webfont.woff?v=
+=3D4.4.0) format(woff), url(https://maxcdn.bootstrapcdn.com/font-awesome/4.=
+4.0/fonts/fontawesome-webfont.ttf?v=3D4.4.0) format(truetype), url(https://=
+maxcdn.bootstrapcdn.com/font-awesome/4.4.0/fonts/fontawesome-webfont.svg?v=
+=3D4.4.0#fontawesomeregular) format(svg); font-weight: normal; font-style: =
+normal; }
+
+.fa { display: inline-block; font-style: normal; font-variant: normal; font=
+-weight: normal; font-stretch: normal; line-height: 1; font-family: FontAwe=
+some; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: ant=
+ialiased; }
+
+.fa-lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -15%; }
+
+.fa-2x { font-size: 2em; }
+
+.fa-3x { font-size: 3em; }
+
+.fa-4x { font-size: 4em; }
+
+.fa-5x { font-size: 5em; }
+
+.fa-fw { width: 1.28571em; text-align: center; }
+
+.fa-ul { padding-left: 0px; margin-left: 2.14286em; list-style-type: none; =
+}
+
+.fa-ul > li { position: relative; }
+
+.fa-li { position: absolute; left: -2.14286em; width: 2.14286em; top: 0.142=
+857em; text-align: center; }
+
+.fa-li.fa-lg { left: -1.85714em; }
+
+.fa-border { padding: 0.2em 0.25em 0.15em; border: 0.08em solid rgb(238, 23=
+8, 238); border-radius: 0.1em; }
+
+.fa-pull-left { float: left; }
+
+.fa-pull-right { float: right; }
+
+.fa.fa-pull-left { margin-right: 0.3em; }
+
+.fa.fa-pull-right { margin-left: 0.3em; }
+
+.pull-right { float: right; }
+
+.pull-left { float: left; }
+
+.fa.pull-left { margin-right: 0.3em; }
+
+.fa.pull-right { margin-left: 0.3em; }
+
+.fa-spin { animation: fa-spin 2s linear infinite; }
+
+.fa-pulse { animation: fa-spin 1s steps(8, end) infinite; }
+
+@-webkit-keyframes fa-spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+@keyframes fa-spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+.fa-rotate-90 { transform: rotate(90deg); }
+
+.fa-rotate-180 { transform: rotate(180deg); }
+
+.fa-rotate-270 { transform: rotate(270deg); }
+
+.fa-flip-horizontal { transform: scale(-1, 1); }
+
+.fa-flip-vertical { transform: scale(1, -1); }
+
+:root .fa-rotate-90, :root .fa-rotate-180, :root .fa-rotate-270, :root .fa-=
+flip-horizontal, :root .fa-flip-vertical { filter: none; }
+
+.fa-stack { position: relative; display: inline-block; width: 2em; height: =
+2em; line-height: 2em; vertical-align: middle; }
+
+.fa-stack-1x, .fa-stack-2x { position: absolute; left: 0px; width: 100%; te=
+xt-align: center; }
+
+.fa-stack-1x { line-height: inherit; }
+
+.fa-stack-2x { font-size: 2em; }
+
+.fa-inverse { color: rgb(255, 255, 255); }
+
+.fa-glass::before { content: "=EF=80=80"; }
+
+.fa-music::before { content: "=EF=80=81"; }
+
+.fa-search::before { content: "=EF=80=82"; }
+
+.fa-envelope-o::before { content: "=EF=80=83"; }
+
+.fa-heart::before { content: "=EF=80=84"; }
+
+.fa-star::before { content: "=EF=80=85"; }
+
+.fa-star-o::before { content: "=EF=80=86"; }
+
+.fa-user::before { content: "=EF=80=87"; }
+
+.fa-film::before { content: "=EF=80=88"; }
+
+.fa-th-large::before { content: "=EF=80=89"; }
+
+.fa-th::before { content: "=EF=80=8A"; }
+
+.fa-th-list::before { content: "=EF=80=8B"; }
+
+.fa-check::before { content: "=EF=80=8C"; }
+
+.fa-remove::before, .fa-close::before, .fa-times::before { content: "=EF=80=
+=8D"; }
+
+.fa-search-plus::before { content: "=EF=80=8E"; }
+
+.fa-search-minus::before { content: "=EF=80=90"; }
+
+.fa-power-off::before { content: "=EF=80=91"; }
+
+.fa-signal::before { content: "=EF=80=92"; }
+
+.fa-gear::before, .fa-cog::before { content: "=EF=80=93"; }
+
+.fa-trash-o::before { content: "=EF=80=94"; }
+
+.fa-home::before { content: "=EF=80=95"; }
+
+.fa-file-o::before { content: "=EF=80=96"; }
+
+.fa-clock-o::before { content: "=EF=80=97"; }
+
+.fa-road::before { content: "=EF=80=98"; }
+
+.fa-download::before { content: "=EF=80=99"; }
+
+.fa-arrow-circle-o-down::before { content: "=EF=80=9A"; }
+
+.fa-arrow-circle-o-up::before { content: "=EF=80=9B"; }
+
+.fa-inbox::before { content: "=EF=80=9C"; }
+
+.fa-play-circle-o::before { content: "=EF=80=9D"; }
+
+.fa-rotate-right::before, .fa-repeat::before { content: "=EF=80=9E"; }
+
+.fa-refresh::before { content: "=EF=80=A1"; }
+
+.fa-list-alt::before { content: "=EF=80=A2"; }
+
+.fa-lock::before { content: "=EF=80=A3"; }
+
+.fa-flag::before { content: "=EF=80=A4"; }
+
+.fa-headphones::before { content: "=EF=80=A5"; }
+
+.fa-volume-off::before { content: "=EF=80=A6"; }
+
+.fa-volume-down::before { content: "=EF=80=A7"; }
+
+.fa-volume-up::before { content: "=EF=80=A8"; }
+
+.fa-qrcode::before { content: "=EF=80=A9"; }
+
+.fa-barcode::before { content: "=EF=80=AA"; }
+
+.fa-tag::before { content: "=EF=80=AB"; }
+
+.fa-tags::before { content: "=EF=80=AC"; }
+
+.fa-book::before { content: "=EF=80=AD"; }
+
+.fa-bookmark::before { content: "=EF=80=AE"; }
+
+.fa-print::before { content: "=EF=80=AF"; }
+
+.fa-camera::before { content: "=EF=80=B0"; }
+
+.fa-font::before { content: "=EF=80=B1"; }
+
+.fa-bold::before { content: "=EF=80=B2"; }
+
+.fa-italic::before { content: "=EF=80=B3"; }
+
+.fa-text-height::before { content: "=EF=80=B4"; }
+
+.fa-text-width::before { content: "=EF=80=B5"; }
+
+.fa-align-left::before { content: "=EF=80=B6"; }
+
+.fa-align-center::before { content: "=EF=80=B7"; }
+
+.fa-align-right::before { content: "=EF=80=B8"; }
+
+.fa-align-justify::before { content: "=EF=80=B9"; }
+
+.fa-list::before { content: "=EF=80=BA"; }
+
+.fa-dedent::before, .fa-outdent::before { content: "=EF=80=BB"; }
+
+.fa-indent::before { content: "=EF=80=BC"; }
+
+.fa-video-camera::before { content: "=EF=80=BD"; }
+
+.fa-photo::before, .fa-image::before, .fa-picture-o::before { content: "=EF=
+=80=BE"; }
+
+.fa-pencil::before { content: "=EF=81=80"; }
+
+.fa-map-marker::before { content: "=EF=81=81"; }
+
+.fa-adjust::before { content: "=EF=81=82"; }
+
+.fa-tint::before { content: "=EF=81=83"; }
+
+.fa-edit::before, .fa-pencil-square-o::before { content: "=EF=81=84"; }
+
+.fa-share-square-o::before { content: "=EF=81=85"; }
+
+.fa-check-square-o::before { content: "=EF=81=86"; }
+
+.fa-arrows::before { content: "=EF=81=87"; }
+
+.fa-step-backward::before { content: "=EF=81=88"; }
+
+.fa-fast-backward::before { content: "=EF=81=89"; }
+
+.fa-backward::before { content: "=EF=81=8A"; }
+
+.fa-play::before { content: "=EF=81=8B"; }
+
+.fa-pause::before { content: "=EF=81=8C"; }
+
+.fa-stop::before { content: "=EF=81=8D"; }
+
+.fa-forward::before { content: "=EF=81=8E"; }
+
+.fa-fast-forward::before { content: "=EF=81=90"; }
+
+.fa-step-forward::before { content: "=EF=81=91"; }
+
+.fa-eject::before { content: "=EF=81=92"; }
+
+.fa-chevron-left::before { content: "=EF=81=93"; }
+
+.fa-chevron-right::before { content: "=EF=81=94"; }
+
+.fa-plus-circle::before { content: "=EF=81=95"; }
+
+.fa-minus-circle::before { content: "=EF=81=96"; }
+
+.fa-times-circle::before { content: "=EF=81=97"; }
+
+.fa-check-circle::before { content: "=EF=81=98"; }
+
+.fa-question-circle::before { content: "=EF=81=99"; }
+
+.fa-info-circle::before { content: "=EF=81=9A"; }
+
+.fa-crosshairs::before { content: "=EF=81=9B"; }
+
+.fa-times-circle-o::before { content: "=EF=81=9C"; }
+
+.fa-check-circle-o::before { content: "=EF=81=9D"; }
+
+.fa-ban::before { content: "=EF=81=9E"; }
+
+.fa-arrow-left::before { content: "=EF=81=A0"; }
+
+.fa-arrow-right::before { content: "=EF=81=A1"; }
+
+.fa-arrow-up::before { content: "=EF=81=A2"; }
+
+.fa-arrow-down::before { content: "=EF=81=A3"; }
+
+.fa-mail-forward::before, .fa-share::before { content: "=EF=81=A4"; }
+
+.fa-expand::before { content: "=EF=81=A5"; }
+
+.fa-compress::before { content: "=EF=81=A6"; }
+
+.fa-plus::before { content: "=EF=81=A7"; }
+
+.fa-minus::before { content: "=EF=81=A8"; }
+
+.fa-asterisk::before { content: "=EF=81=A9"; }
+
+.fa-exclamation-circle::before { content: "=EF=81=AA"; }
+
+.fa-gift::before { content: "=EF=81=AB"; }
+
+.fa-leaf::before { content: "=EF=81=AC"; }
+
+.fa-fire::before { content: "=EF=81=AD"; }
+
+.fa-eye::before { content: "=EF=81=AE"; }
+
+.fa-eye-slash::before { content: "=EF=81=B0"; }
+
+.fa-warning::before, .fa-exclamation-triangle::before { content: "=EF=81=B1=
+"; }
+
+.fa-plane::before { content: "=EF=81=B2"; }
+
+.fa-calendar::before { content: "=EF=81=B3"; }
+
+.fa-random::before { content: "=EF=81=B4"; }
+
+.fa-comment::before { content: "=EF=81=B5"; }
+
+.fa-magnet::before { content: "=EF=81=B6"; }
+
+.fa-chevron-up::before { content: "=EF=81=B7"; }
+
+.fa-chevron-down::before { content: "=EF=81=B8"; }
+
+.fa-retweet::before { content: "=EF=81=B9"; }
+
+.fa-shopping-cart::before { content: "=EF=81=BA"; }
+
+.fa-folder::before { content: "=EF=81=BB"; }
+
+.fa-folder-open::before { content: "=EF=81=BC"; }
+
+.fa-arrows-v::before { content: "=EF=81=BD"; }
+
+.fa-arrows-h::before { content: "=EF=81=BE"; }
+
+.fa-bar-chart-o::before, .fa-bar-chart::before { content: "=EF=82=80"; }
+
+.fa-twitter-square::before { content: "=EF=82=81"; }
+
+.fa-facebook-square::before { content: "=EF=82=82"; }
+
+.fa-camera-retro::before { content: "=EF=82=83"; }
+
+.fa-key::before { content: "=EF=82=84"; }
+
+.fa-gears::before, .fa-cogs::before { content: "=EF=82=85"; }
+
+.fa-comments::before { content: "=EF=82=86"; }
+
+.fa-thumbs-o-up::before { content: "=EF=82=87"; }
+
+.fa-thumbs-o-down::before { content: "=EF=82=88"; }
+
+.fa-star-half::before { content: "=EF=82=89"; }
+
+.fa-heart-o::before { content: "=EF=82=8A"; }
+
+.fa-sign-out::before { content: "=EF=82=8B"; }
+
+.fa-linkedin-square::before { content: "=EF=82=8C"; }
+
+.fa-thumb-tack::before { content: "=EF=82=8D"; }
+
+.fa-external-link::before { content: "=EF=82=8E"; }
+
+.fa-sign-in::before { content: "=EF=82=90"; }
+
+.fa-trophy::before { content: "=EF=82=91"; }
+
+.fa-github-square::before { content: "=EF=82=92"; }
+
+.fa-upload::before { content: "=EF=82=93"; }
+
+.fa-lemon-o::before { content: "=EF=82=94"; }
+
+.fa-phone::before { content: "=EF=82=95"; }
+
+.fa-square-o::before { content: "=EF=82=96"; }
+
+.fa-bookmark-o::before { content: "=EF=82=97"; }
+
+.fa-phone-square::before { content: "=EF=82=98"; }
+
+.fa-twitter::before { content: "=EF=82=99"; }
+
+.fa-facebook-f::before, .fa-facebook::before { content: "=EF=82=9A"; }
+
+.fa-github::before { content: "=EF=82=9B"; }
+
+.fa-unlock::before { content: "=EF=82=9C"; }
+
+.fa-credit-card::before { content: "=EF=82=9D"; }
+
+.fa-feed::before, .fa-rss::before { content: "=EF=82=9E"; }
+
+.fa-hdd-o::before { content: "=EF=82=A0"; }
+
+.fa-bullhorn::before { content: "=EF=82=A1"; }
+
+.fa-bell::before { content: "=EF=83=B3"; }
+
+.fa-certificate::before { content: "=EF=82=A3"; }
+
+.fa-hand-o-right::before { content: "=EF=82=A4"; }
+
+.fa-hand-o-left::before { content: "=EF=82=A5"; }
+
+.fa-hand-o-up::before { content: "=EF=82=A6"; }
+
+.fa-hand-o-down::before { content: "=EF=82=A7"; }
+
+.fa-arrow-circle-left::before { content: "=EF=82=A8"; }
+
+.fa-arrow-circle-right::before { content: "=EF=82=A9"; }
+
+.fa-arrow-circle-up::before { content: "=EF=82=AA"; }
+
+.fa-arrow-circle-down::before { content: "=EF=82=AB"; }
+
+.fa-globe::before { content: "=EF=82=AC"; }
+
+.fa-wrench::before { content: "=EF=82=AD"; }
+
+.fa-tasks::before { content: "=EF=82=AE"; }
+
+.fa-filter::before { content: "=EF=82=B0"; }
+
+.fa-briefcase::before { content: "=EF=82=B1"; }
+
+.fa-arrows-alt::before { content: "=EF=82=B2"; }
+
+.fa-group::before, .fa-users::before { content: "=EF=83=80"; }
+
+.fa-chain::before, .fa-link::before { content: "=EF=83=81"; }
+
+.fa-cloud::before { content: "=EF=83=82"; }
+
+.fa-flask::before { content: "=EF=83=83"; }
+
+.fa-cut::before, .fa-scissors::before { content: "=EF=83=84"; }
+
+.fa-copy::before, .fa-files-o::before { content: "=EF=83=85"; }
+
+.fa-paperclip::before { content: "=EF=83=86"; }
+
+.fa-save::before, .fa-floppy-o::before { content: "=EF=83=87"; }
+
+.fa-square::before { content: "=EF=83=88"; }
+
+.fa-navicon::before, .fa-reorder::before, .fa-bars::before { content: "=EF=
+=83=89"; }
+
+.fa-list-ul::before { content: "=EF=83=8A"; }
+
+.fa-list-ol::before { content: "=EF=83=8B"; }
+
+.fa-strikethrough::before { content: "=EF=83=8C"; }
+
+.fa-underline::before { content: "=EF=83=8D"; }
+
+.fa-table::before { content: "=EF=83=8E"; }
+
+.fa-magic::before { content: "=EF=83=90"; }
+
+.fa-truck::before { content: "=EF=83=91"; }
+
+.fa-pinterest::before { content: "=EF=83=92"; }
+
+.fa-pinterest-square::before { content: "=EF=83=93"; }
+
+.fa-google-plus-square::before { content: "=EF=83=94"; }
+
+.fa-google-plus::before { content: "=EF=83=95"; }
+
+.fa-money::before { content: "=EF=83=96"; }
+
+.fa-caret-down::before { content: "=EF=83=97"; }
+
+.fa-caret-up::before { content: "=EF=83=98"; }
+
+.fa-caret-left::before { content: "=EF=83=99"; }
+
+.fa-caret-right::before { content: "=EF=83=9A"; }
+
+.fa-columns::before { content: "=EF=83=9B"; }
+
+.fa-unsorted::before, .fa-sort::before { content: "=EF=83=9C"; }
+
+.fa-sort-down::before, .fa-sort-desc::before { content: "=EF=83=9D"; }
+
+.fa-sort-up::before, .fa-sort-asc::before { content: "=EF=83=9E"; }
+
+.fa-envelope::before { content: "=EF=83=A0"; }
+
+.fa-linkedin::before { content: "=EF=83=A1"; }
+
+.fa-rotate-left::before, .fa-undo::before { content: "=EF=83=A2"; }
+
+.fa-legal::before, .fa-gavel::before { content: "=EF=83=A3"; }
+
+.fa-dashboard::before, .fa-tachometer::before { content: "=EF=83=A4"; }
+
+.fa-comment-o::before { content: "=EF=83=A5"; }
+
+.fa-comments-o::before { content: "=EF=83=A6"; }
+
+.fa-flash::before, .fa-bolt::before { content: "=EF=83=A7"; }
+
+.fa-sitemap::before { content: "=EF=83=A8"; }
+
+.fa-umbrella::before { content: "=EF=83=A9"; }
+
+.fa-paste::before, .fa-clipboard::before { content: "=EF=83=AA"; }
+
+.fa-lightbulb-o::before { content: "=EF=83=AB"; }
+
+.fa-exchange::before { content: "=EF=83=AC"; }
+
+.fa-cloud-download::before { content: "=EF=83=AD"; }
+
+.fa-cloud-upload::before { content: "=EF=83=AE"; }
+
+.fa-user-md::before { content: "=EF=83=B0"; }
+
+.fa-stethoscope::before { content: "=EF=83=B1"; }
+
+.fa-suitcase::before { content: "=EF=83=B2"; }
+
+.fa-bell-o::before { content: "=EF=82=A2"; }
+
+.fa-coffee::before { content: "=EF=83=B4"; }
+
+.fa-cutlery::before { content: "=EF=83=B5"; }
+
+.fa-file-text-o::before { content: "=EF=83=B6"; }
+
+.fa-building-o::before { content: "=EF=83=B7"; }
+
+.fa-hospital-o::before { content: "=EF=83=B8"; }
+
+.fa-ambulance::before { content: "=EF=83=B9"; }
+
+.fa-medkit::before { content: "=EF=83=BA"; }
+
+.fa-fighter-jet::before { content: "=EF=83=BB"; }
+
+.fa-beer::before { content: "=EF=83=BC"; }
+
+.fa-h-square::before { content: "=EF=83=BD"; }
+
+.fa-plus-square::before { content: "=EF=83=BE"; }
+
+.fa-angle-double-left::before { content: "=EF=84=80"; }
+
+.fa-angle-double-right::before { content: "=EF=84=81"; }
+
+.fa-angle-double-up::before { content: "=EF=84=82"; }
+
+.fa-angle-double-down::before { content: "=EF=84=83"; }
+
+.fa-angle-left::before { content: "=EF=84=84"; }
+
+.fa-angle-right::before { content: "=EF=84=85"; }
+
+.fa-angle-up::before { content: "=EF=84=86"; }
+
+.fa-angle-down::before { content: "=EF=84=87"; }
+
+.fa-desktop::before { content: "=EF=84=88"; }
+
+.fa-laptop::before { content: "=EF=84=89"; }
+
+.fa-tablet::before { content: "=EF=84=8A"; }
+
+.fa-mobile-phone::before, .fa-mobile::before { content: "=EF=84=8B"; }
+
+.fa-circle-o::before { content: "=EF=84=8C"; }
+
+.fa-quote-left::before { content: "=EF=84=8D"; }
+
+.fa-quote-right::before { content: "=EF=84=8E"; }
+
+.fa-spinner::before { content: "=EF=84=90"; }
+
+.fa-circle::before { content: "=EF=84=91"; }
+
+.fa-mail-reply::before, .fa-reply::before { content: "=EF=84=92"; }
+
+.fa-github-alt::before { content: "=EF=84=93"; }
+
+.fa-folder-o::before { content: "=EF=84=94"; }
+
+.fa-folder-open-o::before { content: "=EF=84=95"; }
+
+.fa-smile-o::before { content: "=EF=84=98"; }
+
+.fa-frown-o::before { content: "=EF=84=99"; }
+
+.fa-meh-o::before { content: "=EF=84=9A"; }
+
+.fa-gamepad::before { content: "=EF=84=9B"; }
+
+.fa-keyboard-o::before { content: "=EF=84=9C"; }
+
+.fa-flag-o::before { content: "=EF=84=9D"; }
+
+.fa-flag-checkered::before { content: "=EF=84=9E"; }
+
+.fa-terminal::before { content: "=EF=84=A0"; }
+
+.fa-code::before { content: "=EF=84=A1"; }
+
+.fa-mail-reply-all::before, .fa-reply-all::before { content: "=EF=84=A2"; }
+
+.fa-star-half-empty::before, .fa-star-half-full::before, .fa-star-half-o::b=
+efore { content: "=EF=84=A3"; }
+
+.fa-location-arrow::before { content: "=EF=84=A4"; }
+
+.fa-crop::before { content: "=EF=84=A5"; }
+
+.fa-code-fork::before { content: "=EF=84=A6"; }
+
+.fa-unlink::before, .fa-chain-broken::before { content: "=EF=84=A7"; }
+
+.fa-question::before { content: "=EF=84=A8"; }
+
+.fa-info::before { content: "=EF=84=A9"; }
+
+.fa-exclamation::before { content: "=EF=84=AA"; }
+
+.fa-superscript::before { content: "=EF=84=AB"; }
+
+.fa-subscript::before { content: "=EF=84=AC"; }
+
+.fa-eraser::before { content: "=EF=84=AD"; }
+
+.fa-puzzle-piece::before { content: "=EF=84=AE"; }
+
+.fa-microphone::before { content: "=EF=84=B0"; }
+
+.fa-microphone-slash::before { content: "=EF=84=B1"; }
+
+.fa-shield::before { content: "=EF=84=B2"; }
+
+.fa-calendar-o::before { content: "=EF=84=B3"; }
+
+.fa-fire-extinguisher::before { content: "=EF=84=B4"; }
+
+.fa-rocket::before { content: "=EF=84=B5"; }
+
+.fa-maxcdn::before { content: "=EF=84=B6"; }
+
+.fa-chevron-circle-left::before { content: "=EF=84=B7"; }
+
+.fa-chevron-circle-right::before { content: "=EF=84=B8"; }
+
+.fa-chevron-circle-up::before { content: "=EF=84=B9"; }
+
+.fa-chevron-circle-down::before { content: "=EF=84=BA"; }
+
+.fa-html5::before { content: "=EF=84=BB"; }
+
+.fa-css3::before { content: "=EF=84=BC"; }
+
+.fa-anchor::before { content: "=EF=84=BD"; }
+
+.fa-unlock-alt::before { content: "=EF=84=BE"; }
+
+.fa-bullseye::before { content: "=EF=85=80"; }
+
+.fa-ellipsis-h::before { content: "=EF=85=81"; }
+
+.fa-ellipsis-v::before { content: "=EF=85=82"; }
+
+.fa-rss-square::before { content: "=EF=85=83"; }
+
+.fa-play-circle::before { content: "=EF=85=84"; }
+
+.fa-ticket::before { content: "=EF=85=85"; }
+
+.fa-minus-square::before { content: "=EF=85=86"; }
+
+.fa-minus-square-o::before { content: "=EF=85=87"; }
+
+.fa-level-up::before { content: "=EF=85=88"; }
+
+.fa-level-down::before { content: "=EF=85=89"; }
+
+.fa-check-square::before { content: "=EF=85=8A"; }
+
+.fa-pencil-square::before { content: "=EF=85=8B"; }
+
+.fa-external-link-square::before { content: "=EF=85=8C"; }
+
+.fa-share-square::before { content: "=EF=85=8D"; }
+
+.fa-compass::before { content: "=EF=85=8E"; }
+
+.fa-toggle-down::before, .fa-caret-square-o-down::before { content: "=EF=85=
+=90"; }
+
+.fa-toggle-up::before, .fa-caret-square-o-up::before { content: "=EF=85=91"=
+; }
+
+.fa-toggle-right::before, .fa-caret-square-o-right::before { content: "=EF=
+=85=92"; }
+
+.fa-euro::before, .fa-eur::before { content: "=EF=85=93"; }
+
+.fa-gbp::before { content: "=EF=85=94"; }
+
+.fa-dollar::before, .fa-usd::before { content: "=EF=85=95"; }
+
+.fa-rupee::before, .fa-inr::before { content: "=EF=85=96"; }
+
+.fa-cny::before, .fa-rmb::before, .fa-yen::before, .fa-jpy::before { conten=
+t: "=EF=85=97"; }
+
+.fa-ruble::before, .fa-rouble::before, .fa-rub::before { content: "=EF=85=
+=98"; }
+
+.fa-won::before, .fa-krw::before { content: "=EF=85=99"; }
+
+.fa-bitcoin::before, .fa-btc::before { content: "=EF=85=9A"; }
+
+.fa-file::before { content: "=EF=85=9B"; }
+
+.fa-file-text::before { content: "=EF=85=9C"; }
+
+.fa-sort-alpha-asc::before { content: "=EF=85=9D"; }
+
+.fa-sort-alpha-desc::before { content: "=EF=85=9E"; }
+
+.fa-sort-amount-asc::before { content: "=EF=85=A0"; }
+
+.fa-sort-amount-desc::before { content: "=EF=85=A1"; }
+
+.fa-sort-numeric-asc::before { content: "=EF=85=A2"; }
+
+.fa-sort-numeric-desc::before { content: "=EF=85=A3"; }
+
+.fa-thumbs-up::before { content: "=EF=85=A4"; }
+
+.fa-thumbs-down::before { content: "=EF=85=A5"; }
+
+.fa-youtube-square::before { content: "=EF=85=A6"; }
+
+.fa-youtube::before { content: "=EF=85=A7"; }
+
+.fa-xing::before { content: "=EF=85=A8"; }
+
+.fa-xing-square::before { content: "=EF=85=A9"; }
+
+.fa-youtube-play::before { content: "=EF=85=AA"; }
+
+.fa-dropbox::before { content: "=EF=85=AB"; }
+
+.fa-stack-overflow::before { content: "=EF=85=AC"; }
+
+.fa-instagram::before { content: "=EF=85=AD"; }
+
+.fa-flickr::before { content: "=EF=85=AE"; }
+
+.fa-adn::before { content: "=EF=85=B0"; }
+
+.fa-bitbucket::before { content: "=EF=85=B1"; }
+
+.fa-bitbucket-square::before { content: "=EF=85=B2"; }
+
+.fa-tumblr::before { content: "=EF=85=B3"; }
+
+.fa-tumblr-square::before { content: "=EF=85=B4"; }
+
+.fa-long-arrow-down::before { content: "=EF=85=B5"; }
+
+.fa-long-arrow-up::before { content: "=EF=85=B6"; }
+
+.fa-long-arrow-left::before { content: "=EF=85=B7"; }
+
+.fa-long-arrow-right::before { content: "=EF=85=B8"; }
+
+.fa-apple::before { content: "=EF=85=B9"; }
+
+.fa-windows::before { content: "=EF=85=BA"; }
+
+.fa-android::before { content: "=EF=85=BB"; }
+
+.fa-linux::before { content: "=EF=85=BC"; }
+
+.fa-dribbble::before { content: "=EF=85=BD"; }
+
+.fa-skype::before { content: "=EF=85=BE"; }
+
+.fa-foursquare::before { content: "=EF=86=80"; }
+
+.fa-trello::before { content: "=EF=86=81"; }
+
+.fa-female::before { content: "=EF=86=82"; }
+
+.fa-male::before { content: "=EF=86=83"; }
+
+.fa-gittip::before, .fa-gratipay::before { content: "=EF=86=84"; }
+
+.fa-sun-o::before { content: "=EF=86=85"; }
+
+.fa-moon-o::before { content: "=EF=86=86"; }
+
+.fa-archive::before { content: "=EF=86=87"; }
+
+.fa-bug::before { content: "=EF=86=88"; }
+
+.fa-vk::before { content: "=EF=86=89"; }
+
+.fa-weibo::before { content: "=EF=86=8A"; }
+
+.fa-renren::before { content: "=EF=86=8B"; }
+
+.fa-pagelines::before { content: "=EF=86=8C"; }
+
+.fa-stack-exchange::before { content: "=EF=86=8D"; }
+
+.fa-arrow-circle-o-right::before { content: "=EF=86=8E"; }
+
+.fa-arrow-circle-o-left::before { content: "=EF=86=90"; }
+
+.fa-toggle-left::before, .fa-caret-square-o-left::before { content: "=EF=86=
+=91"; }
+
+.fa-dot-circle-o::before { content: "=EF=86=92"; }
+
+.fa-wheelchair::before { content: "=EF=86=93"; }
+
+.fa-vimeo-square::before { content: "=EF=86=94"; }
+
+.fa-turkish-lira::before, .fa-try::before { content: "=EF=86=95"; }
+
+.fa-plus-square-o::before { content: "=EF=86=96"; }
+
+.fa-space-shuttle::before { content: "=EF=86=97"; }
+
+.fa-slack::before { content: "=EF=86=98"; }
+
+.fa-envelope-square::before { content: "=EF=86=99"; }
+
+.fa-wordpress::before { content: "=EF=86=9A"; }
+
+.fa-openid::before { content: "=EF=86=9B"; }
+
+.fa-institution::before, .fa-bank::before, .fa-university::before { content=
+: "=EF=86=9C"; }
+
+.fa-mortar-board::before, .fa-graduation-cap::before { content: "=EF=86=9D"=
+; }
+
+.fa-yahoo::before { content: "=EF=86=9E"; }
+
+.fa-google::before { content: "=EF=86=A0"; }
+
+.fa-reddit::before { content: "=EF=86=A1"; }
+
+.fa-reddit-square::before { content: "=EF=86=A2"; }
+
+.fa-stumbleupon-circle::before { content: "=EF=86=A3"; }
+
+.fa-stumbleupon::before { content: "=EF=86=A4"; }
+
+.fa-delicious::before { content: "=EF=86=A5"; }
+
+.fa-digg::before { content: "=EF=86=A6"; }
+
+.fa-pied-piper::before { content: "=EF=86=A7"; }
+
+.fa-pied-piper-alt::before { content: "=EF=86=A8"; }
+
+.fa-drupal::before { content: "=EF=86=A9"; }
+
+.fa-joomla::before { content: "=EF=86=AA"; }
+
+.fa-language::before { content: "=EF=86=AB"; }
+
+.fa-fax::before { content: "=EF=86=AC"; }
+
+.fa-building::before { content: "=EF=86=AD"; }
+
+.fa-child::before { content: "=EF=86=AE"; }
+
+.fa-paw::before { content: "=EF=86=B0"; }
+
+.fa-spoon::before { content: "=EF=86=B1"; }
+
+.fa-cube::before { content: "=EF=86=B2"; }
+
+.fa-cubes::before { content: "=EF=86=B3"; }
+
+.fa-behance::before { content: "=EF=86=B4"; }
+
+.fa-behance-square::before { content: "=EF=86=B5"; }
+
+.fa-steam::before { content: "=EF=86=B6"; }
+
+.fa-steam-square::before { content: "=EF=86=B7"; }
+
+.fa-recycle::before { content: "=EF=86=B8"; }
+
+.fa-automobile::before, .fa-car::before { content: "=EF=86=B9"; }
+
+.fa-cab::before, .fa-taxi::before { content: "=EF=86=BA"; }
+
+.fa-tree::before { content: "=EF=86=BB"; }
+
+.fa-spotify::before { content: "=EF=86=BC"; }
+
+.fa-deviantart::before { content: "=EF=86=BD"; }
+
+.fa-soundcloud::before { content: "=EF=86=BE"; }
+
+.fa-database::before { content: "=EF=87=80"; }
+
+.fa-file-pdf-o::before { content: "=EF=87=81"; }
+
+.fa-file-word-o::before { content: "=EF=87=82"; }
+
+.fa-file-excel-o::before { content: "=EF=87=83"; }
+
+.fa-file-powerpoint-o::before { content: "=EF=87=84"; }
+
+.fa-file-photo-o::before, .fa-file-picture-o::before, .fa-file-image-o::bef=
+ore { content: "=EF=87=85"; }
+
+.fa-file-zip-o::before, .fa-file-archive-o::before { content: "=EF=87=86"; =
+}
+
+.fa-file-sound-o::before, .fa-file-audio-o::before { content: "=EF=87=87"; =
+}
+
+.fa-file-movie-o::before, .fa-file-video-o::before { content: "=EF=87=88"; =
+}
+
+.fa-file-code-o::before { content: "=EF=87=89"; }
+
+.fa-vine::before { content: "=EF=87=8A"; }
+
+.fa-codepen::before { content: "=EF=87=8B"; }
+
+.fa-jsfiddle::before { content: "=EF=87=8C"; }
+
+.fa-life-bouy::before, .fa-life-buoy::before, .fa-life-saver::before, .fa-s=
+upport::before, .fa-life-ring::before { content: "=EF=87=8D"; }
+
+.fa-circle-o-notch::before { content: "=EF=87=8E"; }
+
+.fa-ra::before, .fa-rebel::before { content: "=EF=87=90"; }
+
+.fa-ge::before, .fa-empire::before { content: "=EF=87=91"; }
+
+.fa-git-square::before { content: "=EF=87=92"; }
+
+.fa-git::before { content: "=EF=87=93"; }
+
+.fa-y-combinator-square::before, .fa-yc-square::before, .fa-hacker-news::be=
+fore { content: "=EF=87=94"; }
+
+.fa-tencent-weibo::before { content: "=EF=87=95"; }
+
+.fa-qq::before { content: "=EF=87=96"; }
+
+.fa-wechat::before, .fa-weixin::before { content: "=EF=87=97"; }
+
+.fa-send::before, .fa-paper-plane::before { content: "=EF=87=98"; }
+
+.fa-send-o::before, .fa-paper-plane-o::before { content: "=EF=87=99"; }
+
+.fa-history::before { content: "=EF=87=9A"; }
+
+.fa-circle-thin::before { content: "=EF=87=9B"; }
+
+.fa-header::before { content: "=EF=87=9C"; }
+
+.fa-paragraph::before { content: "=EF=87=9D"; }
+
+.fa-sliders::before { content: "=EF=87=9E"; }
+
+.fa-share-alt::before { content: "=EF=87=A0"; }
+
+.fa-share-alt-square::before { content: "=EF=87=A1"; }
+
+.fa-bomb::before { content: "=EF=87=A2"; }
+
+.fa-soccer-ball-o::before, .fa-futbol-o::before { content: "=EF=87=A3"; }
+
+.fa-tty::before { content: "=EF=87=A4"; }
+
+.fa-binoculars::before { content: "=EF=87=A5"; }
+
+.fa-plug::before { content: "=EF=87=A6"; }
+
+.fa-slideshare::before { content: "=EF=87=A7"; }
+
+.fa-twitch::before { content: "=EF=87=A8"; }
+
+.fa-yelp::before { content: "=EF=87=A9"; }
+
+.fa-newspaper-o::before { content: "=EF=87=AA"; }
+
+.fa-wifi::before { content: "=EF=87=AB"; }
+
+.fa-calculator::before { content: "=EF=87=AC"; }
+
+.fa-paypal::before { content: "=EF=87=AD"; }
+
+.fa-google-wallet::before { content: "=EF=87=AE"; }
+
+.fa-cc-visa::before { content: "=EF=87=B0"; }
+
+.fa-cc-mastercard::before { content: "=EF=87=B1"; }
+
+.fa-cc-discover::before { content: "=EF=87=B2"; }
+
+.fa-cc-amex::before { content: "=EF=87=B3"; }
+
+.fa-cc-paypal::before { content: "=EF=87=B4"; }
+
+.fa-cc-stripe::before { content: "=EF=87=B5"; }
+
+.fa-bell-slash::before { content: "=EF=87=B6"; }
+
+.fa-bell-slash-o::before { content: "=EF=87=B7"; }
+
+.fa-trash::before { content: "=EF=87=B8"; }
+
+.fa-copyright::before { content: "=EF=87=B9"; }
+
+.fa-at::before { content: "=EF=87=BA"; }
+
+.fa-eyedropper::before { content: "=EF=87=BB"; }
+
+.fa-paint-brush::before { content: "=EF=87=BC"; }
+
+.fa-birthday-cake::before { content: "=EF=87=BD"; }
+
+.fa-area-chart::before { content: "=EF=87=BE"; }
+
+.fa-pie-chart::before { content: "=EF=88=80"; }
+
+.fa-line-chart::before { content: "=EF=88=81"; }
+
+.fa-lastfm::before { content: "=EF=88=82"; }
+
+.fa-lastfm-square::before { content: "=EF=88=83"; }
+
+.fa-toggle-off::before { content: "=EF=88=84"; }
+
+.fa-toggle-on::before { content: "=EF=88=85"; }
+
+.fa-bicycle::before { content: "=EF=88=86"; }
+
+.fa-bus::before { content: "=EF=88=87"; }
+
+.fa-ioxhost::before { content: "=EF=88=88"; }
+
+.fa-angellist::before { content: "=EF=88=89"; }
+
+.fa-cc::before { content: "=EF=88=8A"; }
+
+.fa-shekel::before, .fa-sheqel::before, .fa-ils::before { content: "=EF=88=
+=8B"; }
+
+.fa-meanpath::before { content: "=EF=88=8C"; }
+
+.fa-buysellads::before { content: "=EF=88=8D"; }
+
+.fa-connectdevelop::before { content: "=EF=88=8E"; }
+
+.fa-dashcube::before { content: "=EF=88=90"; }
+
+.fa-forumbee::before { content: "=EF=88=91"; }
+
+.fa-leanpub::before { content: "=EF=88=92"; }
+
+.fa-sellsy::before { content: "=EF=88=93"; }
+
+.fa-shirtsinbulk::before { content: "=EF=88=94"; }
+
+.fa-simplybuilt::before { content: "=EF=88=95"; }
+
+.fa-skyatlas::before { content: "=EF=88=96"; }
+
+.fa-cart-plus::before { content: "=EF=88=97"; }
+
+.fa-cart-arrow-down::before { content: "=EF=88=98"; }
+
+.fa-diamond::before { content: "=EF=88=99"; }
+
+.fa-ship::before { content: "=EF=88=9A"; }
+
+.fa-user-secret::before { content: "=EF=88=9B"; }
+
+.fa-motorcycle::before { content: "=EF=88=9C"; }
+
+.fa-street-view::before { content: "=EF=88=9D"; }
+
+.fa-heartbeat::before { content: "=EF=88=9E"; }
+
+.fa-venus::before { content: "=EF=88=A1"; }
+
+.fa-mars::before { content: "=EF=88=A2"; }
+
+.fa-mercury::before { content: "=EF=88=A3"; }
+
+.fa-intersex::before, .fa-transgender::before { content: "=EF=88=A4"; }
+
+.fa-transgender-alt::before { content: "=EF=88=A5"; }
+
+.fa-venus-double::before { content: "=EF=88=A6"; }
+
+.fa-mars-double::before { content: "=EF=88=A7"; }
+
+.fa-venus-mars::before { content: "=EF=88=A8"; }
+
+.fa-mars-stroke::before { content: "=EF=88=A9"; }
+
+.fa-mars-stroke-v::before { content: "=EF=88=AA"; }
+
+.fa-mars-stroke-h::before { content: "=EF=88=AB"; }
+
+.fa-neuter::before { content: "=EF=88=AC"; }
+
+.fa-genderless::before { content: "=EF=88=AD"; }
+
+.fa-facebook-official::before { content: "=EF=88=B0"; }
+
+.fa-pinterest-p::before { content: "=EF=88=B1"; }
+
+.fa-whatsapp::before { content: "=EF=88=B2"; }
+
+.fa-server::before { content: "=EF=88=B3"; }
+
+.fa-user-plus::before { content: "=EF=88=B4"; }
+
+.fa-user-times::before { content: "=EF=88=B5"; }
+
+.fa-hotel::before, .fa-bed::before { content: "=EF=88=B6"; }
+
+.fa-viacoin::before { content: "=EF=88=B7"; }
+
+.fa-train::before { content: "=EF=88=B8"; }
+
+.fa-subway::before { content: "=EF=88=B9"; }
+
+.fa-medium::before { content: "=EF=88=BA"; }
+
+.fa-yc::before, .fa-y-combinator::before { content: "=EF=88=BB"; }
+
+.fa-optin-monster::before { content: "=EF=88=BC"; }
+
+.fa-opencart::before { content: "=EF=88=BD"; }
+
+.fa-expeditedssl::before { content: "=EF=88=BE"; }
+
+.fa-battery-4::before, .fa-battery-full::before { content: "=EF=89=80"; }
+
+.fa-battery-3::before, .fa-battery-three-quarters::before { content: "=EF=
+=89=81"; }
+
+.fa-battery-2::before, .fa-battery-half::before { content: "=EF=89=82"; }
+
+.fa-battery-1::before, .fa-battery-quarter::before { content: "=EF=89=83"; =
+}
+
+.fa-battery-0::before, .fa-battery-empty::before { content: "=EF=89=84"; }
+
+.fa-mouse-pointer::before { content: "=EF=89=85"; }
+
+.fa-i-cursor::before { content: "=EF=89=86"; }
+
+.fa-object-group::before { content: "=EF=89=87"; }
+
+.fa-object-ungroup::before { content: "=EF=89=88"; }
+
+.fa-sticky-note::before { content: "=EF=89=89"; }
+
+.fa-sticky-note-o::before { content: "=EF=89=8A"; }
+
+.fa-cc-jcb::before { content: "=EF=89=8B"; }
+
+.fa-cc-diners-club::before { content: "=EF=89=8C"; }
+
+.fa-clone::before { content: "=EF=89=8D"; }
+
+.fa-balance-scale::before { content: "=EF=89=8E"; }
+
+.fa-hourglass-o::before { content: "=EF=89=90"; }
+
+.fa-hourglass-1::before, .fa-hourglass-start::before { content: "=EF=89=91"=
+; }
+
+.fa-hourglass-2::before, .fa-hourglass-half::before { content: "=EF=89=92";=
+ }
+
+.fa-hourglass-3::before, .fa-hourglass-end::before { content: "=EF=89=93"; =
+}
+
+.fa-hourglass::before { content: "=EF=89=94"; }
+
+.fa-hand-grab-o::before, .fa-hand-rock-o::before { content: "=EF=89=95"; }
+
+.fa-hand-stop-o::before, .fa-hand-paper-o::before { content: "=EF=89=96"; }
+
+.fa-hand-scissors-o::before { content: "=EF=89=97"; }
+
+.fa-hand-lizard-o::before { content: "=EF=89=98"; }
+
+.fa-hand-spock-o::before { content: "=EF=89=99"; }
+
+.fa-hand-pointer-o::before { content: "=EF=89=9A"; }
+
+.fa-hand-peace-o::before { content: "=EF=89=9B"; }
+
+.fa-trademark::before { content: "=EF=89=9C"; }
+
+.fa-registered::before { content: "=EF=89=9D"; }
+
+.fa-creative-commons::before { content: "=EF=89=9E"; }
+
+.fa-gg::before { content: "=EF=89=A0"; }
+
+.fa-gg-circle::before { content: "=EF=89=A1"; }
+
+.fa-tripadvisor::before { content: "=EF=89=A2"; }
+
+.fa-odnoklassniki::before { content: "=EF=89=A3"; }
+
+.fa-odnoklassniki-square::before { content: "=EF=89=A4"; }
+
+.fa-get-pocket::before { content: "=EF=89=A5"; }
+
+.fa-wikipedia-w::before { content: "=EF=89=A6"; }
+
+.fa-safari::before { content: "=EF=89=A7"; }
+
+.fa-chrome::before { content: "=EF=89=A8"; }
+
+.fa-firefox::before { content: "=EF=89=A9"; }
+
+.fa-opera::before { content: "=EF=89=AA"; }
+
+.fa-internet-explorer::before { content: "=EF=89=AB"; }
+
+.fa-tv::before, .fa-television::before { content: "=EF=89=AC"; }
+
+.fa-contao::before { content: "=EF=89=AD"; }
+
+.fa-500px::before { content: "=EF=89=AE"; }
+
+.fa-amazon::before { content: "=EF=89=B0"; }
+
+.fa-calendar-plus-o::before { content: "=EF=89=B1"; }
+
+.fa-calendar-minus-o::before { content: "=EF=89=B2"; }
+
+.fa-calendar-times-o::before { content: "=EF=89=B3"; }
+
+.fa-calendar-check-o::before { content: "=EF=89=B4"; }
+
+.fa-industry::before { content: "=EF=89=B5"; }
+
+.fa-map-pin::before { content: "=EF=89=B6"; }
+
+.fa-map-signs::before { content: "=EF=89=B7"; }
+
+.fa-map-o::before { content: "=EF=89=B8"; }
+
+.fa-map::before { content: "=EF=89=B9"; }
+
+.fa-commenting::before { content: "=EF=89=BA"; }
+
+.fa-commenting-o::before { content: "=EF=89=BB"; }
+
+.fa-houzz::before { content: "=EF=89=BC"; }
+
+.fa-vimeo::before { content: "=EF=89=BD"; }
+
+.fa-black-tie::before { content: "=EF=89=BE"; }
+
+.fa-fonticons::before { content: "=EF=8A=80"; }
+------=_NextPart_000_7689_CAB974BC.FC1CFBC7
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+Content-Location: wyciwyg://frame/0
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8"></head><body></body></html>
+------=_NextPart_000_7689_CAB974BC.FC1CFBC7
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://b.hatena.ne.jp/entry/button/?url=https%3A%2F%2Fyulii.github.io%2Fsql-style-guide-20160327.html&layout=simple-balloon
+
+<!DOCTYPE html><html lang=3D"ja"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+  <link rel=3D"canonical" href=3D"http://b.hatena.ne.jp/entry/s/yulii.githu=
+b.io/sql-style-guide-20160327.html">
+  <title>=E3=81=AF=E3=81=A6=E3=81=AA=E3=83=96=E3=83=83=E3=82=AF=E3=83=9E=E3=
+=83=BC=E3=82=AF=E3=83=9C=E3=82=BF=E3=83=B3</title>
+  <link rel=3D"stylesheet" href=3D"https://b.hatena.ne.jp/css/reset.css?79a=
+d2285399bf3e11d4fb03a5709474001ba5fa0" type=3D"text/css" media=3D"all">
+  <link rel=3D"stylesheet" href=3D"https://b.hatena.ne.jp/css/entry-button.=
+css?27f0bec3bfa0736c1f3315f1d829a2ae45c8dd90" type=3D"text/css" media=3D"al=
+l">
+ =20
+  </head><body onkeypress=3D"if (event.keyCode =3D=3D=3D 13) { clickHandler=
+(); return false; }">
+    <div class=3D"b-area-simple en">
+      <a href=3D"http://b.hatena.ne.jp/entry/s/yulii.github.io/sql-style-gu=
+ide-20160327.html" class=3D"b-btn" target=3D"_top" title=3D"=E3=81=93=E3=81=
+=AE=E3=82=A8=E3=83=B3=E3=83=88=E3=83=AA=E3=83=BC=E3=82=92=E3=81=AF=E3=81=A6=
+=E3=81=AA=E3=83=96=E3=83=83=E3=82=AF=E3=83=9E=E3=83=BC=E3=82=AF=E3=81=AB=E8=
+=BF=BD=E5=8A=A0 (1 user)" onclick=3D"if ((event.which || event.button) <=3D=
+ 1) { clickHandler(); return false; }">
+        <span>Bookmark</span>
+      </a>
+      <a href=3D"http://b.hatena.ne.jp/entry/s/yulii.github.io/sql-style-gu=
+ide-20160327.html" class=3D"b-count" target=3D"_blank">1</a>
+    </div>
+   =20
+ =20
+
+</body></html>
+------=_NextPart_000_7689_CAB974BC.FC1CFBC7
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://b.hatena.ne.jp/css/reset.css?79ad2285399bf3e11d4fb03a5709474001ba5fa0
+
+html { color: rgb(0, 0, 0); background: rgb(255, 255, 255); }
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code,=
+ form, fieldset, legend, input, button, textarea, p, blockquote, th, td { m=
+argin: 0px; padding: 0px; }
+
+table { border-collapse: collapse; border-spacing: 0px; }
+
+fieldset, img { border: 0px; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup { font-sty=
+le: inherit; font-weight: inherit; }
+
+del, ins { text-decoration: none; }
+
+li { list-style: none; }
+
+caption, th { text-align: left; }
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+
+q::before, q::after { content: ""; }
+
+abbr, acronym { border: 0px; font-variant: normal; }
+
+sup { vertical-align: baseline; }
+
+sub { vertical-align: baseline; }
+
+legend { color: rgb(0, 0, 0); }
+
+input, button, textarea, select, optgroup, option { font-family: inherit; f=
+ont-size: inherit; font-style: inherit; font-weight: inherit; }
+
+input, button, textarea, select { }
+
+body { font-style: normal; font-variant: normal; font-weight: normal; font-=
+stretch: normal; font-size: 13px; line-height: 1.231; font-family: arial, h=
+elvetica, clean, sans-serif; }
+
+select, input, button, textarea, button { font-style: normal; font-variant:=
+ normal; font-weight: normal; font-stretch: normal; font-size: 99%; line-he=
+ight: normal; font-family: arial, helvetica, clean, sans-serif; }
+
+table { font-size: inherit; }
+
+pre, code, kbd, samp, tt { font-family: monospace; line-height: 100%; }
+------=_NextPart_000_7689_CAB974BC.FC1CFBC7
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://b.hatena.ne.jp/images/entry-button/bbtn-s_v3.png
+
+iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAYAAAD+MdrbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAgNJREFUeNrsVT1Lw1AUPdFaW1NLY/2gqKABBxEloiC66OAPcBLBoW4O
+OiiCk4Kiux0E/4aTm0a3jk8EFQSLUBBbP1qlNlY0vvcSK42RWhu3Hrjc5F7ezTkvcI8Ahq1LHU5g
+URYEPqwJziAJVMFhVAYaWOuToE935kMdD2FG9hX0WLaD6zdfHWvx8CAPufIkr0dTkHauvgp6mXcY
+7vVBnQrx58O4BnJbnKELdzbVjJE6RHojoim7zYOJhrp8j+ek5dxdMclqCsJqDOTaYKY01WL3LMPr
+LJf8U8IDPox2eaCE3Pw9pb0hrNRjod8PRAESzZV2hx1+F5fKGDJWkegjjmJZ3iPXL7ZnBKzQ5RC0
+VNmZZ4sORtJLg5F6olFv1ix3aC/Za4Yd2JBgZTkU/BSGFYcsYFMW/oHh8rmO5pwz0xLuigX8m6eM
+tEBf6s2HOiljpkcq6LH8d09pF3mQZLZMTzlIQNo4/Sq8l+spgwGos7LhKbEMyI32C09J2wjPfi5Y
+uqv8puxOEROt/nyP53vLuXQxyXsJCHMnIHGDmRLyYvc4zessl+4pwwGMdotQqA1wT3mmnjIkYWGk
+EaAlsq+V6CmSm0tlDBmryOEtji4MtyPx7A/LYZYuh6BlOWhmfKKaRg04K7yaniyatQJPcf8g2WOG
+HdiQQGU5fPOUeYc8ZVsWPgQYAFclp979SZ7RAAAAAElFTkSuQmCC
+------=_NextPart_000_7689_CAB974BC.FC1CFBC7
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://b.hatena.ne.jp/css/entry-button.css?27f0bec3bfa0736c1f3315f1d829a2ae45c8dd90
+
+html, body { background: transparent; }
+
+body { overflow: hidden; }
+
+.button-container { text-decoration: none; display: block; width: 49px; pad=
+ding-left: 1px; overflow: hidden; zoom: 1; }
+
+.button-image { float: left; margin-left: -1px; }
+
+.counter { text-align: center; font-weight: bold; line-height: 21px; color:=
+ rgb(44, 110, 189); font-size: 93%; display: block; background: url("/image=
+s/entry-button/button-bg-right.gif") 100% 0% no-repeat; }
+
+.vbutton-container { text-decoration: none; display: block; width: 48px; he=
+ight: 48px; margin: 0px 1px; padding: 1px 0px; position: relative; backgrou=
+nd: rgb(44, 110, 189); }
+
+.vbutton-inner { margin: 0px -1px; display: block; height: 48px; position: =
+relative; cursor: pointer; background: url("/images/entry-button/vbutton-bg=
+.png") 50% 0% rgb(44, 110, 189); }
+
+.vbutton-container .counter { line-height: 0.8; padding-top: 8px; color: rg=
+b(44, 110, 189); background: transparent; }
+
+.vbutton-container .counter .count { display: block; }
+
+.vbutton-container .counter .users { display: block; font-size: 80%; }
+
+.button-counter { padding-right: 1px; width: 48px; }
+
+.counter-container { padding: 1px 0px; display: block; background: rgb(171,=
+ 197, 229); }
+
+.counter-container .counter { margin-right: -1px; line-height: 18px; color:=
+ rgb(44, 110, 189); border-right-width: 1px; border-right-style: solid; bor=
+der-right-color: rgb(171, 197, 229); background: rgb(247, 249, 252); }
+
+.b-area-simple, .b-area-standard { zoom: 1; display: inline-block; height: =
+20px; }
+
+.b-area-simple { position: relative; padding-left: 28px; }
+
+.b-area-standard { position: relative; padding-left: 88px; }
+
+.b-area-standard.vertical { width: 80px; height: 60px; padding-left: 0px; }
+
+a.b-btn, a.b-count { font-family: Arial; font-size: 11px; line-height: 18px=
+; color: rgb(45, 76, 134); text-decoration: none; }
+
+.b-area-standard.ja a.b-btn { font-family: '=E3=83=92=E3=83=A9=E3=82=AE=E3=
+=83=8E=E8=A7=92=E3=82=B4 Pro W3', 'Hiragino Kaku Gothic Pro', =E3=83=A1=E3=
+=82=A4=E3=83=AA=E3=82=AA, Meiryo, Helvetica, Arial, sans-serif; font-size: =
+10px; letter-spacing: -1px; font-weight: bold; line-height: 1; }
+
+.b-area-simple .b-btn, .b-area-standard .b-btn { position: absolute; top: 0=
+px; left: 0px; }
+
+.b-area-simple .b-btn, .b-area-simple .b-count, .b-area-standard .b-btn, .b=
+-area-standard .b-count { zoom: 1; display: inline-block; }
+
+.b-area-standard.vertical .b-btn { position: absolute; top: 40px; display: =
+block; }
+
+.b-area-simple .b-btn { width: 20px; height: 20px; background: url("/images=
+/entry-button/bbtn-s_v3.png") 0% 0px / 20px 40px no-repeat; }
+
+.b-area-simple .b-btn:hover { color: rgb(25, 58, 104); background: url("/im=
+ages/entry-button/bbtn-s_v3.png") 0% -20px / 20px 40px no-repeat; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution=
+: 2dppx) {=20
+  .b-area-simple .b-btn, .b-area-simple .b-btn:hover { background-image: ur=
+l("/images/entry-button/bbtn-s_v3@2x.png"); }
+}
+
+.b-area-simple .b-btn span { display: none; }
+
+.b-area-simple .b-count, .b-area-standard .b-count { width: auto; height: 1=
+8px; position: relative; border: 1px solid rgb(176, 193, 216); border-radiu=
+s: 3px; padding: 0px 5px; background-color: rgb(255, 255, 255); }
+
+.b-area-simple .b-count::after, .b-area-simple .b-count::before, .b-area-st=
+andard .b-count::after, .b-area-standard .b-count::before { border: solid t=
+ransparent; content: " "; height: 0px; right: 100%; position: absolute; wid=
+th: 0px; }
+
+.b-area-simple .b-count::after, .b-area-standard .b-count::after { border-w=
+idth: 3px; border-right-color: rgb(255, 255, 255); top: 6px; }
+
+.b-area-simple .b-count::before, .b-area-standard .b-count::before { border=
+-width: 5px; border-right-color: rgb(176, 193, 216); top: 4px; }
+
+.b-area-standard .b-btn { width: 56px; height: 19px; padding: 1px 0px 0px 2=
+4px; text-decoration: none; text-shadow: rgb(255, 255, 255) 0px 1px 0px; ba=
+ckground: url("/images/entry-button/bbtn-l_v3.png") 0% 0px / 80px 40px no-r=
+epeat; }
+
+.b-area-standard.ja .b-btn { width: 63px; height: 14px; padding: 6px 0px 0p=
+x 21px; }
+
+.b-area-standard .b-btn:hover { color: rgb(25, 58, 104); background: url("/=
+images/entry-button/bbtn-l_v3.png") 0% -20px / 80px 40px no-repeat; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution=
+: 2dppx) {=20
+  .b-area-standard .b-btn, .b-area-standard .b-btn:hover { background-image=
+: url("/images/entry-button/bbtn-l_v3@2x.png"); }
+}
+
+.b-area-standard.vertical .b-count { top: 0px; width: 70px; height: 31px; p=
+osition: relative; border: 1px solid rgb(176, 193, 216); border-radius: 3px=
+; padding: 0px 4px; font-family: Arial; font-size: 16px; line-height: 31px;=
+ text-align: center; color: rgb(45, 76, 134); display: block; background-co=
+lor: rgb(255, 255, 255); }
+
+.b-area-standard.vertical .b-count::after, .b-area-standard.vertical .b-cou=
+nt::before { border: solid transparent; content: " "; height: 0px; right: 1=
+00%; position: absolute; width: 0px; }
+
+.b-area-standard.vertical .b-count::after { border-width: 4px; border-top-c=
+olor: rgb(255, 255, 255); top: 31px; left: 35px; }
+
+.b-area-standard.vertical .b-count::before { border-width: 5px; border-top-=
+color: rgb(176, 193, 216); top: 32px; left: 34px; }
+
+.b-count:hover { color: rgb(25, 58, 104); }
+------=_NextPart_000_7689_CAB974BC.FC1CFBC7--

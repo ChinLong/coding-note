@@ -1,0 +1,1767 @@
+From: <Saved by Blink>
+Subject: scala | ????
+Date: Fri, 27 Oct 2016 03:41:35 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--S3Gzgw5jyeHvq3FsjI7X36p9EGRg225UqrcdeQLc7H----"
+
+------MultipartBoundary--S3Gzgw5jyeHvq3FsjI7X36p9EGRg225UqrcdeQLc7H----
+Content-Type: text/html
+Content-ID: <frame-122-87860791-B0F7-42B3-AF07-44E56764B09D@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://hongjiang.info/scala/
+
+<!DOCTYPE html><!--[if IE 7]>
+<html class=3D"ie ie7" lang=3D"zh-CN">
+<![endif]--><!--[if IE 8]>
+<html class=3D"ie ie8" lang=3D"zh-CN">
+<![endif]--><!--[if !(IE 7) & !(IE 8)]><!--><html lang=3D"zh-CN"><!--<![end=
+if]--><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8">
+
+<meta name=3D"viewport" content=3D"width=3Ddevice-width">
+<title>scala | =E5=86=99=E7=82=B9=E4=BB=80=E4=B9=88</title>
+<link rel=3D"profile" href=3D"http://gmpg.org/xfn/11">
+<link rel=3D"pingback" href=3D"http://hongjiang.info/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src=3D"http://hongjiang.info/wp-content/themes/twentytwelve/js/html=
+5.js" type=3D"text/javascript"></script>
+<![endif]-->
+<link rel=3D"dns-prefetch" href=3D"http://s.w.org/">
+<link rel=3D"alternate" type=3D"application/rss+xml" title=3D"=E5=86=99=E7=
+=82=B9=E4=BB=80=E4=B9=88 =C2=BB Feed" href=3D"http://hongjiang.info/feed/">
+<link rel=3D"alternate" type=3D"application/rss+xml" title=3D"=E5=86=99=E7=
+=82=B9=E4=BB=80=E4=B9=88 =C2=BB =E8=AF=84=E8=AE=BAFeed" href=3D"http://hong=
+jiang.info/comments/feed/">
+<link rel=3D"alternate" type=3D"application/rss+xml" title=3D"=E5=86=99=E7=
+=82=B9=E4=BB=80=E4=B9=88 =C2=BB scala=E8=AF=84=E8=AE=BAFeed" href=3D"http:/=
+/hongjiang.info/scala/feed/">
+	=09
+		<style type=3D"text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel=3D"stylesheet" id=3D"twentytwelve-style-css" href=3D"http://hongj=
+iang.info/wp-content/themes/twentytwelve/style.css?ver=3D4.6.1" type=3D"tex=
+t/css" media=3D"all">
+<!--[if lt IE 9]>
+<link rel=3D'stylesheet' id=3D'twentytwelve-ie-css'  href=3D'http://hongjia=
+ng.info/wp-content/themes/twentytwelve/css/ie.css?ver=3D20121010' type=3D't=
+ext/css' media=3D'all' />
+<![endif]-->
+
+
+<link rel=3D"https://api.w.org/" href=3D"http://hongjiang.info/wp-json/">
+<link rel=3D"EditURI" type=3D"application/rsd+xml" title=3D"RSD" href=3D"ht=
+tp://hongjiang.info/xmlrpc.php?rsd">
+<link rel=3D"wlwmanifest" type=3D"application/wlwmanifest+xml" href=3D"http=
+://hongjiang.info/wp-includes/wlwmanifest.xml">=20
+<meta name=3D"generator" content=3D"WordPress 4.6.1">
+<link rel=3D"canonical" href=3D"http://hongjiang.info/scala/">
+<link rel=3D"shortlink" href=3D"http://hongjiang.info/?p=3D256">
+<link rel=3D"alternate" type=3D"application/json+oembed" href=3D"http://hon=
+gjiang.info/wp-json/oembed/1.0/embed?url=3Dhttp%3A%2F%2Fhongjiang.info%2Fsc=
+ala%2F">
+<link rel=3D"alternate" type=3D"text/xml+oembed" href=3D"http://hongjiang.i=
+nfo/wp-json/oembed/1.0/embed?url=3Dhttp%3A%2F%2Fhongjiang.info%2Fscala%2F&a=
+mp;format=3Dxml">
+		<style type=3D"text/css">.recentcomments a{display:inline !important;padd=
+ing:0 !important;margin:0 !important;}</style>
+	=09
+<link rel=3D"stylesheet" href=3D"http://hongjiang.info/wp-content/plugins/w=
+assup/css/wassup-widget.css?ver=3D1.9.2" type=3D"text/css">
+	<style type=3D"text/css" id=3D"twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #444;
+		}
+		</style>
+	<style type=3D"text/css" id=3D"custom-background-css">
+body.custom-background { background-color: #dbdbdb; }
+</style>
+</head>
+
+<body class=3D"page page-id-256 page-template page-template-page-templates =
+page-template-full-width page-template-page-templatesfull-width-php custom-=
+background full-width single-author">
+<div id=3D"page" class=3D"hfeed site">
+	<header id=3D"masthead" class=3D"site-header" role=3D"banner">
+		<hgroup>
+			<h1 class=3D"site-title"><a href=3D"http://hongjiang.info/" title=3D"=E5=
+=86=99=E7=82=B9=E4=BB=80=E4=B9=88" rel=3D"home">=E5=86=99=E7=82=B9=E4=BB=80=
+=E4=B9=88</a></h1>
+			<h2 class=3D"site-description">=E6=9C=89=E5=85=B3jvm,scala=E4=B8=8E=E5=
+=90=8E=E7=AB=AF=E6=9E=B6=E6=9E=84</h2>
+		</hgroup>
+
+		<nav id=3D"site-navigation" class=3D"main-navigation" role=3D"navigation"=
+>
+			<button class=3D"menu-toggle">=E8=8F=9C=E5=8D=95</button>
+			<a class=3D"assistive-text" href=3D"http://hongjiang.info/scala/#content=
+" title=3D"=E8=B7=B3=E8=87=B3=E5=86=85=E5=AE=B9">=E8=B7=B3=E8=87=B3=E5=86=
+=85=E5=AE=B9</a>
+			<div class=3D"nav-menu"><ul><li><a href=3D"http://hongjiang.info/">=E9=
+=A6=96=E9=A1=B5</a></li><li class=3D"page_item page-item-256 current_page_i=
+tem"><a href=3D"http://hongjiang.info/scala/">scala</a></li><li class=3D"pa=
+ge_item page-item-1603 page_item_has_children"><a href=3D"http://hongjiang.=
+info/index/">=E7=B4=A2=E5=BC=95</a><ul class=3D"children"><li class=3D"page=
+_item page-item-1606"><a href=3D"http://hongjiang.info/index/timeline/">ALL=
+</a></li><li class=3D"page_item page-item-387"><a href=3D"http://hongjiang.=
+info/index/java/">java</a></li><li class=3D"page_item page-item-1268"><a hr=
+ef=3D"http://hongjiang.info/index/tomcat/">tomcat</a></li><li class=3D"page=
+_item page-item-390"><a href=3D"http://hongjiang.info/index/shell/">os&amp;=
+shell</a></li></ul></li><li class=3D"page_item page-item-2"><a href=3D"http=
+://hongjiang.info/about/">=E5=85=B3=E4=BA=8E</a></li><li class=3D"page_item=
+ page-item-981"><a href=3D"http://hongjiang.info/jobs/">=E5=B7=A5=E4=BD=9C=
+=E6=9C=BA=E4=BC=9A</a></li><li class=3D"page_item page-item-1161"><a href=
+=3D"http://hongjiang.info/message/">=E7=95=99=E8=A8=80</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id=3D"main" class=3D"wrapper">
+	<div id=3D"primary" class=3D"site-content">
+		<div id=3D"content" role=3D"main">
+
+						=09
+	<article id=3D"post-256" class=3D"post-256 page type-page status-publish h=
+entry">
+		<header class=3D"entry-header">
+												<h1 class=3D"entry-title">scala</h1>
+		</header>
+
+		<div class=3D"entry-content">
+			<p><strong>akka</strong><br>
+Actor=E9=87=8C=E7=9A=84=E5=81=8F=E5=87=BD=E6=95=B0=E4=B8=8E=E6=80=A7=E8=83=
+=BD <a href=3D"http://hongjiang.info/akka-in-practice-1/">http://hongjiang.=
+info/akka-in-practice-1/</a><br>
+Patterns.ask =E6=98=AF=E4=BD=BF=E7=94=A8=E4=B8=80=E4=B8=AA=E4=B8=B4=E6=97=
+=B6=E5=88=9B=E5=BB=BA=E7=9A=84actor=E5=8F=91=E6=B6=88=E6=81=AF=E8=80=8C=E9=
+=9D=9E=E8=87=AA=E8=BA=AB <a href=3D"http://hongjiang.info/akka-patterns-ask=
+-with-temporary-actor/">http://hongjiang.info/akka-patterns-ask-with-tempor=
+ary-actor/</a><br>
+=E5=AF=B9actor=E7=9A=84=E9=82=AE=E7=AE=B1=E8=AE=A1=E6=95=B0 <a href=3D"http=
+://hongjiang.info/akka-mailbox-counter-extension/">http://hongjiang.info/ak=
+ka-mailbox-counter-extension/</a><br>
+Never ever block an actor <a href=3D"http://hongjiang.info/never-ever-block=
+-an-actor/">http://hongjiang.info/never-ever-block-an-actor/</a></p>
+<p><strong>=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D</strong><br>
+=E8=AF=9D=E8=AF=B4=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D(1) =E4=BB=80=E4=B9=
+=88=E6=98=AF=E6=A8=A1=E5=BC=8F=EF=BC=9F<a href=3D"http://hongjiang.info/sca=
+la-pattern-matching-1/">http://hongjiang.info/scala-pattern-matching-1/</a>=
+<br>
+=E8=AF=9D=E8=AF=B4=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D(2) scala=E9=87=8C=E6=
+=98=AF=E6=80=8E=E4=B9=88=E5=AE=9E=E7=8E=B0=E7=9A=84? <a href=3D"http://hong=
+jiang.info/scala-pattern-matching-2/">http://hongjiang.info/scala-pattern-m=
+atching-2/</a><br>
+=E8=AF=9D=E8=AF=B4=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D(3) =E6=A8=A1=E5=BC=
+=8F=E5=8C=B9=E9=85=8D=E7=9A=84=E6=A0=B8=E5=BF=83=E5=8A=9F=E8=83=BD=E6=98=AF=
+=E8=A7=A3=E6=9E=84=EF=BC=81<a href=3D"http://hongjiang.info/scala-pattern-m=
+atching-3/">http://hongjiang.info/scala-pattern-matching-3/</a><br>
+=E8=AF=9D=E8=AF=B4=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D(4) =E8=B5=8B=E5=80=
+=BC=E8=AF=AD=E5=8F=A5=E4=B8=8E=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D <a href=
+=3D"http://hongjiang.info/scala-pattern-matching-4/">http://hongjiang.info/=
+scala-pattern-matching-4/</a><br>
+=E8=AF=9D=E8=AF=B4=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D(5) for=E8=A1=A8=E8=
+=BE=BE=E5=BC=8F=E4=B8=AD=E7=9A=84=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D <a hr=
+ef=3D"http://hongjiang.info/scala-pattern-matching-5/">http://hongjiang.inf=
+o/scala-pattern-matching-5/</a><br>
+=E8=AF=9D=E8=AF=B4=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D(6) case=E7=B1=BB=E7=
+=9A=84=E7=BB=86=E8=8A=82 <a href=3D"http://hongjiang.info/scala-pattern-mat=
+ching-6/">http://hongjiang.info/scala-pattern-matching-6/</a><br>
+=E8=AF=9D=E8=AF=B4=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D(7) =E4=B8=80=E4=B8=
+=AA=E6=9E=84=E9=80=A0=E5=99=A8=E6=A8=A1=E5=BC=8F=E7=9A=84=E4=BE=8B=E5=AD=90=
+(by case class) <a href=3D"http://hongjiang.info/scala-pattern-matching-7/"=
+>http://hongjiang.info/scala-pattern-matching-7/</a><br>
+=E8=AF=9D=E8=AF=B4=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D(8) =E4=B8=80=E4=B8=
+=AA=E6=8A=BD=E5=8F=96=E5=99=A8=E7=9A=84=E4=BE=8B=E5=AD=90 <a href=3D"http:/=
+/hongjiang.info/scala-pattern-matching-8/">http://hongjiang.info/scala-patt=
+ern-matching-8/</a></p>
+<p><strong>=E7=B1=BB=E5=9E=8B=E7=9B=B8=E5=85=B3</strong><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A1) =E7=B1=BB=E5=9E=8B=E4=
+=B8=8E=E7=B1=BB <a href=3D"http://hongjiang.info/scala-type-and-class/">htt=
+p://hongjiang.info/scala-type-and-class/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A2) classOf=E4=B8=8EgetCla=
+ss=E6=96=B9=E6=B3=95=E7=9A=84=E5=B7=AE=E5=BC=82 <a href=3D"http://hongjiang=
+.info/scala-type-system-classof-and-getclass/">http://hongjiang.info/scala-=
+type-system-classof-and-getclass/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A3) =E5=8D=95=E4=BE=8B=E7=
+=B1=BB=E5=9E=8B <a href=3D"http://hongjiang.info/scala-type-system-singleto=
+n-type/">http://hongjiang.info/scala-type-system-singleton-type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A4) =E5=86=85=E9=83=A8=E7=
+=B1=BB=EF=BC=8C=E8=B7=AF=E5=BE=84=E4=BE=9D=E8=B5=96=E7=B1=BB=E5=9E=8B&amp;=
+=E7=B1=BB=E5=9E=8B=E6=8A=95=E5=BD=B1 <a href=3D"http://hongjiang.info/scala=
+-type-system-inner-type-and-type-projection/">http://hongjiang.info/scala-t=
+ype-system-inner-type-and-type-projection/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A5) =E7=BB=93=E6=9E=84=E7=
+=B1=BB=E5=9E=8B <a href=3D"http://hongjiang.info/scala-type-system-structur=
+al-type/">http://hongjiang.info/scala-type-system-structural-type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A6) =E5=A4=8D=E5=90=88=E7=
+=B1=BB=E5=9E=8B=E4=B8=8Ewith=E5=85=B3=E9=94=AE=E5=AD=97 <a href=3D"http://h=
+ongjiang.info/scala-type-system-compund-type/">http://hongjiang.info/scala-=
+type-system-compund-type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A7) =E4=B8=AD=E7=BC=80=E7=
+=B1=BB=E5=9E=8B <a href=3D"http://hongjiang.info/scala-type-system-infix-ty=
+pe/">http://hongjiang.info/scala-type-system-infix-type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A8) type=E5=85=B3=E9=94=AE=
+=E5=AD=97 <a href=3D"http://hongjiang.info/scala-type-system-type-keyword/"=
+>http://hongjiang.info/scala-type-system-type-keyword/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A9) this=E5=88=AB=E5=90=8D=
+&amp;=E8=87=AA=E8=BA=AB=E7=B1=BB=E5=9E=8B <a href=3D"http://hongjiang.info/=
+scala-type-system-self-type/">http://hongjiang.info/scala-type-system-self-=
+type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A10) =E4=BA=A4=E9=9B=86=E7=
+=B1=BB=E5=9E=8B=E4=B8=8E=E8=81=94=E5=90=88=E7=B1=BB=E5=9E=8B <a href=3D"htt=
+p://hongjiang.info/scala-intersection-type-and-union-type/">http://hongjian=
+g.info/scala-intersection-type-and-union-type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A11) upper bounds &amp; lo=
+wer bounds <a href=3D"http://hongjiang.info/scala-upper-bounds-and-lower-bo=
+unds/">http://hongjiang.info/scala-upper-bounds-and-lower-bounds/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A12) view bounds <a href=
+=3D"http://hongjiang.info/scala-type-system-view-bounds/">http://hongjiang.=
+info/scala-type-system-view-bounds/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A13) context bounds <a hre=
+f=3D"http://hongjiang.info/scala-type-system-context-bounds/">http://hongji=
+ang.info/scala-type-system-context-bounds/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A14) multiple bounds <a hr=
+ef=3D"http://hongjiang.info/scala-type-system-multiple-bounds/">http://hong=
+jiang.info/scala-type-system-multiple-bounds/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A15) =E5=8D=8F=E5=8F=98=E4=
+=B8=8E=E9=80=86=E5=8F=98 <a href=3D"http://hongjiang.info/scala-covariance-=
+and-contravariance/">http://hongjiang.info/scala-covariance-and-contravaria=
+nce/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A16) =E5=87=BD=E6=95=B0=E7=
+=B1=BB=E5=9E=8B <a href=3D"http://hongjiang.info/scala-function-type/">http=
+://hongjiang.info/scala-function-type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A17) =E7=BB=93=E6=9E=84=E7=
+=B1=BB=E5=9E=8B=E7=9A=84=E7=BB=86=E8=8A=82=E9=97=AE=E9=A2=98 <a href=3D"htt=
+p://hongjiang.info/scala-structural-type-detail/">http://hongjiang.info/sca=
+la-structural-type-detail/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A18) =E4=B8=8D=E7=A8=B3=E5=
+=AE=9A(volatile)=E7=B1=BB=E5=9E=8B <a href=3D"http://hongjiang.info/scala-t=
+ype-system-volatile-type/">http://hongjiang.info/scala-type-system-volatile=
+-type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A19) Manifest=E4=B8=8EType=
+Tag <a href=3D"http://hongjiang.info/scala-type-system-manifest-vs-typetag/=
+">http://hongjiang.info/scala-type-system-manifest-vs-typetag/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A20) =E6=95=B0=E7=BB=84=E7=
+=B1=BB=E5=9E=8B <a href=3D"http://hongjiang.info/scala-type-system-array-ty=
+pe/">http://hongjiang.info/scala-type-system-array-type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A21) type specialization=
+=E4=B8=8E=E7=B1=BB=E7=88=86=E7=82=B8 <a href=3D"http://hongjiang.info/scala=
+-type-specialization/">http://hongjiang.info/scala-type-specialization/</a>=
+<br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A22) =E7=B1=BB=E5=9E=8B=E7=
+=BA=A6=E6=9D=9F=E4=B8=8E=E7=89=B9=E5=AE=9A=E6=96=B9=E6=B3=95 <a href=3D"htt=
+p://hongjiang.info/scala-type-contraints-and-specialized-methods/">http://h=
+ongjiang.info/scala-type-contraints-and-specialized-methods/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A23) =E7=94=A8=E7=B1=BB=E5=
+=9E=8B=E8=AF=81=E6=98=8E=E5=AE=9E=E7=8E=B0=E8=81=94=E5=90=88=E7=B1=BB=E5=9E=
+=8B <a href=3D"http://hongjiang.info/scala-type-evidence-and-union-type/">h=
+ttp://hongjiang.info/scala-type-evidence-and-union-type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A24) =E7=90=86=E8=A7=A3 hi=
+gher-kinded-type <a href=3D"http://hongjiang.info/scala-higher-kinded-type/=
+">http://hongjiang.info/scala-higher-kinded-type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A25) type lambda <a href=
+=3D"http://hongjiang.info/scala-type-lambda/">http://hongjiang.info/scala-t=
+ype-lambda/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A26) type classes=E6=A8=A1=
+=E5=BC=8F <a href=3D"http://hongjiang.info/scala-type-classes-pattern/">htt=
+p://hongjiang.info/scala-type-classes-pattern/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A27) =E5=9B=9E=E9=A1=BE=E5=
+=B8=B8=E8=A7=81=E7=9A=84type classes <a href=3D"http://hongjiang.info/scala=
+-type-classes-review/">http://hongjiang.info/scala-type-classes-review/</a>=
+<br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A28) =E4=BE=9D=E8=B5=96=E7=
+=B1=BB=E5=9E=8B <a href=3D"http://hongjiang.info/scala-type-system-dependen=
+t-types/">http://hongjiang.info/scala-type-system-dependent-types/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9Acase class=E4=B8=8E=E4=BB=
+=A3=E6=95=B0=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=8B <a href=3D"http://hongjian=
+g.info/scala-case-class-and-algebraic-data-type/">http://hongjiang.info/sca=
+la-case-class-and-algebraic-data-type/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A=E7=B1=BB=E5=9E=8B=E6=8E=
+=A8=E5=AF=BC <a href=3D"http://hongjiang.info/scala-type-inference/">http:/=
+/hongjiang.info/scala-type-inference/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A=E6=9F=AF=E9=87=8C-=E9=9C=
+=8D=E5=8D=8E=E5=BE=B7=E5=90=8C=E6=9E=84 <a href=3D"http://hongjiang.info/sc=
+ala-curry-howard-isomorphism/">http://hongjiang.info/scala-curry-howard-iso=
+morphism/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A=E5=80=BC=E7=B1=BB=E5=9E=
+=8B=E4=B8=8E=E6=95=B0=E7=BB=84 <a href=3D"http://hongjiang.info/scala-value=
+-class-in-array/">http://hongjiang.info/scala-value-class-in-array/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9ANull=E4=B8=8ENothing=EF=
+=BC=8C=E9=80=A0=E5=9E=8B=E9=97=AE=E9=A2=98 <a href=3D"http://hongjiang.info=
+/scala-null-and-nothing/">http://hongjiang.info/scala-null-and-nothing/</a>=
+<br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A=E5=80=BC=E7=B1=BB=E5=9E=
+=8B=E7=9A=84=E7=BB=86=E8=8A=82 <a href=3D"http://hongjiang.info/scala-value=
+-classes-detail/">http://hongjiang.info/scala-value-classes-detail/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A=E9=80=9A=E7=94=A8=E7=89=
+=B9=E8=B4=A8(universal traits) <a href=3D"http://hongjiang.info/scala-unive=
+rsal-traits/">http://hongjiang.info/scala-universal-traits/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A=E5=80=BC=E7=B1=BB=E5=9E=
+=8B=E7=9A=84=E8=A3=85=E7=AE=B1=E9=97=AE=E9=A2=98 <a href=3D"http://hongjian=
+g.info/scala-value-class-boxing-question/">http://hongjiang.info/scala-valu=
+e-class-boxing-question/</a><br>
+scala=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=9A=E5=80=BC=E7=B1=BB=E5=9E=
+=8B=E7=9A=84=E4=B8=80=E4=BA=9B=E9=99=90=E5=88=B6 <a href=3D"http://hongjian=
+g.info/scala-value-classes/">http://hongjiang.info/scala-value-classes/</a>=
+</p>
+<p><strong>shapeless</strong><br>
+shapeless(1): =E4=BB=8E=E6=96=B9=E6=B3=95=E4=B8=8E=E5=87=BD=E6=95=B0=E7=9A=
+=84=E5=A4=9A=E6=80=81=E8=B0=88=E8=B5=B7 <a href=3D"http://hongjiang.info/sh=
+apeless-1-polymorphic-question/">http://hongjiang.info/shapeless-1-polymorp=
+hic-question/</a><br>
+shapeless(2): =E5=AF=B9=E5=87=BD=E6=95=B0(=E5=80=BC)=E5=AE=9E=E7=8E=B0=E5=
+=8F=82=E6=95=B0=E5=8C=96=E5=A4=9A=E6=80=81 <a href=3D"http://hongjiang.info=
+/shapeless-2-polymorphic-function-impl/">http://hongjiang.info/shapeless-2-=
+polymorphic-function-impl/</a></p>
+<p><strong>=E7=B1=BB=E5=9E=8B=E6=8E=A8=E5=AF=BC=E7=9B=B8=E5=85=B3</strong><=
+br>
+=E6=B3=9B=E5=9E=8B=E6=96=B9=E6=B3=95=E8=BD=AC=E6=8D=A2=E4=B8=BA=E9=83=A8=E5=
+=88=86=E5=BA=94=E7=94=A8=E5=87=BD=E6=95=B0=E6=97=B6=E7=9A=84=E7=B1=BB=E5=9E=
+=8B=E6=8E=A8=E5=AF=BC=E9=97=AE=E9=A2=98 <a href=3D"http://hongjiang.info/ge=
+neric-methods-2-partially-applied-functions/">http://hongjiang.info/generic=
+-methods-2-partially-applied-functions/</a></p>
+<p><strong>spray</strong><br>
+spray=E4=B8=AD=E7=9A=84Magnet=E6=A8=A1=E5=BC=8F: typeclass=E7=9A=84=E4=B8=
+=80=E7=A7=8D=E7=89=B9=E5=AE=9A=E6=96=B9=E5=BC=8F <a href=3D"http://hongjian=
+g.info/spray-magnet-pattern/">http://hongjiang.info/spray-magnet-pattern/</=
+a></p>
+<p><strong>monads &amp; monoids</strong><br>
+=E6=88=91=E6=89=80=E7=90=86=E8=A7=A3=E7=9A=84monad(0) <a href=3D"http://hon=
+gjiang.info/understand-monad-0/"> http://hongjiang.info/understand-monad-0/=
+</a><br>
+=E6=88=91=E6=89=80=E7=90=86=E8=A7=A3=E7=9A=84monad(1)=EF=BC=9A=E5=8D=8A=E7=
+=BE=A4(semigroup)=E4=B8=8E=E5=B9=BA=E5=8D=8A=E7=BE=A4(monoid) <a href=3D"ht=
+tp://hongjiang.info/semigroup-and-monoid/"> http://hongjiang.info/semigroup=
+-and-monoid/</a><br>
+=E6=88=91=E6=89=80=E7=90=86=E8=A7=A3=E7=9A=84monad(2)=EF=BC=9Afold=E4=B8=8E=
+monoid <a href=3D"http://hongjiang.info/fold-and-monoid/"> http://hongjiang=
+.info/fold-and-monoid/</a><br>
+=E6=88=91=E6=89=80=E7=90=86=E8=A7=A3=E7=9A=84monad(3)=EF=BC=9A=E5=8D=8A=E7=
+=BE=A4(semigroup)=E4=B8=8E=E5=B9=B6=E8=A1=8C=E8=BF=90=E7=AE=97 <a href=3D"h=
+ttp://hongjiang.info/semigroup-and-parallel/"> http://hongjiang.info/semigr=
+oup-and-parallel/</a><br>
+=E6=88=91=E6=89=80=E7=90=86=E8=A7=A3=E7=9A=84monad(4)=EF=BC=9A=E5=87=BD=E5=
+=AD=90(functor)=E6=98=AF=E4=BB=80=E4=B9=88 <a href=3D"http://hongjiang.info=
+/understand-monad-4-what-is-functor/"> http://hongjiang.info/understand-mon=
+ad-4-what-is-functor/</a><br>
+=E6=88=91=E6=89=80=E7=90=86=E8=A7=A3=E7=9A=84monad(5)=EF=BC=9A=E8=87=AA=E5=
+=87=BD=E5=AD=90(Endofunctor)=E6=98=AF=E4=BB=80=E4=B9=88 <a href=3D"http://h=
+ongjiang.info/understand-monad-5-what-is-endofunctor/"> http://hongjiang.in=
+fo/understand-monad-5-what-is-endofunctor/</a><br>
+=E6=88=91=E6=89=80=E7=90=86=E8=A7=A3=E7=9A=84monad(6)=EF=BC=9A=E4=BB=8E=E7=
+=BB=84=E5=90=88=E5=AD=90(combinator)=E8=AF=B4=E8=B5=B7 <a href=3D"http://ho=
+ngjiang.info/understand-monad-6-combinator/"> http://hongjiang.info/underst=
+and-monad-6-combinator/</a><br>
+=E6=88=91=E6=89=80=E7=90=86=E8=A7=A3=E7=9A=84monad(7)=EF=BC=9A=E6=8A=8Amona=
+d=E7=9C=8B=E5=81=9A=E8=A1=8C=E4=B8=BA=E7=9A=84=E7=BB=84=E5=90=88=E5=AD=90 <=
+a href=3D"http://hongjiang.info/understand-monad-7-action-combinator/"> htt=
+p://hongjiang.info/understand-monad-7-action-combinator/</a></p>
+<p><strong>=E7=BF=BB=E8=AF=91&amp;=E7=AC=94=E8=AE=B0</strong><br>
+Programming in Scala=E7=9A=84=E9=98=85=E8=AF=BB=E7=AC=94=E8=AE=B0 <a href=
+=3D"http://hongjiang.info/programming-in-scala-notes/">http://hongjiang.inf=
+o/programming-in-scala-notes/</a><br>
+Effective Scala=E4=B8=AD=E6=96=87=E7=89=88 <a href=3D"http://hongjiang.info=
+/effective-scala-chinese/">http://hongjiang.info/effective-scala-chinese/</=
+a><br>
+=E7=BF=BB=E8=AF=91 monads-are-elephants =E7=AC=AC=E4=B8=80=E9=83=A8=E5=88=
+=86 <a href=3D"http://hongjiang.info/monads-are-elephants-part1-chinese/"> =
+http://hongjiang.info/monads-are-elephants-part1-chinese</a><br>
+=E7=BF=BB=E8=AF=91 monads-are-elephants =E7=AC=AC=E4=BA=8C=E9=83=A8=E5=88=
+=86 <a href=3D"http://hongjiang.info/monads-are-elephants-part2-chinese/"> =
+http://hongjiang.info/monads-are-elephants-part2-chinese</a><br>
+=E7=BF=BB=E8=AF=91 monads-are-elephants =E7=AC=AC=E4=B8=89=E9=83=A8=E5=88=
+=86 <a href=3D"http://hongjiang.info/monads-are-elephants-part3-chinese/"> =
+http://hongjiang.info/monads-are-elephants-part3-chinese</a></p>
+<p><strong>scala pitfalls</strong><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(0): =E5=BA=8F <a href=3D"http://h=
+ongjiang.info/scala-pitfalls-0/"> http://hongjiang.info/scala-pitfalls-0/</=
+a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(1): lambda=E8=A1=A8=E8=BE=BE=E5=
+=BC=8F=E7=9A=84=E7=BC=A9=E5=86=99 <a href=3D"http://hongjiang.info/scala-pi=
+tfalls-1/"> http://hongjiang.info/scala-pitfalls-1/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(2): =E5=B0=8F=E6=8B=AC=E5=8F=B7=
+=E4=B8=8E=E8=8A=B1=E6=8B=AC=E5=8F=B7 <a href=3D"http://hongjiang.info/scala=
+-pitfalls-2/"> http://hongjiang.info/scala-pitfalls-2/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(3): for=E8=A1=A8=E8=BE=BE=E5=BC=
+=8F=E7=9A=84=E8=83=8C=E5=90=8E <a href=3D"http://hongjiang.info/scala-pitfa=
+lls-3/"> http://hongjiang.info/scala-pitfalls-3/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(4): Unit=E7=B1=BB=E5=9E=8B <a hre=
+f=3D"http://hongjiang.info/scala-pitfalls-4/"> http://hongjiang.info/scala-=
+pitfalls-4/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(5): =E4=B8=AD=E7=BC=80=E8=A1=A8=
+=E8=BE=BE <a href=3D"http://hongjiang.info/scala-pitfalls-5/"> http://hongj=
+iang.info/scala-pitfalls-5/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(6): =E5=86=85=E9=83=A8=E7=B1=BB=
+=E4=B8=8E=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D <a href=3D"http://hongjiang.i=
+nfo/scala-pitfalls-6/"> http://hongjiang.info/scala-pitfalls-6/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(7): val x:Int =3D x + 1 =E7=9A=84=
+=E9=97=AE=E9=A2=98 <a href=3D"http://hongjiang.info/scala-pitfalls-7/"> htt=
+p://hongjiang.info/scala-pitfalls-7/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(8): =E9=AB=98=E9=98=B6=E5=87=BD=
+=E6=95=B0=E4=B8=8EUnit=E7=9A=84=E8=B0=9C=E9=A2=98 <a href=3D"http://hongjia=
+ng.info/scala-pitfalls-8/"> http://hongjiang.info/scala-pitfalls-8/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(9): List(1,2,3) =3D=3D Seq(1,2,3)=
+ ? <a href=3D"http://hongjiang.info/scala-pitfalls-9/"> http://hongjiang.in=
+fo/scala-pitfalls-9/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(10): =E9=80=86=E5=8F=98=E7=82=B9=
+=E4=B8=8E=E5=8D=8F=E5=8F=98=E7=82=B9 <a href=3D"http://hongjiang.info/scala=
+-pitfalls-10/"> http://hongjiang.info/scala-pitfalls-10/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(11): isInstanceOf=E4=B8=8E=E7=B1=
+=BB=E5=9E=8B=E6=93=A6=E6=8B=AD <a href=3D"http://hongjiang.info/scala-pitfa=
+lls-11-type-erasure/"> http://hongjiang.info/scala-pitfalls-11-type-erasure=
+/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(12): App=E7=89=B9=E8=B4=A8=E7=9A=
+=84=E5=BB=B6=E8=BF=9F=E5=88=9D=E5=A7=8B=E5=8C=96 <a href=3D"http://hongjian=
+g.info/scala-app-trait-delay-init/"> http://hongjiang.info/scala-app-trait-=
+delay-init/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(13): =E6=A8=A1=E5=BC=8F=E5=8C=B9=
+=E9=85=8D=E4=B8=AD=E7=9A=84=E9=80=BB=E8=BE=91=E6=88=96 <a href=3D"http://ho=
+ngjiang.info/scala-pitfalls-13/"> http://hongjiang.info/scala-pitfalls-13/<=
+/a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(14): trait=E7=9A=84=E6=B3=9B=E5=
+=9E=8B=E5=8F=82=E6=95=B0=E4=B8=BA=E4=BD=95=E4=B8=8D=E6=94=AF=E6=8C=81contex=
+t bounds <a href=3D"http://hongjiang.info/scala-pitfalls-14/"> http://hongj=
+iang.info/scala-pitfalls-14/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(15): class A { type T }=E4=B8=8Ec=
+lass A[T] {} <a href=3D"http://hongjiang.info/scala-pitfalls-15/"> http://h=
+ongjiang.info/scala-pitfalls-15/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(16): println(1,2,3)=E4=B8=BA=E4=
+=BB=80=E4=B9=88work? <a href=3D"http://hongjiang.info/scala-pitfalls-16/"> =
+http://hongjiang.info/scala-pitfalls-16/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(17): toSet()=E7=9A=84=E8=B0=9C=E9=
+=A2=98 <a href=3D"http://hongjiang.info/scala-pitfalls-17/"> http://hongjia=
+ng.info/scala-pitfalls-17/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(18): postfix operator=E7=9A=84=E9=
+=97=AE=E9=A2=98 <a href=3D"http://hongjiang.info/scala-pitfalls-18/"> http:=
+//hongjiang.info/scala-pitfalls-18/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(19): MutableList=E4=B8=8Emutable.=
+LinkedList=E7=9A=84=E9=97=AE=E9=A2=98 <a href=3D"http://hongjiang.info/scal=
+a-pitfalls-19/"> http://hongjiang.info/scala-pitfalls-19/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(20): MutableList=E8=BF=AD=E4=BB=
+=A3=E5=99=A8=E7=9A=84bug <a href=3D"http://hongjiang.info/scala-pitfalls-20=
+/"> http://hongjiang.info/scala-pitfalls-20/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(21): auto-tupling=E4=B8=8Eauto-de=
+tupling <a href=3D"http://hongjiang.info/scala-pitfalls-21-auto-tupling-and=
+-auto-detupling/"> http://hongjiang.info/scala-pitfalls-21-auto-tupling-and=
+-auto-detupling/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(22): var=E5=8F=98=E9=87=8F=E4=B8=
+=8E=E8=B5=8B=E5=80=BC=E6=93=8D=E4=BD=9C=E7=AC=A6 <a href=3D"http://hongjian=
+g.info/scala-pitfalls-22/"> http://hongjiang.info/scala-pitfalls-22/</a><br=
+>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(23): Nothing=E7=B1=BB=E5=9E=8B=E5=
+=BC=95=E5=8F=91=E7=9A=84NullPointerException <a href=3D"http://hongjiang.in=
+fo/scala-pitfalls-23-nothing-caused-npe/"> http://hongjiang.info/scala-pitf=
+alls-23-nothing-caused-npe/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(24): break=E4=B8=8E=E5=BC=82=E5=
+=B8=B8=E6=8D=95=E8=8E=B7 <a href=3D"http://hongjiang.info/scala-pitfalls-24=
+/"> http://hongjiang.info/scala-pitfalls-24/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(25): try-finally=E8=A1=A8=E8=BE=
+=BE=E5=BC=8F=E7=9A=84=E7=B1=BB=E5=9E=8B=E6=8E=A8=E5=AF=BC <a href=3D"http:/=
+/hongjiang.info/scala-pitfalls-25-try-finally-expr-type-infer/"> http://hon=
+gjiang.info/scala-pitfalls-25-try-finally-expr-type-infer/</a><br>
+scala=E9=9B=BE=E4=B8=AD=E9=A3=8E=E6=99=AF(26): =E5=8F=98=E9=87=8F=E6=9F=A5=
+=E6=89=BE=E7=9A=84=E9=97=AE=E9=A2=98 <a href=3D"http://hongjiang.info/scala=
+-pitfalls-26/"> http://hongjiang.info/scala-pitfalls-26/</a></p>
+<p><strong>=E8=AF=8A=E6=96=AD</strong><br>
+scala=E7=9A=84=E8=AF=8A=E6=96=AD=E6=96=B9=E6=B3=95(1) =E4=BD=BF=E7=94=A8-Xp=
+rint:typer=E7=9C=8B=E8=AF=AD=E6=B3=95=E7=B3=96=E7=9A=84=E8=83=8C=E5=90=8E <=
+a href=3D"http://hongjiang.info/scala-diagnose-1/">http://hongjiang.info/sc=
+ala-diagnose-1/</a><br>
+scala=E7=9A=84=E8=AF=8A=E6=96=AD=E6=96=B9=E6=B3=95(2) =E5=9C=A8repl=E4=B8=
+=8B=E7=94=A8reify=E6=9F=A5=E7=9C=8B=E8=A1=A8=E8=BE=BE=E5=BC=8F=E7=9A=84=E7=
+=BF=BB=E8=AF=91=E7=BB=93=E6=9E=9C <a href=3D"http://hongjiang.info/scala-di=
+agnose-2/">http://hongjiang.info/scala-diagnose-2/</a><br>
+scala=E7=9A=84=E8=AF=8A=E6=96=AD=E6=96=B9=E6=B3=95(3) =E5=9C=A8repl=E4=B8=
+=8B=E7=BB=9F=E8=AE=A1=E6=96=B9=E6=B3=95=E7=9A=84=E6=89=A7=E8=A1=8C=E6=97=B6=
+=E9=97=B4 <a href=3D"http://hongjiang.info/scala-diagnose-3/">http://hongji=
+ang.info/scala-diagnose-3/</a><br>
+scala=E7=9A=84=E8=AF=8A=E6=96=AD=E6=96=B9=E6=B3=95(4) -Ytyper-debug =E7=BC=
+=96=E8=AF=91=E9=A1=B9 <a href=3D"http://hongjiang.info/scala-diagnose-4/">h=
+ttp://hongjiang.info/scala-diagnose-4/</a><br>
+scala=E7=9A=84=E8=AF=8A=E6=96=AD=E6=96=B9=E6=B3=95(5) =E7=94=A8scalac-aspec=
+ts=E8=AF=8A=E6=96=ADscalac=E5=90=84=E9=98=B6=E6=AE=B5=E8=80=97=E6=97=B6 <a =
+href=3D"http://hongjiang.info/scalac-aspects/">http://hongjiang.info/scalac=
+-aspects/</a></p>
+<p><strong>=E5=87=BD=E6=95=B0=E4=B8=8E=E5=87=BD=E6=95=B0=E5=BC=8F=E9=A3=8E=
+=E6=A0=BC</strong><br>
+=E6=97=A0=E5=8F=82=E6=96=B9=E6=B3=95=E4=B8=8E=E5=B0=8F=E6=8B=AC=E5=8F=B7=E9=
+=97=AE=E9=A2=98 <a href=3D"http://hongjiang.info/scala-parenthesis-and-appl=
+y/">http://hongjiang.info/scala-parenthesis-and-apply/</a><br>
+scala=E4=B8=AD=E7=9A=84=E6=97=A0=E5=8F=82=E6=96=B9=E6=B3=95=E4=B8=8E=E7=BB=
+=9F=E4=B8=80=E8=AE=BF=E9=97=AE=E5=8E=9F=E5=88=99 <a href=3D"http://hongjian=
+g.info/scala-uniform-access-principle/">http://hongjiang.info/scala-uniform=
+-access-principle/</a><br>
+scala=E4=B8=AD=E7=9A=84eta-conversion <a href=3D"http://hongjiang.info/scal=
+a-eta-conversion/">http://hongjiang.info/scala-eta-conversion/</a><br>
+=E9=97=AD=E5=8C=85=E5=8F=98=E9=87=8F=E7=BB=91=E5=AE=9A=E9=97=AE=E9=A2=98 <a=
+ href=3D"http://hongjiang.info/closure-var-banding/">http://hongjiang.info/=
+closure-var-banding/</a><br>
+=E5=A6=82=E4=BD=95=E5=86=99=E4=B8=80=E6=AE=B5=E7=AC=A6=E5=90=88scala=E8=AF=
+=AD=E8=A8=80=E4=B9=A0=E6=83=AF=E7=9A=84=E5=BF=AB=E9=80=9F=E6=8E=92=E5=BA=8F=
+ <a href=3D"http://hongjiang.info/scala-quicksort/">http://hongjiang.info/s=
+cala-quicksort/</a><br>
+Any.##=E6=96=B9=E6=B3=95=E4=B8=8EhashCode=E7=9A=84=E5=8C=BA=E5=88=AB <a hre=
+f=3D"http://hongjiang.info/double-pound-sign-and-hashcode/">http://hongjian=
+g.info/double-pound-sign-and-hashcode/</a><br>
+scala=E4=B8=AD=E7=9A=84=E6=9C=89=E5=90=8D=E5=8F=82=E6=95=B0 <a href=3D"http=
+://hongjiang.info/scala-named-arguments/">http://hongjiang.info/scala-named=
+-arguments/</a><br>
+map=E5=87=BD=E6=95=B0=EF=BC=8C=E9=9A=90=E5=BC=8F=E5=8F=82=E6=95=B0CanBuildF=
+rom=E7=9A=84=E7=BB=86=E8=8A=82 <a href=3D"http://hongjiang.info/scala-canbu=
+ildfrom-detail/">http://hongjiang.info/scala-canbuildfrom-detail/</a><br>
+scala=E4=B8=AD=E5=87=BD=E6=95=B0=E7=B1=BB=E5=9E=8B=E7=9A=84=E5=A4=9A=E6=80=
+=81 <a href=3D"http://hongjiang.info/scala-function-polymorphic/">http://ho=
+ngjiang.info/scala-function-polymorphic/</a><br>
+scala=E4=B8=8D=E6=98=AF=E5=87=BD=E6=95=B0=E5=BC=8F=E8=AF=AD=E8=A8=80=EF=BC=
+=8C=E4=B8=8EOcaml=E7=9A=84=E5=AF=B9=E6=AF=94 <a href=3D"http://hongjiang.in=
+fo/scala-vs-ocaml/">http://hongjiang.info/scala-vs-ocaml/</a><br>
+foldLeft=E4=B8=8EfoldRight <a href=3D"http://hongjiang.info/foldleft-andfol=
+dright/">http://hongjiang.info/foldleft-and-foldright/</a><br>
+=E5=86=8D=E8=B0=88eta-conversion=E4=B8=8Eeta-expansion <a href=3D"http://ho=
+ngjiang.info/eta-conversion-and-eta-expansion/">http://hongjiang.info/eta-c=
+onversion-and-eta-expansion/</a><br>
+=E6=9F=AF=E9=87=8C=E5=8C=96(currying)=E4=B8=8E=E6=9E=84=E9=80=A0=E5=99=A8(B=
+uilder)=E6=A8=A1=E5=BC=8F <a href=3D"http://hongjiang.info/currying-and-bui=
+lder-pattern/">http://hongjiang.info/currying-and-builder-pattern/</a></p>
+<p><strong>=E9=9B=86=E5=90=88=E7=9B=B8=E5=85=B3</strong><br>
+=E5=AF=B9tuple=E8=BF=9B=E8=A1=8C=E8=BF=AD=E4=BB=A3 <a href=3D"http://hongji=
+ang.info/tuple-iterator/">http://hongjiang.info/tuple-iterator/</a><br>
+String=E5=BD=93=E4=BD=9C=E9=9B=86=E5=90=88=E5=A4=84=E7=90=86=E6=97=B6=E7=9A=
+=84=E6=96=B9=E6=B3=95 <a href=3D"http://hongjiang.info/string-as-collection=
+/">http://hongjiang.info/string-as-collection/</a><br>
+scala=E4=B8=AD=E9=9B=86=E5=90=88=E7=9A=84=E4=BA=A4=E9=9B=86=E3=80=81=E5=B9=
+=B6=E9=9B=86=E3=80=81=E5=B7=AE=E9=9B=86 <a href=3D"http://hongjiang.info/sc=
+ala-union-diff-intersect/">http://hongjiang.info/scala-union-diff-intersect=
+/</a><br>
+Tuple1=E7=9A=84=E5=AD=98=E5=9C=A8=E6=84=8F=E4=B9=89=EF=BC=9F<a href=3D"http=
+://hongjiang.info/tuple1-purpose/">http://hongjiang.info/tuple1-purpose/</a=
+><br>
+=E4=B8=BA=E4=BB=80=E4=B9=88scala=E4=B8=AD=E7=9A=84tuple=E5=AE=9A=E4=B9=89=
+=E4=BA=8622=E4=B8=AA(Tuple22)? <a href=3D"http://hongjiang.info/why-tuples-=
+only-to-22/">http://hongjiang.info/why-tuples-only-to-22/</a><br>
+=E4=BA=8C=E5=85=83=E7=BB=84=E7=AE=AD=E5=A4=B4=E8=A1=A8=E8=BE=BE=E5=BC=8F=E8=
+=83=8C=E5=90=8E=E7=9A=84=E8=AF=AD=E6=B3=95=E7=B3=96 <a href=3D"http://hongj=
+iang.info/scala-any2arrowassoc/">http://hongjiang.info/scala-any2arrowassoc=
+/</a><br>
+=E9=80=9A=E8=BF=87List.apply=E6=96=B9=E6=B3=95=E6=9E=84=E9=80=A0List=E7=9A=
+=84=E8=83=8C=E5=90=8E=E9=80=BB=E8=BE=91 <a href=3D"http://hongjiang.info/sc=
+ala-list-apply/">http://hongjiang.info/scala-list-apply/</a></p>
+<p><strong>API pitfalls</strong><br>
+scala=E7=B1=BB=E5=BA=93=E4=B8=AD=E7=9A=84api=E9=99=B7=E9=98=B1(1): LinkedLi=
+st.append <a href=3D"http://hongjiang.info/scala-api-pitfalls-1/">http://ho=
+ngjiang.info/scala-api-pitfalls-1/</a></p>
+<p><strong>REPL=E7=9B=B8=E5=85=B3</strong><br>
+repl=E6=9D=82=E8=AE=B0 <a href=3D"http://hongjiang.info/repl-misc/">http://=
+hongjiang.info/repl-misc/</a><br>
+repl=E4=B8=8B=E7=9A=84=E5=87=A0=E7=A7=8D=E6=A8=A1=E5=BC=8F <a href=3D"http:=
+//hongjiang.info/scala-repl-modes/">http://hongjiang.info/scala-repl-modes/=
+</a><br>
+repl=E4=B8=8B=E7=9A=84javap <a href=3D"http://hongjiang.info/scala-repl-jav=
+ap/">http://hongjiang.info/scala-repl-javap/</a><br>
+scala2.11=E7=9A=84repl=E4=B8=8B=E5=A2=9E=E5=8A=A0=E4=BA=86kind=E5=91=BD=E4=
+=BB=A4 <a href=3D"http://hongjiang.info/scala-repl-kind/">http://hongjiang.=
+info/scala-repl-kind/</a></p>
+<p><strong>scala 2.10+</strong><br>
+scala2.10=E4=B8=ADeval=E4=B8=80=E6=AE=B5script <a href=3D"http://hongjiang.=
+info/scala210-eval-script/">http://hongjiang.info/scala210-eval-script/</a>=
+<br>
+scala2.10.1=E7=9A=84repl=E4=B8=8B:cp=E5=91=BD=E4=BB=A4=E4=B8=8D=E8=83=BD=E5=
+=B7=A5=E4=BD=9C <a href=3D"http://hongjiang.info/scala210-repl-cp-do-not-wo=
+rk/">http://hongjiang.info/scala210-repl-cp-do-not-work/</a><br>
+scala2.10=E4=B8=AD=E9=87=87=E7=BA=B3=E4=BA=86SIP-18:=E6=A8=A1=E5=9D=97=E5=
+=8C=96=E8=AF=AD=E8=A8=80=E7=89=B9=E6=80=A7 <a href=3D"http://hongjiang.info=
+/scala-sip-18/">http://hongjiang.info/scala-sip-18/</a><br>
+scala2.10=E9=87=8C=E7=9A=84for=E8=A1=A8=E8=BE=BE=E5=BC=8F=E5=B7=B2=E7=BB=8F=
+=E4=B8=8D=E5=85=81=E8=AE=B8=E5=AF=B9=E5=8F=98=E9=87=8F=E5=A3=B0=E6=98=8Eval=
+ <a href=3D"http://hongjiang.info/for-comprehension-val-definition/">http:/=
+/hongjiang.info/for-comprehension-val-definition/</a><br>
+scala2.11=E7=BC=96=E8=AF=91=E7=8E=AF=E8=8A=82=E7=9A=84=E4=B8=80=E4=BA=9B=E5=
+=8F=98=E5=8A=A8: delambdafy <a href=3D"http://hongjiang.info/scala-compiler=
+-delambdafy/">http://hongjiang.info/scala-compiler-delambdafy/</a><br>
+scala2.11=E7=BC=96=E8=AF=91=E5=99=A8=E5=AF=B9lint=E7=9A=84=E5=A2=9E=E5=BC=
+=BA <a href=3D"http://hongjiang.info/scala-211-compiler-lint/">http://hongj=
+iang.info/scala-211-compiler-lint/</a></p>
+<p><strong>=E6=9C=AA=E5=88=86=E7=B1=BB</strong><br>
+lazy=E5=8F=98=E9=87=8F=E4=B8=8E=E5=8F=8C=E9=87=8D=E6=A3=80=E6=B5=8B=E9=94=
+=81(DCL) <a href=3D"http://hongjiang.info/scala-lazy-and-dcl/">http://hongj=
+iang.info/scala-lazy-and-dcl/</a><br>
+scala=E9=87=8C=E7=9A=84=E9=9D=99=E6=80=81=E4=BB=A3=E7=90=86(static-forwarde=
+rs) <a href=3D"http://hongjiang.info/scala-static-forwarders/">http://hongj=
+iang.info/scala-static-forwarders/</a><br>
+=E7=BB=9F=E8=AE=A1=E8=AF=97=E7=BB=8F=E4=B8=AD=E6=9C=80=E5=B8=B8=E4=BD=BF=E7=
+=94=A8=E7=9A=84=E5=8F=A0=E8=AF=8D <a href=3D"http://hongjiang.info/scala-co=
+unting-reduplicated-character/">http://hongjiang.info/scala-counting=E2=80=
+=A6ated-character/</a><br>
+scala2.9=E4=B8=AD@serializable=E6=B3=A8=E9=87=8A=E5=B7=B2=E4=B8=8D=E9=BC=93=
+=E5=8A=B1=E4=BD=BF=E7=94=A8 <a href=3D"http://hongjiang.info/serializable-a=
+nnotation-deprecated/">http://hongjiang.info/serializable-annotation-deprec=
+ated/</a><br>
+import _root_.xxx =E4=B8=AD=E7=9A=84_root_=E5=89=8D=E7=BC=80=E8=A1=A8=E7=A4=
+=BAxxx=E5=8C=85=E5=90=8D=E6=98=AF=E7=BB=9D=E5=AF=B9=E8=B7=AF=E5=BE=84 <a hr=
+ef=3D"http://hongjiang.info/scala-package-root-prefix/">http://hongjiang.in=
+fo/scala-package-root-prefix/</a><br>
+scala=E4=B8=AD=E6=89=A7=E8=A1=8C=E5=A4=96=E9=83=A8=E5=91=BD=E4=BB=A4(scala.=
+sys.process) <a href=3D"http://hongjiang.info/scala-process/">http://hongji=
+ang.info/scala-process/</a><br>
+classloader=E9=97=AE=E9=A2=98=EF=BC=9Aimport my.package._ =E6=98=AF=E5=90=
+=A6=E4=BC=9Aload=E8=AF=A5=E5=8C=85=E4=B8=8B=E6=89=80=E6=9C=89=E7=9A=84class=
+? <a href=3D"http://hongjiang.info/classloader-question-on-import-classes/"=
+>http://hongjiang.info/classloader-question-on-import-classes/</a><br>
+scala=E4=B8=AD=E6=9C=89Unicode=E7=9A=84=E5=85=B3=E9=94=AE=E5=AD=97 <a href=
+=3D"http://hongjiang.info/scala-unicode-reserved-words/">http://hongjiang.i=
+nfo/scala-unicode-reserved-words/</a><br>
+Any=E7=B1=BB=E7=9A=84=E6=BA=90=E7=A0=81=E5=9C=A8=E5=93=AA=E5=84=BF=EF=BC=9F=
+<a href=3D"http://hongjiang.info/cannot-find-soucecode-of-class-any/">http:=
+//hongjiang.info/cannot-find-soucecode-of-class-any/</a><br>
+scala=E7=BC=96=E8=AF=91=E5=99=A8=E7=9A=84=E4=B8=80=E4=B8=AAbug <a href=3D"h=
+ttp://hongjiang.info/scala-compiler-bug/">http://hongjiang.info/scala-compi=
+ler-bug/</a><br>
+scala bug=E7=B3=BB=E5=88=97=EF=BC=9A2.10=E7=BC=96=E8=AF=91=E5=99=A8=E6=8A=
+=8A=E5=8D=95=E4=BE=8B=E5=BD=93=E4=BD=9C=E7=B1=BB=E5=9E=8B=E7=9A=84bug <a hr=
+ef=3D"http://hongjiang.info/scala-bug-210-object-as-type/">http://hongjiang=
+.info/scala-bug-210-object-as-type/</a><br>
+scala=E9=87=8C=E6=A8=A1=E6=8B=9Fjavascript/python=E9=87=8C=E7=9A=84=E7=94=
+=9F=E6=88=90=E5=99=A8=E7=9A=84=E6=95=88=E6=9E=9C <a href=3D"http://hongjian=
+g.info/scala-simulate-javascript-generator/">http://hongjiang.info/scala-si=
+mulate-javascript-generator/</a><br>
+null=E9=80=A0=E5=9E=8B=E4=B8=BA=E5=80=BC=E7=B1=BB=E5=9E=8B=E6=97=B6=E4=B8=
+=BA=E4=BD=95=E4=B8=8D=E6=8A=9B=E5=BC=82=E5=B8=B8 <a href=3D"http://hongjian=
+g.info/null-cast-to-value-type/">http://hongjiang.info/null-cast-to-value-t=
+ype/</a><br>
+Int=E4=B8=8EInteger=E7=9A=84=E6=8B=86=E7=AE=B1=E9=97=AE=E9=A2=98 <a href=3D=
+"http://hongjiang.info/scala-int-unbox-for-null/">http://hongjiang.info/sca=
+la-int-unbox-for-null/</a><br>
+Scala=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B=E4=B8=AD=E6=96=87=E7=89=
+=88=E5=B7=B2=E4=B8=8A=E6=9E=B6 <a href=3D"http://hongjiang.info/functional-=
+programming-in-scala-chinese-version/">http://hongjiang.info/functional-pro=
+gramming-in-scala-chinese-version/</a><br>
+scalastyle=E5=B7=A5=E5=85=B7 <a href=3D"http://hongjiang.info/scala-style-c=
+hecker/">http://hongjiang.info/scala-style-checker/</a></p>
+<p><strong>=E5=88=86=E4=BA=AB=E4=B8=8E=E4=BA=A4=E6=B5=81</strong><br>
+=E5=88=86=E4=BA=ABppt: scala=E4=B8=AD=E7=9A=84=E5=87=BD=E6=95=B0=E4=B8=8E=
+=E9=97=AD=E5=8C=85 <a href=3D"http://hongjiang.info/scala-function-and-clos=
+ure/">http://hongjiang.info/scala-function-and-closure/</a><br>
+=E4=B8=8E19=E6=A5=BC=E7=9A=84=E4=BA=A4=E6=B5=81 <a href=3D"http://hongjiang=
+.info/scala-19lou/">http://hongjiang.info/scala-19lou/</a><br>
+=E4=B8=8A=E6=B5=B7scala=E7=88=B1=E5=A5=BD=E8=80=85=E8=81=9A=E4=BC=9A(2013) =
+<a href=3D"http://hongjiang.info/scala-shanghai-512/">http://hongjiang.info=
+/scala-shanghai-512/</a><br>
+=E9=98=BF=E9=87=8C=E6=8A=80=E6=9C=AF=E5=98=89=E5=B9=B4=E5=8D=8E2013 <a href=
+=3D"http://hongjiang.info/adc2013/">http://hongjiang.info/adc2013/</a><br>
+2013=E5=8D=8E=E4=B8=9Cscala=E7=88=B1=E5=A5=BD=E8=80=85=E8=81=9A=E4=BC=9A(=
+=E6=9D=AD=E5=B7=9E) <a href=3D"http://hongjiang.info/scala-hangzhou-2013-10=
+19/">http://hongjiang.info/scala-hangzhou-2013-1019/</a><br>
+=E5=8D=8E=E4=B8=9C=E5=9C=B0=E5=8C=BAscala=E7=88=B1=E5=A5=BD=E8=80=85=E8=81=
+=9A=E4=BC=9A(2014=E4=B8=8A=E6=B5=B7) <a href=3D"http://hongjiang.info/scala=
+-shanghai-2014/">http://hongjiang.info/scala-shanghai-2014/</a><br>
+=E5=8D=8E=E4=B8=9C=E5=9C=B0=E5=8C=BAscala=E7=88=B1=E5=A5=BD=E8=80=85=E8=81=
+=9A=E4=BC=9A(2015=E4=B8=8A=E6=B5=B7) <a href=3D"http://hongjiang.info/scala=
+-shanghai-2015/">http://hongjiang.info/scala-shanghai-2015/</a><br>
+Scala=E5=9C=A8=E6=8C=96=E8=B4=A2=E7=9A=84=E5=BA=94=E7=94=A8=E5=AE=9E=E8=B7=
+=B5 <a href=3D"http://hongjiang.info/scala-in-wacai/">http://hongjiang.info=
+/scala-in-wacai/</a><br>
+ArchSummit=E5=8C=97=E4=BA=AC2015=E5=B0=8F=E8=AE=B0 <a href=3D"http://hongji=
+ang.info/archsummit-beijing-2015/">http://hongjiang.info/archsummit-beijing=
+-2015/</a></p>
+<p><strong>=E4=BE=9D=E8=B5=96=E6=B3=A8=E5=85=A5</strong><br>
+Cake Pattern=E4=B8=8E=E4=BE=9D=E8=B5=96=E6=B3=A8=E5=85=A5 <a href=3D"http:/=
+/hongjiang.info/cake-pattern-and-di/">http://hongjiang.info/cake-pattern-an=
+d-di/</a><br>
+scala=E4=B8=AD=E7=9A=84self type(=E8=87=AA=E8=BA=AB=E7=B1=BB=E5=9E=8B)=E4=
+=B8=8E=E4=BE=9D=E8=B5=96=E6=B3=A8=E5=85=A5 <a href=3D"http://hongjiang.info=
+/scala-self-type-and-di/">http://hongjiang.info/scala-self-type-and-di/</a>=
+</p>
+					</div><!-- .entry-content -->
+		<footer class=3D"entry-meta">
+					</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+			=09
+<div id=3D"comments" class=3D"comments-area">
+
+=09
+			<h2 class=3D"comments-title">
+			=E3=80=8A<span>scala</span>=E3=80=8B=E4=B8=8A=E6=9C=894=E6=9D=A1=E8=AF=
+=84=E8=AE=BA		</h2>
+
+		<ol class=3D"commentlist">
+				<li class=3D"comment even thread-even depth-1" id=3D"li-comment-4181">
+		<article id=3D"comment-4181" class=3D"comment">
+			<header class=3D"comment-meta comment-author vcard">
+				<img alt=3D"" src=3D"http://2.gravatar.com/avatar/b4ca2c5c823bf482145fb=
+0be6522c965?s=3D44&amp;d=3Dretro&amp;r=3Dg" class=3D"avatar avatar-44 photo=
+" height=3D"44" width=3D"44"><cite><b class=3D"fn">miao yu</b> </cite><a hr=
+ef=3D"http://hongjiang.info/scala/#comment-4181"><time datetime=3D"2014-07-=
+03T00:22:26+00:00">2014-07-0300:22</time></a>			</header><!-- .comment-meta=
+ -->
+
+		=09
+			<section class=3D"comment-content comment">
+				<p>=E9=98=85=E8=AF=BB=E4=BA=86=E5=A4=A7=E9=83=A8=E5=88=86=E5=8D=9A=E4=
+=B8=BB=E5=85=B3=E4=BA=8Escala=E7=9A=84=E5=8D=9A=E5=AE=A2=EF=BC=8C=E6=84=9F=
+=E8=A7=89=E5=8F=97=E7=9B=8A=E5=8C=AA=E6=B5=85=EF=BC=8C=E8=AF=B7=E9=97=AE=E5=
+=8D=9A=E4=B8=BB=E6=9C=89=E6=B2=A1=E6=9C=89=E6=84=8F=E5=90=91=E5=86=99=E4=B8=
+=80=E4=BA=9Bscalding=E7=9B=B8=E5=85=B3=E7=9A=84=E5=8D=9A=E5=AE=A2=E3=80=82=
+=E6=84=9F=E8=A7=89scalding=E5=BE=88=E5=BC=BA=E5=A4=A7=EF=BC=8C=E4=BD=86=E6=
+=98=AF=E8=87=AA=E5=B7=B1=E7=9A=84=E8=AE=A4=E8=AF=86=E5=AE=9E=E5=9C=A8=E5=A4=
+=AA=E6=9C=89=E9=99=90</p>
+							</section><!-- .comment-content -->
+
+			<div class=3D"reply">
+				<a rel=3D"nofollow" class=3D"comment-reply-link" href=3D"http://hongjia=
+ng.info/scala/?replytocom=3D4181#respond" onclick=3D"return addComment.move=
+Form( &quot;comment-4181&quot;, &quot;4181&quot;, &quot;respond&quot;, &quo=
+t;256&quot; )" aria-label=3D"=E5=9B=9E=E5=A4=8D=E7=BB=99miao yu">=E5=9B=9E=
+=E5=A4=8D</a> <span>=E2=86=93</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class=3D"comment odd alt thread-odd thread-alt depth-1" id=3D"li-comme=
+nt-4332">
+		<article id=3D"comment-4332" class=3D"comment">
+			<header class=3D"comment-meta comment-author vcard">
+				<img alt=3D"" src=3D"http://2.gravatar.com/avatar/e7f3860aea9d8beda719f=
+6ac134172da?s=3D44&amp;d=3Dretro&amp;r=3Dg" class=3D"avatar avatar-44 photo=
+" height=3D"44" width=3D"44"><cite><b class=3D"fn">hary</b> </cite><a href=
+=3D"http://hongjiang.info/scala/#comment-4332"><time datetime=3D"2014-10-30=
+T16:59:08+00:00">2014-10-3016:59</time></a>			</header><!-- .comment-meta -=
+->
+
+		=09
+			<section class=3D"comment-content comment">
+				<p>=E6=9C=80=E8=BF=91=E7=B3=BB=E7=BB=9F=E7=9A=84=E5=AD=A6=E4=B9=A0=E4=
+=BA=86=E4=B8=8BScala / Play2.<br>
+=E6=84=9F=E8=A7=89=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B=E6=9E=9C=E7=
+=84=B6=E6=98=AF=E5=8D=9A=E5=A4=A7=E7=B2=BE=E6=B7=B1=E3=80=82 Play=E4=B8=AD=
+=E7=9A=84Enumerator/Iteratee=E8=AE=A9=E6=88=91=E8=80=B3=E7=9B=AE=E4=B8=80=
+=E6=96=B0=E3=80=82 =E7=BF=BB=E4=BA=86=E4=B8=8B=E6=BA=90=E4=BB=A3=E7=A0=81=
+=EF=BC=8C =E6=84=9F=E8=A7=89=E8=84=91=E5=AD=90=E4=B8=8D=E5=A4=9F=E7=94=A8=
+=EF=BC=8C =E7=9C=8B=E4=BA=861=E5=A4=A9=E8=BF=98=E6=98=AF=E5=BE=88=E6=99=95=
+=EF=BC=8C<br>
+=E7=BE=A4=E4=B8=BB=E6=98=AF=E5=90=A6=E6=9C=89=E7=A0=94=E7=A9=B6=E8=BF=87Enu=
+merator/Iteratee,  =E6=88=96=E6=98=AF=E8=AE=A4=E8=AF=86=E8=B0=81=E5=9C=A8=
+=E7=A0=94=E7=A9=B6=EF=BC=9F =E6=88=91=E7=9C=8B=E4=BA=86=E4=B8=8B=E7=AB=A0=
+=E7=87=81=E6=98=8E=E5=85=B3=E4=BA=8EIteratee=E7=9A=84ppt. =E6=84=9F=E8=A7=
+=89=E8=BF=98=E6=98=AF=E4=B8=8D=E5=A4=9F=E7=BB=86=E3=80=82<br>
+=E7=BE=A4=E4=B8=BB =E8=A6=81=E6=98=AF=E8=83=BD=E6=9D=A5=E4=B8=AAIteratee=E6=
+=BA=90=E4=BB=A3=E7=A0=81=E5=88=86=E6=9E=90=E5=B0=B1=E5=A5=BD=E4=BA=86=E3=80=
+=82</p>
+							</section><!-- .comment-content -->
+
+			<div class=3D"reply">
+				<a rel=3D"nofollow" class=3D"comment-reply-link" href=3D"http://hongjia=
+ng.info/scala/?replytocom=3D4332#respond" onclick=3D"return addComment.move=
+Form( &quot;comment-4332&quot;, &quot;4332&quot;, &quot;respond&quot;, &quo=
+t;256&quot; )" aria-label=3D"=E5=9B=9E=E5=A4=8D=E7=BB=99hary">=E5=9B=9E=E5=
+=A4=8D</a> <span>=E2=86=93</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	<ol class=3D"children">
+	<li class=3D"comment even depth-2" id=3D"li-comment-4396">
+		<article id=3D"comment-4396" class=3D"comment">
+			<header class=3D"comment-meta comment-author vcard">
+				<img alt=3D"" src=3D"http://0.gravatar.com/avatar/c32c1460f9163fbaf266b=
+f9335debc02?s=3D44&amp;d=3Dretro&amp;r=3Dg" class=3D"avatar avatar-44 photo=
+" height=3D"44" width=3D"44"><cite><b class=3D"fn">blackzwei</b> </cite><a =
+href=3D"http://hongjiang.info/scala/#comment-4396"><time datetime=3D"2015-0=
+2-10T19:41:40+00:00">2015-02-1019:41</time></a>			</header><!-- .comment-me=
+ta -->
+
+		=09
+			<section class=3D"comment-content comment">
+				<p><a href=3D"http://mandubian.com/2012/08/27/understanding-play2-itera=
+tees-for-normal-humans/" rel=3D"nofollow">http://mandubian.com/2012/08/27/u=
+nderstanding-play2-iteratees-for-normal-humans/</a><br>
+=E5=A4=9A=E7=9C=8B=E7=9C=8B=E8=BF=99=E7=AF=87=E6=96=87=E6=84=9F=E8=A7=89=E4=
+=BC=9A=E5=A5=BD=E5=BE=88=E5=A4=9A=E7=9A=84</p>
+							</section><!-- .comment-content -->
+
+			<div class=3D"reply">
+				<a rel=3D"nofollow" class=3D"comment-reply-link" href=3D"http://hongjia=
+ng.info/scala/?replytocom=3D4396#respond" onclick=3D"return addComment.move=
+Form( &quot;comment-4396&quot;, &quot;4396&quot;, &quot;respond&quot;, &quo=
+t;256&quot; )" aria-label=3D"=E5=9B=9E=E5=A4=8D=E7=BB=99blackzwei">=E5=9B=
+=9E=E5=A4=8D</a> <span>=E2=86=93</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class=3D"comment odd alt depth-2" id=3D"li-comment-4397">
+		<article id=3D"comment-4397" class=3D"comment">
+			<header class=3D"comment-meta comment-author vcard">
+				<img alt=3D"" src=3D"http://1.gravatar.com/avatar/4566228dd0ba3d5652d1f=
+2cf47471e3a?s=3D44&amp;d=3Dretro&amp;r=3Dg" class=3D"avatar avatar-44 photo=
+" height=3D"44" width=3D"44"><cite><b class=3D"fn">lcn</b> </cite><a href=
+=3D"http://hongjiang.info/scala/#comment-4397"><time datetime=3D"2015-02-11=
+T02:51:01+00:00">2015-02-1102:51</time></a>			</header><!-- .comment-meta -=
+->
+
+		=09
+			<section class=3D"comment-content comment">
+				<p><a href=3D"http://stackoverflow.com/questions/26952366/is-haskells-l=
+aziness-an-elegant-alternative-to-pythons-generators" rel=3D"nofollow">http=
+://stackoverflow.com/questions/26952366/is-haskells-laziness-an-elegant-alt=
+ernative-to-pythons-generators</a> =E4=B9=9F=E5=8F=AF=E4=BB=A5=E4=B8=80=E7=
+=9C=8B=EF=BC=8C=E5=A5=BD=E7=9F=A5=E9=81=93iteratoree=E7=9A=84=E6=A0=B9=E6=
+=BA=90=E5=92=8C=E5=8F=98=E7=A7=8D=E3=80=82</p>
+							</section><!-- .comment-content -->
+
+			<div class=3D"reply">
+				<a rel=3D"nofollow" class=3D"comment-reply-link" href=3D"http://hongjia=
+ng.info/scala/?replytocom=3D4397#respond" onclick=3D"return addComment.move=
+Form( &quot;comment-4397&quot;, &quot;4397&quot;, &quot;respond&quot;, &quo=
+t;256&quot; )" aria-label=3D"=E5=9B=9E=E5=A4=8D=E7=BB=99lcn">=E5=9B=9E=E5=
+=A4=8D</a> <span>=E2=86=93</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+	=09
+	=09
+=09
+					<div id=3D"respond" class=3D"comment-respond">
+			<h3 id=3D"reply-title" class=3D"comment-reply-title">=E5=8F=91=E8=A1=A8=
+=E8=AF=84=E8=AE=BA <small><a rel=3D"nofollow" id=3D"cancel-comment-reply-li=
+nk" href=3D"http://hongjiang.info/scala/#respond" style=3D"display:none;">=
+=E5=8F=96=E6=B6=88=E5=9B=9E=E5=A4=8D</a></small></h3>				<form action=3D"ht=
+tp://hongjiang.info/wp-comments-post.php" method=3D"post" id=3D"commentform=
+" class=3D"comment-form anti-spam-form-processed">
+					<p class=3D"comment-notes"><span id=3D"email-notes">=E7=94=B5=E5=AD=90=
+=E9=82=AE=E4=BB=B6=E5=9C=B0=E5=9D=80=E4=B8=8D=E4=BC=9A=E8=A2=AB=E5=85=AC=E5=
+=BC=80=E3=80=82</span> =E5=BF=85=E5=A1=AB=E9=A1=B9=E5=B7=B2=E7=94=A8<span c=
+lass=3D"required">*</span>=E6=A0=87=E6=B3=A8</p><p class=3D"comment-form-co=
+mment"><label for=3D"comment">=E8=AF=84=E8=AE=BA</label> <textarea id=3D"co=
+mment" name=3D"comment" cols=3D"45" rows=3D"8" maxlength=3D"65525" aria-req=
+uired=3D"true" required=3D"required"></textarea></p><p class=3D"comment-for=
+m-author"><label for=3D"author">=E5=A7=93=E5=90=8D <span class=3D"required"=
+>*</span></label> <input id=3D"author" name=3D"author" type=3D"text" value=
+=3D"" size=3D"30" maxlength=3D"245" aria-required=3D"true" required=3D"requ=
+ired"></p>
+<p class=3D"comment-form-email"><label for=3D"email">=E7=94=B5=E5=AD=90=E9=
+=82=AE=E4=BB=B6 <span class=3D"required">*</span></label> <input id=3D"emai=
+l" name=3D"email" type=3D"text" value=3D"" size=3D"30" maxlength=3D"100" ar=
+ia-describedby=3D"email-notes" aria-required=3D"true" required=3D"required"=
+></p>
+<p class=3D"comment-form-url"><label for=3D"url">=E7=AB=99=E7=82=B9</label>=
+ <input id=3D"url" name=3D"url" type=3D"text" value=3D"" size=3D"30" maxlen=
+gth=3D"200"></p>
+<p class=3D"form-submit"><input name=3D"submit" type=3D"submit" id=3D"submi=
+t" class=3D"submit" value=3D"=E5=8F=91=E8=A1=A8=E8=AF=84=E8=AE=BA"> <input =
+type=3D"hidden" name=3D"comment_post_ID" value=3D"256" id=3D"comment_post_I=
+D">
+<input type=3D"hidden" name=3D"comment_parent" id=3D"comment_parent" value=
+=3D"0">
+</p>		<p class=3D"antispam-group antispam-group-q" style=3D"clear: both; di=
+splay: none;">
+			<label>Current ye@r <span class=3D"required">*</span></label>
+			<input type=3D"hidden" name=3D"antspm-a" class=3D"antispam-control antis=
+pam-control-a" value=3D"2016">
+			<input type=3D"text" name=3D"antspm-q" class=3D"antispam-control antispa=
+m-control-q" value=3D"4.2" autocomplete=3D"off">
+		</p>
+		<p class=3D"antispam-group antispam-group-e" style=3D"display: none;">
+			<label>Leave this field empty</label>
+			<input type=3D"text" name=3D"antspm-e-email-url-website" class=3D"antisp=
+am-control antispam-control-e" value=3D"" autocomplete=3D"off">
+		</p>
+				<input type=3D"hidden" name=3D"antspm-d" class=3D"antispam-control anti=
+spam-control-d" value=3D"2016"></form>
+					</div><!-- #respond -->
+	=09
+</div><!-- #comments .comments-area -->		=09
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+	</div><!-- #main .wrapper -->
+	<footer id=3D"colophon" role=3D"contentinfo">
+		<div class=3D"site-info">
+						<a href=3D"https://cn.wordpress.org/" title=3D"=E4=BC=98=E9=9B=85=E7=
+=9A=84=E4=B8=AA=E4=BA=BA=E5=8F=91=E5=B8=83=E5=B9=B3=E5=8F=B0">=E8=87=AA=E8=
+=B1=AA=E5=9C=B0=E9=87=87=E7=94=A8WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+<!-- <p class=3D"small"> WassUp 1.9.2 timestamp: 2016-10-27 02:48:39AM UTC =
+(10:48AM)<br />
+=E5=A6=82=E6=9E=9C=E4=B8=8A=E9=9D=A2=E7=9A=84=E6=97=B6=E9=97=B4=E6=88=B3=E4=
+=B8=8D=E6=98=AF=E5=BD=93=E5=89=8D=E6=97=B6=E9=97=B4,=E8=AF=A5=E9=A1=B5=E5=
+=B0=86=E8=A2=AB=E7=BC=93=E5=AD=98.</p> -->
+
+
+
+
+
+<div id=3D"qb-sougou-search" style=3D"display: none; opacity: 0;"><p>=E6=90=
+=9C=E7=B4=A2</p><p class=3D"last-btn">=E5=A4=8D=E5=88=B6</p><iframe src=3D"=
+cid:frame-128-1B9D1AB4-72BC-4852-B4A9-53EBB9B0ED9F@mhtml.blink"></iframe></=
+div></body></html>
+------MultipartBoundary--S3Gzgw5jyeHvq3FsjI7X36p9EGRg225UqrcdeQLc7H----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://hongjiang.info/wp-content/themes/twentytwelve/style.css?ver=4.6.1
+
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, b=
+lockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, i=
+mg, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i=
+, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, cap=
+tion, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, emb=
+ed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, se=
+ction, summary, time, mark, audio, video { margin: 0px; padding: 0px; borde=
+r: 0px; font-size: 100%; vertical-align: baseline; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote::before, blockquote::after, q::before, q::after { content: none;=
+ }
+
+table { border-collapse: collapse; border-spacing: 0px; }
+
+caption, th, td { font-weight: normal; text-align: left; }
+
+h1, h2, h3, h4, h5, h6 { clear: both; }
+
+html { overflow-y: scroll; font-size: 100%; }
+
+a:focus { outline: dotted thin; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, s=
+ection { display: block; }
+
+audio, canvas, video { display: inline-block; }
+
+audio:not([controls]) { display: none; }
+
+del { color: rgb(51, 51, 51); }
+
+ins { text-decoration: none; background: rgb(255, 249, 192); }
+
+hr { border: 0px; height: 1px; margin: 24px 24px 1.71429rem; background-col=
+or: rgb(204, 204, 204); }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-ali=
+gn: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+small { font-size: smaller; }
+
+img { border: 0px; }
+
+.clear::after, .wrapper::after, .format-status .entry-header::after { clear=
+: both; }
+
+.clear::before, .clear::after, .wrapper::before, .wrapper::after, .format-s=
+tatus .entry-header::before, .format-status .entry-header::after { display:=
+ table; content: ""; }
+
+.archive-title, .page-title, .widget-title, .entry-content th, .comment-con=
+tent th { font-size: 0.785714rem; line-height: 2.18182; font-weight: bold; =
+text-transform: uppercase; color: rgb(99, 99, 99); }
+
+article.format-quote footer.entry-meta, article.format-link footer.entry-me=
+ta, article.format-status footer.entry-meta { font-size: 0.785714rem; line-=
+height: 2.18182; }
+
+button, input, select, textarea { border: 1px solid rgb(204, 204, 204); bor=
+der-radius: 3px; font-family: inherit; padding: 0.428571rem; }
+
+button, input { line-height: normal; }
+
+textarea { font-size: 100%; overflow: auto; vertical-align: top; }
+
+input[type=3D"checkbox"], input[type=3D"radio"], input[type=3D"file"], inpu=
+t[type=3D"hidden"], input[type=3D"image"], input[type=3D"color"] { border: =
+0px; border-radius: 0px; padding: 0px; }
+
+.menu-toggle, input[type=3D"submit"], input[type=3D"button"], input[type=3D=
+"reset"], article.post-password-required input[type=3D"submit"], .bypostaut=
+hor cite span { padding: 0.428571rem 0.714286rem; font-size: 0.785714rem; l=
+ine-height: 1.42857; font-weight: normal; color: rgb(124, 124, 124); border=
+: 1px solid rgb(210, 210, 210); border-radius: 3px; box-shadow: rgba(64, 64=
+, 64, 0.0980392) 0px 1px 2px; background-image: -webkit-linear-gradient(top=
+, rgb(244, 244, 244), rgb(230, 230, 230)); background-color: rgb(230, 230, =
+230); background-repeat: repeat-x; }
+
+.menu-toggle, button, input[type=3D"submit"], input[type=3D"button"], input=
+[type=3D"reset"] { cursor: pointer; }
+
+button[disabled], input[disabled] { cursor: default; }
+
+.menu-toggle:hover, .menu-toggle:focus, button:hover, input[type=3D"submit"=
+]:hover, input[type=3D"button"]:hover, input[type=3D"reset"]:hover, article=
+.post-password-required input[type=3D"submit"]:hover { color: rgb(94, 94, 9=
+4); background-image: -webkit-linear-gradient(top, rgb(249, 249, 249), rgb(=
+235, 235, 235)); background-color: rgb(235, 235, 235); background-repeat: r=
+epeat-x; }
+
+.menu-toggle:active, .menu-toggle.toggled-on, button:active, input[type=3D"=
+submit"]:active, input[type=3D"button"]:active, input[type=3D"reset"]:activ=
+e { color: rgb(117, 117, 117); box-shadow: rgb(198, 198, 198) 0px 0px 8px 2=
+px inset, rgb(244, 244, 244) 0px 1px 0px 0px; border-color: transparent; ba=
+ckground-image: -webkit-linear-gradient(top, rgb(235, 235, 235), rgb(225, 2=
+25, 225)); background-color: rgb(225, 225, 225); background-repeat: repeat-=
+x; }
+
+.bypostauthor cite span { color: rgb(255, 255, 255); border: 1px solid rgb(=
+31, 111, 147); border-radius: 2px; box-shadow: none; padding: 0px; backgrou=
+nd-image: none; background-color: rgb(33, 117, 155); }
+
+.entry-content img, .comment-content img, .widget img { max-width: 100%; }
+
+img[class*=3D"align"], img[class*=3D"wp-image-"], img[class*=3D"attachment-=
+"] { height: auto; }
+
+img.size-full, img.size-large, img.header-image, img.wp-post-image { max-wi=
+dth: 100%; height: auto; }
+
+embed, iframe, object, video { max-width: 100%; }
+
+.entry-content .twitter-tweet-rendered { max-width: 100% !important; }
+
+.alignleft { float: left; }
+
+.alignright { float: right; }
+
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+.entry-content img, .comment-content img, .widget img, img.header-image, .a=
+uthor-avatar img, img.wp-post-image { border-radius: 3px; box-shadow: rgba(=
+0, 0, 0, 0.2) 0px 1px 4px; }
+
+.wp-caption { max-width: 100%; padding: 4px; }
+
+.wp-caption .wp-caption-text, .gallery-caption, .entry-caption { font-style=
+: italic; font-size: 0.857143rem; line-height: 2; color: rgb(117, 117, 117)=
+; }
+
+img.wp-smiley, .rsswidget img { border: 0px; border-radius: 0px; box-shadow=
+: none; margin-bottom: 0px; margin-top: 0px; padding: 0px; }
+
+.entry-content dl.gallery-item { margin: 0px; }
+
+.gallery-item a, .gallery-caption { width: 90%; }
+
+.gallery-item a { display: block; }
+
+.gallery-caption a { display: inline; }
+
+.gallery-columns-1 .gallery-item a { max-width: 100%; width: auto; }
+
+.gallery .gallery-icon img { height: auto; max-width: 90%; padding: 5%; }
+
+.gallery-columns-1 .gallery-icon img { padding: 3%; }
+
+.site-content nav { clear: both; line-height: 2; overflow: hidden; }
+
+#nav-above { padding: 1.71429rem 0px; }
+
+#nav-above { display: none; }
+
+.paged #nav-above { display: block; }
+
+.nav-previous, .previous-image { float: left; width: 50%; }
+
+.nav-next, .next-image { float: right; text-align: right; width: 50%; }
+
+.nav-single + .comments-area, #comment-nav-above { margin: 3.42857rem 0px; =
+}
+
+.author .archive-header { margin-bottom: 1.71429rem; }
+
+.author-info { border-top-width: 1px; border-top-style: solid; border-top-c=
+olor: rgb(237, 237, 237); margin: 1.71429rem 0px; padding-top: 1.71429rem; =
+overflow: hidden; }
+
+.author-description p { color: rgb(117, 117, 117); font-size: 0.928571rem; =
+line-height: 1.84615; }
+
+.author.archive .author-info { border-top-width: 0px; margin: 0px 0px 3.428=
+57rem; }
+
+.author.archive .author-avatar { margin-top: 0px; }
+
+html { font-size: 87.5%; }
+
+body { font-size: 1rem; font-family: Helvetica, Arial, sans-serif; text-ren=
+dering: optimizeLegibility; color: rgb(68, 68, 68); }
+
+body.custom-font-enabled { font-family: 'Open Sans', Helvetica, Arial, sans=
+-serif; }
+
+a { outline: none; color: rgb(33, 117, 155); }
+
+a:hover { color: rgb(15, 54, 71); }
+
+.assistive-text, .site .screen-reader-text { clip: rect(1px 1px 1px 1px); o=
+verflow: hidden; height: 1px; width: 1px; position: absolute !important; }
+
+.main-navigation .assistive-text:focus, .site .screen-reader-text:hover, .s=
+ite .screen-reader-text:active, .site .screen-reader-text:focus { border: 2=
+px solid rgb(51, 51, 51); border-radius: 3px; color: rgb(0, 0, 0); display:=
+ block; font-size: 12px; height: auto; padding: 12px; position: absolute; t=
+op: 5px; left: 5px; width: auto; z-index: 100000; clip: auto !important; ba=
+ckground: rgb(255, 255, 255); }
+
+.site { padding: 0px 1.71429rem; background-color: rgb(255, 255, 255); }
+
+.site-content { margin: 1.71429rem 0px 0px; }
+
+.widget-area { margin: 1.71429rem 0px 0px; }
+
+.site-header { padding: 1.71429rem 0px; }
+
+.site-header h1, .site-header h2 { text-align: center; }
+
+.site-header h1 a, .site-header h2 a { color: rgb(81, 81, 81); display: inl=
+ine-block; text-decoration: none; }
+
+.site-header h1 a:hover, .site-header h2 a:hover { color: rgb(33, 117, 155)=
+; }
+
+.site-header h1 { font-size: 1.71429rem; line-height: 1.28571; margin-botto=
+m: 1rem; }
+
+.site-header h2 { font-weight: normal; font-size: 0.928571rem; line-height:=
+ 1.84615; color: rgb(117, 117, 117); }
+
+.header-image { margin-top: 1.71429rem; }
+
+.main-navigation { margin-top: 1.71429rem; text-align: center; }
+
+.main-navigation li { margin-top: 1.71429rem; font-size: 0.857143rem; line-=
+height: 1.42857; }
+
+.main-navigation a { color: rgb(94, 94, 94); }
+
+.main-navigation a:hover, .main-navigation a:focus { color: rgb(33, 117, 15=
+5); }
+
+.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul { display:=
+ none; }
+
+.main-navigation ul.nav-menu.toggled-on, .menu-toggle { display: inline-blo=
+ck; }
+
+section[role=3D"banner"] { margin-bottom: 3.42857rem; }
+
+.widget-area .widget { margin-bottom: 3.42857rem; word-wrap: break-word; }
+
+.widget-area .widget h3 { margin-bottom: 1.71429rem; }
+
+.widget-area .widget p, .widget-area .widget li, .widget-area .widget .text=
+widget { font-size: 0.928571rem; line-height: 1.84615; }
+
+.widget-area .widget p { margin-bottom: 1.71429rem; }
+
+.widget-area .textwidget ul { list-style: disc outside; margin: 0px 0px 1.7=
+1429rem; }
+
+.widget-area .textwidget li { margin-left: 2.57143rem; }
+
+.widget-area .widget a { color: rgb(117, 117, 117); }
+
+.widget-area .widget a:hover { color: rgb(33, 117, 155); }
+
+.widget-area .widget a:visited { color: rgb(159, 159, 159); }
+
+.widget-area #s { width: 53.6667%; }
+
+footer[role=3D"contentinfo"] { border-top-width: 1px; border-top-style: sol=
+id; border-top-color: rgb(237, 237, 237); clear: both; font-size: 0.857143r=
+em; line-height: 2; max-width: 68.5714rem; margin-top: 1.71429rem; margin-l=
+eft: auto; margin-right: auto; padding: 1.71429rem 0px; }
+
+footer[role=3D"contentinfo"] a { color: rgb(104, 104, 104); }
+
+footer[role=3D"contentinfo"] a:hover { color: rgb(33, 117, 155); }
+
+.entry-meta { clear: both; }
+
+.entry-header { margin-bottom: 1.71429rem; }
+
+.entry-header img.wp-post-image { margin-bottom: 1.71429rem; }
+
+.entry-header .entry-title { font-size: 1.42857rem; line-height: 1.2; font-=
+weight: normal; }
+
+.entry-header .entry-title a { text-decoration: none; }
+
+.entry-header .entry-format { margin-top: 1.71429rem; font-weight: normal; =
+}
+
+.entry-header .comments-link { margin-top: 1.71429rem; font-size: 0.928571r=
+em; line-height: 1.84615; color: rgb(117, 117, 117); }
+
+.comments-link a, .entry-meta a { color: rgb(117, 117, 117); }
+
+.comments-link a:hover, .entry-meta a:hover { color: rgb(33, 117, 155); }
+
+article.sticky .featured-post { border-top-width: 4px; border-top-style: do=
+uble; border-top-color: rgb(237, 237, 237); border-bottom-width: 4px; borde=
+r-bottom-style: double; border-bottom-color: rgb(237, 237, 237); color: rgb=
+(117, 117, 117); font-size: 0.928571rem; line-height: 3.69231; margin-botto=
+m: 1.71429rem; text-align: center; }
+
+.entry-content, .entry-summary, .mu_register { line-height: 1.71429; }
+
+.entry-content h1, .comment-content h1, .entry-content h2, .comment-content=
+ h2, .entry-content h3, .comment-content h3, .entry-content h4, .comment-co=
+ntent h4, .entry-content h5, .comment-content h5, .entry-content h6, .comme=
+nt-content h6 { margin: 1.71429rem 0px; line-height: 1.71429; }
+
+.entry-content h1, .comment-content h1 { font-size: 1.5rem; line-height: 1.=
+5; }
+
+.entry-content h2, .comment-content h2, .mu_register h2 { font-size: 1.2857=
+1rem; line-height: 1.6; }
+
+.entry-content h3, .comment-content h3 { font-size: 1.14286rem; line-height=
+: 1.84615; }
+
+.entry-content h4, .comment-content h4 { font-size: 1rem; line-height: 1.84=
+615; }
+
+.entry-content h5, .comment-content h5 { font-size: 0.928571rem; line-heigh=
+t: 1.84615; }
+
+.entry-content h6, .comment-content h6 { font-size: 0.857143rem; line-heigh=
+t: 1.84615; }
+
+.entry-content p, .entry-summary p, .comment-content p, .mu_register p { ma=
+rgin: 0px 0px 1.71429rem; line-height: 1.71429; }
+
+.entry-content a:visited, .comment-content a:visited { color: rgb(159, 159,=
+ 159); }
+
+.entry-content .more-link { white-space: nowrap; }
+
+.entry-content ol, .comment-content ol, .entry-content ul, .comment-content=
+ ul, .mu_register ul { margin: 0px 0px 1.71429rem; line-height: 1.71429; }
+
+.entry-content ul ul, .comment-content ul ul, .entry-content ol ol, .commen=
+t-content ol ol, .entry-content ul ol, .comment-content ul ol, .entry-conte=
+nt ol ul, .comment-content ol ul { margin-bottom: 0px; }
+
+.entry-content ul, .comment-content ul, .mu_register ul { list-style: disc =
+outside; }
+
+.entry-content ol, .comment-content ol { list-style: decimal outside; }
+
+.entry-content li, .comment-content li, .mu_register li { margin: 0px 0px 0=
+px 2.57143rem; }
+
+.entry-content blockquote, .comment-content blockquote { margin-bottom: 1.7=
+1429rem; padding: 1.71429rem; font-style: italic; }
+
+.entry-content blockquote p:last-child, .comment-content blockquote p:last-=
+child { margin-bottom: 0px; }
+
+.entry-content code, .comment-content code { font-family: Consolas, Monaco,=
+ 'Lucida Console', monospace; font-size: 0.857143rem; line-height: 2; }
+
+.entry-content pre, .comment-content pre { border: 1px solid rgb(237, 237, =
+237); color: rgb(102, 102, 102); font-family: Consolas, Monaco, 'Lucida Con=
+sole', monospace; font-size: 0.857143rem; line-height: 1.71429; margin: 1.7=
+1429rem 0px; overflow: auto; padding: 1.71429rem; }
+
+.entry-content pre code, .comment-content pre code { display: block; }
+
+.entry-content abbr, .comment-content abbr, .entry-content dfn, .comment-co=
+ntent dfn, .entry-content acronym, .comment-content acronym { border-bottom=
+-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(102, 102=
+, 102); cursor: help; }
+
+.entry-content address, .comment-content address { display: block; line-hei=
+ght: 1.71429; margin: 0px 0px 1.71429rem; }
+
+img.alignleft, .wp-caption.alignleft { margin: 0.857143rem 1.71429rem 0.857=
+143rem 0px; }
+
+img.alignright, .wp-caption.alignright { margin: 0.857143rem 0px 0.857143re=
+m 1.71429rem; }
+
+img.aligncenter, .wp-caption.aligncenter { clear: both; margin-top: 0.85714=
+3rem; margin-bottom: 0.857143rem; }
+
+.entry-content embed, .entry-content iframe, .entry-content object, .entry-=
+content video { margin-bottom: 1.71429rem; }
+
+.entry-content dl, .comment-content dl { margin: 0px 1.71429rem; }
+
+.entry-content dt, .comment-content dt { font-weight: bold; line-height: 1.=
+71429; }
+
+.entry-content dd, .comment-content dd { line-height: 1.71429; margin-botto=
+m: 1.71429rem; }
+
+.entry-content table, .comment-content table { border-bottom-width: 1px; bo=
+rder-bottom-style: solid; border-bottom-color: rgb(237, 237, 237); color: r=
+gb(117, 117, 117); font-size: 0.857143rem; line-height: 2; margin: 0px 0px =
+1.71429rem; width: 100%; }
+
+.entry-content table caption, .comment-content table caption { font-size: 1=
+.14286rem; margin: 1.71429rem 0px; }
+
+.entry-content td, .comment-content td { border-top-width: 1px; border-top-=
+style: solid; border-top-color: rgb(237, 237, 237); padding: 6px 10px 6px 0=
+px; }
+
+.site-content article { border-bottom-width: 4px; border-bottom-style: doub=
+le; border-bottom-color: rgb(237, 237, 237); margin-bottom: 5.14286rem; pad=
+ding-bottom: 1.71429rem; word-wrap: break-word; }
+
+.page-links { clear: both; line-height: 1.71429; }
+
+footer.entry-meta { margin-top: 1.71429rem; font-size: 0.928571rem; line-he=
+ight: 1.84615; color: rgb(117, 117, 117); }
+
+.single-author .entry-meta .by-author { display: none; }
+
+.mu_register h2 { color: rgb(117, 117, 117); font-weight: normal; }
+
+.archive-header, .page-header { margin-bottom: 3.42857rem; padding-bottom: =
+1.57143rem; border-bottom-width: 1px; border-bottom-style: solid; border-bo=
+ttom-color: rgb(237, 237, 237); }
+
+.archive-meta { color: rgb(117, 117, 117); font-size: 0.857143rem; line-hei=
+ght: 2; margin-top: 1.57143rem; }
+
+.attachment .entry-content .mejs-audio { max-width: 400px; }
+
+.attachment .entry-content .mejs-container { margin-bottom: 24px; }
+
+.article.attachment { overflow: hidden; }
+
+.image-attachment div.attachment { text-align: center; }
+
+.image-attachment div.attachment p { text-align: center; }
+
+.image-attachment div.attachment img { display: block; height: auto; margin=
+: 0px auto; max-width: 100%; }
+
+.image-attachment .entry-caption { margin-top: 0.571429rem; }
+
+article.format-aside h1 { margin-bottom: 1.71429rem; }
+
+article.format-aside h1 a { text-decoration: none; color: rgb(77, 82, 90); =
+}
+
+article.format-aside h1 a:hover { color: rgb(46, 53, 66); }
+
+article.format-aside .aside { padding: 1.71429rem; border-left-width: 22px;=
+ border-left-style: solid; border-left-color: rgb(168, 191, 232); backgroun=
+d: rgb(210, 224, 249); }
+
+article.format-aside p { font-size: 0.928571rem; line-height: 1.84615; colo=
+r: rgb(74, 84, 102); }
+
+article.format-aside blockquote:last-child, article.format-aside p:last-chi=
+ld { margin-bottom: 0px; }
+
+article.format-image footer h1 { font-size: 0.928571rem; line-height: 1.846=
+15; font-weight: normal; }
+
+article.format-image footer h2 { font-size: 0.785714rem; line-height: 2.181=
+82; }
+
+article.format-image footer a h2 { font-weight: normal; }
+
+article.format-link header { padding: 0px 0.714286rem; float: right; font-s=
+ize: 0.785714rem; line-height: 2.18182; font-weight: bold; font-style: ital=
+ic; text-transform: uppercase; color: rgb(132, 132, 132); border-radius: 3p=
+x; background-color: rgb(235, 235, 235); }
+
+article.format-link .entry-content { max-width: 80%; float: left; }
+
+article.format-link .entry-content a { font-size: 1.57143rem; line-height: =
+1.09091; text-decoration: none; }
+
+article.format-quote .entry-content p { margin: 0px; padding-bottom: 1.7142=
+9rem; }
+
+article.format-quote .entry-content blockquote { display: block; padding: 1=
+.71429rem 1.71429rem 0px; font-size: 1.07143rem; line-height: 1.6; font-sty=
+le: normal; color: rgb(106, 106, 106); background: rgb(239, 239, 239); }
+
+.format-status .entry-header { margin-bottom: 1.71429rem; }
+
+.format-status .entry-header header { display: inline-block; }
+
+.format-status .entry-header h1 { font-size: 1.07143rem; font-weight: norma=
+l; line-height: 1.6; margin: 0px; }
+
+.format-status .entry-header h2 { font-size: 0.857143rem; font-weight: norm=
+al; line-height: 2; margin: 0px; }
+
+.format-status .entry-header header a { color: rgb(117, 117, 117); }
+
+.format-status .entry-header header a:hover { color: rgb(33, 117, 155); }
+
+.format-status .entry-header img { float: left; margin-right: 1.5rem; }
+
+.comments-title { margin-bottom: 3.42857rem; font-size: 1.14286rem; line-he=
+ight: 1.5; font-weight: normal; }
+
+.comments-area article { margin: 1.71429rem 0px; }
+
+.comments-area article header { margin: 0px 0px 3.42857rem; overflow: hidde=
+n; position: relative; }
+
+.comments-area article header img { float: left; padding: 0px; line-height:=
+ 0; }
+
+.comments-area article header cite, .comments-area article header time { di=
+splay: block; margin-left: 6.07143rem; }
+
+.comments-area article header cite { font-style: normal; font-size: 1.07143=
+rem; line-height: 1.42857; }
+
+.comments-area cite b { font-weight: normal; }
+
+.comments-area article header time { line-height: 1.71429; text-decoration:=
+ none; font-size: 0.857143rem; color: rgb(94, 94, 94); }
+
+.comments-area article header a { text-decoration: none; color: rgb(94, 94,=
+ 94); }
+
+.comments-area article header a:hover { color: rgb(33, 117, 155); }
+
+.comments-area article header cite a { color: rgb(68, 68, 68); }
+
+.comments-area article header cite a:hover { text-decoration: underline; }
+
+.comments-area article header h4 { position: absolute; top: 0px; right: 0px=
+; padding: 0.428571rem 0.857143rem; font-size: 0.857143rem; font-weight: no=
+rmal; color: rgb(255, 255, 255); border-radius: 3px; border: 1px solid rgb(=
+0, 124, 189); background-image: -webkit-linear-gradient(top, rgb(0, 156, 23=
+8), rgb(0, 136, 208)); background-color: rgb(0, 136, 208); background-repea=
+t: repeat-x; }
+
+.comments-area .bypostauthor cite span { position: absolute; margin-left: 0=
+.357143rem; padding: 0.142857rem 0.357143rem; font-size: 0.714286rem; }
+
+.comments-area .bypostauthor cite b { font-weight: bold; }
+
+a.comment-reply-link, a.comment-edit-link { color: rgb(104, 104, 104); font=
+-size: 0.928571rem; line-height: 1.84615; }
+
+a.comment-reply-link:hover, a.comment-edit-link:hover { color: rgb(33, 117,=
+ 155); }
+
+.commentlist .pingback { line-height: 1.71429; margin-bottom: 1.71429rem; }
+
+#respond { margin-top: 3.42857rem; }
+
+#respond h3#reply-title { font-size: 1.14286rem; line-height: 1.5; }
+
+#respond h3#reply-title #cancel-comment-reply-link { margin-left: 0.714286r=
+em; font-weight: normal; font-size: 0.857143rem; }
+
+#respond form { margin: 1.71429rem 0px; }
+
+#respond form p { margin: 0.785714rem 0px; }
+
+#respond form p.logged-in-as { margin-bottom: 1.71429rem; }
+
+#respond form label { display: block; line-height: 1.71429; }
+
+#respond form input[type=3D"text"], #respond form textarea { box-sizing: bo=
+rder-box; font-size: 0.857143rem; line-height: 1.71429; padding: 0.714286re=
+m; width: 100%; }
+
+#respond form p.form-allowed-tags { margin: 0px; font-size: 0.857143rem; li=
+ne-height: 2; color: rgb(94, 94, 94); }
+
+.required { color: red; }
+
+.entry-page-image { margin-bottom: 1rem; }
+
+.template-front-page .site-content article { border: 0px; margin-bottom: 0p=
+x; }
+
+.template-front-page .widget-area { clear: both; float: none; width: auto; =
+padding-top: 1.71429rem; border-top-width: 1px; border-top-style: solid; bo=
+rder-top-color: rgb(237, 237, 237); }
+
+.template-front-page .widget-area .widget li { margin: 0.571429rem 0px 0px;=
+ font-size: 0.928571rem; line-height: 1.71429; list-style-type: square; lis=
+t-style-position: inside; }
+
+.template-front-page .widget-area .widget li a { color: rgb(117, 117, 117);=
+ }
+
+.template-front-page .widget-area .widget li a:hover { color: rgb(33, 117, =
+155); }
+
+.template-front-page .widget-area .widget_text img { float: left; margin: 0=
+.571429rem 1.71429rem 0.571429rem 0px; }
+
+.widget-area .widget ul ul { margin-left: 0.857143rem; }
+
+.widget_rss li { margin: 0.857143rem 0px; }
+
+.widget_recent_entries .post-date, .widget_rss .rss-date { color: rgb(170, =
+170, 170); font-size: 0.785714rem; margin-left: 0.857143rem; }
+
+#wp-calendar { margin: 0px; width: 100%; font-size: 0.928571rem; line-heigh=
+t: 1.84615; color: rgb(104, 104, 104); }
+
+#wp-calendar th, #wp-calendar td, #wp-calendar caption { text-align: left; =
+}
+
+#wp-calendar #next { padding-right: 1.71429rem; text-align: right; }
+
+.widget_search label { display: block; font-size: 0.928571rem; line-height:=
+ 1.84615; }
+
+.widget_twitter li { list-style-type: none; }
+
+.widget_twitter .timesince { display: block; text-align: right; }
+
+img#wpstats { display: block; margin: 0px auto 1.71429rem; }
+
+@media screen and (min-width: 600px) {=20
+  .author-avatar { float: left; margin-top: 0.571429rem; }
+  .author-description { float: right; width: 80%; }
+  .site { margin: 0px auto; max-width: 68.5714rem; overflow: hidden; }
+  .site-content { float: left; width: 65.1042%; }
+  body.template-front-page .site-content, body.attachment .site-content, bo=
+dy.full-width .site-content { width: 100%; }
+  .widget-area { float: right; width: 26.0417%; }
+  .site-header h1, .site-header h2 { text-align: left; }
+  .site-header h1 { font-size: 1.85714rem; line-height: 1.84615; margin-bot=
+tom: 0px; }
+  .main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul { border=
+-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(23=
+7, 237, 237); border-top-width: 1px; border-top-style: solid; border-top-co=
+lor: rgb(237, 237, 237); text-align: left; width: 100%; display: inline-blo=
+ck !important; }
+  .main-navigation ul { margin: 0px; text-indent: 0px; }
+  .main-navigation li a, .main-navigation li { display: inline-block; text-=
+decoration: none; }
+  .main-navigation li a { border-bottom-width: 0px; color: rgb(106, 106, 10=
+6); line-height: 3.69231; text-transform: uppercase; white-space: nowrap; }
+  .main-navigation li a:hover, .main-navigation li a:focus { color: rgb(0, =
+0, 0); }
+  .main-navigation li { margin: 0px 2.85714rem 0px 0px; position: relative;=
+ }
+  .main-navigation li ul { margin: 0px; padding: 0px; position: absolute; t=
+op: 100%; z-index: 1; height: 1px; width: 1px; overflow: hidden; clip: rect=
+(1px 1px 1px 1px); }
+  .main-navigation li ul ul { top: 0px; left: 100%; }
+  .main-navigation ul li:hover > ul, .main-navigation ul li:focus > ul, .ma=
+in-navigation .focus > ul { border-left-width: 0px; clip: inherit; overflow=
+: inherit; height: inherit; width: inherit; }
+  .main-navigation li ul li a { border-bottom-width: 1px; border-bottom-sty=
+le: solid; border-bottom-color: rgb(237, 237, 237); display: block; font-si=
+ze: 0.785714rem; line-height: 2.18182; padding: 0.571429rem 0.714286rem; wi=
+dth: 12.8571rem; white-space: normal; background: rgb(239, 239, 239); }
+  .main-navigation li ul li a:hover, .main-navigation li ul li a:focus { co=
+lor: rgb(68, 68, 68); background: rgb(227, 227, 227); }
+  .main-navigation .current-menu-item > a, .main-navigation .current-menu-a=
+ncestor > a, .main-navigation .current_page_item > a, .main-navigation .cur=
+rent_page_ancestor > a { color: rgb(99, 99, 99); font-weight: bold; }
+  .menu-toggle { display: none; }
+  .entry-header .entry-title { font-size: 1.57143rem; }
+  #respond form input[type=3D"text"] { width: 46.3333%; }
+  #respond form textarea.blog-textarea { width: 79.6667%; }
+  .template-front-page .site-content, .template-front-page article { overfl=
+ow: hidden; }
+  .template-front-page.has-post-thumbnail article { float: left; width: 47.=
+9167%; }
+  .entry-page-image { float: right; margin-bottom: 0px; width: 47.9167%; }
+  .template-front-page .widget-area .widget, .template-front-page.two-sideb=
+ars .widget-area .front-widgets { float: left; width: 51.875%; margin-botto=
+m: 1.71429rem; }
+  .template-front-page .widget-area .widget:nth-child(2n+1) { clear: right;=
+ }
+  .template-front-page .widget-area .widget:nth-child(2n), .template-front-=
+page.two-sidebars .widget-area .front-widgets + .front-widgets { float: rig=
+ht; width: 39.0625%; margin: 0px 0px 1.71429rem; }
+  .template-front-page.two-sidebars .widget, .template-front-page.two-sideb=
+ars .widget:nth-child(2n) { float: none; width: auto; }
+  .commentlist .children { margin-left: 3.42857rem; }
+}
+
+@media screen and (min-width: 960px) {=20
+  body { background-color: rgb(230, 230, 230); }
+  body .site { padding: 0px 2.85714rem; margin-top: 3.42857rem; margin-bott=
+om: 3.42857rem; box-shadow: rgba(100, 100, 100, 0.298039) 0px 2px 6px; }
+  body.custom-background-empty { background-color: rgb(255, 255, 255); }
+  body.custom-background-empty .site, body.custom-background-white .site { =
+padding: 0px; margin-top: 0px; margin-bottom: 0px; box-shadow: none; }
+}
+
+@media print {=20
+  body { color: rgb(0, 0, 0); font-size: 10pt; background: none !important;=
+ }
+  footer a[rel=3D"bookmark"]:link::after, footer a[rel=3D"bookmark"]:visite=
+d::after { content: " [" attr(href) "] "; }
+  a { text-decoration: none; }
+  .entry-content img, .comment-content img, .author-avatar img, img.wp-post=
+-image { border-radius: 0px; box-shadow: none; }
+  .site { max-width: 100%; clear: both !important; display: block !importan=
+t; float: none !important; position: relative !important; }
+  .site-header { margin-bottom: 5.14286rem; text-align: left; }
+  .site-header h1 { font-size: 21pt; line-height: 1; text-align: left; }
+  .site-header h2 { color: rgb(0, 0, 0); font-size: 10pt; text-align: left;=
+ }
+  .site-header h1 a, .site-header h2 a { color: rgb(0, 0, 0); }
+  .author-avatar, #colophon, #respond, .commentlist .comment-edit-link, .co=
+mmentlist .reply, .entry-header .comments-link, .entry-meta .edit-link a, .=
+page-link, .site-content nav, .widget-area, img.header-image, .main-navigat=
+ion { display: none; }
+  .wrapper { border-top-style: none; box-shadow: none; }
+  .site-content { margin: 0px; width: auto; }
+  .entry-header .entry-title, .entry-title { font-size: 21pt; }
+  footer.entry-meta, footer.entry-meta a { color: rgb(68, 68, 68); font-siz=
+e: 10pt; }
+  .author-description { float: none; width: auto; }
+  .commentlist > li.comment { position: relative; width: auto; background: =
+none; }
+  .commentlist .avatar { height: 39px; left: 2.2em; top: 2.2em; width: 39px=
+; }
+  .comments-area article header cite, .comments-area article header time { =
+margin-left: 3.57143rem; }
+}
+------MultipartBoundary--S3Gzgw5jyeHvq3FsjI7X36p9EGRg225UqrcdeQLc7H----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://hongjiang.info/wp-content/plugins/wassup/css/wassup-widget.css?ver=1.9.2
+
+@charset "utf-8";
+
+.wassup-widget { white-space: normal; }
+
+.wassup-widget ul { }
+
+.wassup-widget ul.nobullet li { list-style-type: none; }
+
+.wassup-widget ul li { min-height: 1em; clear: left; }
+
+.wassup-widget strong { font-size: 1.1em; text-shadow: rgb(238, 255, 238) -=
+1px 1px 0px; }
+
+.wassup-widget p { text-indent: 0px !important; }
+
+.wassup-widget .nobullet li p, .wassup-widget .nobullet li div { max-width:=
+ 90%; margin: 1em 0px 0px; padding: 2px 2px 3px 5px; word-wrap: normal; }
+
+.wassup-widget li a { }
+
+.wassup-widget .online-count { min-width: 25px; margin: 0px 2px 5px 7px; pa=
+dding: 2px 3px 0px; font-family: 'Lucida Console', Monaco, monospace; displ=
+ay: inline-block; line-height: 1.2em; color: rgb(34, 34, 51); font-size: 1.=
+1em; text-align: center; border: 1px solid rgb(187, 187, 187); border-radiu=
+s: 3px; background-color: rgb(221, 240, 255); }
+
+.wassup-widget .online-total { min-width: 30px; margin-left: 5px; padding: =
+2px 4px 0px; font-size: 1.3em; }
+
+.wassup-widget p img { margin: 0px 2px; padding: 0px; vertical-align: middl=
+e; }
+
+.wassup-widget .online-user { background-color: rgb(232, 232, 248); }
+
+.wassup-widget .online-comauth { background-color: rgb(252, 250, 172); }
+
+.wassup-widget .online-spider { background-color: rgb(246, 236, 206); }
+
+.wassup-widget .online-loggedin { background-color: rgb(223, 255, 204); }
+
+.wassup-widget p.online-loggedin { color: rgb(34, 34, 51); border: 1px soli=
+d rgb(238, 238, 238); border-radius: 7px; background-color: rgb(239, 255, 2=
+24); }
+
+.wassup-widget .wassup-flag img, .wassup-widget .icon { margin-left: 3px; p=
+adding: 0px; border: 1px solid rgb(238, 238, 238); }
+
+.wassup-widget li.stat-count .top-item, .wassup-widget li .top-url { max-wi=
+dth: 95%; display: inline-block; float: none; }
+
+.wassup-widget ul li.stat-count .top-item, .wassup-widget ul li.stat-count =
+.top-url { max-width: 83%; vertical-align: top; }
+
+.wassup-widget ul li .top-url a { display: block; line-height: 1em; overflo=
+w: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.wassup-widget ul li .fixed { display: inline-block; float: left; padding-r=
+ight: 3px; font-family: 'Lucida Console', Monaco, monospace; text-align: ri=
+ght; font-size: 1.1em; clear: left; }
+
+.wassup-widget li.stat-count .fixed { float: none; }
+
+.wassup-widget .wassup-marque { display: block; width: 100%; margin: -5px 0=
+px 0px; padding: 2px 10px 0px 0px; text-align: center; color: rgb(153, 153,=
+ 153); opacity: 0.7; font-size: 7pt !important; }
+
+.wassup-widget .wassup-marque a { color: rgb(119, 119, 153); opacity: 0.7; =
+text-decoration: none; }
+
+.wassup-widget .wassup-marque a:hover { color: rgb(0, 0, 0); }
+------MultipartBoundary--S3Gzgw5jyeHvq3FsjI7X36p9EGRg225UqrcdeQLc7H----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://2.gravatar.com/avatar/b4ca2c5c823bf482145fb0be6522c965?s=44&d=retro&r=g
+
+iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAIAAACR5s1WAAAAl0lEQVRYhe2WsQ2AMAwEA6JlCkok
+FmAhFmUESnahekEixTJp4uKutqLT27IzHPOWejP2FkgJiRckBBJictat9/n36WvZnZUhkkBCICGQ
+EEgIJAQSIruiDafSwHitOLAhkkBCVH9WRdu+DTa+TEaZMSIhkkBCVGfCaKFznfi3TogkkBAhJLLB
+bNtCDWUFIZJAQiAhkBAhJB7m7h5sQu4lAAAAAABJRU5ErkJggg==
+------MultipartBoundary--S3Gzgw5jyeHvq3FsjI7X36p9EGRg225UqrcdeQLc7H----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://2.gravatar.com/avatar/e7f3860aea9d8beda719f6ac134172da?s=44&d=retro&r=g
+
+iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAIAAACR5s1WAAAAmUlEQVRYhe2WwQmAMBAEE7EBq7EK
+O/BhafZgez78uBgPEo5TyD52vonHsCxn8jrNqTdDb4GUJPEgCSAJMAa+2Y+zdrQtkYEUSUgCUEh4
+e1SWsdE+5zUDRRKSAFmPmhtJAAqJ1z5p/B5LnMvKP4EiCUmAn19WMSiSkASIdOL7njBQJCEJQCFR
+rZhpX6Bx/gkUSUgCSAJIAlBIXHuMG/oebOfHAAAAAElFTkSuQmCC
+------MultipartBoundary--S3Gzgw5jyeHvq3FsjI7X36p9EGRg225UqrcdeQLc7H----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://0.gravatar.com/avatar/c32c1460f9163fbaf266bf9335debc02?s=44&d=retro&r=g
+
+iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAIAAACR5s1WAAAAl0lEQVRYhe2WMQqAMAxF2yIunsyj
+eCLP4eTdnJy+BKEhxAp/+G/qkvaRhiS1LUcB+3k9522dy1Ccy9vYl3JIAkyJGPu7L3KVRJEJSYBq
++4SDUwc94vVBkQlJAEkASQAKiWizsmiA/YYkQA1u29+nqLbtABQS3W0715FsVLyMKDIhCSAJIAlA
+IZHZrIZDkQlJAEkASQAKiRsaWCOeMleVlgAAAABJRU5ErkJggg==
+------MultipartBoundary--S3Gzgw5jyeHvq3FsjI7X36p9EGRg225UqrcdeQLc7H----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://1.gravatar.com/avatar/4566228dd0ba3d5652d1f2cf47471e3a?s=44&d=retro&r=g
+
+iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAIAAACR5s1WAAAArElEQVRYhe2YwQmAMBAEjaQHS/Fh
+I/6swUpsw0bsy9dCEpLjjAr72PkJXhjuwh4apm0eaiz7mT5ex1p9zcB/wvj06D+QBIjF5DwYJcbg
+jSqKTkgChFZOFKQTdQ7eHy0UnZAEoJCIHTUd+WZD0QlJgJ470belDCg6IQlAIZFt0c9TqEVxtSk6
+IQngDav3X2AGFJ2QBJAEkASgkMjCKk2kz5eZfhc5kASQBJAEuAHUlCMPjpWjpQAAAABJRU5ErkJg
+gg==
+------MultipartBoundary--S3Gzgw5jyeHvq3FsjI7X36p9EGRg225UqrcdeQLc7H----
+Content-Type: text/html
+Content-ID: <frame-128-1B9D1AB4-72BC-4852-B4A9-53EBB9B0ED9F@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8"></head><body></body></html>
+------MultipartBoundary--S3Gzgw5jyeHvq3FsjI7X36p9EGRg225UqrcdeQLc7H------

@@ -1,0 +1,3527 @@
+From: <Saved by Blink>
+Subject: Effective Scala
+Date: Fri, 25 Aug 2016 03:06:21 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_4E99_935BFB70.279E8EBF"
+
+------=_NextPart_000_4E99_935BFB70.279E8EBF
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://twitter.github.io/effectivescala/index-cn.html#控制结构
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8">
+<title>Effective Scala</title>
+
+
+
+
+
+<!--
+<link href=3D'http://fonts.googleapis.com/css?family=3DDroid+Sans+Mono' rel=
+=3D'stylesheet' type=3D'text/css'>
+<link href=3D'http://fonts.googleapis.com/css?family=3DDroid+Serif' rel=3D'=
+stylesheet' type=3D'text/css'>
+<link href=3D'http://fonts.googleapis.com/css?family=3DDroid+Sans' rel=3D's=
+tylesheet' type=3D'text/css'>
+<link href=3D'http://fonts.googleapis.com/css?family=3DInconsolata' rel=3D'=
+stylesheet' type=3D'text/css'>
+-->
+
+<!--
+<link href=3D'http://fonts.googleapis.com/css?family=3DDroid+Sans+Mono' rel=
+=3D'stylesheet' type=3D'text/css'>
+-->
+
+<style>=09
+	body {
+		font-family: "ff-meta-serif-web-pro", times, serif;
+		text-rendering: optimizeLegibility;
+		font-size: 17px;
+		margin: 0 1.0in 0 1.0in;
+/*		line-height: 1.3em;*/
+	}
+
+	address {
+		text-align: center;
+	}
+=09
+	.header {
+		text-align: center;
+		margin-top: 1em;
+	}
+=09
+	.rhs {
+		text-align: left;
+	}
+=09
+	p {
+		text-indent: 1em;
+		text-align: justify;
+	}
+=09
+	.LP {
+		text-indent: 0em;
+	}
+=09
+	code {
+		font-family: "Droid Sans Mono'", monospace;
+/*		font-size: 0.75em;*/
+		font-size: 0.80em;
+	}
+=09
+	address {
+		font-family: sans-serif;
+	}
+=09
+	h1 {
+		font-family: "proxima-nova";
+	}
+=09
+	h2 {
+		font-weight: bold;
+		font-size: 110%;
+		margin-top: 1.5em;
+		margin-bottom: 0.05in;
+	}
+=09
+	h3 {
+		font-size: 100%;
+		font-style: oblique;
+		margin-top: 1.5em;
+		margin-bottom: 0.05in;
+	}
+=09
+	pre {
+		margin: 0 0.5in 0 0.5in;
+	}
+=09
+	dl.rules dt {
+		font-style: oblique;
+	}
+=09
+	table#toc {
+		margin: 0 auto;
+	}
+=09
+	/* XXX: apply only to TOC. todo: reapply -- html whatever? */  =20
+	ul {
+	/*	list-style-type: none;*/
+	}
+=09
+	.algo {
+		font-variant: small-caps;
+	}
+=09
+	div.explainer {
+		margin-left: 3em;
+		border-left: 2px solid;
+		padding-left: 1em;
+	}
+=09
+	.explainer > h3 {
+		margin-top: 0px;
+		font-style: normal;
+	}
+=09
+	.footer {
+		font-style: oblique;
+		font-size: small;
+	}
+</style>
+</head>
+
+<body>
+<p><a href=3D"http://github.com/twitter/effectivescala"><img style=3D"posit=
+ion: absolute; top: 0; left: 0; border: 0;" src=3D"https://s3.amazonaws.com=
+/github/ribbons/forkme_left_green_007200.png" alt=3D"Fork me on GitHub"></a=
+></p>
+
+<h1 class=3D"header">Effective Scala</h1>
+
+<address>Marius Eriksen, Twitter Inc.<br>marius@twitter.com (<a href=3D"htt=
+p://twitter.com/marius">@marius</a>)<br><br>[translated by hongjiang(<a hre=
+f=3D"http://github.com/hongjiang">@hongjiang</a>), tongqing(<a href=3D"http=
+s://github.com/tongqqiu">@tongqing</a>)] </address>
+
+<h2>Table of Contents</h2>
+
+<ul>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#=E5=BA=8F=E8=A8=80">=E5=BA=8F=E8=A8=80</a></strong></li>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#=E6=A0=BC=E5=BC=8F=E5=8C=96">=E6=A0=BC=E5=BC=8F=E5=8C=96</a></strong>: <e=
+m><a href=3D"http://twitter.github.io/effectivescala/index-cn.html#=E6=A0=
+=BC=E5=BC=8F=E5=8C=96-=E7=A9=BA=E6=A0=BC">=E7=A9=BA=E6=A0=BC</a></em>, <em>=
+<a href=3D"http://twitter.github.io/effectivescala/index-cn.html#=E6=A0=BC=
+=E5=BC=8F=E5=8C=96-=E5=91=BD=E5=90=8D">=E5=91=BD=E5=90=8D</a></em>, <em><a =
+href=3D"http://twitter.github.io/effectivescala/index-cn.html#=E6=A0=BC=E5=
+=BC=8F=E5=8C=96-Imports">Imports</a></em>, <em><a href=3D"http://twitter.gi=
+thub.io/effectivescala/index-cn.html#=E6=A0=BC=E5=BC=8F=E5=8C=96-=E8=8A=B1=
+=E6=8B=AC=E5=8F=B7">=E8=8A=B1=E6=8B=AC=E5=8F=B7</a></em>, <em><a href=3D"ht=
+tp://twitter.github.io/effectivescala/index-cn.html#=E6=A0=BC=E5=BC=8F=E5=
+=8C=96-=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D">=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=
+=85=8D</a></em>, <em><a href=3D"http://twitter.github.io/effectivescala/ind=
+ex-cn.html#=E6=A0=BC=E5=BC=8F=E5=8C=96-=E6=B3=A8=E9=87=8A">=E6=B3=A8=E9=87=
+=8A</a></em></li>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B">=E7=B1=BB=E5=9E=8B=E5=92=
+=8C=E6=B3=9B=E5=9E=8B</a></strong>: <em><a href=3D"http://twitter.github.io=
+/effectivescala/index-cn.html#=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B=
+-=E8=BF=94=E5=9B=9E=E7=B1=BB=E5=9E=8B=E6=B3=A8=E8=A7=A3(annotation)">=E8=BF=
+=94=E5=9B=9E=E7=B1=BB=E5=9E=8B=E6=B3=A8=E8=A7=A3(annotation)</a></em>, <em>=
+<a href=3D"http://twitter.github.io/effectivescala/index-cn.html#=E7=B1=BB=
+=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E5=8F=98=E5=9E=8B">=E5=8F=98=E5=9E=8B=
+</a></em>, <em><a href=3D"http://twitter.github.io/effectivescala/index-cn.=
+html#=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E7=B1=BB=E5=9E=8B=E5=88=
+=AB=E5=90=8D">=E7=B1=BB=E5=9E=8B=E5=88=AB=E5=90=8D</a></em>, <em><a href=3D=
+"http://twitter.github.io/effectivescala/index-cn.html#=E7=B1=BB=E5=9E=8B=
+=E5=92=8C=E6=B3=9B=E5=9E=8B-=E9=9A=90=E5=BC=8F=E8=BD=AC=E6=8D=A2">=E9=9A=90=
+=E5=BC=8F=E8=BD=AC=E6=8D=A2</a></em></li>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#=E9=9B=86=E5=90=88">=E9=9B=86=E5=90=88</a></strong>: <em><a href=3D"http:=
+//twitter.github.io/effectivescala/index-cn.html#=E9=9B=86=E5=90=88-=E5=B1=
+=82=E7=BA=A7">=E5=B1=82=E7=BA=A7</a></em>, <em><a href=3D"http://twitter.gi=
+thub.io/effectivescala/index-cn.html#=E9=9B=86=E5=90=88-=E9=9B=86=E5=90=88=
+=E7=9A=84=E4=BD=BF=E7=94=A8">=E9=9B=86=E5=90=88=E7=9A=84=E4=BD=BF=E7=94=A8<=
+/a></em>, <em><a href=3D"http://twitter.github.io/effectivescala/index-cn.h=
+tml#=E9=9B=86=E5=90=88-=E9=A3=8E=E6=A0=BC">=E9=A3=8E=E6=A0=BC</a></em>, <em=
+><a href=3D"http://twitter.github.io/effectivescala/index-cn.html#=E9=9B=86=
+=E5=90=88-=E6=80=A7=E8=83=BD">=E6=80=A7=E8=83=BD</a></em>, <em><a href=3D"h=
+ttp://twitter.github.io/effectivescala/index-cn.html#=E9=9B=86=E5=90=88-Jav=
+a=E9=9B=86=E5=90=88">Java=E9=9B=86=E5=90=88</a></em></li>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#=E5=B9=B6=E5=8F=91">=E5=B9=B6=E5=8F=91</a></strong>: <em><a href=3D"http:=
+//twitter.github.io/effectivescala/index-cn.html#=E5=B9=B6=E5=8F=91-Future"=
+>Future</a></em>, <em><a href=3D"http://twitter.github.io/effectivescala/in=
+dex-cn.html#=E5=B9=B6=E5=8F=91-=E9=9B=86=E5=90=88">=E9=9B=86=E5=90=88</a></=
+em></li>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84">=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=
+=84</a></strong>: <em><a href=3D"http://twitter.github.io/effectivescala/in=
+dex-cn.html#=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-=E9=80=92=E5=BD=92">=E9=80=
+=92=E5=BD=92</a></em>, <em><a href=3D"http://twitter.github.io/effectivesca=
+la/index-cn.html#=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-=E8=BF=94=E5=9B=9E(Re=
+turn)">=E8=BF=94=E5=9B=9E(Return)</a></em>, <em><a href=3D"http://twitter.g=
+ithub.io/effectivescala/index-cn.html#=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-=
+for=E5=BE=AA=E7=8E=AF=E5=92=8Cfor=E6=8E=A8=E5=AF=BC">for=E5=BE=AA=E7=8E=AF=
+=E5=92=8Cfor=E6=8E=A8=E5=AF=BC</a></em>, <em><a href=3D"http://twitter.gith=
+ub.io/effectivescala/index-cn.html#=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-=E8=
+=A6=81=E6=B1=82require=E5=92=8C=E6=96=AD=E8=A8=80(assert)">=E8=A6=81=E6=B1=
+=82require=E5=92=8C=E6=96=AD=E8=A8=80(assert)</a></em></li>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B">=E5=87=BD=E6=95=B0=E5=BC=
+=8F=E7=BC=96=E7=A8=8B</a></strong>: <em><a href=3D"http://twitter.github.io=
+/effectivescala/index-cn.html#=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B=
+-Case=E7=B1=BB=E6=A8=A1=E6=8B=9F=E4=BB=A3=E6=95=B0=E6=95=B0=E6=8D=AE=E7=B1=
+=BB=E5=9E=8B">Case=E7=B1=BB=E6=A8=A1=E6=8B=9F=E4=BB=A3=E6=95=B0=E6=95=B0=E6=
+=8D=AE=E7=B1=BB=E5=9E=8B</a></em>, <em><a href=3D"http://twitter.github.io/=
+effectivescala/index-cn.html#=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=
+Options">Options</a></em>, <em><a href=3D"http://twitter.github.io/effectiv=
+escala/index-cn.html#=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E6=A8=
+=A1=E5=BC=8F=E5=8C=B9=E9=85=8D">=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D</a></e=
+m>, <em><a href=3D"http://twitter.github.io/effectivescala/index-cn.html#=
+=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E5=81=8F=E5=87=BD=E6=95=B0">=
+=E5=81=8F=E5=87=BD=E6=95=B0</a></em>, <em><a href=3D"http://twitter.github.=
+io/effectivescala/index-cn.html#=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=
+=8B-=E8=A7=A3=E6=9E=84=E7=BB=91=E5=AE=9A">=E8=A7=A3=E6=9E=84=E7=BB=91=E5=AE=
+=9A</a></em>, <em><a href=3D"http://twitter.github.io/effectivescala/index-=
+cn.html#=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E6=83=B0=E6=80=A7=E8=
+=B5=8B=E5=80=BC">=E6=83=B0=E6=80=A7=E8=B5=8B=E5=80=BC</a></em>, <em><a href=
+=3D"http://twitter.github.io/effectivescala/index-cn.html#=E5=87=BD=E6=95=
+=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E4=BC=A0=E5=90=8D=E8=B0=83=E7=94=A8">=E4=BC=
+=A0=E5=90=8D=E8=B0=83=E7=94=A8</a></em>, <em><a href=3D"http://twitter.gith=
+ub.io/effectivescala/index-cn.html#=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=
+=A8=8B-`flatMap`"><code>flatMap</code></a></em></li>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B">=E9=9D=
+=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B</a></strong>: <em=
+><a href=3D"http://twitter.github.io/effectivescala/index-cn.html#=E9=9D=A2=
+=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B-=E4=BE=9D=E8=B5=96=
+=E6=B3=A8=E5=85=A5">=E4=BE=9D=E8=B5=96=E6=B3=A8=E5=85=A5</a></em>, <em><a h=
+ref=3D"http://twitter.github.io/effectivescala/index-cn.html#=E9=9D=A2=E5=
+=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B-Trait">Trait</a></em>, =
+<em><a href=3D"http://twitter.github.io/effectivescala/index-cn.html#=E9=9D=
+=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B-=E5=8F=AF=E8=A7=
+=81=E6=80=A7">=E5=8F=AF=E8=A7=81=E6=80=A7</a></em>, <em><a href=3D"http://t=
+witter.github.io/effectivescala/index-cn.html#=E9=9D=A2=E5=90=91=E5=AF=B9=
+=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B-=E7=BB=93=E6=9E=84=E7=B1=BB=E5=9E=8B">=
+=E7=BB=93=E6=9E=84=E7=B1=BB=E5=9E=8B</a></em></li>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#=E5=9E=83=E5=9C=BE=E5=9B=9E=E6=94=B6">=E5=9E=83=E5=9C=BE=E5=9B=9E=E6=94=
+=B6</a></strong></li>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#Java =E5=85=BC=E5=AE=B9=E6=80=A7">Java =E5=85=BC=E5=AE=B9=E6=80=A7</a></s=
+trong></li>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#Twitter=E6=A0=87=E5=87=86=E5=BA=93">Twitter=E6=A0=87=E5=87=86=E5=BA=93</a=
+></strong>: <em><a href=3D"http://twitter.github.io/effectivescala/index-cn=
+.html#Twitter=E6=A0=87=E5=87=86=E5=BA=93-Future">Future</a></em>, <em><a hr=
+ef=3D"http://twitter.github.io/effectivescala/index-cn.html#Twitter=E6=A0=
+=87=E5=87=86=E5=BA=93-Offer/Broker">Offer/Broker</a></em></li>
+<li><strong><a href=3D"http://twitter.github.io/effectivescala/index-cn.htm=
+l#=E8=87=B4=E8=B0=A2">=E8=87=B4=E8=B0=A2</a></strong></li>
+</ul>
+
+<h2>=E5=85=B6=E4=BB=96=E8=AF=AD=E8=A8=80</h2>
+
+<p><a href=3D"http://twitter.github.io/effectivescala/index.html">English</=
+a>
+<a href=3D"http://twitter.github.io/effectivescala/index-ja.html">=E6=97=A5=
+=E6=9C=AC=E8=AA=9E</a>
+<a href=3D"http://twitter.github.io/effectivescala/index-ru.html">=D0=A0=D1=
+=83=D1=81=D1=81=D0=BA=D0=B8=D0=B9</a></p>
+
+<p><a id=3D"=E5=BA=8F=E8=A8=80"></a></p><a id=3D"=E5=BA=8F=E8=A8=80">
+
+<h2>=E5=BA=8F=E8=A8=80</h2>
+
+</a><p><a id=3D"=E5=BA=8F=E8=A8=80"></a><a href=3D"http://www.scala-lang.or=
+g/">Scala</a>=E6=98=AFTwitter=E4=BD=BF=E7=94=A8=E7=9A=84=E4=B8=BB=E8=A6=81=
+=E5=BA=94=E7=94=A8=E7=BC=96=E7=A8=8B=E8=AF=AD=E8=A8=80=E4=B9=8B=E4=B8=80=E3=
+=80=82=E5=BE=88=E5=A4=9A=E6=88=91=E4=BB=AC=E7=9A=84=E5=9F=BA=E7=A1=80=E6=9E=
+=B6=E6=9E=84=E9=83=BD=E6=98=AF=E7=94=A8scala=E5=86=99=E7=9A=84=EF=BC=8C<a h=
+ref=3D"http://github.com/twitter/">=E6=88=91=E4=BB=AC=E4=B9=9F=E6=9C=89=E4=
+=B8=80=E4=BA=9B=E5=A4=A7=E7=9A=84=E5=BA=93</a>=E6=94=AF=E6=8C=81=E6=88=91=
+=E4=BB=AC=E4=BD=BF=E7=94=A8=E3=80=82=E8=99=BD=E7=84=B6=E9=9D=9E=E5=B8=B8=E6=
+=9C=89=E6=95=88, Scala=E4=B9=9F=E6=98=AF=E4=B8=80=E9=97=A8=E5=A4=A7=E7=9A=
+=84=E8=AF=AD=E8=A8=80,=E7=BB=8F=E9=AA=8C=E6=95=99=E4=BC=9A=E6=88=91=E4=BB=
+=AC=E5=9C=A8=E5=AE=9E=E8=B7=B5=E4=B8=AD=E8=A6=81=E9=9D=9E=E5=B8=B8=E5=B0=8F=
+=E5=BF=83=E3=80=82 =E5=AE=83=E6=9C=89=E4=BB=80=E4=B9=88=E9=99=B7=E9=98=B1=
+=EF=BC=9F=E5=93=AA=E4=BA=9B=E7=89=B9=E6=80=A7=E6=88=91=E4=BB=AC=E5=BA=94=E8=
+=AF=A5=E6=8B=A5=E6=8A=B1=EF=BC=8C=E5=93=AA=E4=BA=9B=E5=BA=94=E8=AF=A5=E9=81=
+=BF=E5=BC=80=EF=BC=9F=E6=88=91=E4=BB=AC=E4=BB=80=E4=B9=88=E6=97=B6=E5=80=99=
+=E9=87=87=E7=94=A8=E2=80=9C=E7=BA=AF=E5=87=BD=E6=95=B0=E5=BC=8F=E9=A3=8E=E6=
+=A0=BC=E2=80=9D=EF=BC=8C=E4=BB=80=E4=B9=88=E6=97=B6=E5=80=99=E5=BA=94=E8=AF=
+=A5=E9=81=BF=E5=85=8D=EF=BC=9F=E6=8D=A2=E5=8F=A5=E8=AF=9D=E8=AF=B4=EF=BC=9A=
+=E5=93=AA=E4=BA=9B=E6=98=AF=E6=88=91=E4=BB=AC=E5=8F=91=E7=8E=B0=E7=9A=84=EF=
+=BC=8C=E5=8F=AF=E4=BB=A5=E9=AB=98=E6=95=88=E5=9C=B0=E4=BD=BF=E7=94=A8=E8=BF=
+=99=E9=97=A8=E8=AF=AD=E8=A8=80=E7=9A=84=E5=9C=B0=E6=96=B9=EF=BC=9F=E6=9C=AC=
+=E6=8C=87=E5=8D=97=E8=AF=95=E5=9B=BE=E6=8A=8A=E6=88=91=E4=BB=AC=E7=9A=84=E7=
+=BB=8F=E9=AA=8C=E6=8F=90=E7=82=BC=E6=88=90=E7=9F=AD=E6=96=87=EF=BC=8C=E6=8F=
+=90=E4=BE=9B=E4=B8=80=E7=B3=BB=E5=88=97=E6=9C=80=E4=BD=B3=E5=AE=9E=E8=B7=B5=
+=E3=80=82=E6=88=91=E4=BB=AC=E4=BD=BF=E7=94=A8scala=E4=B8=BB=E8=A6=81=E5=88=
+=9B=E5=BB=BA=E4=B8=80=E4=BA=9B=E5=A4=A7=E5=AE=B9=E9=87=8F=E5=88=86=E5=B8=83=
+=E5=BC=8F=E7=B3=BB=E7=BB=9F=E6=9C=8D=E5=8A=A1=E2=80=94=E2=80=94=E6=88=91=E4=
+=BB=AC=E7=9A=84=E5=BB=BA=E8=AE=AE=E4=B9=9F=E5=81=8F=E5=90=91=E4=BA=8E=E6=AD=
+=A4=E2=80=94=E2=80=94=E4=BD=86=E8=BF=99=E9=87=8C=E7=9A=84=E5=A4=A7=E5=A4=9A=
+=E5=BB=BA=E8=AE=AE=E4=B9=9F=E5=BA=94=E8=AF=A5=E8=87=AA=E7=84=B6=E7=9A=84=E9=
+=80=82=E7=94=A8=E5=85=B6=E4=BB=96=E7=B3=BB=E7=BB=9F=E3=80=82=E8=BF=99=E4=B8=
+=8D=E6=98=AF=E5=AE=9A=E5=BE=8B=EF=BC=8C=E4=BD=86=E4=B8=8D=E5=BD=93=E7=9A=84=
+=E4=BD=BF=E7=94=A8=E5=BA=94=E8=AF=A5=E8=A2=AB=E8=B0=83=E6=95=B4=E3=80=82</p=
+>
+
+<p>Scala=E6=8F=90=E4=BE=9B=E5=BE=88=E5=A4=9A=E5=B7=A5=E5=85=B7=E4=BD=BF=E8=
+=A1=A8=E8=BE=BE=E5=BC=8F=E5=8F=AF=E4=BB=A5=E5=BE=88=E7=AE=80=E6=B4=81=E3=80=
+=82=E6=95=B2=E7=9A=84=E5=B0=91=E8=AF=BB=E7=9A=84=E5=B0=B1=E5=B0=91=EF=BC=8C=
+=E8=AF=BB=E7=9A=84=E5=B0=91=E5=B0=B1=E8=83=BD=E6=9B=B4=E5=BF=AB=E7=9A=84=E8=
+=AF=BB=EF=BC=8C=E5=9B=A0=E6=AD=A4=E7=AE=80=E6=B4=81=E5=A2=9E=E5=BC=BA=E4=BA=
+=86=E4=BB=A3=E7=A0=81=E7=9A=84=E6=B8=85=E6=99=B0=E3=80=82=E7=84=B6=E8=80=8C=
+=E7=AE=80=E6=B4=81=E4=B9=9F=E6=98=AF=E4=B8=80=E6=8A=8A=E9=92=9D=E5=99=A8(bl=
+unt tool)=E4=B9=9F=E5=8F=AF=E8=83=BD=E8=B5=B7=E5=88=B0=E7=9B=B8=E5=8F=8D=E7=
+=9A=84=E6=95=88=E6=9E=9C=EF=BC=9A=E5=9C=A8=E8=80=83=E8=99=91=E6=AD=A3=E7=A1=
+=AE=E6=80=A7=E4=B9=8B=E5=90=8E=EF=BC=8C=E4=B9=9F=E8=A6=81=E4=B8=BA=E8=AF=BB=
+=E8=80=85=E7=9D=80=E6=83=B3=E3=80=82</p>
+
+<p>=E9=A6=96=E5=85=88=EF=BC=8C=E7=94=A8Scala=E7=BC=96=E7=A8=8B=EF=BC=8C=E4=
+=BD=A0=E4=B8=8D=E6=98=AF=E5=9C=A8=E5=86=99Java=EF=BC=8CHaskell=E6=88=96Pyth=
+on=EF=BC=9BScala=E7=A8=8B=E5=BA=8F=E4=B8=8D=E5=83=8F=E8=BF=99=E5=85=B6=E4=
+=B8=AD=E7=9A=84=E4=BB=BB=E4=BD=95=E4=B8=80=E7=A7=8D=E3=80=82=E4=B8=BA=E4=BA=
+=86=E9=AB=98=E6=95=88=E7=9A=84=E4=BD=BF=E7=94=A8=E8=AF=AD=E8=A8=80=EF=BC=8C=
+=E4=BD=A0=E5=BF=85=E9=A1=BB=E7=94=A8=E5=85=B6=E6=9C=AF=E8=AF=AD=E8=A1=A8=E8=
+=BE=BE=E4=BD=A0=E7=9A=84=E9=97=AE=E9=A2=98=E3=80=82 =E5=BC=BA=E5=88=B6=E6=
+=8A=8AJava=E7=A8=8B=E5=BA=8F=E8=BD=AC=E6=88=90Scala=E7=A8=8B=E5=BA=8F=E6=98=
+=AF=E6=97=A0=E7=94=A8=E7=9A=84=EF=BC=8C=E5=9B=A0=E4=B8=BA=E5=A4=A7=E5=A4=9A=
+=E6=95=B0=E6=83=85=E5=86=B5=E4=B8=8B=E5=AE=83=E4=BC=9A=E4=B8=8D=E5=A6=82=E5=
+=8E=9F=E6=9D=A5=E7=9A=84=E3=80=82</p>
+
+<p>=E8=BF=99=E4=B8=8D=E6=98=AF=E5=AF=B9Scala=E7=9A=84=E4=B8=80=E7=AF=87=E4=
+=BB=8B=E7=BB=8D=EF=BC=8C=E6=88=91=E4=BB=AC=E5=81=87=E5=AE=9A=E8=AF=BB=E8=80=
+=85=E7=86=9F=E6=82=89=E8=BF=99=E9=97=A8=E8=AF=AD=E8=A8=80=E3=80=82=E8=BF=99=
+=E5=84=BF=E6=9C=89=E4=BA=9B=E5=AD=A6=E4=B9=A0Scala=E7=9A=84=E8=B5=84=E6=BA=
+=90=EF=BC=9A</p>
+
+<ul>
+<li><a href=3D"http://twitter.github.com/scala_school/">Scala School</a></l=
+i>
+<li><a href=3D"http://www.scala-lang.org/node/1305">Learning Scala</a></li>
+<li><a href=3D"http://matt.might.net/articles/learning-scala-in-small-bites=
+/">Learning Scala in Small Bites</a></li>
+</ul>
+
+<p>=E8=BF=99=E6=98=AF=E4=B8=80=E7=AF=87=E2=80=9C=E6=B4=BB=E7=9A=84=E2=80=9D=
+=E6=96=87=E6=A1=A3=EF=BC=8C=E6=88=91=E4=BB=AC=E4=BC=9A=E6=9B=B4=E6=96=B0=E5=
+=AE=83,=E4=BB=A5=E5=8F=8D=E6=98=A0=E6=88=91=E4=BB=AC=E5=BD=93=E5=89=8D=E7=
+=9A=84=E6=9C=80=E4=BD=B3=E5=AE=9E=E8=B7=B5=EF=BC=8C=E4=BD=86=E6=A0=B8=E5=BF=
+=83=E7=9A=84=E6=80=9D=E6=83=B3=E4=B8=8D=E5=A4=AA=E5=8F=AF=E8=83=BD=E4=BC=9A=
+=E5=8F=98=EF=BC=9A =E6=B0=B8=E8=BF=9C=E9=87=8D=E8=A7=86=E5=8F=AF=E8=AF=BB=
+=E6=80=A7=EF=BC=9B=E5=86=99=E6=B3=9B=E5=8C=96=E7=9A=84=E4=BB=A3=E7=A0=81=E4=
+=BD=86=E4=B8=8D=E8=A6=81=E7=89=BA=E7=89=B2=E6=B8=85=E6=99=B0=E5=BA=A6=EF=BC=
+=9B
+=E5=88=A9=E7=94=A8=E7=AE=80=E5=8D=95=E7=9A=84=E8=AF=AD=E8=A8=80=E7=89=B9=E6=
+=80=A7=E7=9A=84=E5=A8=81=E5=8A=9B=EF=BC=8C=E4=BD=86=E9=81=BF=E5=85=8D=E6=99=
+=A6=E6=B6=A9=E9=9A=BE=E6=87=82=EF=BC=88=E5=B0=A4=E5=85=B6=E6=98=AF=E7=B1=BB=
+=E5=9E=8B=E7=B3=BB=E7=BB=9F=EF=BC=89=E3=80=82=E6=9C=80=E9=87=8D=E8=A6=81=E7=
+=9A=84=EF=BC=8C=E6=80=BB=E8=A6=81=E6=84=8F=E8=AF=86=E5=88=B0=E4=BD=A0=E6=89=
+=80=E5=81=9A=E7=9A=84=E5=8F=96=E8=88=8D=E3=80=82=E4=B8=80=E9=97=A8=E6=88=90=
+=E7=86=9F=E7=9A=84(sophisticated)=E8=AF=AD=E8=A8=80=E9=9C=80=E8=A6=81=E5=A4=
+=8D=E6=9D=82=E7=9A=84=E5=AE=9E=E7=8E=B0=EF=BC=8C=E5=A4=8D=E6=9D=82=E6=80=A7=
+=E5=8F=88=E4=BA=A7=E7=94=9F=E4=BA=86=E5=A4=8D=E6=9D=82=E6=80=A7=EF=BC=9A=E4=
+=B9=8B=E4=BA=8E=E6=8E=A8=E7=90=86=EF=BC=8C=E4=B9=8B=E4=BA=8E=E8=AF=AD=E4=B9=
+=89=EF=BC=8C=E4=B9=8B=E4=BA=8E=E7=89=B9=E6=80=A7=E4=B9=8B=E9=97=B4=E7=9A=84=
+=E4=BA=A4=E4=BA=92=EF=BC=8C=E4=BB=A5=E5=8F=8A=E4=B8=8E=E4=BD=A0=E5=90=88=E4=
+=BD=9C=E8=80=85=E4=B9=8B=E9=97=B4=E7=9A=84=E7=90=86=E8=A7=A3=E3=80=82=E5=9B=
+=A0=E6=AD=A4=E5=A4=8D=E6=9D=82=E6=80=A7=E6=98=AF=E4=B8=BA=E6=88=90=E7=86=9F=
+=E6=89=80=E4=BA=A4=E7=9A=84=E7=A8=8E=E2=80=94=E2=80=94=E4=BD=A0=E5=BF=85=E9=
+=A1=BB=E7=A1=AE=E4=BF=9D=E6=95=88=E7=94=A8=E8=B6=85=E8=BF=87=E5=AE=83=E7=9A=
+=84=E6=88=90=E6=9C=AC=E3=80=82</p>
+
+<p>=E7=8E=A9=E7=9A=84=E6=84=89=E5=BF=AB=E3=80=82</p>
+
+<p><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96"></a></p><a id=3D"=E6=A0=BC=E5=BC=
+=8F=E5=8C=96">
+
+<h2>=E6=A0=BC=E5=BC=8F=E5=8C=96</h2>
+
+<p>=E4=BB=A3=E7=A0=81=E6=A0=BC=E5=BC=8F=E5=8C=96=E7=9A=84=E8=A7=84=E8=8C=83=
+=E5=B9=B6=E4=B8=8D=E9=87=8D=E8=A6=81=EF=BC=8C=E5=8F=AA=E8=A6=81=E5=AE=83=E4=
+=BB=AC=E5=AE=9E=E7=94=A8=E3=80=82=E5=AE=83=E7=9A=84=E5=AE=9A=E4=B9=89=E5=BD=
+=A2=E5=BC=8F=E6=B2=A1=E6=9C=89=E5=85=88=E5=A4=A9=E7=9A=84=E5=A5=BD=E4=B8=8E=
+=E5=9D=8F=EF=BC=8C=E5=87=A0=E4=B9=8E=E6=AF=8F=E4=B8=AA=E4=BA=BA=E9=83=BD=E6=
+=9C=89=E8=87=AA=E5=B7=B1=E7=9A=84=E5=81=8F=E5=A5=BD=E3=80=82=E7=84=B6=E8=80=
+=8C=EF=BC=8C=E5=AF=B9=E4=BA=8E=E4=B8=80=E8=B4=AF=E5=9C=B0=E9=87=87=E7=94=A8=
+=E5=90=8C=E4=B8=80=E6=A0=BC=E5=BC=8F=E5=8C=96=E8=A7=84=E5=88=99=E7=9A=84=E6=
+=80=BB=E4=BC=9A=E5=A2=9E=E5=8A=A0=E5=8F=AF=E8=AF=BB=E6=80=A7=E3=80=82=E5=B7=
+=B2=E7=BB=8F=E7=86=9F=E6=82=89=E6=9F=90=E7=A7=8D=E7=89=B9=E5=AE=9A=E9=A3=8E=
+=E6=A0=BC=E7=9A=84=E8=AF=BB=E8=80=85=E4=B8=8D=E5=BF=85=E9=9D=9E=E8=A6=81=E5=
+=8E=BB=E6=8E=8C=E6=8F=A1=E5=8F=A6=E4=B8=80=E5=A5=97=E5=BD=93=E5=9C=B0=E4=B9=
+=A0=E6=83=AF=EF=BC=8C=E6=88=96=E8=AF=91=E8=A7=A3=E5=8F=A6=E4=B8=80=E4=B8=AA=
+=E8=A7=92=E8=90=BD=E9=87=8C=E7=9A=84=E8=AF=AD=E8=A8=80=E8=AF=AD=E6=B3=95=E3=
+=80=82</p>
+
+<p>=E8=BF=99=E5=AF=B9Scala=E6=9D=A5=E8=AF=B4=E4=B9=9F=E7=89=B9=E5=88=AB=E9=
+=87=8D=E8=A6=81=EF=BC=8C=E5=9B=A0=E4=B8=BA=E5=AE=83=E7=9A=84=E8=AF=AD=E6=B3=
+=95=E9=AB=98=E5=BA=A6=E7=9A=84=E9=87=8D=E5=8F=A0=E3=80=82=E4=B8=80=E4=B8=AA=
+=E4=BE=8B=E5=AD=90=E6=98=AF=E6=96=B9=E6=B3=95=E8=B0=83=E7=94=A8=EF=BC=9A=E6=
+=96=B9=E6=B3=95=E8=B0=83=E7=94=A8=E5=8F=AF=E4=BB=A5=E7=94=A8=E2=80=9C.=E2=
+=80=9D=E5=90=8E=E8=BE=B9=E8=B7=9F=E5=9C=86=E6=8B=AC=E5=8F=B7=EF=BC=8C=E6=88=
+=96=E4=B8=8D=E4=BD=BF=E7=94=A8=E2=80=9C.=E2=80=9D=EF=BC=8C=E5=90=8E=E8=BE=
+=B9=E7=94=A8=E7=A9=BA=E6=A0=BC=E5=8A=A0=E4=B8=8D=E5=B8=A6=E5=9C=86=E6=8B=AC=
+=E5=8F=B7(=E9=92=88=E5=AF=B9=E7=A9=BA=E5=85=83=E6=88=96=E4=B8=80=E5=85=83=
+=E6=96=B9=E6=B3=95)=E6=96=B9=E5=BC=8F=E8=B0=83=E7=94=A8=E3=80=82=E6=AD=A4=
+=E5=A4=96=EF=BC=8C=E4=B8=8D=E5=90=8C=E9=A3=8E=E6=A0=BC=E7=9A=84=E6=96=B9=E6=
+=B3=95=E8=B0=83=E7=94=A8=E6=8F=AD=E9=9C=B2=E4=BA=86=E5=AE=83=E4=BB=AC=E5=9C=
+=A8=E8=AF=AD=E6=B3=95=E4=B8=8A=E4=B8=8D=E5=90=8C=E7=9A=84=E5=88=86=E6=AD=A7=
+(ambiguities)=E3=80=82=E5=BD=93=E7=84=B6=E4=B8=80=E8=87=B4=E7=9A=84=E5=BA=
+=94=E7=94=A8=E6=85=8E=E9=87=8D=E7=9A=84=E9=80=89=E6=8B=A9=E4=B8=80=E7=BB=84=
+=E6=A0=BC=E5=BC=8F=E5=8C=96=E8=A7=84=E5=88=99=EF=BC=8C=E5=AF=B9=E4=BA=BA=E5=
+=92=8C=E6=9C=BA=E5=99=A8=E6=9D=A5=E8=AF=B4=E9=83=BD=E4=BC=9A=E6=B6=88=E9=99=
+=A4=E5=A4=A7=E9=87=8F=E7=9A=84=E6=AD=A7=E4=B9=89=E3=80=82</p>
+
+</a><p><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96">=E6=88=91=E4=BB=AC=E4=BE=9D=E7=
+=9D=80</a><a href=3D"http://docs.scala-lang.org/style/">Scala style guide</=
+a> =E5=A2=9E=E5=8A=A0=E4=BA=86=E4=BB=A5=E4=B8=8B=E8=A7=84=E5=88=99=EF=BC=9A=
+</p>
+
+<p><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E7=A9=BA=E6=A0=BC"></a></p><a id=
+=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E7=A9=BA=E6=A0=BC">
+
+<h3>=E7=A9=BA=E6=A0=BC</h3>
+
+<p>=E7=94=A8=E4=B8=A4=E4=B8=AA=E7=A9=BA=E6=A0=BC=E7=BC=A9=E8=BF=9B=E3=80=82=
+=E9=81=BF=E5=85=8D=E6=AF=8F=E8=A1=8C=E9=95=BF=E5=BA=A6=E8=B6=85=E8=BF=87100=
+=E5=88=97=E3=80=82=E5=9C=A8=E4=B8=A4=E4=B8=AA=E6=96=B9=E6=B3=95=E3=80=81=E7=
+=B1=BB=E3=80=81=E5=AF=B9=E8=B1=A1=E5=AE=9A=E4=B9=89=E4=B9=8B=E9=97=B4=E4=BD=
+=BF=E7=94=A8=E4=B8=80=E4=B8=AA=E7=A9=BA=E7=99=BD=E8=A1=8C=E3=80=82</p>
+
+</a><p><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E7=A9=BA=E6=A0=BC"></a><a id=
+=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E5=91=BD=E5=90=8D"></a></p><a id=3D"=E6=A0=
+=BC=E5=BC=8F=E5=8C=96-=E5=91=BD=E5=90=8D">
+
+<h3>=E5=91=BD=E5=90=8D</h3>
+
+<dl class=3D"rules">
+<dt>=E5=AF=B9=E4=BD=9C=E7=94=A8=E5=9F=9F=E8=BE=83=E7=9F=AD=E7=9A=84=E5=8F=
+=98=E9=87=8F=E4=BD=BF=E7=94=A8=E7=9F=AD=E5=90=8D=E5=AD=97=EF=BC=9A</dt>
+<dd> <code>i</code>s, <code>j</code>s =E5=92=8C <code>k</code>s=E7=AD=89=E5=
+=8F=AF=E5=87=BA=E7=8E=B0=E5=9C=A8=E5=BE=AA=E7=8E=AF=E4=B8=AD=E3=80=82</dd>
+<dt>=E5=AF=B9=E4=BD=9C=E7=94=A8=E5=9F=9F=E8=BE=83=E9=95=BF=E7=9A=84=E5=8F=
+=98=E9=87=8F=E4=BD=BF=E7=94=A8=E9=95=BF=E5=90=8D=E5=AD=97=EF=BC=9A</dt>
+<dd>=E5=A4=96=E9=83=A8APIs=E5=BA=94=E8=AF=A5=E7=94=A8=E9=95=BF=E7=9A=84=EF=
+=BC=8C=E4=B8=8D=E9=9C=80=E5=8A=A0=E4=BB=A5=E8=AF=B4=E6=98=8E=E4=BE=BF=E5=8F=
+=AF=E7=90=86=E8=A7=A3=E7=9A=84=E5=90=8D=E5=AD=97=E3=80=82=E4=BE=8B=E5=A6=82=
+=EF=BC=9A<code>Future.collect</code> =E8=80=8C=E9=9D=9E <code>Future.all</c=
+ode>
+</dd>
+<dt>=E4=BD=BF=E7=94=A8=E9=80=9A=E7=94=A8=E7=9A=84=E7=BC=A9=E5=86=99=EF=BC=
+=8C=E9=81=BF=E5=BC=80=E9=9A=90=E7=A7=98=E9=9A=BE=E6=87=82=E7=9A=84=E7=BC=A9=
+=E5=86=99=EF=BC=9A</dt>
+<dd>=E4=BE=8B=E5=A6=82=E6=AF=8F=E4=B8=AA=E4=BA=BA=E9=83=BD=E7=9F=A5=E9=81=
+=93 <code>ok</code>,<code>err</code>, <code>defn</code>=E7=AD=89=E7=BC=A9=
+=E5=86=99=E7=9A=84=E6=84=8F=E6=80=9D=EF=BC=8C=E8=80=8C<code>sfri</code>=E6=
+=98=AF=E4=B8=8D=E5=B8=B8=E7=94=A8=E7=9A=84=E3=80=82</dd>
+<dt>=E4=B8=8D=E8=A6=81=E5=9C=A8=E4=B8=8D=E5=90=8C=E7=94=A8=E9=80=94=E6=97=
+=B6=E9=87=8D=E7=94=A8=E5=90=8C=E6=A0=B7=E7=9A=84=E5=90=8D=E5=AD=97=EF=BC=9A=
+</dt>
+<dd>=E4=BD=BF=E7=94=A8<code>val</code>(=E6=B3=A8=EF=BC=9AScala=E4=B8=AD=E7=
+=9A=84=E4=B8=8D=E5=8F=AF=E5=8F=98=E7=B1=BB=E5=9E=8B)</dd>
+<dt>=E9=81=BF=E5=85=8D=E7=94=A8 <code>`</code>=E5=A3=B0=E6=98=8E=E4=BF=9D=
+=E7=95=99=E5=AD=97=E5=8F=98=E9=87=8F=EF=BC=9A</dt>
+<dd>=E7=94=A8<code>typ</code>=E6=9B=BF=E4=BB=A3 <code>`type`</code></dd>
+<dt>=E7=94=A8=E4=B8=BB=E5=8A=A8=E8=AF=AD=E6=80=81(active)=E6=9D=A5=E5=91=BD=
+=E5=90=8D=E6=9C=89=E5=89=AF=E4=BD=9C=E7=94=A8=E7=9A=84=E6=93=8D=E4=BD=9C=EF=
+=BC=9A</dt>
+<dd><code>user.activate()</code>=E8=80=8C=E9=9D=9E <code>user.setActive()</=
+code> </dd>
+<dt>=E5=AF=B9=E6=9C=89=E8=BF=94=E5=9B=9E=E5=80=BC=E7=9A=84=E6=96=B9=E6=B3=
+=95=E4=BD=BF=E7=94=A8=E5=85=B7=E6=9C=89=E6=8F=8F=E8=BF=B0=E6=80=A7=E7=9A=84=
+=E5=90=8D=E5=AD=97=EF=BC=9A</dt>
+<dd><code>src.isDefined</code> =E8=80=8C=E9=9D=9E<code>src.defined</code></=
+dd>
+<dt>getters=E4=B8=8D=E9=87=87=E7=94=A8=E5=89=8D=E7=BC=80<code>get</code>=EF=
+=BC=9A</dt>
+<dd>=E7=94=A8get=E6=98=AF=E5=A4=9A=E4=BD=99=E7=9A=84: <code>site.count</cod=
+e>=E8=80=8C=E9=9D=9E<code>site.getCount</code></dd>
+<dt>=E4=B8=8D=E5=BF=85=E9=87=8D=E5=A4=8D=E5=B7=B2=E7=BB=8F=E8=A2=ABpackage=
+=E6=88=96object=E5=B0=81=E8=A3=85=E8=BF=87=E7=9A=84=E5=90=8D=E5=AD=97=EF=BC=
+=9A</dt>
+<dd>=E4=BD=BF=E7=94=A8=EF=BC=9A
+<pre><code>object User {
+  def get(id: Int): Option[User]
+}</code></pre>
+=E8=80=8C=E9=9D=9E=EF=BC=9A
+<pre><code>object User {
+  def getUser(id: Int): Option[User]
+}</code></pre>
+=E7=9B=B8=E6=AF=94 <code>get</code> =E6=96=B9=E6=B3=95 <code>getUser</code>=
+ =E6=96=B9=E6=B3=95=E4=B8=AD=E7=9A=84User=E6=98=AF=E5=A4=9A=E4=BD=99=E7=9A=
+=84=EF=BC=8C=E5=B9=B6=E4=B8=8D=E8=83=BD=E6=8F=90=E4=BE=9B=E9=A2=9D=E5=A4=96=
+=E7=9A=84=E4=BF=A1=E6=81=AF=E3=80=82
+</dd>
+</dl>
+
+</a><p><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E5=91=BD=E5=90=8D"></a><a id=
+=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-Imports"></a></p><a id=3D"=E6=A0=BC=E5=BC=
+=8F=E5=8C=96-Imports">
+
+<h3>Imports</h3>
+
+<dl class=3D"rules">
+<dt>=E5=AF=B9=E5=BC=95=E5=85=A5=E8=A1=8C=E6=8C=89=E5=AD=97=E6=AF=8D=E9=A1=
+=BA=E5=BA=8F=E6=8E=92=E5=BA=8F=EF=BC=9A</dt>
+<dd>=E8=BF=99=E6=A0=B7=E6=9C=BA=E6=96=B9=E4=BE=BF=E4=BA=86=E8=A7=86=E8=A7=
+=89=E4=B8=8A=E7=9A=84=E6=A3=80=E6=9F=A5=EF=BC=8C=E4=B9=9F=E7=AE=80=E5=8C=96=
+=E4=BA=86=E8=87=AA=E5=8A=A8=E6=93=8D=E4=BD=9C=E3=80=82</dd>
+<dt>=E5=BD=93=E4=BB=8E=E4=B8=80=E4=B8=AA=E5=8C=85=E4=B8=AD=E5=BC=95=E5=85=
+=A5=E5=A4=9A=E4=B8=AA=E6=97=B6=EF=BC=8C=E7=94=A8=E8=8A=B1=E6=8B=AC=E5=8F=B7=
+=EF=BC=9A</dt>
+<dd><code>import com.twitter.concurrent.{Broker, Offer}</code></dd>
+<dt>=E5=BD=93=E5=BC=95=E5=85=A5=E8=B6=85=E8=BF=876=E4=B8=AA=E6=97=B6=E4=BD=
+=BF=E7=94=A8=E9=80=9A=E9=85=8D=E7=AC=A6=EF=BC=9A</dt>
+<dd>e.g.: <code>import com.twitter.concurrent._</code>
+<br>=E4=B8=8D=E8=A6=81=E8=BD=BB=E7=8E=87=E7=9A=84=E4=BD=BF=E7=94=A8: =E4=B8=
+=80=E4=BA=9B=E5=8C=85=E5=AF=BC=E5=85=A5=E4=BA=86=E5=A4=AA=E5=A4=9A=E7=9A=84=
+=E5=90=8D=E5=AD=97</dd>
+<dt>=E5=BD=93=E5=BC=95=E5=85=A5=E9=9B=86=E5=90=88=E7=9A=84=E6=97=B6=E5=80=
+=99=EF=BC=8C=E9=80=9A=E8=BF=87=E7=94=A8import scala.collections.immutable(=
+=E4=B8=8D=E5=8F=AF=E5=8F=98=E9=9B=86=E5=90=88)=E6=88=96scala.collections.mu=
+table(=E5=8F=AF=E5=8F=98=E9=9B=86=E5=90=88)=E6=9D=A5=E9=99=90=E5=AE=9A=E5=
+=90=8D=E7=A7=B0
+</dt><dd>=E5=8F=AF=E5=8F=98=E5=92=8C=E4=B8=8D=E5=8F=AF=E5=8F=98=E9=9B=86=E5=
+=90=88=E6=9C=89=E7=9B=B8=E5=90=8C=E7=9A=84=E5=90=8D=E5=AD=97=E3=80=82=E9=99=
+=90=E5=AE=9A=E5=90=8D=E7=A7=B0=E8=AE=A9=E8=AF=BB=E8=80=85=E5=BE=88=E6=98=8E=
+=E7=A1=AE=E7=9F=A5=E9=81=93=E4=BD=BF=E7=94=A8=E7=9A=84=E6=98=AF=E5=93=AA=E4=
+=B8=AA=E5=8F=98=E9=87=8F(e.g. "<code>immutable.Map</code>")</dd>
+<dd>(=E8=AF=91=E6=B3=A8=EF=BC=8C=E9=80=9A=E5=B8=B8=E4=B9=9F=E4=BC=9A=E9=BB=
+=98=E8=AE=A4immutable=EF=BC=8C=E8=80=8C=E5=9C=A8=E4=BD=BF=E7=94=A8mutable=
+=E6=97=B6=E6=98=BE=E7=A4=BA=E5=BC=95=E5=85=A5)</dd>
+<dt>=E4=B8=8D=E8=A6=81=E4=BD=BF=E7=94=A8=E6=9D=A5=E8=87=AA=E5=85=B6=E5=AE=
+=83=E5=8C=85=E7=9A=84=E7=9B=B8=E5=AF=B9=E5=BC=95=E7=94=A8=EF=BC=9A</dt>
+<dd>=E9=81=BF=E5=85=8D<pre><code>import com.twitter
+import concurrent</code></pre> =E8=80=8C=E5=BA=94=E8=AF=A5=E7=94=A8=E6=B8=
+=85=E6=99=B0=E7=9A=84=EF=BC=9A<pre><code>import com.twitter.concurrent</cod=
+e></pre>(=E8=AF=91=E6=B3=A8=EF=BC=8C=E5=AE=9E=E9=99=85=E4=B8=8A=E4=B8=8A=E9=
+=9D=A2=E7=9A=84import=E4=B8=8D=E8=83=BD=E7=BC=96=E8=AF=91=E9=80=9A=E8=BF=87=
+=EF=BC=8C=E7=AC=AC=E4=BA=8C=E4=B8=AAimport=E5=BA=94=E8=AF=A5=E4=B8=BA=EF=BC=
+=9Aimport twitter.concurrent
+=E5=8D=B3import=E4=B8=80=E4=B8=AA=E5=8C=85=E5=AE=9E=E9=99=85=E6=98=AF=E5=AE=
+=9A=E4=B9=89=E4=BA=86=E8=BF=99=E4=B8=AA=E5=8C=85=E7=9A=84=E5=88=AB=E5=90=8D=
+=E3=80=82)</dd>
+<dt>=E5=B0=86import=E6=94=BE=E5=9C=A8=E6=96=87=E4=BB=B6=E7=9A=84=E5=A4=B4=
+=E9=83=A8=EF=BC=9A</dt>
+<dd> =E8=AF=BB=E8=80=85=E5=8F=AF=E4=BB=A5=E5=9C=A8=E4=B8=80=E4=B8=AA=E5=9C=
+=B0=E6=96=B9=E5=8F=82=E8=80=83=E6=89=80=E6=9C=89=E7=9A=84=E5=BC=95=E7=94=A8=
+=E3=80=82</dd>
+</dl>
+
+</a><p><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-Imports"></a><a id=3D"=E6=A0=BC=
+=E5=BC=8F=E5=8C=96-=E8=8A=B1=E6=8B=AC=E5=8F=B7"></a></p><a id=3D"=E6=A0=BC=
+=E5=BC=8F=E5=8C=96-=E8=8A=B1=E6=8B=AC=E5=8F=B7">
+
+<h3>=E8=8A=B1=E6=8B=AC=E5=8F=B7</h3>
+
+<p>=E8=8A=B1=E6=8B=AC=E5=8F=B7=E7=94=A8=E4=BA=8E=E5=88=9B=E5=BB=BA=E5=A4=8D=
+=E5=90=88=E8=A1=A8=E8=BE=BE=E5=BC=8F=EF=BC=8C=E5=A4=8D=E5=90=88=E8=A1=A8=E8=
+=BE=BE=E5=BC=8F=E7=9A=84=E8=BF=94=E5=9B=9E=E5=80=BC=E6=98=AF=E6=9C=80=E5=90=
+=8E=E4=B8=80=E4=B8=AA=E8=A1=A8=E8=BE=BE=E5=BC=8F=E3=80=82=E9=81=BF=E5=85=8D=
+=E5=AF=B9=E7=AE=80=E5=8D=95=E7=9A=84=E8=A1=A8=E8=BE=BE=E5=BC=8F=E9=87=87=E7=
+=94=A8=E8=8A=B1=E6=8B=AC=E5=8F=B7=EF=BC=9B=E5=86=99=E6=88=90=EF=BC=9A</p>
+
+<pre><code> def square(x: Int) =3D x*x
+</code></pre>
+
+<p class=3D"LP">=E8=80=8C=E4=B8=8D=E6=98=AF=EF=BC=9A</p>
+
+<pre><code> def square(x: Int) =3D {
+   x * x
+ }
+</code></pre>
+
+<p class=3D"LP">=E5=B0=BD=E7=AE=A1=E7=AC=AC=E4=BA=8C=E7=A7=8D=E6=96=B9=E5=
+=BC=8F=E7=94=A8=E5=9C=A8=E5=8C=BA=E5=88=86=E6=96=B9=E6=B3=95=E4=BD=93=E7=9A=
+=84=E8=AF=AD=E5=8F=A5=E6=9E=84=E6=88=90=E5=BE=88=E8=AF=B1=E4=BA=BA=E3=80=82=
+=E7=AC=AC=E4=B8=80=E7=A7=8D=E9=80=89=E6=8B=A9=E6=9B=B4=E5=8A=A0=E7=AE=80=E6=
+=B4=81=EF=BC=8C=E6=98=93=E8=AF=BB=E3=80=82=E9=81=BF=E5=85=8D=E8=AF=AD=E5=8F=
+=A5=E4=B8=8A=E7=9A=84=E7=B9=81=E6=96=87=E7=BC=9B=E8=8A=82=EF=BC=8C=E9=99=A4=
+=E9=9D=9E=E9=9C=80=E8=A6=81=E9=98=90=E6=98=8E=E3=80=82</p>
+
+</a><p><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E8=8A=B1=E6=8B=AC=E5=8F=B7"></=
+a><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D=
+"></a></p><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E6=A8=A1=E5=BC=8F=E5=8C=B9=
+=E9=85=8D">
+
+<h3>=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D</h3>
+
+<p>=E5=B0=BD=E5=8F=AF=E8=83=BD=E7=9B=B4=E6=8E=A5=E5=9C=A8=E5=87=BD=E6=95=B0=
+=E5=AE=9A=E4=B9=89=E7=9A=84=E5=9C=B0=E6=96=B9=E4=BD=BF=E7=94=A8=E6=A8=A1=E5=
+=BC=8F=E5=8C=B9=E9=85=8D=E3=80=82=E4=BE=8B=E5=A6=82=EF=BC=8C=E4=B8=8B=E9=9D=
+=A2=E7=9A=84=E5=86=99=E6=B3=95 match=E5=BA=94=E8=AF=A5=E8=A2=AB=E6=8A=98=E5=
+=8F=A0=E8=B5=B7=E6=9D=A5(collapse)</p>
+
+<pre><code> list map { item =3D&gt;
+   item match {
+     case Some(x) =3D&gt; x
+     case None =3D&gt; default
+   }
+ }
+</code></pre>
+
+<p class=3D"LP">=E7=94=A8=E4=B8=8B=E9=9D=A2=E7=9A=84=E5=86=99=E6=B3=95=E6=
+=9B=BF=E4=BB=A3=EF=BC=9A</p>
+
+<pre><code> list map {
+   case Some(x) =3D&gt; x
+   case None =3D&gt; default
+ }
+</code></pre>
+
+<p class=3D"LP">=E5=AE=83=E5=BE=88=E6=B8=85=E6=99=B0=E7=9A=84=E8=A1=A8=E8=
+=BE=BE=E4=BA=86 list=E4=B8=AD=E7=9A=84=E5=85=83=E7=B4=A0=E9=83=BD=E8=A2=AB=
+=E6=98=A0=E5=B0=84=EF=BC=8C=E9=97=B4=E6=8E=A5=E7=9A=84=E6=96=B9=E5=BC=8F=E8=
+=AE=A9=E4=BA=BA=E4=B8=8D=E5=AE=B9=E6=98=93=E6=98=8E=E7=99=BD=E3=80=82</p>
+
+</a><p><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=
+=85=8D"></a><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E6=B3=A8=E9=87=8A"></a></=
+p><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E6=B3=A8=E9=87=8A">
+
+<h3>=E6=B3=A8=E9=87=8A</h3>
+
+</a><p><a id=3D"=E6=A0=BC=E5=BC=8F=E5=8C=96-=E6=B3=A8=E9=87=8A">=E4=BD=BF=
+=E7=94=A8</a><a href=3D"https://wiki.scala-lang.org/display/SW/Scaladoc">Sc=
+alaDoc</a>=E6=8F=90=E4=BE=9BAPI=E6=96=87=E6=A1=A3=E3=80=82=E7=94=A8=E4=B8=
+=8B=E9=9D=A2=E7=9A=84=E9=A3=8E=E6=A0=BC=EF=BC=9A</p>
+
+<pre><code> /**
+  * ServiceBuilder builds services
+  * ...
+  */
+</code></pre>
+
+<p class=3D"LP">=E8=80=8C=E4=B8=8D=E6=98=AF=E9=9D=9E=E6=A0=87=E5=87=86=E7=
+=9A=84ScalaDoc=E9=A3=8E=E6=A0=BC=EF=BC=9A</p>
+
+<pre><code> /** ServiceBuilder builds services
+  * ...
+  */
+</code></pre>
+
+<p>=E4=B8=8D=E8=A6=81=E8=AF=89=E8=AF=B8=E4=BA=8EASCII=E7=A0=81=E8=89=BA=E6=
+=9C=AF=E6=88=96=E5=85=B6=E4=BB=96=E5=8F=AF=E8=A7=86=E5=8C=96=E4=BF=AE=E9=A5=
+=B0=E3=80=82=E7=94=A8=E6=96=87=E6=A1=A3=E8=AE=B0=E5=BD=95APIs=E4=BD=86=E4=
+=B8=8D=E8=A6=81=E6=B7=BB=E5=8A=A0=E4=B8=8D=E5=BF=85=E8=A6=81=E7=9A=84=E6=B3=
+=A8=E9=87=8A=E3=80=82=E5=A6=82=E6=9E=9C=E4=BD=A0=E5=8F=91=E7=8E=B0=E4=BD=A0=
+=E8=87=AA=E5=B7=B1=E6=B7=BB=E5=8A=A0=E6=B3=A8=E9=87=8A=E8=A7=A3=E9=87=8A=E4=
+=BD=A0=E7=9A=84=E4=BB=A3=E7=A0=81=E8=A1=8C=E4=B8=BA=EF=BC=8C=E5=85=88=E9=97=
+=AE=E9=97=AE=E8=87=AA=E5=B7=B1=E6=98=AF=E5=90=A6=E5=8F=AF=E4=BB=A5=E8=B0=83=
+=E6=95=B4=E4=BB=A3=E7=A0=81=E7=BB=93=E6=9E=84=EF=BC=8C=E4=BB=8E=E8=80=8C=E5=
+=8F=AF=E4=BB=A5=E6=98=8E=E6=98=BE=E5=9C=B0=E5=8F=AF=E4=BB=A5=E7=9C=8B=E5=87=
+=BA=E5=AE=83=E5=81=9A=E4=BA=86=E4=BB=80=E4=B9=88=E3=80=82=E7=9B=B8=E5=AF=B9=
+=E4=BA=8E=E2=80=9Cit works, obviously=E2=80=9D =E6=9B=B4=E5=81=8F=E5=90=91=
+=E4=BA=8E=E2=80=9Cobviously it works=E2=80=9D</p>
+
+<p><a id=3D"=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B"></a></p><a id=3D=
+"=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B">
+
+<h2>=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B</h2>
+
+<p>=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=E7=9A=84=E9=A6=96=E8=A6=81=E7=9B=AE=
+=E7=9A=84=E6=98=AF=E6=A3=80=E6=B5=8B=E7=A8=8B=E5=BA=8F=E9=94=99=E8=AF=AF=E3=
+=80=82=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=E6=9C=89=E6=95=88=E7=9A=84=E6=8F=
+=90=E4=BE=9B=E4=BA=86=E4=B8=80=E4=B8=AA=E9=9D=99=E6=80=81=E6=A3=80=E6=B5=8B=
+=E7=9A=84=E6=9C=89=E9=99=90=E5=BD=A2=E5=BC=8F=EF=BC=8C=E5=85=81=E8=AE=B8=E6=
+=88=91=E4=BB=AC=E4=BB=A3=E7=A0=81=E4=B8=AD=E6=98=8E=E7=A1=AE=E6=9F=90=E7=A7=
+=8D=E7=B1=BB=E5=9E=8B=E7=9A=84=E5=8F=98=E9=87=8F=E5=B9=B6=E4=B8=94=E7=BC=96=
+=E8=AF=91=E5=99=A8=E5=8F=AF=E4=BB=A5=E9=AA=8C=E8=AF=81=E3=80=82=E7=B1=BB=E5=
+=9E=8B=E7=B3=BB=E7=BB=9F=E5=BD=93=E7=84=B6=E4=B9=9F=E6=8F=90=E4=BE=9B=E4=BA=
+=86=E5=85=B6=E4=BB=96=E5=A5=BD=E5=A4=84=EF=BC=8C=E4=BD=86=E9=94=99=E8=AF=AF=
+=E6=A3=80=E6=B5=8B=E6=98=AF=E4=BB=96=E5=AD=98=E5=9C=A8=E7=9A=84=E7=90=86=E7=
+=94=B1(Raison d=E2=80=99=C3=8Atre)</p>
+
+<p>=E6=88=91=E4=BB=AC=E4=BD=BF=E7=94=A8=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=
+=E5=BA=94=E5=BD=93=E5=8F=8D=E6=98=A0=E8=BF=99=E4=B8=80=E7=9B=AE=E6=A0=87=EF=
+=BC=8C=E4=BD=86=E6=88=91=E4=BB=AC=E5=BF=85=E9=A1=BB=E8=80=83=E8=99=91=E5=88=
+=B0=E8=AF=BB=E8=80=85=EF=BC=88=E8=AF=91=E6=B3=A8=EF=BC=9A=E8=AF=BB=E4=BD=A0=
+=E4=BB=A3=E7=A0=81=E7=9A=84=E4=BA=BA=EF=BC=89=EF=BC=9A=E6=98=8E=E6=99=BA=E5=
+=9C=B0=E4=BD=BF=E7=94=A8=E7=B1=BB=E5=9E=8B=E5=8F=AF=E4=BB=A5=E5=A2=9E=E5=8A=
+=A0=E6=B8=85=E6=99=B0=E5=BA=A6=EF=BC=8C=E8=80=8C=E8=BF=87=E4=BB=BD=E8=81=AA=
+=E6=98=8E=E5=8F=AA=E4=BC=9A=E8=BF=B7=E4=B9=B1=E3=80=82</p>
+
+</a><p><a id=3D"=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B">Scala=E7=9A=
+=84=E5=BC=BA=E5=A4=A7=E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F=E6=98=AF=E5=AD=A6=
+=E6=9C=AF=E6=8E=A2=E7=B4=A2=E5=92=8C=E5=AE=9E=E8=B7=B5=E5=85=B1=E5=90=8C=E6=
+=9D=A5=E6=BA=90(=E4=BE=8B=E5=A6=82</a><a href=3D"http://apocalisp.wordpress=
+.com/2010/06/08/type-level-programming-in-scala/">Type level programming in=
+ Scala</a>) =E3=80=82=E4=BD=86=E8=BF=99=E6=98=AF=E4=B8=80=E4=B8=AA=E8=BF=B7=
+=E4=BA=BA=E7=9A=84=E5=AD=A6=E6=9C=AF=E8=AF=9D=E9=A2=98=EF=BC=8C=E8=BF=99=E4=
+=BA=9B=E6=8A=80=E6=9C=AF=E5=BE=88=E5=B0=91=E5=9C=A8=E5=BA=94=E7=94=A8=E5=92=
+=8C=E6=AD=A3=E5=BC=8F=E4=BA=A7=E5=93=81=E4=BB=A3=E7=A0=81=E4=B8=AD=E4=BD=BF=
+=E7=94=A8=E3=80=82=E5=AE=83=E4=BB=AC=E5=BA=94=E8=AF=A5=E8=A2=AB=E9=81=BF=E5=
+=85=8D=E3=80=82</p>
+
+<p><a id=3D"=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E8=BF=94=E5=9B=
+=9E=E7=B1=BB=E5=9E=8B=E6=B3=A8=E8=A7=A3(annotation)"></a></p><a id=3D"=E7=
+=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E8=BF=94=E5=9B=9E=E7=B1=BB=E5=
+=9E=8B=E6=B3=A8=E8=A7=A3(annotation)">
+
+<h3>=E8=BF=94=E5=9B=9E=E7=B1=BB=E5=9E=8B=E6=B3=A8=E8=A7=A3(annotation)</h3>
+
+<p>=E5=B0=BD=E7=AE=A1Scala=E5=85=81=E8=AE=B8=E8=BF=94=E5=9B=9E=E7=B1=BB=E5=
+=9E=8B=E6=98=AF=E5=8F=AF=E4=BB=A5=E7=9C=81=E7=95=A5=E7=9A=84=EF=BC=8C=E5=8A=
+=A0=E4=B8=8A=E5=AE=83=E4=BB=AC=E6=8F=90=E4=BE=9B=E4=BA=86=E5=BE=88=E5=A5=BD=
+=E7=9A=84=E6=96=87=E6=A1=A3=EF=BC=9A=E8=BF=99=E5=AF=B9public=E6=96=B9=E6=B3=
+=95=E7=89=B9=E5=88=AB=E9=87=8D=E8=A6=81=E3=80=82=E8=80=8C=E5=BD=93=E4=B8=80=
+=E4=B8=AA=E6=96=B9=E6=B3=95=E4=B8=8D=E9=9C=80=E8=A6=81=E5=AF=B9=E5=A4=96=E6=
+=9A=B4=E9=9C=B2=EF=BC=8C=E5=B9=B6=E4=B8=94=E5=AE=83=E7=9A=84=E8=BF=94=E5=9B=
+=9E=E5=80=BC=E7=B1=BB=E5=9E=8B=E6=98=AF=E6=98=BE=E8=80=8C=E6=98=93=E8=A7=81=
+=E7=9A=84=E6=97=B6=E5=80=99=EF=BC=8C=E5=88=99=E5=8F=AF=E4=BB=A5=E7=9B=B4=E6=
+=8E=A5=E7=9C=81=E7=95=A5=E3=80=82</p>
+
+<p>=E5=9C=A8=E4=BD=BF=E7=94=A8=E6=B7=B7=E5=85=A5(mixin)=E5=AE=9E=E4=BE=8B=
+=E5=8C=96=E5=AF=B9=E8=B1=A1=E6=97=B6=E8=BF=99=E4=B8=80=E7=82=B9=E5=B0=A4=E5=
+=85=B6=E9=87=8D=E8=A6=81=EF=BC=8CScala=E7=BC=96=E8=AF=91=E5=99=A8=E4=B8=BA=
+=E8=BF=99=E4=BA=9B=E5=AF=B9=E8=B1=A1=E5=88=9B=E9=80=A0=E4=BA=86=E5=8D=95=E7=
+=B1=BB=E3=80=82=E4=BE=8B=E5=A6=82=EF=BC=9A</p>
+
+<pre><code> trait Service
+ def make() =3D new Service {
+   def getId =3D 123
+ }
+</code></pre>
+
+<p class=3D"LP">=E4=B8=8A=E9=9D=A2=E7=9A=84make<em>=E4=B8=8D=E9=9C=80=E8=A6=
+=81</em>=E5=AE=9A=E4=B9=89=E8=BF=94=E5=9B=9E=E7=B1=BB=E5=9E=8B=E4=B8=BAServ=
+ice=EF=BC=9B=E7=BC=96=E8=AF=91=E5=99=A8=E4=BC=9A=E5=88=9B=E5=BB=BA=E4=B8=80=
+=E4=B8=AA=E5=8A=A0=E5=B7=A5=E8=BF=87=E7=9A=84=E7=B1=BB=E5=9E=8B: Object wit=
+h Service{def getId:Int}(=E8=AF=91=E6=B3=A8:with=E6=98=AFScala=E9=87=8C=E7=
+=9A=84mixin=E7=9A=84=E8=AF=AD=E6=B3=95)=E3=80=82=E8=8B=A5=E7=94=A8=E4=B8=80=
+=E4=B8=AA=E6=98=BE=E5=BC=8F=E7=9A=84=E6=B3=A8=E9=87=8A=EF=BC=9A</p>
+
+<pre><code> def make(): Service =3D new Service{}
+</code></pre>
+
+<p>=E7=8E=B0=E5=9C=A8=E4=BD=9C=E8=80=85=E5=88=99=E4=B8=8D=E5=BF=85=E6=94=B9=
+=E5=8F=98make=E6=96=B9=E6=B3=95=E7=9A=84=E5=85=AC=E5=BC=80=E7=B1=BB=E5=9E=
+=8B=E8=80=8C=E9=9A=8F=E6=84=8F=E7=9A=84=E6=B7=B7=E5=85=A5(mix in) =E6=9B=B4=
+=E5=A4=9A=E7=9A=84=E7=89=B9=E8=B4=A8(traits)=EF=BC=8C=E4=BD=BF=E5=90=91=E5=
+=90=8E=E5=85=BC=E5=AE=B9=E5=BE=88=E5=AE=B9=E6=98=93=E5=AE=9E=E7=8E=B0=E3=80=
+=82</p>
+
+</a><p><a id=3D"=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E8=BF=94=E5=
+=9B=9E=E7=B1=BB=E5=9E=8B=E6=B3=A8=E8=A7=A3(annotation)"></a><a id=3D"=E7=B1=
+=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E5=8F=98=E5=9E=8B"></a></p><a id=
+=3D"=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E5=8F=98=E5=9E=8B">
+
+<h3>=E5=8F=98=E5=9E=8B</h3>
+
+<p>=E5=8F=98=E5=9E=8B(Variance)=E5=8F=91=E7=94=9F=E5=9C=A8=E6=B3=9B=E5=9E=
+=8B=E4=B8=8E=E5=AD=90=E7=B1=BB=E5=9E=8B=E5=8C=96(subtyping)=E7=BB=93=E5=90=
+=88=E7=9A=84=E6=97=B6=E5=80=99=E3=80=82=E4=B8=8E=E5=AE=B9=E5=99=A8=E7=B1=BB=
+=E5=9E=8B=E7=9A=84=E5=AD=90=E7=B1=BB=E5=9E=8B=E5=8C=96=E6=9C=89=E5=85=B3=EF=
+=BC=8C=E5=AE=83=E4=BB=AC=E5=AE=9A=E4=B9=89=E4=BA=86=E5=AF=B9=E6=89=80=E5=8C=
+=85=E5=90=AB=E7=9A=84=E7=B1=BB=E5=9E=8B=E5=A6=82=E4=BD=95=E5=AD=90=E7=B1=BB=
+=E5=9E=8B=E5=8C=96=E3=80=82=E5=9B=A0=E4=B8=BAScala=E6=9C=89=E5=A3=B0=E6=98=
+=8E=E7=82=B9=E5=8F=98=E5=9E=8B(declaration site variance)=E6=B3=A8=E9=87=8A=
+=EF=BC=88annotation=EF=BC=89=EF=BC=8C=E5=85=AC=E5=85=B1=E5=BA=93=E7=9A=84=
+=E4=BD=9C=E8=80=85=E2=80=94=E2=80=94=E7=89=B9=E5=88=AB=E6=98=AF=E9=9B=86=E5=
+=90=88=E2=80=94=E2=80=94=E5=BF=85=E9=A1=BB=E6=9C=89=E4=B8=B0=E5=AF=8C=E7=9A=
+=84=E6=B3=A8=E9=87=8A=E5=99=A8=E3=80=82=E8=BF=99=E4=BA=9B=E6=B3=A8=E9=87=8A=
+=E5=AF=B9=E5=85=B1=E4=BA=AB=E4=BB=A3=E7=A0=81=E7=9A=84=E5=8F=AF=E7=94=A8=E6=
+=80=A7=E5=BE=88=E9=87=8D=E8=A6=81=EF=BC=8C=E4=BD=86=E6=BB=A5=E7=94=A8=E4=B9=
+=9F=E4=BC=9A=E5=BE=88=E5=8D=B1=E9=99=A9=E3=80=82</p>
+
+<p>=E4=B8=8D=E5=8F=AF=E5=8F=98(invariants)=E6=98=AFScala=E7=B1=BB=E5=9E=8B=
+=E7=B3=BB=E7=BB=9F=E4=B8=AD=E9=AB=98=E7=BA=A7=E9=83=A8=E5=88=86=EF=BC=8C=E4=
+=BD=86=E4=B9=9F=E6=98=AF=E5=BF=85=E9=A1=BB=E7=9A=84=E4=B8=80=E9=9D=A2=EF=BC=
+=8C=E5=9B=A0=E4=B8=BA=E5=AE=83=E6=9C=89=E5=8A=A9=E4=BA=8E=E5=AD=90=E7=B1=BB=
+=E5=9E=8B=E5=8C=96=E7=9A=84=E5=BA=94=E7=94=A8=EF=BC=8C=E5=BA=94=E8=AF=A5=E5=
+=B9=BF=E6=B3=9B(=E5=B9=B6=E4=B8=94=E6=AD=A3=E7=A1=AE)=E5=9C=B0=E4=BD=BF=E7=
+=94=A8=E3=80=82</p>
+
+<p><em>=E4=B8=8D=E5=8F=AF=E5=8F=98(Immutable)=E9=9B=86=E5=90=88=E5=BA=94=E8=
+=AF=A5=E6=98=AF=E5=8D=8F=E5=8F=98=E7=9A=84(covariant)</em>=E3=80=82=E6=8E=
+=A5=E5=8F=97=E5=AE=B9=E5=99=A8=E5=8C=96=E7=B1=BB=E5=9E=8B=E5=BE=97=E6=96=B9=
+=E6=B3=95=E5=BA=94=E8=AF=A5=E9=80=82=E5=BD=93=E5=9C=B0=E9=99=8D=E7=BA=A7(do=
+wngrade)=E9=9B=86=E5=90=88=EF=BC=9A</p>
+
+<pre><code> trait Collection[+T] {
+   def add[U &gt;: T](other: U): Collection[U]
+ }
+</code></pre>
+
+<p><em>=E5=8F=AF=E5=8F=98(mutable)=E9=9B=86=E5=90=88=E5=BA=94=E8=AF=A5=E6=
+=98=AF=E4=B8=8D=E5=8F=AF=E5=8F=98=E7=9A=84(invariant)</em>. =E5=8D=8F=E5=8F=
+=98=E5=AF=B9=E4=BA=8E=E5=8F=AF=E5=8F=98=E9=9B=86=E5=90=88=E6=98=AF=E5=85=B8=
+=E5=9E=8B=E6=97=A0=E6=95=88=E7=9A=84=E3=80=82=E8=80=83=E8=99=91=EF=BC=9A</p=
+>
+
+<pre><code> trait HashSet[+T] {
+   def add[U &gt;: T](item: U)
+ }
+</code></pre>
+
+<p class=3D"LP">=E5=92=8C=E4=B8=8B=E9=9D=A2=E7=9A=84=E7=B1=BB=E5=9E=8B=E5=
+=B1=82=E7=BA=A7=EF=BC=9A</p>
+
+<pre><code> trait Mammal
+ trait Dog extends Mammal
+ trait Cat extends Mammal
+</code></pre>
+
+<p class=3D"LP">=E5=A6=82=E6=9E=9C=E6=88=91=E7=8E=B0=E5=9C=A8=E6=9C=89=E4=
+=B8=80=E4=B8=AA=E7=8B=97(dog)=E7=9A=84 HashSet=EF=BC=9A</p>
+
+<pre><code> val dogs: HashSet[Dog]
+</code></pre>
+
+<p class=3D"LP">=E6=8A=8A=E5=AE=83=E4=BD=9C=E4=B8=BA=E4=B8=80=E4=B8=AA=E5=
+=93=BA=E4=B9=B3=E5=8A=A8=E7=89=A9=E7=9A=84Set=EF=BC=8C=E5=A2=9E=E5=8A=A0=E4=
+=B8=80=E5=8F=AA=E7=8C=AB(cat)</p>
+
+<pre><code> val mammals: HashSet[Mammal] =3D dogs
+ mammals.add(new Cat{})
+</code></pre>
+
+<p class=3D"LP">=E8=BF=99=E5=B0=86=E4=B8=8D=E5=86=8D=E6=98=AF=E4=B8=80=E4=
+=B8=AA=E5=8F=AA=E5=AD=98=E5=82=A8=E7=8B=97(dog)=E7=9A=84HashSet=EF=BC=81</p=
+>
+
+<!--
+  *     when to use abstract type members?
+  *     show contravariance trick?
+-->
+
+</a><p><a id=3D"=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E5=8F=98=E5=
+=9E=8B"></a><a id=3D"=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E7=B1=
+=BB=E5=9E=8B=E5=88=AB=E5=90=8D"></a></p><a id=3D"=E7=B1=BB=E5=9E=8B=E5=92=
+=8C=E6=B3=9B=E5=9E=8B-=E7=B1=BB=E5=9E=8B=E5=88=AB=E5=90=8D">
+
+<h3>=E7=B1=BB=E5=9E=8B=E5=88=AB=E5=90=8D</h3>
+
+<p>=E7=B1=BB=E5=9E=8B=E5=88=AB=E5=90=8D=E5=BA=94=E5=BD=93=E5=9C=A8=E5=85=B6=
+=E6=8F=90=E4=BE=9B=E4=BA=86=E4=BE=BF=E6=8D=B7=E7=9A=84=E5=91=BD=E5=90=8D=E6=
+=88=96=E9=98=90=E6=98=8E=E6=84=8F=E5=9B=BE=E6=97=B6=E4=BD=BF=E7=94=A8=EF=BC=
+=8C=E4=BD=86=E5=AF=B9=E4=BA=8E=E8=87=AA=E8=A7=A3=E9=87=8A=EF=BC=88=E4=B8=8D=
+=E8=A8=80=E8=87=AA=E6=98=8E=EF=BC=89=E7=9A=84=E7=B1=BB=E5=9E=8B=E4=B8=8D=E8=
+=A6=81=E4=BD=BF=E7=94=A8=E7=B1=BB=E5=9E=8B=E5=88=AB=E5=90=8D=E3=80=82=E6=AF=
+=94=E5=A6=82</p>
+
+<pre><code> () =3D&gt; Int
+</code></pre>
+
+<p class=3D"LP">=E6=AF=94=E4=B8=8B=E9=9D=A2=E5=AE=9A=E4=B9=89=E7=9A=84=E5=
+=88=AB=E5=90=8DIntMarker=E6=9B=B4=E6=B8=85=E6=99=B0</p>
+
+<pre><code> type IntMaker =3D () =3D&gt; Int
+ IntMaker
+</code></pre>
+
+<p class=3D"LP">=E4=BD=86=EF=BC=8C=E4=B8=8B=E9=9D=A2=E7=9A=84=E5=88=AB=E5=
+=90=8D:</p>
+
+<pre><code> class ConcurrentPool[K, V] {
+   type Queue =3D ConcurrentLinkedQueue[V]
+   type Map   =3D ConcurrentHashMap[K, Queue]
+   ...
+ }
+</code></pre>
+
+<p class=3D"LP">=E6=98=AF=E6=9C=89=E7=94=A8=E7=9A=84=EF=BC=8C=E5=9B=A0=E4=
+=B8=BA=E5=AE=83=E8=A1=A8=E8=BE=BE=E4=BA=86=E7=9B=AE=E7=9A=84=E5=B9=B6=E6=9B=
+=B4=E5=8A=A0=E7=AE=80=E7=9F=AD=E3=80=82</p>
+
+<p>=E5=BD=93=E4=BD=BF=E7=94=A8=E7=B1=BB=E5=9E=8B=E5=88=AB=E5=90=8D=E7=9A=84=
+=E6=97=B6=E5=80=99=E4=B8=8D=E8=A6=81=E4=BD=BF=E7=94=A8=E5=AD=90=E7=B1=BB=E5=
+=9E=8B=E5=8C=96(subtyping)</p>
+
+<pre><code> trait SocketFactory extends (SocketAddress =3D&gt; Socket)
+</code></pre>
+
+<p class=3D"LP">SocketFactory =E6=98=AF=E4=B8=80=E4=B8=AA=E7=94=9F=E4=BA=A7=
+Socket=E7=9A=84=E6=96=B9=E6=B3=95=E3=80=82=E4=BD=BF=E7=94=A8=E4=B8=80=E4=B8=
+=AA=E7=B1=BB=E5=9E=8B=E5=88=AB=E5=90=8D=E6=9B=B4=E5=A5=BD=EF=BC=9A</p>
+
+<pre><code> type SocketFactory =3D SocketAddress =3D&gt; Socket
+</code></pre>
+
+<p class=3D"LP">=E6=88=91=E4=BB=AC=E7=8E=B0=E5=9C=A8=E5=8F=AF=E4=BB=A5=E5=
+=AF=B9 SocketFactory=E7=B1=BB=E5=9E=8B=E7=9A=84=E5=80=BC =E6=8F=90=E4=BE=9B=
+=E5=87=BD=E6=95=B0=E5=AD=97=E9=9D=A2=E9=87=8F(function literals) ,=E4=B9=9F=
+=E5=8F=AF=E4=BB=A5=E4=BD=BF=E7=94=A8=E5=87=BD=E6=95=B0=E7=BB=84=E5=90=88=EF=
+=BC=9A</p>
+
+<pre><code> val addrToInet: SocketAddress =3D&gt; Long
+ val inetToSocket: Long =3D&gt; Socket
+
+ val factory: SocketFactory =3D addrToInet andThen inetToSocket
+</code></pre>
+
+<p>=E7=B1=BB=E5=9E=8B=E5=88=AB=E5=90=8D=E9=80=9A=E8=BF=87=E7=94=A8 package =
+object =E5=B0=86=E5=90=8D=E5=AD=97=E7=BB=91=E5=AE=9A=E5=9C=A8=E9=A1=B6=E5=
+=B1=82:</p>
+
+<pre><code> package com.twitter
+ package object net {
+   type SocketFactory =3D (SocketAddress) =3D&gt; Socket
+ }
+</code></pre>
+
+<p>=E6=B3=A8=E6=84=8F=E7=B1=BB=E5=9E=8B=E5=88=AB=E5=90=8D=E4=B8=8D=E6=98=AF=
+=E6=96=B0=E7=B1=BB=E5=9E=8B=E2=80=94=E2=80=94=E4=BB=96=E4=BB=AC=E7=AD=89=E4=
+=BB=B7=E4=BA=8E=E5=9C=A8=E8=AF=AD=E6=B3=95=E4=B8=8A=E7=94=A8=E5=88=AB=E5=90=
+=8D=E4=BB=A3=E6=9B=BF=E4=BA=86=E5=8E=9F=E7=B1=BB=E5=9E=8B=E3=80=82</p>
+
+</a><p><a id=3D"=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E7=B1=BB=E5=
+=9E=8B=E5=88=AB=E5=90=8D"></a><a id=3D"=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=
+=E5=9E=8B-=E9=9A=90=E5=BC=8F=E8=BD=AC=E6=8D=A2"></a></p><a id=3D"=E7=B1=BB=
+=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E9=9A=90=E5=BC=8F=E8=BD=AC=E6=8D=A2">
+
+<h3>=E9=9A=90=E5=BC=8F=E8=BD=AC=E6=8D=A2</h3>
+
+<p>=E9=9A=90=E5=BC=8F=E8=BD=AC=E6=8D=A2=E6=98=AF=E7=B1=BB=E5=9E=8B=E7=B3=BB=
+=E7=BB=9F=E9=87=8C=E4=B8=80=E4=B8=AA=E5=BC=BA=E5=A4=A7=E7=9A=84=E5=8A=9F=E8=
+=83=BD=EF=BC=8C=E4=BD=86=E5=BA=94=E5=BD=93=E8=B0=A8=E6=85=8E=E5=9C=B0=E4=BD=
+=BF=E7=94=A8=E3=80=82=E5=AE=83=E4=BB=AC=E6=9C=89=E5=A4=8D=E6=9D=82=E7=9A=84=
+=E8=A7=A3=E5=86=B3=E8=A7=84=E5=88=99=EF=BC=8C =E4=BD=BF=E5=BE=97=E9=80=9A=
+=E8=BF=87=E7=AE=80=E5=8D=95=E7=9A=84=E8=AF=8D=E6=B3=95=E6=A3=80=E6=9F=A5=E9=
+=A2=86=E4=BC=9A=E5=AE=9E=E9=99=85=E5=8F=91=E7=94=9F=E4=BA=86=E4=BB=80=E4=B9=
+=88=E5=BE=88=E5=9B=B0=E9=9A=BE=E3=80=82=E5=9C=A8=E4=B8=8B=E9=9D=A2=E7=9A=84=
+=E5=9C=BA=E6=99=AF=E4=BD=BF=E7=94=A8=E9=9A=90=E5=BC=8F=E8=BD=AC=E6=8D=A2=E6=
+=98=AFOK=E7=9A=84=EF=BC=9A</p>
+
+<ul>
+<li>=E6=89=A9=E5=B1=95=E6=88=96=E5=A2=9E=E5=8A=A0=E4=B8=80=E4=B8=AAScala=E9=
+=A3=8E=E6=A0=BC=E7=9A=84=E9=9B=86=E5=90=88</li>
+<li>=E9=80=82=E9=85=8D=E6=88=96=E6=89=A9=E5=B1=95=E4=B8=80=E4=B8=AA=E5=AF=
+=B9=E8=B1=A1(pimp my library=E6=A8=A1=E5=BC=8F=EF=BC=89=EF=BC=88=E8=AF=91=
+=E6=B3=A8=E5=8F=82=E8=A7=81=EF=BC=9Ahttp://www.artima.com/weblogs/viewpost.=
+jsp?thread=3D179766)</li>
+<li>=E9=80=9A=E8=BF=87=E6=8F=90=E4=BE=9B=E7=BA=A6=E6=9D=9F=E8=AF=81=E6=8D=
+=AE=E6=9D=A5=E5=8A=A0=E5=BC=BA=E7=B1=BB=E5=9E=8B=E5=AE=89=E5=85=A8=E3=80=82=
+</li>
+<li>=E6=8F=90=E4=BE=9B=E4=BA=86=E7=B1=BB=E5=9E=8B=E7=9A=84=E8=AF=81=E6=8D=
+=AE (typeclassing=EF=BC=8Chaskell=E4=B8=AD=E7=9A=84=E6=A6=82=E5=BF=B5=EF=BC=
+=8C=E6=8C=87=E5=AE=9A=E4=B9=89=E4=B8=80=E7=BB=84=E5=87=BD=E6=95=B0=EF=BC=8C=
+=E5=85=B6=E5=AE=9E=E7=8E=B0=E5=9B=A0=E6=89=80=E7=BB=99=E7=9A=84=E6=95=B0=E6=
+=8D=AE=E7=B1=BB=E5=9E=8B=E4=B8=8D=E5=90=8C=E8=80=8C=E4=B8=8D=E5=90=8C)</li>
+<li>=E7=94=A8=E4=BA=8EManifests (=E6=B3=A8=EF=BC=9AManifest[T]=E5=8C=85=E5=
+=90=AB=E7=B1=BB=E5=9E=8BT=E7=9A=84=E8=BF=90=E8=A1=8C=E6=97=B6=E4=BF=A1=E6=
+=81=AF)</li>
+</ul>
+
+<p>=E5=A6=82=E6=9E=9C=E4=BD=A0=E5=8F=91=E7=8E=B0=E8=87=AA=E5=B7=B1=E5=9C=A8=
+=E7=94=A8=E9=9A=90=E5=BC=8F=E8=BD=AC=E6=8D=A2=EF=BC=8C=E6=80=BB=E8=A6=81=E9=
+=97=AE=E9=97=AE=E8=87=AA=E5=B7=B1=E6=98=AF=E5=90=A6=E4=B8=8D=E4=BD=BF=E7=94=
+=A8=E8=BF=99=E7=A7=8D=E6=96=B9=E5=BC=8F=E4=B9=9F=E5=8F=AF=E4=BB=A5=E8=BE=BE=
+=E5=88=B0=E7=9B=AE=E7=9A=84=E3=80=82</p>
+
+<p>=E4=B8=8D=E8=A6=81=E4=BD=BF=E7=94=A8=E9=9A=90=E5=BC=8F=E8=BD=AC=E6=8D=A2=
+=E5=AF=B9=E4=B8=A4=E4=B8=AA=E7=9B=B8=E4=BC=BC=E7=9A=84=E6=95=B0=E6=8D=AE=E7=
+=B1=BB=E5=9E=8B=E5=81=9A=E8=87=AA=E5=8A=A8=E8=BD=AC=E6=8D=A2(=E4=BE=8B=E5=
+=A6=82=EF=BC=8C=E6=8A=8Alist=E8=BD=AC=E6=8D=A2=E4=B8=BAstream);=E6=98=BE=E7=
+=A4=BA=E5=9C=B0=E5=81=9A=E6=9B=B4=E5=A5=BD=EF=BC=8C=E5=9B=A0=E4=B8=BA=E4=B8=
+=8D=E5=90=8C=E7=B1=BB=E5=9E=8B=E6=9C=89=E4=B8=8D=E5=90=8C=E7=9A=84=E8=AF=AD=
+=E6=84=8F=EF=BC=8C=E8=AF=BB=E8=80=85=E5=BA=94=E8=AF=A5=E6=84=8F=E8=AF=86=E5=
+=88=B0=E8=BF=99=E4=BA=9B=E5=90=AB=E4=B9=89=E3=80=82
+=E8=AF=91=E6=B3=A8=EF=BC=9A 1=EF=BC=89=E4=B8=80=E4=BA=9B=E5=8D=95=E8=AF=8D=
+=E7=9A=84=E6=84=8F=E4=B9=89=E4=B8=8D=E5=90=8C=EF=BC=8C=E4=BD=86=E7=BF=BB=E8=
+=AF=91=E4=B8=BA=E4=B8=AD=E6=96=87=E6=97=B6=E5=8F=AF=E8=83=BD=E7=94=A8=E7=9A=
+=84=E7=9B=B8=E4=BC=BC=E7=9A=84=E8=AF=8D=E8=AF=AD=EF=BC=8C=E6=AF=94=E5=A6=82=
+mutable=EF=BC=8C Immutable =E8=BF=99=E4=B8=A4=E4=B8=AA=E7=BF=BB=E8=AF=91=E4=
+=B8=BA=E5=8F=AF=E5=8F=98=E5=92=8C=E4=B8=8D=E5=8F=AF=E5=8F=98=EF=BC=8C=E5=AE=
+=83=E4=BB=AC=E6=98=AF=E6=8C=87=E6=95=B0=E6=8D=AE=E7=9A=84=E5=8F=AF=E5=8F=98=
+=E4=B8=8E=E4=B8=8D=E5=8F=AF=E5=8F=98=E3=80=82
+variance, invariant =E4=B9=9F=E7=BF=BB=E8=AF=91=E4=B8=BA =E5=8F=AF=E5=8F=98=
+=E5=92=8C=E4=B8=8D=E5=8F=AF=E5=8F=98=EF=BC=8C=EF=BC=88variance=E4=B9=9F=E7=
+=BF=BB=E8=AF=91=E4=B8=BA=E2=80=9C=E5=8F=98=E5=9E=8B=E2=80=9D=EF=BC=89=EF=BC=
+=8C=E5=AE=83=E4=BB=AC=E6=98=AF=E6=8C=87=E7=B1=BB=E5=9E=8B=E7=9A=84=E5=8F=AF=
+=E5=8F=98=E4=B8=8E=E4=B8=8D=E5=8F=AF=E5=8F=98=E3=80=82variance=E6=8C=87=E6=
+=94=AF=E6=8C=81=E5=8D=8F=E5=8F=98=E6=88=96=E9=80=86=E5=8F=98=E7=9A=84=E7=B1=
+=BB=E5=9E=8B=EF=BC=8Cinvariant=E5=88=99=E7=9B=B8=E5=8F=8D=E3=80=82</p>
+
+</a><p><a id=3D"=E7=B1=BB=E5=9E=8B=E5=92=8C=E6=B3=9B=E5=9E=8B-=E9=9A=90=E5=
+=BC=8F=E8=BD=AC=E6=8D=A2"></a><a id=3D"=E9=9B=86=E5=90=88"></a></p><a id=3D=
+"=E9=9B=86=E5=90=88">
+
+<h2>=E9=9B=86=E5=90=88</h2>
+
+<p>Scala=E6=9C=89=E4=B8=80=E4=B8=AA=E9=9D=9E=E5=B8=B8=E9=80=9A=E7=94=A8=EF=
+=BC=8C=E4=B8=B0=E5=AF=8C=EF=BC=8C=E5=BC=BA=E5=A4=A7=EF=BC=8C=E5=8F=AF=E7=BB=
+=84=E5=90=88=E7=9A=84=E9=9B=86=E5=90=88=E5=BA=93=EF=BC=9B=E9=9B=86=E5=90=88=
+=E6=98=AF=E9=AB=98=E9=98=B6=E7=9A=84(high level)=E5=B9=B6=E6=9A=B4=E9=9C=B2=
+=E4=BA=86=E4=B8=80=E5=A4=A7=E5=A5=97=E6=93=8D=E4=BD=9C=E6=96=B9=E6=B3=95=E3=
+=80=82=E5=BE=88=E5=A4=9A=E9=9B=86=E5=90=88=E7=9A=84=E5=A4=84=E7=90=86=E5=92=
+=8C=E8=BD=AC=E6=8D=A2=E5=8F=AF=E4=BB=A5=E8=A2=AB=E8=A1=A8=E8=BE=BE=E7=9A=84=
+=E7=AE=80=E6=B4=81=E5=8F=88=E5=8F=AF=E8=AF=BB=EF=BC=8C=E4=BD=86=E4=B8=8D=E5=
+=AE=A1=E6=85=8E=E5=9C=B0=E7=94=A8=E5=AE=83=E4=BB=AC=E7=9A=84=E5=8A=9F=E8=83=
+=BD=E4=B9=9F=E4=BC=9A=E5=AF=BC=E8=87=B4=E7=9B=B8=E5=8F=8D=E7=9A=84=E7=BB=93=
+=E6=9E=9C=E3=80=82=E6=AF=8F=E4=B8=AAScala=E7=A8=8B=E5=BA=8F=E5=91=98=E5=BA=
+=94=E8=AF=A5=E9=98=85=E8=AF=BB =E9=9B=86=E5=90=88=E8=AE=BE=E8=AE=A1=E6=96=
+=87=E6=A1=A3=EF=BC=9B=E9=80=9A=E8=BF=87=E5=AE=83=E5=8F=AF=E4=BB=A5=E5=BE=88=
+=E5=A5=BD=E5=9C=B0=E6=B4=9E=E5=AF=9F=E9=9B=86=E5=90=88=E5=BA=93=EF=BC=8C=E5=
+=B9=B6=E4=BA=86=E8=A7=A3=E8=AE=BE=E8=AE=A1=E5=8A=A8=E6=9C=BA=E3=80=82</p>
+
+<p>=E6=80=BB=E4=BD=BF=E7=94=A8=E6=9C=80=E7=AE=80=E5=8D=95=E7=9A=84=E9=9B=86=
+=E5=90=88=E6=9D=A5=E6=BB=A1=E8=B6=B3=E4=BD=A0=E7=9A=84=E9=9C=80=E6=B1=82</p=
+>
+
+</a><p><a id=3D"=E9=9B=86=E5=90=88"></a><a id=3D"=E9=9B=86=E5=90=88-=E5=B1=
+=82=E7=BA=A7"></a></p><a id=3D"=E9=9B=86=E5=90=88-=E5=B1=82=E7=BA=A7">
+
+<h3>=E5=B1=82=E7=BA=A7</h3>
+
+<p>=E9=9B=86=E5=90=88=E5=BA=93=E5=BE=88=E5=A4=A7=EF=BC=9A=E9=99=A4=E4=BA=86=
+=E7=B2=BE=E5=BF=83=E8=AE=BE=E8=AE=A1=E7=9A=84=E5=B1=82=E7=BA=A7(Hierarchy)=
+=E2=80=94=E2=80=94=E6=A0=B9=E6=98=AF Traversable[T] =E2=80=94=E2=80=94 =E5=
+=A4=A7=E5=A4=9A=E6=95=B0=E9=9B=86=E5=90=88=E9=83=BD=E6=9C=89=E4=B8=8D=E5=8F=
+=AF=E5=8F=98(immutable)=E5=92=8C=E5=8F=AF=E5=8F=98(mutable)=E4=B8=A4=E7=A7=
+=8D=E5=8F=98=E4=BD=93=E3=80=82=E6=97=A0=E8=AE=BA=E5=85=B6=E5=A4=8D=E6=9D=82=
+=E6=80=A7=EF=BC=8C=E4=B8=8B=E9=9D=A2=E7=9A=84=E5=9B=BE=E8=A1=A8=E5=8C=85=E5=
+=90=AB=E4=BA=86=E5=8F=AF=E5=8F=98=E5=92=8C=E4=B8=8D=E5=8F=AF=E5=8F=98=E9=9B=
+=86=E5=90=88=E5=B1=82=E7=BA=A7=E7=9A=84=E9=87=8D=E8=A6=81=E5=B7=AE=E5=BC=82=
+=E3=80=82</p>
+
+<p><img src=3D"http://twitter.github.io/effectivescala/coll.png" style=3D"m=
+argin-left: 3em;"></p>
+
+<p class=3D"LP">Iterable[T] =E6=98=AF=E6=89=80=E6=9C=89=E5=8F=AF=E9=81=8D=
+=E5=8E=86=E7=9A=84=E9=9B=86=E5=90=88=EF=BC=8C=E5=AE=83=E6=8F=90=E4=BE=9B=E4=
+=BA=86=E8=BF=AD=E4=BB=A3=E7=9A=84=E6=96=B9=E6=B3=95(foreach)=E3=80=82Seq[T]=
+ =E6=98=AF=E6=9C=89=E5=BA=8F=E9=9B=86=E5=90=88=EF=BC=8CSet[T]=E6=98=AF=E6=
+=95=B0=E5=AD=A6=E4=B8=8A=E7=9A=84=E9=9B=86=E5=90=88(=E6=97=A0=E5=BA=8F=E4=
+=B8=94=E4=B8=8D=E9=87=8D=E5=A4=8D)=EF=BC=8CMap[T]=E6=98=AF=E5=85=B3=E8=81=
+=94=E6=95=B0=E7=BB=84=EF=BC=8C=E4=B9=9F=E6=98=AF=E6=97=A0=E5=BA=8F=E7=9A=84=
+=E3=80=82</p>
+
+</a><p><a id=3D"=E9=9B=86=E5=90=88-=E5=B1=82=E7=BA=A7"></a><a id=3D"=E9=9B=
+=86=E5=90=88-=E9=9B=86=E5=90=88=E7=9A=84=E4=BD=BF=E7=94=A8"></a></p><a id=
+=3D"=E9=9B=86=E5=90=88-=E9=9B=86=E5=90=88=E7=9A=84=E4=BD=BF=E7=94=A8">
+
+<h3>=E9=9B=86=E5=90=88=E7=9A=84=E4=BD=BF=E7=94=A8</h3>
+
+<p><em>=E4=BC=98=E5=85=88=E4=BD=BF=E7=94=A8=E4=B8=8D=E5=8F=AF=E5=8F=98=E9=
+=9B=86=E5=90=88</em>=E3=80=82=E4=B8=8D=E5=8F=AF=E5=8F=98=E9=9B=86=E5=90=88=
+=E9=80=82=E7=94=A8=E4=BA=8E=E5=A4=A7=E5=A4=9A=E6=95=B0=E6=83=85=E5=86=B5=EF=
+=BC=8C=E8=AE=A9=E7=A8=8B=E5=BA=8F=E6=98=93=E4=BA=8E=E7=90=86=E8=A7=A3=E5=92=
+=8C=E6=8E=A8=E6=96=AD=EF=BC=8C=E5=9B=A0=E4=B8=BA=E5=AE=83=E4=BB=AC=E6=98=AF=
+=E5=BC=95=E7=94=A8=E9=80=8F=E6=98=8E=E7=9A=84( referentially transparent )=
+=E5=9B=A0=E6=AD=A4=E7=BC=BA=E7=9C=81=E4=B9=9F=E6=98=AF=E7=BA=BF=E7=A8=8B=E5=
+=AE=89=E5=85=A8=E7=9A=84=E3=80=82</p>
+
+<p><em>=E4=BD=BF=E7=94=A8=E5=8F=AF=E5=8F=98=E9=9B=86=E5=90=88=E6=97=B6=EF=
+=BC=8C=E6=98=8E=E7=A1=AE=E5=9C=B0=E5=BC=95=E7=94=A8=E5=8F=AF=E5=8F=98=E9=9B=
+=86=E5=90=88=E7=9A=84=E5=91=BD=E5=90=8D=E7=A9=BA=E9=97=B4</em>=E3=80=82=E4=
+=B8=8D=E8=A6=81=E7=94=A8=E4=BD=BF=E7=94=A8import scala.collection.mutable._=
+ =E7=84=B6=E5=90=8E=E5=BC=95=E7=94=A8 Set =EF=BC=8C=E5=BA=94=E8=AF=A5=E7=94=
+=A8=E4=B8=8B=E9=9D=A2=E7=9A=84=E6=96=B9=E5=BC=8F=E6=9B=BF=E4=BB=A3=EF=BC=9A=
+</p>
+
+<pre><code> import scala.collections.mutable
+ val set =3D mutable.Set()
+</code></pre>
+
+<p class=3D"LP">=E8=BF=99=E6=A0=B7=E5=B0=B1=E5=BE=88=E6=98=8E=E7=A1=AE=E5=
+=9C=A8=E4=BD=BF=E7=94=A8=E4=B8=80=E4=B8=AA=E5=8F=AF=E5=8F=98=E9=9B=86=E5=90=
+=88=E3=80=82</p>
+
+<p><em>=E4=BD=BF=E7=94=A8=E9=9B=86=E5=90=88=E7=B1=BB=E5=9E=8B=E7=BC=BA=E7=
+=9C=81=E7=9A=84=E6=9E=84=E9=80=A0=E5=87=BD=E6=95=B0</em>=E3=80=82=E6=AF=8F=
+=E5=BD=93=E4=BD=A0=E9=9C=80=E8=A6=81=E4=B8=80=E4=B8=AA=E6=9C=89=E5=BA=8F=E7=
+=9A=84=E5=BA=8F=E5=88=97(=E4=B8=8D=E9=9C=80=E8=A6=81=E9=93=BE=E8=A1=A8=E8=
+=AF=AD=E4=B9=89)=EF=BC=8C=E7=94=A8 Seq() =E7=AD=89=E8=AF=B8=E5=A6=82=E6=AD=
+=A4=E7=B1=BB=E7=9A=84=E6=96=B9=E6=B3=95=E6=9E=84=E9=80=A0=EF=BC=9A</p>
+
+<pre><code> val seq =3D Seq(1, 2, 3)
+ val set =3D Set(1, 2, 3)
+ val map =3D Map(1 -&gt; "one", 2 -&gt; "two", 3 -&gt; "three")
+</code></pre>
+
+<p class=3D"LP">=E8=BF=99=E7=A7=8D=E9=A3=8E=E6=A0=BC=E4=BB=8E=E8=AF=AD=E6=
+=84=8F=E4=B8=8A=E5=88=86=E7=A6=BB=E4=BA=86=E9=9B=86=E5=90=88=E4=B8=8E=E5=AE=
+=83=E7=9A=84=E5=AE=9E=E7=8E=B0=EF=BC=8C=E8=AE=A9=E9=9B=86=E5=90=88=E5=BA=93=
+=E4=BD=BF=E7=94=A8=E6=9B=B4=E9=80=82=E5=BD=93=E7=9A=84=E7=B1=BB=E5=9E=8B=EF=
+=BC=9A=E4=BD=A0=E9=9C=80=E8=A6=81Map=EF=BC=8C=E8=80=8C=E4=B8=8D=E6=98=AF=E5=
+=BF=85=E9=A1=BB=E4=B8=80=E4=B8=AA=E7=BA=A2=E9=BB=91=E6=A0=91(Red-Black Tree=
+=EF=BC=8C=E6=B3=A8=EF=BC=9A=E7=BA=A2=E9=BB=91=E6=A0=91TreeMap=E6=98=AFMap=
+=E7=9A=84=E5=AE=9E=E7=8E=B0=E8=80=85)</p>
+
+<p>=E6=AD=A4=E5=A4=96=EF=BC=8C=E9=BB=98=E8=AE=A4=E7=9A=84=E6=9E=84=E9=80=A0=
+=E5=87=BD=E6=95=B0=E9=80=9A=E5=B8=B8=E4=BD=BF=E7=94=A8=E4=B8=93=E6=9C=89=E7=
+=9A=84=E8=A1=A8=E8=BE=BE=E5=BC=8F=EF=BC=8C=E4=BE=8B=E5=A6=82=EF=BC=9AMap() =
+=E5=B0=86=E4=BD=BF=E7=94=A8=E6=9C=893=E4=B8=AA=E6=88=90=E5=91=98=E7=9A=84=
+=E5=AF=B9=E8=B1=A1(=E4=B8=93=E7=94=A8=E7=9A=84Map3=E7=B1=BB)=E6=9D=A5=E6=98=
+=A0=E5=B0=843=E4=B8=AAkeys=E3=80=82</p>
+
+<p>=E4=B8=8A=E9=9D=A2=E7=9A=84=E6=8E=A8=E8=AE=BA=E6=98=AF=EF=BC=9A=E5=9C=A8=
+=E4=BD=A0=E8=87=AA=E5=B7=B1=E7=9A=84=E6=96=B9=E6=B3=95=E5=92=8C=E6=9E=84=E9=
+=80=A0=E5=87=BD=E6=95=B0=E9=87=8C=EF=BC=8C=E9=80=82=E5=BD=93=E5=9C=B0=E6=8E=
+=A5=E5=8F=97=E6=9C=80=E5=AE=BD=E6=B3=9B=E7=9A=84=E9=9B=86=E5=90=88=E7=B1=BB=
+=E5=9E=8B=E3=80=82=E9=80=9A=E5=B8=B8=E5=8F=AF=E4=BB=A5=E5=BD=92=E7=BB=93=E4=
+=B8=BAIterable, Seq, Set, =E6=88=96 Map=E4=B8=AD=E7=9A=84=E4=B8=80=E4=B8=AA=
+=E3=80=82=E5=A6=82=E6=9E=9C=E4=BD=A0=E7=9A=84=E6=96=B9=E6=B3=95=E9=9C=80=E8=
+=A6=81=E4=B8=80=E4=B8=AA sequence=EF=BC=8C=E4=BD=BF=E7=94=A8 Seq[T]=EF=BC=
+=8C=E8=80=8C=E4=B8=8D=E6=98=AFList[T]</p>
+
+<!--
+something about buffers for construction?
+anything about streams?
+-->
+
+</a><p><a id=3D"=E9=9B=86=E5=90=88-=E9=9B=86=E5=90=88=E7=9A=84=E4=BD=BF=E7=
+=94=A8"></a><a id=3D"=E9=9B=86=E5=90=88-=E9=A3=8E=E6=A0=BC"></a></p><a id=
+=3D"=E9=9B=86=E5=90=88-=E9=A3=8E=E6=A0=BC">
+
+<h3>=E9=A3=8E=E6=A0=BC</h3>
+
+<p>=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B=E9=BC=93=E5=8A=B1=E4=BD=BF=
+=E7=94=A8=E6=B5=81=E6=B0=B4=E7=BA=BF=E8=BD=AC=E6=8D=A2=E5=B0=86=E4=B8=80=E4=
+=B8=AA=E4=B8=8D=E5=8F=AF=E5=8F=98=E7=9A=84=E9=9B=86=E5=90=88=E5=A1=91=E9=80=
+=A0=E4=B8=BA=E6=83=B3=E8=A6=81=E7=9A=84=E7=BB=93=E6=9E=9C=E3=80=82=E8=BF=99=
+=E5=B8=B8=E5=B8=B8=E4=BC=9A=E6=9C=89=E9=9D=9E=E5=B8=B8=E7=AE=80=E6=98=8E=E7=
+=9A=84=E6=96=B9=E6=A1=88=EF=BC=8C=E4=BD=86=E4=B9=9F=E5=AE=B9=E6=98=93=E8=BF=
+=B7=E7=B3=8A=E8=AF=BB=E8=80=85=E2=80=94=E2=80=94=E5=BE=88=E9=9A=BE=E9=A2=86=
+=E6=82=9F=E4=BD=9C=E8=80=85=E7=9A=84=E6=84=8F=E5=9B=BE=EF=BC=8C=E6=88=96=E8=
+=B7=9F=E8=B8=AA=E6=89=80=E6=9C=89=E9=9A=90=E5=90=AB=E7=9A=84=E4=B8=AD=E9=97=
+=B4=E7=BB=93=E6=9E=9C=E3=80=82=E4=BE=8B=E5=A6=82=EF=BC=8C=E6=88=91=E4=BB=AC=
+=E6=83=B3=E8=A6=81=E4=BB=8E=E4=B8=80=E7=BB=84=E8=AF=AD=E8=A8=80=E4=B8=AD=E6=
+=B1=87=E9=9B=86=E4=B8=8D=E5=90=8C=E7=9A=84=E7=A8=8B=E5=BA=8F=E8=AF=AD=E8=A8=
+=80=E7=9A=84=E6=8A=95=E7=A5=A8=EF=BC=8C=E6=8C=89=E7=85=A7=E5=BE=97=E7=A5=A8=
+=E7=9A=84=E9=A1=BA=E5=BA=8F=E6=98=BE=E7=A4=BA(=E8=AF=AD=E8=A8=80=EF=BC=8C=
+=E7=A5=A8=E6=95=B0)=EF=BC=9A</p>
+
+<pre><code> val votes =3D Seq(("scala", 1), ("java", 4), ("scala", 10), ("s=
+cala", 1), ("python", 10))
+ val orderedVotes =3D votes
+   .groupBy(_._1)
+   .map { case (which, counts) =3D&gt;
+     (which, counts.foldLeft(0)(_ + _._2))
+   }.toSeq
+   .sortBy(_._2)
+   .reverse
+</code></pre>
+
+<p class=3D"LP">=E4=B8=8A=E9=9D=A2=E7=9A=84=E4=BB=A3=E7=A0=81=E7=AE=80=E6=
+=B4=81=E5=B9=B6=E4=B8=94=E6=AD=A3=E7=A1=AE=EF=BC=8C=E4=BD=86=E5=87=A0=E4=B9=
+=8E=E6=AF=8F=E4=B8=AA=E8=AF=BB=E8=80=85=E9=83=BD=E4=B8=8D=E8=83=BD=E7=90=86=
+=E8=A7=A3=E4=BD=9C=E8=80=85=E7=9A=84=E5=8E=9F=E6=9C=AC=E6=84=8F=E5=9B=BE=E3=
+=80=82=E4=B8=80=E4=B8=AA=E7=AD=96=E7=95=A5=E6=98=AF=E5=A3=B0=E6=98=8E=E4=B8=
+=AD=E9=97=B4=E7=BB=93=E6=9E=9C=E5=92=8C=E5=8F=82=E6=95=B0=EF=BC=9A</p>
+
+<pre><code> val votesByLang =3D votes groupBy { case (lang, _) =3D&gt; lang=
+ }
+ val sumByLang =3D votesByLang map { case (lang, counts) =3D&gt;
+   val countsOnly =3D counts map { case (_, count) =3D&gt; count }
+   (lang, countsOnly.sum)
+ }
+ val orderedVotes =3D sumByLang.toSeq
+   .sortBy { case (_, count) =3D&gt; count }
+   .reverse
+</code></pre>
+
+<p class=3D"LP">=E4=BB=A3=E7=A0=81=E4=B9=9F=E5=90=8C=E6=A0=B7=E7=AE=80=E6=
+=B4=81=EF=BC=8C=E4=BD=86=E6=9B=B4=E6=B8=85=E6=99=B0=E7=9A=84=E8=A1=A8=E8=BE=
+=BE=E4=BA=86=E8=BD=AC=E6=8D=A2=E7=9A=84=E5=8F=91=E7=94=9F(=E9=80=9A=E8=BF=
+=87=E5=91=BD=E5=90=8D=E4=B8=AD=E9=97=B4=E5=80=BC)=EF=BC=8C=E5=92=8C=E6=AD=
+=A3=E5=9C=A8=E6=93=8D=E4=BD=9C=E7=9A=84=E6=95=B0=E6=8D=AE=E7=9A=84=E7=BB=93=
+=E6=9E=84(=E9=80=9A=E8=BF=87=E5=91=BD=E5=90=8D=E5=8F=82=E6=95=B0)=E3=80=82=
+=E5=A6=82=E6=9E=9C=E4=BD=A0=E6=8B=85=E5=BF=83=E8=BF=99=E7=A7=8D=E9=A3=8E=E6=
+=A0=BC=E6=B1=A1=E6=9F=93=E4=BA=86=E5=91=BD=E5=90=8D=E7=A9=BA=E9=97=B4=EF=BC=
+=8C=E7=94=A8=E5=A4=A7=E6=8B=AC=E5=8F=B7{}=E6=9D=A5=E5=B0=86=E8=A1=A8=E8=BE=
+=BE=E5=BC=8F=E5=88=86=E7=BB=84:</p>
+
+<pre><code> val orderedVotes =3D {
+   val votesByLang =3D ...
+   ...
+ }
+</code></pre>
+
+</a><p><a id=3D"=E9=9B=86=E5=90=88-=E9=A3=8E=E6=A0=BC"></a><a id=3D"=E9=9B=
+=86=E5=90=88-=E6=80=A7=E8=83=BD"></a></p><a id=3D"=E9=9B=86=E5=90=88-=E6=80=
+=A7=E8=83=BD">
+
+<h3>=E6=80=A7=E8=83=BD</h3>
+
+<p>=E9=AB=98=E9=98=B6=E9=9B=86=E5=90=88=E5=BA=93=EF=BC=88=E9=80=9A=E5=B8=B8=
+=E4=B9=9F=E4=BC=B4=E9=9A=8F=E9=AB=98=E9=98=B6=E6=9E=84=E9=80=A0=EF=BC=89=E4=
+=BD=BF=E6=8E=A8=E7=90=86=E6=80=A7=E8=83=BD=E6=9B=B4=E5=8A=A0=E5=9B=B0=E9=9A=
+=BE=EF=BC=9A=E4=BD=A0=E8=B6=8A=E5=81=8F=E7=A6=BB=E7=9B=B4=E6=8E=A5=E6=8C=87=
+=E7=A4=BA=E8=AE=A1=E7=AE=97=E6=9C=BA=E2=80=94=E2=80=94=E5=8D=B3=E5=91=BD=E4=
+=BB=A4=E5=BC=8F=E9=A3=8E=E6=A0=BC=E2=80=94=E2=80=94=E5=B0=B1=E8=B6=8A=E9=9A=
+=BE=E5=87=86=E7=A1=AE=E9=A2=84=E6=B5=8B=E4=B8=80=E6=AE=B5=E4=BB=A3=E7=A0=81=
+=E7=9A=84=E6=80=A7=E8=83=BD=E5=BD=B1=E5=93=8D=E3=80=82=E7=84=B6=E8=80=8C=E6=
+=8E=A8=E7=90=86=E6=AD=A3=E7=A1=AE=E6=80=A7=E9=80=9A=E5=B8=B8=E5=BE=88=E5=AE=
+=B9=E6=98=93=EF=BC=9B=E5=8F=AF=E8=AF=BB=E6=80=A7=E4=B9=9F=E6=98=AF=E5=8A=A0=
+=E5=BC=BA=E7=9A=84=E3=80=82=E5=9C=A8Java=E8=BF=90=E8=A1=8C=E6=97=B6=E4=BD=
+=BF=E7=94=A8Scala=E4=BD=BF=E5=BE=97=E6=83=85=E5=86=B5=E6=9B=B4=E5=8A=A0=E5=
+=A4=8D=E6=9D=82=EF=BC=8CScala=E5=AF=B9=E4=BD=A0=E9=9A=90=E8=97=8F=E4=BA=86=
+=E8=A3=85=E7=AE=B1(boxing)/=E6=8B=86=E7=AE=B1(unboxing)=E6=93=8D=E4=BD=9C=
+=EF=BC=8C=E5=8F=AF=E8=83=BD=E5=BC=95=E5=8F=91=E4=B8=A5=E9=87=8D=E7=9A=84=E6=
+=80=A7=E8=83=BD=E6=88=96=E5=86=85=E5=AD=98=E7=A9=BA=E9=97=B4=E9=97=AE=E9=A2=
+=98=E3=80=82</p>
+
+</a><p><a id=3D"=E9=9B=86=E5=90=88-=E6=80=A7=E8=83=BD">=E5=9C=A8=E5=85=B3=
+=E6=B3=A8=E4=BA=8E=E4=BD=8E=E5=B1=82=E6=AC=A1=E7=9A=84=E7=BB=86=E8=8A=82=E4=
+=B9=8B=E5=89=8D=EF=BC=8C=E7=A1=AE=E4=BF=9D=E4=BD=A0=E4=BD=BF=E7=94=A8=E7=9A=
+=84=E9=9B=86=E5=90=88=E9=80=82=E5=90=88=E4=BD=A0=E3=80=82 =E7=A1=AE=E4=BF=
+=9D=E4=BD=A0=E7=9A=84=E6=95=B0=E6=8D=AE=E7=BB=93=E6=9E=84=E6=B2=A1=E6=9C=89=
+=E4=B8=8D=E6=9C=9F=E6=9C=9B=E7=9A=84=E6=B8=90=E8=BF=9B=E5=A4=8D=E6=9D=82=E5=
+=BA=A6=E3=80=82=E5=90=84=E7=A7=8DScala=E9=9B=86=E5=90=88=E7=9A=84=E5=A4=8D=
+=E6=9D=82=E6=80=A7=E6=8F=8F=E8=BF=B0=E5=9C=A8</a><a href=3D"http://www.scal=
+a-lang.org/docu/files/collections-api/collections_40.html">=E8=BF=99=E5=84=
+=BF</a>=E3=80=82</p>
+
+<p>=E6=80=A7=E8=83=BD=E4=BC=98=E5=8C=96=E7=9A=84=E7=AC=AC=E4=B8=80=E6=9D=A1=
+=E5=8E=9F=E5=88=99=E6=98=AF=E7=90=86=E8=A7=A3=E4=BD=A0=E7=9A=84=E5=BA=94=E7=
+=94=A8=E4=B8=BA=E4=BB=80=E4=B9=88=E8=BF=99=E4=B9=88=E6=85=A2=E3=80=82=E4=B8=
+=8D=E8=A6=81=E4=BD=BF=E7=94=A8=E7=A9=BA=E6=95=B0=E6=8D=AE=E6=93=8D=E4=BD=9C=
+=E3=80=82=E5=9C=A8=E6=89=A7=E8=A1=8C=E5=89=8D=E5=88=86=E6=9E=90<a class=3D"=
+noteref" id=3D"fnref1" href=3D"http://twitter.github.io/effectivescala/inde=
+x-cn.html#fn1" title=3D"Jump to note 1">[1]</a>=E4=BD=A0=E7=9A=84=E5=BA=94=
+=E7=94=A8=E3=80=82=E5=85=B3=E6=B3=A8=E7=9A=84=E7=AC=AC=E4=B8=80=E7=82=B9=E6=
+=98=AF=E7=83=AD=E5=BE=AA=E7=8E=AF(hot loops) =E5=92=8C=E5=A4=A7=E5=9E=8B=E7=
+=9A=84=E6=95=B0=E6=8D=AE=E7=BB=93=E6=9E=84=E3=80=82=E8=BF=87=E5=BA=A6=E5=85=
+=B3=E6=B3=A8=E4=BC=98=E5=8C=96=E9=80=9A=E5=B8=B8=E6=98=AF=E6=B5=AA=E8=B4=B9=
+=E7=B2=BE=E5=8A=9B=E3=80=82=E8=AE=B0=E4=BD=8FKnuth(=E9=AB=98=E5=BE=B7=E7=BA=
+=B3)=E7=9A=84=E6=A0=BC=E8=A8=80=EF=BC=9A=E2=80=9C=E8=BF=87=E6=97=A9=E4=BC=
+=98=E5=8C=96=E6=98=AF=E4=B8=87=E6=81=B6=E4=B9=8B=E6=BA=90=E2=80=9D=E3=80=82=
+</p>
+
+<p>=E5=A6=82=E6=9E=9C=E6=98=AF=E9=9C=80=E8=A6=81=E6=9B=B4=E9=AB=98=E6=80=A7=
+=E8=83=BD=E6=88=96=E8=80=85=E7=A9=BA=E9=97=B4=E6=95=88=E7=8E=87=E7=9A=84=E5=
+=9C=BA=E6=99=AF=EF=BC=8C=E9=80=9A=E5=B8=B8=E6=9B=B4=E9=80=82=E5=90=88=E4=BD=
+=BF=E7=94=A8=E4=BD=8E=E7=BA=A7=E7=9A=84=E9=9B=86=E5=90=88=E3=80=82=E5=AF=B9=
+=E5=A4=A7=E5=BA=8F=E5=88=97=E4=BD=BF=E7=94=A8=E6=95=B0=E7=BB=84=E6=9B=BF=E4=
+=BB=A3=E5=88=97=E8=A1=A8(List) (=E4=B8=8D=E5=8F=AF=E5=8F=98Vector=E6=8F=90=
+=E4=BE=9B=E4=BA=86=E4=B8=80=E4=B8=AA=E6=8C=87=E7=A7=B0=E9=80=8F=E6=98=8E=E7=
+=9A=84=E8=BD=AC=E6=8D=A2=E5=88=B0=E6=95=B0=E7=BB=84=E7=9A=84=E6=8E=A5=E5=8F=
+=A3) =EF=BC=8C=E5=B9=B6=E8=80=83=E8=99=91=E4=BD=BF=E7=94=A8buffers=E6=9B=BF=
+=E4=BB=A3=E7=9B=B4=E6=8E=A5=E5=BA=8F=E5=88=97=E7=9A=84=E6=9E=84=E9=80=A0=E6=
+=9D=A5=E6=8F=90=E9=AB=98=E6=80=A7=E8=83=BD=E3=80=82</p>
+
+<p><a id=3D"=E9=9B=86=E5=90=88-Java=E9=9B=86=E5=90=88"></a></p><a id=3D"=E9=
+=9B=86=E5=90=88-Java=E9=9B=86=E5=90=88">
+
+<h3>Java=E9=9B=86=E5=90=88</h3>
+
+<p>=E4=BD=BF=E7=94=A8 scala.collection.JavaConverters =E4=B8=8EJava=E9=9B=
+=86=E5=90=88=E4=BA=A4=E4=BA=92=E3=80=82=E5=AE=83=E6=9C=89=E4=B8=80=E7=B3=BB=
+=E5=88=97=E7=9A=84=E9=9A=90=E5=BC=8F=E8=BD=AC=E6=8D=A2=EF=BC=8C=E6=B7=BB=E5=
+=8A=A0=E4=BA=86asJava=E5=92=8CasScala=E7=9A=84=E8=BD=AC=E6=8D=A2=E6=96=B9=
+=E6=B3=95=E3=80=82=E4=BD=BF=E7=94=A8=E5=AE=83=E4=BB=AC=E8=BF=99=E4=BA=9B=E6=
+=96=B9=E6=B3=95=E7=A1=AE=E4=BF=9D=E8=BD=AC=E6=8D=A2=E6=98=AF=E6=98=BE=E5=BC=
+=8F=E7=9A=84=EF=BC=8C=E6=9C=89=E5=8A=A9=E4=BA=8E=E9=98=85=E8=AF=BB=EF=BC=9A=
+</p>
+
+<pre><code> import scala.collection.JavaConverters._
+
+ val list: java.util.List[Int] =3D Seq(1,2,3,4).asJava
+ val buffer: scala.collection.mutable.Buffer[Int] =3D list.asScala
+</code></pre>
+
+</a><p><a id=3D"=E9=9B=86=E5=90=88-Java=E9=9B=86=E5=90=88"></a><a id=3D"=E5=
+=B9=B6=E5=8F=91"></a></p><a id=3D"=E5=B9=B6=E5=8F=91">
+
+<h2>=E5=B9=B6=E5=8F=91</h2>
+
+<p>=E7=8E=B0=E4=BB=A3=E6=9C=8D=E5=8A=A1=E6=98=AF=E9=AB=98=E5=BA=A6=E5=B9=B6=
+=E5=8F=91=E7=9A=84=E2=80=94=E2=80=94 =E6=9C=8D=E5=8A=A1=E5=99=A8=E9=80=9A=
+=E5=B8=B8=E6=98=AF=E5=9C=A810=E2=80=93100=E7=A7=92=E5=86=85=E5=B9=B6=E5=88=
+=97=E4=B8=8A=E5=8D=83=E4=B8=AA=E5=90=8C=E6=97=B6=E7=9A=84=E6=93=8D=E4=BD=9C=
+=E2=80=94=E2=80=94=E5=A4=84=E7=90=86=E9=9A=90=E5=90=AB=E7=9A=84=E5=A4=8D=E6=
+=9D=82=E6=80=A7=E6=98=AF=E5=88=9B=E4=BD=9C=E5=81=A5=E5=A3=AE=E7=B3=BB=E7=BB=
+=9F=E8=BD=AF=E4=BB=B6=E7=9A=84=E4=B8=AD=E5=BF=83=E4=B8=BB=E9=A2=98=E3=80=82=
+</p>
+
+<p><em>=E7=BA=BF=E7=A8=8B</em>=E6=8F=90=E4=BE=9B=E4=BA=86=E4=B8=80=E7=A7=8D=
+=E8=A1=A8=E8=BE=BE=E5=B9=B6=E5=8F=91=E7=9A=84=E6=96=B9=E5=BC=8F=EF=BC=9A=E5=
+=AE=83=E4=BB=AC=E7=BB=99=E4=BD=A0=E7=8B=AC=E7=AB=8B=E7=9A=84=EF=BC=8C=E5=A0=
+=86=E5=85=B1=E4=BA=AB=E7=9A=84(heap-sharing)=E7=94=B1=E6=93=8D=E4=BD=9C=E7=
+=B3=BB=E7=BB=9F=E8=B0=83=E5=BA=A6=E7=9A=84=E6=89=A7=E8=A1=8C=E4=B8=8A=E4=B8=
+=8B=E6=96=87=E3=80=82=E7=84=B6=E8=80=8C=EF=BC=8C=E5=9C=A8Java=E9=87=8C=E7=
+=BA=BF=E7=A8=8B=E7=9A=84=E5=88=9B=E5=BB=BA=E6=98=AF=E6=98=82=E8=B4=B5=E7=9A=
+=84=EF=BC=8C=E6=98=AF=E4=B8=80=E7=A7=8D=E5=BF=85=E9=A1=BB=E6=89=98=E7=AE=A1=
+=E7=9A=84=E8=B5=84=E6=BA=90=EF=BC=8C=E9=80=9A=E5=B8=B8=E5=80=9F=E5=8A=A9=E4=
+=BA=8E=E7=BA=BF=E7=A8=8B=E6=B1=A0=E3=80=82=E8=BF=99=E5=AF=B9=E7=A8=8B=E5=BA=
+=8F=E5=91=98=E5=88=9B=E9=80=A0=E4=BA=86=E9=A2=9D=E5=A4=96=E7=9A=84=E5=A4=8D=
+=E6=9D=82=EF=BC=8C=E4=B9=9F=E9=80=A0=E6=88=90=E9=AB=98=E5=BA=A6=E7=9A=84=E8=
+=80=A6=E5=90=88=EF=BC=9A=E5=BE=88=E9=9A=BE=E4=BB=8E=E6=89=80=E4=BD=BF=E7=94=
+=A8=E7=9A=84=E5=9F=BA=E7=A1=80=E8=B5=84=E6=BA=90=E4=B8=AD=E5=88=86=E7=A6=BB=
+=E5=BA=94=E7=94=A8=E9=80=BB=E8=BE=91=E3=80=82</p>
+
+<p>=E5=BD=93=E5=88=9B=E5=BB=BA=E9=AB=98=E5=BA=A6=E5=88=86=E6=95=A3(fan-out)=
+=E7=9A=84=E6=9C=8D=E5=8A=A1=E6=97=B6=E8=BF=99=E7=A7=8D=E5=A4=8D=E6=9D=82=E5=
+=BA=A6=E5=B0=A4=E5=85=B6=E6=98=8E=E6=98=BE=EF=BC=9A =E6=AF=8F=E4=B8=AA=E8=
+=BE=93=E5=85=A5=E8=AF=B7=E6=B1=82=E5=AF=BC=E8=87=B4=E4=B8=80=E5=A4=A7=E6=89=
+=B9=E5=AF=B9=E5=8F=A6=E4=B8=80=E5=B1=82=E7=B3=BB=E7=BB=9F=E7=9A=84=E8=AF=B7=
+=E6=B1=82=E3=80=82=E5=9C=A8=E8=BF=99=E4=BA=9B=E7=B3=BB=E7=BB=9F=E4=B8=AD=EF=
+=BC=8C=E7=BA=BF=E7=A8=8B=E6=B1=A0=E5=BF=85=E9=A1=BB=E8=A2=AB=E6=89=98=E7=AE=
+=A1=E4=BB=A5=E4=BE=BF=E6=A0=B9=E6=8D=AE=E6=AF=8F=E4=B8=80=E5=B1=82=E8=AF=B7=
+=E6=B1=82=E7=9A=84=E6=AF=94=E4=BE=8B=E6=9D=A5=E5=B9=B3=E8=A1=A1=EF=BC=9A=E4=
+=B8=80=E4=B8=AA=E7=BA=BF=E7=A8=8B=E6=B1=A0=E7=9A=84=E7=AE=A1=E7=90=86=E4=B8=
+=8D=E5=96=84=E4=BC=9A=E5=AF=BC=E8=87=B4=E5=8F=A6=E4=B8=80=E4=B8=AA=E7=BA=BF=
+=E7=A8=8B=E6=B1=A0=E4=B9=9F=E5=87=BA=E7=8E=B0=E9=97=AE=E9=A2=98=E3=80=82</p=
+>
+
+<p>=E4=B8=80=E4=B8=AA=E5=81=A5=E5=A3=AE=E7=B3=BB=E7=BB=9F=E5=BF=85=E9=A1=BB=
+=E8=80=83=E8=99=91=E8=B6=85=E6=97=B6=E5=92=8C=E5=8F=96=E6=B6=88=EF=BC=8C=E4=
+=B8=A4=E8=80=85=E9=83=BD=E9=9C=80=E8=A6=81=E5=BC=95=E5=85=A5=E6=9B=B4=E5=A4=
+=9A=E2=80=9C=E6=8E=A7=E5=88=B6=E2=80=9D=E7=BA=BF=E7=A8=8B=EF=BC=8C=E4=BD=BF=
+=E9=97=AE=E9=A2=98=E6=9B=B4=E5=8A=A0=E5=A4=8D=E6=9D=82=E3=80=82=E6=B3=A8=E6=
+=84=8F=E8=8B=A5=E7=BA=BF=E7=A8=8B=E5=BE=88=E5=BB=89=E4=BB=B7=E8=BF=99=E4=BA=
+=9B=E9=97=AE=E9=A2=98=E4=B9=9F=E5=B0=86=E4=BC=9A=E8=A2=AB=E5=89=8A=E5=BC=B1=
+=EF=BC=9A=E4=B8=8D=E5=86=8D=E9=9C=80=E8=A6=81=E4=B8=80=E4=B8=AA=E7=BA=BF=E7=
+=A8=8B=E6=B1=A0=EF=BC=8C=E8=B6=85=E6=97=B6=E7=9A=84=E7=BA=BF=E7=A8=8B=E5=B0=
+=86=E8=A2=AB=E4=B8=A2=E5=BC=83=EF=BC=8C=E4=B8=8D=E5=86=8D=E9=9C=80=E8=A6=81=
+=E9=A2=9D=E5=A4=96=E7=9A=84=E8=B5=84=E6=BA=90=E7=AE=A1=E7=90=86=E3=80=82</p=
+>
+
+<p>=E5=9B=A0=E6=AD=A4=EF=BC=8C=E8=B5=84=E6=BA=90=E7=AE=A1=E7=90=86=E5=8D=B1=
+=E5=AE=B3=E4=BA=86=E6=A8=A1=E5=9D=97=E5=8C=96=E3=80=82</p>
+
+</a><p><a id=3D"=E5=B9=B6=E5=8F=91"></a><a id=3D"=E5=B9=B6=E5=8F=91-Future"=
+></a></p><a id=3D"=E5=B9=B6=E5=8F=91-Future">
+
+<h3>Future</h3>
+
+<p>=E4=BD=BF=E7=94=A8Future=E7=AE=A1=E7=90=86=E5=B9=B6=E5=8F=91=E3=80=82=E5=
+=AE=83=E4=BB=AC=E5=B0=86=E5=B9=B6=E5=8F=91=E6=93=8D=E4=BD=9C=E4=BB=8E=E8=B5=
+=84=E6=BA=90=E7=AE=A1=E7=90=86=E9=87=8C=E8=A7=A3=E8=80=A6=E5=87=BA=E6=9D=A5=
+=EF=BC=9A=E4=BE=8B=E5=A6=82=EF=BC=8CFinagle=EF=BC=88=E8=AF=91=E6=B3=A8=EF=
+=BC=9Atwitter=E7=9A=84=E4=B8=80=E4=B8=AARFC=E6=A1=86=E6=9E=B6=EF=BC=89=E4=
+=BB=A5=E6=9C=89=E6=95=88=E7=9A=84=E6=96=B9=E5=BC=8F=E5=9C=A8=E5=B0=91=E9=87=
+=8F=E7=BA=BF=E7=A8=8B=E4=B8=8A=E5=AE=9E=E7=8E=B0=E5=B9=B6=E5=8F=91=E6=93=8D=
+=E4=BD=9C=E7=9A=84=E5=A4=8D=E7=94=A8=E3=80=82Scala=E6=9C=89=E4=B8=80=E4=B8=
+=AA=E8=BD=BB=E9=87=8F=E7=BA=A7=E7=9A=84=E9=97=AD=E5=8C=85=E5=AD=97=E9=9D=A2=
+=E8=AF=AD=E6=B3=95(literal syntax)=EF=BC=8C=E6=89=80=E4=BB=A5Futures=E5=BC=
+=95=E5=85=A5=E4=BA=86=E5=BE=88=E5=B0=91=E7=9A=84=E8=AF=AD=E6=B3=95=E5=BC=80=
+=E9=94=80=EF=BC=8C=E5=AE=83=E4=BB=AC=E6=88=90=E4=B8=BA=E5=BE=88=E5=A4=9A=E7=
+=A8=8B=E5=BA=8F=E5=91=98=E7=9A=84=E7=AC=AC=E4=BA=8C=E6=9C=AC=E8=83=BD=E3=80=
+=82</p>
+
+<p>Futures=E5=85=81=E8=AE=B8=E7=A8=8B=E5=BA=8F=E5=91=98=E7=94=A8=E4=B8=80=
+=E7=A7=8D=E5=8F=AF=E6=89=A9=E5=85=85=E7=9A=84=EF=BC=8C=E6=9C=89=E5=A4=84=E7=
+=90=86=E5=A4=B1=E8=B4=A5=E5=8E=9F=E5=88=99=E7=9A=84=E5=A3=B0=E6=98=8E=E9=A3=
+=8E=E6=A0=BC=EF=BC=8C=E6=9D=A5=E8=A1=A8=E8=BE=BE=E5=B9=B6=E5=8F=91=E8=AE=A1=
+=E7=AE=97=E3=80=82=E8=BF=99=E4=BA=9B=E7=89=B9=E6=80=A7=E4=BD=BF=E6=88=91=E4=
+=BB=AC=E7=9B=B8=E4=BF=A1=E5=AE=83=E4=BB=AC=E5=B0=A4=E5=85=B6=E9=80=82=E5=90=
+=88=E5=9C=A8=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B=E4=B8=AD=E7=94=A8=
+=EF=BC=8C=E8=BF=99=E4=B9=9F=E6=98=AF=E9=BC=93=E5=8A=B1=E4=BD=BF=E7=94=A8=E7=
+=9A=84=E9=A3=8E=E6=A0=BC=E3=80=82</p>
+
+<p><em>=E6=9B=B4=E6=84=BF=E6=84=8F=E8=BD=AC=E6=8D=A2=EF=BC=88transforming=
+=EF=BC=89future=E8=80=8C=E9=9D=9E=E8=87=AA=E5=B7=B1=E5=88=9B=E9=80=A0</em>=
+=E3=80=82Future=E7=9A=84=E8=BD=AC=E6=8D=A2(transformations)=E7=A1=AE=E4=BF=
+=9D=E5=A4=B1=E8=B4=A5=E4=BC=9A=E4=BC=A0=E6=92=AD=EF=BC=8C=E5=8F=AF=E4=BB=A5=
+=E9=80=9A=E8=BF=87=E4=BF=A1=E5=8F=B7=E5=8F=96=E6=B6=88=EF=BC=8C=E5=AF=B9=E4=
+=BA=8E=E7=A8=8B=E5=BA=8F=E5=91=98=E6=9D=A5=E8=AF=B4=E4=B8=8D=E5=BF=85=E8=80=
+=83=E8=99=91Java=E5=86=85=E5=AD=98=E6=A8=A1=E5=9E=8B=E7=9A=84=E5=90=AB=E4=
+=B9=89=E3=80=82=E7=94=9A=E8=87=B3=E4=B8=80=E4=B8=AA=E4=BB=94=E7=BB=86=E7=9A=
+=84=E7=A8=8B=E5=BA=8F=E5=91=98=E4=BC=9A=E5=86=99=E5=87=BA=E4=B8=8B=E9=9D=A2=
+=E7=9A=84=E4=BB=A3=E7=A0=81=EF=BC=8C=E9=A1=BA=E5=BA=8F=E5=9C=B0=E5=8F=91=E5=
+=87=BA10=E6=AC=A1RPC=E8=AF=B7=E6=B1=82=E8=80=8C=E5=90=8E=E6=89=93=E5=8D=B0=
+=E7=BB=93=E6=9E=9C=EF=BC=9A</p>
+
+<pre><code> val p =3D new Promise[List[Result]]
+ var results: List[Result] =3D Nil
+ def collect() {
+   doRpc() onSuccess { result =3D&gt;
+     results =3D result :: results
+     if (results.length &lt; 10)
+       collect()
+     else
+       p.setValue(results)
+   } onFailure { t =3D&gt;
+     p.setException(t)
+   }
+ }
+
+ collect()
+ p onSuccess { results =3D&gt;
+   printf("Got results %s\n", results.mkString(", "))
+ }
+</code></pre>
+
+<p>=E7=A8=8B=E5=BA=8F=E5=91=98=E4=B8=8D=E5=BE=97=E4=B8=8D=E7=A1=AE=E4=BF=9D=
+RPC=E5=A4=B1=E8=B4=A5=E6=98=AF=E5=8F=AF=E4=BC=A0=E6=92=AD=E7=9A=84=EF=BC=8C=
+=E4=BB=A3=E7=A0=81=E6=95=A3=E5=B8=83=E5=9C=A8=E6=8E=A7=E5=88=B6=E6=B5=81=E7=
+=A8=8B=E4=B8=AD=EF=BC=9B=E7=B3=9F=E7=B3=95=E7=9A=84=E6=98=AF=EF=BC=8C=E4=BB=
+=A3=E7=A0=81=E6=98=AF=E9=94=99=E8=AF=AF=E7=9A=84=EF=BC=81 =E6=B2=A1=E6=9C=
+=89=E5=A3=B0=E6=98=8Eresults=E6=98=AFvolatile=EF=BC=8C=E6=88=91=E4=BB=AC=E4=
+=B8=8D=E8=83=BD=E7=A1=AE=E4=BF=9Dresults=E6=AF=8F=E6=AC=A1=E8=BF=AD=E4=BB=
+=A3=E4=BC=9A=E4=BF=9D=E6=8C=81=E5=89=8D=E4=B8=80=E6=AC=A1=E5=80=BC=E3=80=82=
+Java=E5=86=85=E5=AD=98=E6=A8=A1=E5=9E=8B=E6=98=AF=E4=B8=80=E4=B8=AA=E7=8B=
+=A1=E7=8C=BE=E7=9A=84=E9=87=8E=E5=85=BD=EF=BC=8C=E5=B9=B8=E5=A5=BD=E6=88=91=
+=E4=BB=AC=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87=E7=94=A8=E5=A3=B0=E6=98=8E=E5=
+=BC=8F=E9=A3=8E=E6=A0=BC(declarative style)=E9=81=BF=E5=BC=80=E8=BF=99=E4=
+=BA=9B=E9=99=B7=E9=98=B1=EF=BC=9A</p>
+
+<pre><code> def collect(results: List[Result] =3D Nil): Future[List[Result]=
+] =3D
+   doRpc() flatMap { result =3D&gt;
+     if (results.length &lt; 9)
+       collect(result :: results)
+     else
+       result :: results
+   }
+
+ collect() onSuccess { results =3D&gt;
+   printf("Got results %s\n", results.mkString(", "))
+ }
+</code></pre>
+
+<p>=E6=88=91=E4=BB=AC=E7=94=A8flatMap=E9=A1=BA=E5=BA=8F=E5=8C=96=E6=93=8D=
+=E4=BD=9C=EF=BC=8C=E6=8A=8A=E6=88=91=E4=BB=AC=E5=A4=84=E7=90=86=E4=B8=AD=E7=
+=9A=84=E7=BB=93=E6=9E=9C=E9=A2=84=E8=BF=BD=E5=8A=A0(prepend)=E5=88=B0list=
+=E4=B8=AD=E3=80=82=E8=BF=99=E6=98=AF=E4=B8=80=E4=B8=AA=E9=80=9A=E7=94=A8=E7=
+=9A=84=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B=E4=B9=A0=E8=AF=AD=E7=9A=
+=84Futures=E8=AF=91=E6=9C=AC=E3=80=82=E8=BF=99=E6=98=AF=E6=AD=A3=E7=A1=AE=
+=E7=9A=84=EF=BC=8C=E4=B8=8D=E4=BB=85=E9=9C=80=E8=A6=81=E7=9A=84=E6=A0=B7=E6=
+=9D=BF=E4=BB=A3=E7=A0=81(boilerplate)=E5=8F=AF=E4=BB=A5=E5=87=8F=E5=B0=91=
+=EF=BC=8C=E6=98=93=E5=87=BA=E9=94=99=E7=9A=84=E5=8F=AF=E8=83=BD=E6=80=A7=E4=
+=B9=9F=E4=BC=9A=E5=87=8F=E5=B0=91=EF=BC=8C=E5=B9=B6=E4=B8=94=E8=AF=BB=E8=B5=
+=B7=E6=9D=A5=E6=9B=B4=E5=A5=BD=E3=80=82</p>
+
+<p><em>Future=E7=BB=84=E5=90=88=E5=AD=90(combinators)=E7=9A=84=E4=BD=BF=E7=
+=94=A8</em>=E3=80=82=E5=BD=93=E6=93=8D=E4=BD=9C=E5=A4=9A=E4=B8=AAfutures=E6=
+=97=B6=EF=BC=8CFuture.select=EF=BC=8CFuture.join=E5=92=8CFuture.collect=E5=
+=BA=94=E8=AF=A5=E8=A2=AB=E7=BB=84=E5=90=88=E7=BC=96=E5=86=99=E5=87=BA=E9=80=
+=9A=E7=94=A8=E6=A8=A1=E5=BC=8F=E3=80=82</p>
+
+</a><p><a id=3D"=E5=B9=B6=E5=8F=91-Future"></a><a id=3D"=E5=B9=B6=E5=8F=91-=
+=E9=9B=86=E5=90=88"></a></p><a id=3D"=E5=B9=B6=E5=8F=91-=E9=9B=86=E5=90=88"=
+>
+
+<h3>=E9=9B=86=E5=90=88</h3>
+
+<p>=E5=B9=B6=E5=8F=91=E9=9B=86=E5=90=88=E7=9A=84=E4=B8=BB=E9=A2=98=E5=85=85=
+=E6=BB=A1=E7=9D=80=E6=84=8F=E8=A7=81=E3=80=81=E5=BE=AE=E5=A6=99(subtleties)=
+=E3=80=81=E6=95=99=E6=9D=A1=E3=80=81=E6=81=90=E6=83=A7/=E4=B8=8D=E7=A1=AE=
+=E5=AE=9A/=E6=80=80=E7=96=91(FUD)=E3=80=82=E5=9C=A8=E5=A4=A7=E5=A4=9A=E5=AE=
+=9E=E9=99=85=E5=9C=BA=E6=99=AF=E9=83=BD=E4=B8=8D=E5=AD=98=E5=9C=A8=E9=97=AE=
+=E9=A2=98=EF=BC=9A=E6=80=BB=E6=98=AF=E5=85=88=E7=94=A8=E6=9C=80=E7=AE=80=E5=
+=8D=95,=E6=9C=80=E6=97=A0=E8=81=8A=EF=BC=8C=E6=9C=80=E6=A0=87=E5=87=86=E7=
+=9A=84=E9=9B=86=E5=90=88=E8=A7=A3=E5=86=B3=E9=97=AE=E9=A2=98=E3=80=82 =E5=
+=9C=A8=E4=BD=A0=E7=9F=A5=E9=81=93=E4=B8=8D=E8=83=BD=E4=BD=BF=E7=94=A8synchr=
+onized=E5=89=8D=E4=B8=8D=E8=A6=81=E5=8E=BB=E7=94=A8=E4=B8=80=E4=B8=AA=E5=B9=
+=B6=E5=8F=91=E9=9B=86=E5=90=88=EF=BC=9AJVM=E6=9C=89=E7=9D=80=E8=80=81=E7=BB=
+=83=E7=9A=84=E6=89=8B=E6=AE=B5=E6=9D=A5=E4=BD=BF=E5=BE=97=E5=90=8C=E6=AD=A5=
+=E5=BC=80=E9=94=80=E6=9B=B4=E5=B0=8F=EF=BC=8C=E6=89=80=E4=BB=A5=E5=AE=83=E7=
+=9A=84=E6=95=88=E7=8E=87=E8=83=BD=E8=AE=A9=E4=BD=A0=E6=83=8A=E8=AE=B6=E3=80=
+=82</p>
+
+<p>=E5=A6=82=E6=9E=9C=E4=B8=80=E4=B8=AA=E4=B8=8D=E5=8F=AF=E5=8F=98(immutabl=
+e)=E9=9B=86=E5=90=88=E5=8F=AF=E8=A1=8C=EF=BC=8C=E5=B0=B1=E5=B0=BD=E5=8F=AF=
+=E8=83=BD=E7=94=A8=E4=B8=8D=E5=8F=AF=E5=8F=98=E9=9B=86=E5=90=88=E2=80=94=E2=
+=80=94=E5=AE=83=E4=BB=AC=E6=98=AF=E6=8C=87=E7=A7=B0=E9=80=8F=E6=98=8E=E7=9A=
+=84(referentially transparent)=EF=BC=8C=E6=89=80=E4=BB=A5=E5=9C=A8=E5=B9=B6=
+=E5=8F=91=E4=B8=8A=E4=B8=8B=E6=96=87=E6=8E=A8=E6=96=AD=E5=AE=83=E4=BB=AC=E6=
+=98=AF=E7=AE=80=E5=8D=95=E7=9A=84=E3=80=82=E4=B8=8D=E5=8F=AF=E5=8F=98=E9=9B=
+=86=E5=90=88=E7=9A=84=E6=94=B9=E5=8F=98=E9=80=9A=E5=B8=B8=E7=94=A8=E6=9B=B4=
+=E6=96=B0=E5=BC=95=E7=94=A8=E5=88=B0=E5=BD=93=E5=89=8D=E5=80=BC(=E4=B8=80=
+=E4=B8=AAvar=E5=8D=95=E5=85=83=E6=88=96=E4=B8=80=E4=B8=AAAtomicReference)=
+=E3=80=82=E5=BF=85=E9=A1=BB=E5=B0=8F=E5=BF=83=E6=AD=A3=E7=A1=AE=E5=9C=B0=E5=
+=BA=94=E7=94=A8=EF=BC=9A=E5=8E=9F=E5=AD=90=E5=9E=8B=E7=9A=84(atomics)=E5=BF=
+=85=E9=A1=BB=E9=87=8D=E8=AF=95(retried)=EF=BC=8C=E5=8F=98=E9=87=8F(var=E7=
+=B1=BB=E5=9E=8B=E7=9A=84)=E5=BF=85=E9=A1=BB=E5=A3=B0=E6=98=8E=E4=B8=BAvolat=
+ile=E4=BB=A5=E4=BF=9D=E8=AF=81=E5=AE=83=E4=BB=AC=E5=8F=91=E5=B8=83(publishe=
+d)=E5=88=B0=E5=AE=83=E4=BB=AC=E7=9A=84=E7=BA=BF=E7=A8=8B=E3=80=82</p>
+
+<p>=E5=8F=AF=E5=8F=98=E7=9A=84=E5=B9=B6=E5=8F=91=E9=9B=86=E5=90=88=E6=9C=89=
+=E7=9D=80=E5=A4=8D=E6=9D=82=E7=9A=84=E8=AF=AD=E4=B9=89=EF=BC=8C=E5=B9=B6=E5=
+=88=A9=E7=94=A8Java=E5=86=85=E5=AD=98=E6=A8=A1=E5=9E=8B=E7=9A=84=E5=BE=AE=
+=E5=A6=99=E7=9A=84=E4=B8=80=E9=9D=A2=EF=BC=8C=E6=89=80=E4=BB=A5=E5=9C=A8=E4=
+=BD=A0=E4=BD=BF=E7=94=A8=E5=89=8D=E7=A1=AE=E5=AE=9A=E4=BD=A0=E7=90=86=E8=A7=
+=A3=E5=AE=83=E7=9A=84=E5=90=AB=E4=B9=89=E2=80=94=E2=80=94=E5=B0=A4=E5=85=B6=
+=E5=AF=B9=E4=BA=8E=E5=8F=91=E5=B8=83=E6=9B=B4=E6=96=B0(=E6=96=B0=E7=9A=84=
+=E5=85=AC=E5=BC=80=E6=96=B9=E6=B3=95)=E3=80=82=E5=90=8C=E6=AD=A5=E7=9A=84=
+=E9=9B=86=E5=90=88=E5=90=8C=E6=A0=B7=E5=86=99=E8=B5=B7=E6=9D=A5=E6=9B=B4=E5=
+=A5=BD=EF=BC=9A=E5=83=8FgetOrElseUpdate=E6=93=8D=E4=BD=9C=E4=B8=8D=E8=83=BD=
+=E5=A4=9F=E8=A2=AB=E5=B9=B6=E5=8F=91=E9=9B=86=E5=90=88=E6=AD=A3=E7=A1=AE=E7=
+=9A=84=E5=AE=9E=E7=8E=B0=EF=BC=8C=E5=88=9B=E5=BB=BA=E5=A4=8D=E5=90=88(compo=
+site)=E9=9B=86=E5=90=88=E5=B0=A4=E5=85=B6=E5=AE=B9=E6=98=93=E5=87=BA=E9=94=
+=99=E3=80=82</p>
+
+<!--
+
+use the stupid collections first, get fancy only when justified.
+
+serialized? synchronized?
+
+blah blah.
+
+Async*?
+
+-->
+
+</a><p><a id=3D"=E5=B9=B6=E5=8F=91-=E9=9B=86=E5=90=88"></a><a id=3D"=E6=8E=
+=A7=E5=88=B6=E7=BB=93=E6=9E=84"></a></p><a id=3D"=E6=8E=A7=E5=88=B6=E7=BB=
+=93=E6=9E=84">
+
+<h2>=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84</h2>
+
+<p>=E5=87=BD=E6=95=B0=E5=BC=8F=E9=A3=8E=E6=A0=BC=E7=9A=84=E7=A8=8B=E5=BA=8F=
+=E5=80=BE=E5=90=91=E4=BA=8E=E9=9C=80=E8=A6=81=E6=9B=B4=E5=B0=91=E7=9A=84=E4=
+=BC=A0=E7=BB=9F=E7=9A=84=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84=EF=BC=8C=E5=B9=
+=B6=E4=B8=94=E4=BD=BF=E7=94=A8=E5=A3=B0=E6=98=8E=E5=BC=8F=E9=A3=8E=E6=A0=BC=
+=E5=86=99=E7=9A=84=E7=A8=8B=E5=BA=8F=E8=AF=BB=E8=B5=B7=E6=9D=A5=E6=9B=B4=E5=
+=A5=BD=E3=80=82=E8=BF=99=E9=80=9A=E5=B8=B8=E6=84=8F=E5=91=B3=E7=9D=80=E6=89=
+=93=E7=A0=B4=E4=BD=A0=E7=9A=84=E9=80=BB=E8=BE=91=EF=BC=8C=E6=8B=86=E5=88=86=
+=E5=88=B0=E8=8B=A5=E5=B9=B2=E4=B8=AA=E5=B0=8F=E7=9A=84=E6=96=B9=E6=B3=95=E6=
+=88=96=E5=87=BD=E6=95=B0=EF=BC=8C=E7=94=A8=E5=8C=B9=E9=85=8D=E8=A1=A8=E8=BE=
+=BE=E5=BC=8F(match expression)=E6=8A=8A=E4=BB=96=E4=BB=AC=E7=B2=98=E5=9C=A8=
+=E4=B8=80=E8=B5=B7=E3=80=82=E5=87=BD=E6=95=B0=E5=BC=8F=E7=A8=8B=E5=BA=8F=E4=
+=B9=9F=E5=80=BE=E5=90=91=E4=BA=8E=E6=9B=B4=E5=A4=9A=E9=9D=A2=E5=90=91=E8=A1=
+=A8=E8=BE=BE=E5=BC=8F(expression-oriented)=EF=BC=9A=E6=9D=A1=E4=BB=B6=E5=88=
+=86=E6=94=AF=E6=98=AF=E5=90=8C=E4=B8=80=E7=B1=BB=E5=9E=8B=E7=9A=84=E5=80=BC=
+=E8=AE=A1=E7=AE=97=EF=BC=8Cfor=EF=BC=88..) yield =E8=A1=A8=E8=BE=BE=E5=BC=
+=8F=EF=BC=8C=E4=BB=A5=E5=8F=8A=E9=80=92=E5=BD=92=E9=83=BD=E6=98=AF=E5=8F=B8=
+=E7=A9=BA=E8=A7=81=E6=83=AF=E7=9A=84=E3=80=82</p>
+
+</a><p><a id=3D"=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84"></a><a id=3D"=E6=8E=
+=A7=E5=88=B6=E7=BB=93=E6=9E=84-=E9=80=92=E5=BD=92"></a></p><a id=3D"=E6=8E=
+=A7=E5=88=B6=E7=BB=93=E6=9E=84-=E9=80=92=E5=BD=92">
+
+<h3>=E9=80=92=E5=BD=92</h3>
+
+<p><em>=E7=94=A8=E9=80=92=E5=BD=92=E6=9C=AF=E8=AF=AD=E6=9D=A5=E8=A1=A8=E8=
+=BE=BE=E4=BD=A0=E7=9A=84=E9=97=AE=E9=A2=98=E5=B8=B8=E5=B8=B8=E4=BC=9A=E4=BD=
+=BF=E9=97=AE=E9=A2=98=E7=AE=80=E5=8C=96</em>=EF=BC=8C=E5=A6=82=E6=9E=9C=E5=
+=BA=94=E7=94=A8=E4=BA=86=E5=B0=BE=E9=80=92=E5=BD=92=E4=BC=98=E5=8C=96(=E5=
+=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87@tailrec=E6=B3=A8=E9=87=8A=E6=A3=80=E6=B5=
+=8B)=EF=BC=8C=E7=BC=96=E8=AF=91=E5=99=A8=E7=94=9A=E8=87=B3=E4=BC=9A=E5=B0=
+=86=E4=BD=A0=E7=9A=84=E4=BB=A3=E7=A0=81=E8=BD=AC=E6=8D=A2=E4=B8=BA=E6=AD=A3=
+=E5=B8=B8=E7=9A=84=E5=BE=AA=E7=8E=AF=E3=80=82=E5=AF=B9=E6=AF=94=E4=B8=80=E4=
+=B8=AA=E6=A0=87=E5=87=86=E7=9A=84=E5=91=BD=E4=BB=A4=E5=BC=8F=E7=89=88=E6=9C=
+=AC=E7=9A=84=E5=A0=86=E6=8E=92=E5=BA=8F(fix-down):</p>
+
+<pre><code> def fixDown(heap: Array[T], m: Int, n: Int): Unit =3D {
+   var k: Int =3D m
+   while (n &gt;=3D 2*k) {
+     var j =3D 2*k
+     if (j &lt; n &amp;&amp; heap(j) &lt; heap(j + 1))
+       j +=3D 1
+     if (heap(k) &gt;=3D heap(j))
+       return
+     else {
+       swap(heap, k, j)
+       k =3D j
+     }
+   }
+ }
+</code></pre>
+
+</a><p><a id=3D"=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-=E9=80=92=E5=BD=92">=
+=E6=AF=8F=E6=AC=A1=E8=BF=9B=E5=85=A5while=E5=BE=AA=E7=8E=AF=EF=BC=8C=E6=88=
+=91=E4=BB=AC=E5=B7=A5=E4=BD=9C=E5=9C=A8=E5=89=8D=E4=B8=80=E6=AC=A1=E8=BF=AD=
+=E4=BB=A3=E6=97=B6=E6=B1=A1=E6=9F=93=E8=BF=87=E7=9A=84=E7=8A=B6=E6=80=81=E3=
+=80=82=E6=AF=8F=E4=B8=AA=E5=8F=98=E9=87=8F=E7=9A=84=E5=80=BC=E6=98=AF=E9=82=
+=A3=E4=B8=80=E5=88=86=E6=94=AF=E6=89=80=E8=BF=9B=E5=85=A5=E5=87=BD=E6=95=B0=
+=EF=BC=8C=E5=BD=93=E6=89=BE=E5=88=B0=E6=AD=A3=E7=A1=AE=E7=9A=84=E4=BD=8D=E7=
+=BD=AE=E6=97=B6=E4=BC=9A=E5=9C=A8=E5=BE=AA=E7=8E=AF=E4=B8=AD=E8=BF=94=E5=9B=
+=9E=E3=80=82
+(=E6=95=8F=E9=94=90=E7=9A=84=E8=AF=BB=E8=80=85=E4=BC=9A=E5=9C=A8Dijkstra=E7=
+=9A=84</a><a href=3D"http://www.u.arizona.edu/~rubinson/copyright_violation=
+s/Go_To_Considered_Harmful.html">=E2=80=9CGo To=E5=A3=B0=E6=98=8E=E6=98=AF=
+=E6=9C=89=E5=AE=B3=E7=9A=84=E2=80=9D</a>=E4=B8=80=E6=96=87=E6=89=BE=E5=88=
+=B0=E7=9B=B8=E4=BC=BC=E7=9A=84=E8=A7=82=E7=82=B9)</p>
+
+<p>=E8=80=83=E8=99=91=E5=B0=BE=E9=80=92=E5=BD=92=E7=9A=84=E5=AE=9E=E7=8E=B0=
+<a class=3D"noteref" id=3D"fnref2" href=3D"http://twitter.github.io/effecti=
+vescala/index-cn.html#fn2" title=3D"Jump to note 2">[2]</a>:</p>
+
+<pre><code> @tailrec
+ final def fixDown(heap: Array[T], i: Int, j: Int) {
+   if (j &lt; i*2) return
+
+   val m =3D if (j =3D=3D i*2 || heap(2*i) &lt; heap(2*i+1)) 2*i else 2*i +=
+ 1
+   if (heap(m) &lt; heap(i)) {
+     swap(heap, i, m)
+     fixDown(heap, m, j)
+   }
+ }
+</code></pre>
+
+<p class=3D"LP">=E6=AF=8F=E6=AC=A1=E8=BF=AD=E4=BB=A3=E9=83=BD=E6=98=AF=E4=
+=B8=80=E4=B8=AA=E6=98=8E=E7=A1=AE=E5=AE=9A=E4=B9=89=E7=9A=84=E5=8E=86=E5=8F=
+=B2=E6=B8=85=E7=99=BD=E7=9A=84=E5=8F=98=E9=87=8F=EF=BC=8C=E5=B9=B6=E4=B8=94=
+=E6=B2=A1=E6=9C=89=E5=BC=95=E7=94=A8=E5=8D=95=E5=85=83=EF=BC=9A=E5=88=B0=E5=
+=A4=84=E9=83=BD=E6=98=AF=E4=B8=8D=E5=8F=98=E7=9A=84(invariants)=E3=80=82=E6=
+=9B=B4=E5=AE=B9=E6=98=93=E5=AE=9E=E7=8E=B0=EF=BC=8C=E4=B9=9F=E5=AE=B9=E6=98=
+=93=E9=98=85=E8=AF=BB=E3=80=82=E4=B9=9F=E6=B2=A1=E6=9C=89=E6=80=A7=E8=83=BD=
+=E6=96=B9=E9=9D=A2=E7=9A=84=E6=83=A9=E7=BD=9A=EF=BC=9A=E5=9B=A0=E4=B8=BA=E6=
+=96=B9=E6=B3=95=E6=98=AF=E5=B0=BE=E9=80=92=E5=BD=92=E7=9A=84=EF=BC=8C=E7=BC=
+=96=E8=AF=91=E5=99=A8=E4=BC=9A=E8=BD=AC=E6=8D=A2=E4=B8=BA=E6=A0=87=E5=87=86=
+=E7=9A=84=E5=91=BD=E4=BB=A4=E5=BC=8F=E7=9A=84=E5=BE=AA=E7=8E=AF=E3=80=82</p=
+>
+
+<!--
+elaborate..
+-->
+
+<p><a id=3D"=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-=E8=BF=94=E5=9B=9E(Return)=
+"></a></p><a id=3D"=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-=E8=BF=94=E5=9B=9E(=
+Return)">
+
+<h3>=E8=BF=94=E5=9B=9E(Return)</h3>
+
+<p>=E5=B9=B6=E4=B8=8D=E6=98=AF=E8=AF=B4=E5=91=BD=E4=BB=A4=E5=BC=8F=E7=BB=93=
+=E6=9E=84=E6=B2=A1=E6=9C=89=E4=BB=B7=E5=80=BC=E3=80=82=E5=9C=A8=E5=BE=88=E5=
+=A4=9A=E4=BE=8B=E5=AD=90=E4=B8=AD=E5=AE=83=E4=BB=AC=E5=BE=88=E9=80=82=E5=90=
+=88=E4=BA=8E=E6=8F=90=E5=89=8D=E7=BB=88=E6=AD=A2=E8=AE=A1=E7=AE=97=E8=80=8C=
+=E9=9D=9E=E5=AF=B9=E6=AF=8F=E4=B8=AA=E5=8F=AF=E8=83=BD=E7=BB=88=E6=AD=A2=E7=
+=9A=84=E7=82=B9=E5=AD=98=E5=9C=A8=E4=B8=80=E4=B8=AA=E6=9D=A1=E4=BB=B6=E5=88=
+=86=E6=94=AF=EF=BC=9A=E7=9A=84=E7=A1=AE=E5=9C=A8=E4=B8=8A=E9=9D=A2=E7=9A=84=
+fixDown=E5=87=BD=E6=95=B0=EF=BC=8C=E5=A6=82=E6=9E=9C=E6=88=91=E4=BB=AC=E5=
+=B7=B2=E7=BB=8F=E5=9C=A8=E5=A0=86=E7=9A=84=E7=BB=93=E5=B0=BE=EF=BC=8C=E4=B8=
+=80=E4=B8=AAreturn=E7=94=A8=E4=BA=8E=E6=8F=90=E5=89=8D=E7=BB=88=E6=AD=A2=E3=
+=80=82</p>
+
+<p>Returns=E5=8F=AF=E4=BB=A5=E7=94=A8=E4=BA=8E=E5=88=87=E6=96=AD=E5=88=86=
+=E6=94=AF=E5=92=8C=E5=BB=BA=E7=AB=8B=E4=B8=8D=E5=8F=98=E9=87=8F(establish i=
+nvariants)=E3=80=82=E8=BF=99=E5=87=8F=E5=B0=91=E4=BA=86=E5=B5=8C=E5=A5=97=
+=EF=BC=8C=E5=B9=B6=E4=B8=94=E5=AE=B9=E6=98=93=E6=8E=A8=E6=96=AD=E5=90=8E=E7=
+=BB=AD=E7=9A=84=E4=BB=A3=E7=A0=81=E7=9A=84=E6=AD=A3=E7=A1=AE=E6=80=A7=EF=BC=
+=8C=E4=BB=8E=E8=80=8C=E5=B8=AE=E5=8A=A9=E4=BA=86=E8=AF=BB=E8=80=85=E3=80=82=
+=E8=BF=99=E5=B0=A4=E5=85=B6=E9=80=82=E7=94=A8=E4=BA=8E=E5=8D=AB=E8=AF=AD=E5=
+=8F=A5(guard clauses)=EF=BC=9A</p>
+
+<pre><code> def compare(a: AnyRef, b: AnyRef): Int =3D {
+   if (a eq b)
+     return 0
+
+   val d =3D System.identityHashCode(a) compare System.identityHashCode(b)
+   if (d !=3D 0)
+     return d
+
+   // slow path..
+ }
+</code></pre>
+
+<p>=E4=BD=BF=E7=94=A8return=E5=A2=9E=E5=8A=A0=E4=BA=86=E5=8F=AF=E8=AF=BB=E6=
+=80=A7</p>
+
+<pre><code> def suffix(i: Int) =3D {
+   if      (i =3D=3D 1) return "st"
+   else if (i =3D=3D 2) return "nd"
+   else if (i =3D=3D 3) return "rd"
+   else             return "th"
+ }
+</code></pre>
+
+<p class=3D"LP">=E4=B8=8A=E9=9D=A2=E6=98=AF=E9=92=88=E5=AF=B9=E5=91=BD=E4=
+=BB=A4=E5=BC=8F=E8=AF=AD=E8=A8=80=E7=9A=84=EF=BC=8C=E5=9C=A8Scala=E4=B8=AD=
+=E9=BC=93=E5=8A=B1=E7=9C=81=E7=95=A5return</p>
+
+<pre><code> def suffix(i: Int) =3D
+   if      (i =3D=3D 1) "st"
+   else if (i =3D=3D 2) "nd"
+   else if (i =3D=3D 3) "rd"
+   else             "th"
+</code></pre>
+
+<p class=3D"LP">=E4=BD=86=E4=BD=BF=E7=94=A8=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=
+=85=8D=E6=9B=B4=E5=A5=BD=EF=BC=9A</p>
+
+<pre><code> def suffix(i: Int) =3D i match {
+   case 1 =3D&gt; "st"
+   case 2 =3D&gt; "nd"
+   case 3 =3D&gt; "rd"
+   case _ =3D&gt; "th"
+ }
+</code></pre>
+
+<p>=E6=B3=A8=E6=84=8F=EF=BC=8Creturn=E4=BC=9A=E6=9C=89=E9=9A=90=E6=80=A7=E5=
+=BC=80=E9=94=80=EF=BC=9A=E5=BD=93=E5=9C=A8=E9=97=AD=E5=8C=85=E5=86=85=E9=83=
+=A8=E4=BD=BF=E7=94=A8=E6=97=B6=E3=80=82</p>
+
+<pre><code> seq foreach { elem =3D&gt;
+   if (elem.isLast)
+     return
+
+   // process...
+ }
+</code></pre>
+
+<p class=3D"LP">=E5=9C=A8=E5=AD=97=E8=8A=82=E7=A0=81=E5=B1=82=E5=AE=9E=E7=
+=8E=B0=E4=B8=BA=E4=B8=80=E4=B8=AA=E5=BC=82=E5=B8=B8=E7=9A=84=E6=8D=95=E8=8E=
+=B7/=E5=A3=B0=E6=98=8E(catching/throwing)=E5=AF=B9=EF=BC=8C=E7=94=A8=E5=9C=
+=A8=E9=A2=91=E7=B9=81=E7=9A=84=E6=89=A7=E8=A1=8C=E7=9A=84=E4=BB=A3=E7=A0=81=
+=E4=B8=AD=EF=BC=8C=E4=BC=9A=E6=9C=89=E6=80=A7=E8=83=BD=E5=BD=B1=E5=93=8D=E3=
+=80=82</p>
+
+</a><p><a id=3D"=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-=E8=BF=94=E5=9B=9E(Ret=
+urn)"></a><a id=3D"=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-for=E5=BE=AA=E7=8E=
+=AF=E5=92=8Cfor=E6=8E=A8=E5=AF=BC"></a></p><a id=3D"=E6=8E=A7=E5=88=B6=E7=
+=BB=93=E6=9E=84-for=E5=BE=AA=E7=8E=AF=E5=92=8Cfor=E6=8E=A8=E5=AF=BC">
+
+<h3>for=E5=BE=AA=E7=8E=AF=E5=92=8Cfor=E6=8E=A8=E5=AF=BC</h3>
+
+<p>for=E5=AF=B9=E5=BE=AA=E7=8E=AF=E5=92=8C=E8=81=9A=E9=9B=86=E6=8F=90=E4=BE=
+=9B=E4=BA=86=E7=AE=80=E6=B4=81=E5=92=8C=E8=87=AA=E7=84=B6=E7=9A=84=E8=A1=A8=
+=E8=BE=BE=E3=80=82 =E5=AE=83=E5=9C=A8=E6=89=81=E5=B9=B3=E5=8C=96(flattening=
+)=E5=BE=88=E5=A4=9A=E5=BA=8F=E5=88=97=E6=97=B6=E7=89=B9=E5=88=AB=E6=9C=89=
+=E7=94=A8=E3=80=82for=E8=AF=AD=E6=B3=95=E9=80=9A=E8=BF=87=E5=88=86=E9=85=8D=
+=E5=92=8C=E6=B4=BE=E5=8F=91=E9=97=AD=E5=8C=85=E9=9A=90=E8=97=8F=E4=BA=86=E5=
+=BA=95=E5=B1=82=E7=9A=84=E6=9C=BA=E5=88=B6=E3=80=82=E8=BF=99=E4=BC=9A=E5=AF=
+=BC=E8=87=B4=E6=84=8F=E5=A4=96=E7=9A=84=E5=BC=80=E9=94=80=E5=92=8C=E8=AF=AD=
+=E4=B9=89=EF=BC=9B=E4=BE=8B=E5=A6=82=EF=BC=9A</p>
+
+<pre><code> for (item &lt;- container) {
+   if (item !=3D 2) return
+ }
+</code></pre>
+
+<p class=3D"LP">=E5=A6=82=E6=9E=9C=E5=AE=B9=E5=99=A8=E5=BB=B6=E8=BF=9F=E8=
+=AE=A1=E7=AE=97(delays computation)=E4=BC=9A=E5=BC=95=E8=B5=B7=E8=BF=90=E8=
+=A1=8C=E6=97=B6=E9=94=99=E8=AF=AF=EF=BC=8C=E4=BD=BF=E8=BF=94=E5=9B=9E=E4=B8=
+=8D=E5=9C=A8=E6=9C=AC=E5=9C=B0=E4=B8=8A=E4=B8=8B=E6=96=87 (making the retur=
+n nonlocal)</p>
+
+<p>=E5=9B=A0=E4=B8=BA=E8=BF=99=E4=BA=9B=E5=8E=9F=E5=9B=A0=EF=BC=8C=E5=B8=B8=
+=E5=B8=B8=E6=9B=B4=E5=8F=AF=E5=8F=96=E7=9A=84=E6=98=AF=E7=9B=B4=E6=8E=A5=E8=
+=B0=83=E7=94=A8foreach, flatMap, map=E5=92=8Cfilter =E2=80=94=E2=80=94 =E4=
+=BD=86=E5=9C=A8=E5=85=B6=E6=84=8F=E4=B9=89=E6=B8=85=E6=A5=9A=E7=9A=84=E6=97=
+=B6=E5=80=99=E4=BD=BF=E7=94=A8for=E3=80=82</p>
+
+</a><p><a id=3D"=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-for=E5=BE=AA=E7=8E=AF=
+=E5=92=8Cfor=E6=8E=A8=E5=AF=BC"></a><a id=3D"=E6=8E=A7=E5=88=B6=E7=BB=93=E6=
+=9E=84-=E8=A6=81=E6=B1=82require=E5=92=8C=E6=96=AD=E8=A8=80(assert)"></a></=
+p><a id=3D"=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-=E8=A6=81=E6=B1=82require=
+=E5=92=8C=E6=96=AD=E8=A8=80(assert)">
+
+<h3>=E8=A6=81=E6=B1=82require=E5=92=8C=E6=96=AD=E8=A8=80(assert)</h3>
+
+<p>=E8=A6=81=E6=B1=82(require)=E5=92=8C=E6=96=AD=E8=A8=80(assert)=E9=83=BD=
+=E8=B5=B7=E5=88=B0=E5=8F=AF=E6=89=A7=E8=A1=8C=E6=96=87=E6=A1=A3=E7=9A=84=E4=
+=BD=9C=E7=94=A8=E3=80=82=E4=B8=A4=E8=80=85=E9=83=BD=E5=9C=A8=E7=B1=BB=E5=9E=
+=8B=E7=B3=BB=E7=BB=9F=E4=B8=8D=E8=83=BD=E8=A1=A8=E8=BE=BE=E6=89=80=E8=A6=81=
+=E6=B1=82=E7=9A=84=E4=B8=8D=E5=8F=98=E9=87=8F(invariants)=E7=9A=84=E5=9C=BA=
+=E6=99=AF=E9=87=8C=E6=9C=89=E7=94=A8=E3=80=82
+assert=E7=94=A8=E4=BA=8E=E4=BB=A3=E7=A0=81=E5=81=87=E8=AE=BE=E7=9A=84=E4=B8=
+=8D=E5=8F=98=E9=87=8F(invariants) =EF=BC=88=E5=86=85=E9=83=A8=E6=88=96=E5=
+=A4=96=E9=83=A8=E7=9A=84=EF=BC=89 =E4=BE=8B=E5=A6=82=EF=BC=9A(=E8=AF=91=E6=
+=B3=A8=EF=BC=8C=E4=B8=8D=E5=8F=98=E9=87=8F invariant =E6=98=AF=E6=8C=87=E7=
+=B1=BB=E5=9E=8B=E4=B8=8D=E5=8F=AF=E5=8F=98=EF=BC=8C=E5=8D=B3=E4=B8=8D=E6=94=
+=AF=E6=8C=81=E5=8D=8F=E5=8F=98=E6=88=96=E9=80=86=E5=8F=98=E7=9A=84=E7=B1=BB=
+=E5=9E=8B=E5=8F=98=E9=87=8F)</p>
+
+<pre><code> val stream =3D getClass.getResourceAsStream("someclassdata")
+ assert(stream !=3D null)
+</code></pre>
+
+<p>=E7=9B=B8=E5=8F=8D=EF=BC=8Crequire=E7=94=A8=E4=BA=8E=E8=A1=A8=E8=BE=BEAP=
+I=E5=A5=91=E7=BA=A6=EF=BC=9A</p>
+
+<pre><code> def fib(n: Int) =3D {
+   require(n &gt; 0)
+   ...
+ }
+</code></pre>
+
+</a><p><a id=3D"=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84-=E8=A6=81=E6=B1=82requ=
+ire=E5=92=8C=E6=96=AD=E8=A8=80(assert)"></a><a id=3D"=E5=87=BD=E6=95=B0=E5=
+=BC=8F=E7=BC=96=E7=A8=8B"></a></p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=
+=BC=96=E7=A8=8B">
+
+<h2>=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B</h2>
+
+<p>=E9=9D=A2=E5=90=91=E5=80=BC=EF=BC=88value-oriented =EF=BC=89=E7=BC=96=E7=
+=A8=8B=E6=9C=89=E5=BE=88=E5=A4=9A=E4=BC=98=E5=8A=BF=EF=BC=8C=E7=89=B9=E5=88=
+=AB=E6=98=AF=E7=94=A8=E5=9C=A8=E4=B8=8E=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=
+=E7=A8=8B=E7=BB=93=E6=9E=84=E7=9B=B8=E7=BB=93=E5=90=88=E3=80=82=E8=BF=99=E7=
+=A7=8D=E9=A3=8E=E6=A0=BC=E5=BC=BA=E8=B0=83=E5=80=BC=E7=9A=84=E8=BD=AC=E6=8D=
+=A2=EF=BC=88=E8=AF=91=E6=B3=A8=EF=BC=9A=E7=94=B1=E4=B8=80=E4=B8=AA=E4=B8=8D=
+=E5=8F=98=E7=9A=84=E5=80=BC=E7=94=9F=E6=88=90=E5=8F=A6=E4=B8=80=E4=B8=AA=E4=
+=B8=8D=E5=8F=98=E7=9A=84=E5=80=BC=EF=BC=89=E8=80=8C=E9=9D=9E=E7=8A=B6=E6=80=
+=81=E7=9A=84=E6=94=B9=E5=8F=98=EF=BC=8C=E7=94=9F=E6=88=90=E7=9A=84=E4=BB=A3=
+=E7=A0=81=E6=98=AF=E6=8C=87=E7=A7=B0=E9=80=8F=E6=98=8E=E7=9A=84(referential=
+ly transparent)=EF=BC=8C=E6=8F=90=E4=BE=9B=E4=BA=86=E6=9B=B4=E5=BC=BA=E7=9A=
+=84=E4=B8=8D=E5=8F=98=E5=9E=8B(invariants)=EF=BC=8C=E5=9B=A0=E6=AD=A4=E5=AE=
+=B9=E6=98=93=E5=AE=9E=E7=8E=B0=E3=80=82Case=E7=B1=BB(=E4=B9=9F=E8=A2=AB=E7=
+=BF=BB=E8=AF=91=E4=B8=BA=E6=A0=B7=E6=9C=AC=E7=B1=BB)=EF=BC=8C=E6=A8=A1=E5=
+=BC=8F=E5=8C=B9=E9=85=8D=EF=BC=8C=E8=A7=A3=E6=9E=84=E7=BB=91=E5=AE=9A(destr=
+ucturing bindings)=EF=BC=8C=E7=B1=BB=E5=9E=8B=E6=8E=A8=E6=96=AD=EF=BC=8C=E8=
+=BD=BB=E9=87=8F=E7=BA=A7=E7=9A=84=E9=97=AD=E5=8C=85=E5=92=8C=E6=96=B9=E6=B3=
+=95=E5=88=9B=E5=BB=BA=E8=AF=AD=E6=B3=95=E9=83=BD=E6=98=AF=E8=BF=99=E4=B8=80=
+=E7=B1=BB=E7=9A=84=E5=B7=A5=E5=85=B7=E3=80=82</p>
+
+</a><p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B"></a><a id=3D=
+"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-Case=E7=B1=BB=E6=A8=A1=E6=8B=
+=9F=E4=BB=A3=E6=95=B0=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=8B"></a></p><a id=3D=
+"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-Case=E7=B1=BB=E6=A8=A1=E6=8B=
+=9F=E4=BB=A3=E6=95=B0=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=8B">
+
+<h3>Case=E7=B1=BB=E6=A8=A1=E6=8B=9F=E4=BB=A3=E6=95=B0=E6=95=B0=E6=8D=AE=E7=
+=B1=BB=E5=9E=8B</h3>
+
+</a><p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-Case=E7=B1=BB=
+=E6=A8=A1=E6=8B=9F=E4=BB=A3=E6=95=B0=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=8B">C=
+ase=E7=B1=BB=E5=8F=AF=E5=AE=9E=E7=8E=B0=E4=BB=A3=E6=95=B0=E6=95=B0=E6=8D=AE=
+=E7=B1=BB=E5=9E=8B(ADT)=E7=BC=96=E7=A0=81=EF=BC=9A=E5=AE=83=E4=BB=AC=E5=AF=
+=B9=E5=A4=A7=E9=87=8F=E7=9A=84=E6=95=B0=E6=8D=AE=E7=BB=93=E6=9E=84=E8=BF=9B=
+=E8=A1=8C=E5=BB=BA=E6=A8=A1=E6=97=B6=E6=9C=89=E7=94=A8=EF=BC=8C=E7=94=A8=E5=
+=BC=BA=E4=B8=8D=E5=8F=98=E7=B1=BB=E5=9E=8B(invariants)=E6=8F=90=E4=BE=9B=E4=
+=BA=86=E7=AE=80=E6=B4=81=E7=9A=84=E4=BB=A3=E7=A0=81=E3=80=82=E5=B0=A4=E5=85=
+=B6=E5=9C=A8=E7=BB=93=E5=90=88=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D=E6=83=85=
+=E5=86=B5=E4=B8=8B=E3=80=82=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D=E5=AE=9E=E7=
+=8E=B0=E4=BA=86=E5=85=A8=E9=9D=A2=E8=A7=A3=E6=9E=90=E6=8F=90=E4=BE=9B=E6=9B=
+=B4=E5=BC=BA=E5=A4=A7=E7=9A=84=E9=9D=99=E6=80=81=E4=BF=9D=E6=8A=A4=E3=80=82
+(=E8=AF=91=E6=B3=A8=EF=BC=9AADTs=E6=98=AFAlgebraic Data Type=E4=BB=A3=E6=95=
+=B0=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=8B=E7=9A=84=E7=BC=A9=E5=86=99=EF=BC=8C=
+=E5=85=B3=E4=BA=8E=E8=BF=99=E4=B8=AA=E6=A6=82=E5=BF=B5=E8=A7=81=E6=88=91=E7=
+=9A=84=E5=8F=A6=E4=B8=80=E7=AF=87</a><a href=3D"http://hongjiang.info/scala=
+-case-class-and-algebraic-data-type/">=E5=8D=9A=E5=AE=A2</a>)</p>
+
+<p>=E4=B8=8B=E9=9D=A2=E6=98=AF=E7=94=A8case=E7=B1=BB=E6=A8=A1=E6=8B=9F=E4=
+=BB=A3=E6=95=B0=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=8B=E7=9A=84=E6=A8=A1=E5=BC=
+=8F</p>
+
+<pre><code> sealed trait Tree[T]
+ case class Node[T](left: Tree[T], right: Tree[T]) extends Tree[T]
+ case class Leaf[T](value: T) extends Tree[T]
+</code></pre>
+
+<p>=E7=B1=BB=E5=9E=8B Tree[T] =E6=9C=89=E4=B8=A4=E4=B8=AA=E6=9E=84=E9=80=A0=
+=E5=87=BD=E5=99=A8=EF=BC=9ANode=E5=92=8CLeaf=E3=80=82=E5=AE=9A=E4=B9=89=E7=
+=B1=BB=E5=9E=8B=E4=B8=BAsealed(=E5=B0=81=E9=97=AD=E7=B1=BB)=E5=85=81=E8=AE=
+=B8=E7=BC=96=E8=AF=91=E5=99=A8=E8=BF=9B=E8=A1=8C=E5=BD=BB=E5=BA=95=E7=9A=84=
+=E5=88=86=E6=9E=90(=E8=BF=99=E6=98=AF=E9=92=88=E5=AF=B9=E6=A8=A1=E5=BC=8F=
+=E5=8C=B9=E9=85=8D=E7=9A=84=EF=BC=8C=E5=8F=82=E8=80=83Programming in Scala)=
+=E5=9B=A0=E4=B8=BA=E6=9E=84=E9=80=A0=E5=99=A8=E5=B0=86=E4=B8=8D=E8=83=BD=E4=
+=BB=8E=E5=A4=96=E9=83=A8=E6=BA=90=E6=96=87=E4=BB=B6=E4=B8=AD=E6=B7=BB=E5=8A=
+=A0=E3=80=82</p>
+
+<p>=E4=B8=8E=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D=E4=B8=80=E5=90=8C=EF=BC=8C=
+=E8=BF=99=E4=B8=AA=E5=BB=BA=E6=A8=A1=E4=BD=BF=E5=BE=97=E4=BB=A3=E7=A0=81=E7=
+=AE=80=E6=B4=81=E5=B9=B6=E4=B8=94=E6=98=BE=E7=84=B6=E6=98=AF=E6=AD=A3=E7=A1=
+=AE=E7=9A=84(obviously correct)</p>
+
+<pre><code> def findMin[T &lt;: Ordered[T]](tree: Tree[T]) =3D tree match {
+   case Node(left, right) =3D&gt; Seq(findMin(left), findMin(right)).min
+   case Leaf(value) =3D&gt; value
+ }
+</code></pre>
+
+<p>=E5=B0=BD=E7=AE=A1=E4=B8=80=E4=BA=9B=E9=80=92=E5=BD=92=E7=BB=93=E6=9E=84=
+=EF=BC=8C=E5=A6=82=E6=A0=91=E7=9A=84=E7=BB=84=E6=88=90=E6=98=AF=E5=85=B8=E5=
+=9E=8B=E7=9A=84ADTs(=E4=BB=A3=E6=95=B0=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=8B)=
+=E5=BA=94=E7=94=A8=EF=BC=8C=E5=AE=83=E4=BB=AC=E7=9A=84=E7=94=A8=E5=A4=84=E9=
+=A2=86=E5=9F=9F=E6=9B=B4=E5=A4=A7=E3=80=82
+disjoint,unions=E7=89=B9=E5=88=AB=E5=AE=B9=E6=98=93=E7=9A=84=E7=94=A8ADTs=
+=E5=BB=BA=E6=A8=A1=EF=BC=9B=E8=BF=99=E4=BA=9B=E9=A2=91=E7=B9=81=E5=8F=91=E7=
+=94=9F=E5=9C=A8=E7=8A=B6=E6=80=81=E6=9C=BA=E4=B8=8A(state machines)=E3=80=
+=82</p>
+
+<p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-Options"></a></p>=
+<a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-Options">
+
+<h3>Options</h3>
+
+<p>Option=E7=B1=BB=E5=9E=8B=E6=98=AF=E4=B8=80=E4=B8=AA=E5=AE=B9=E5=99=A8=EF=
+=BC=8C=E7=A9=BA(None)=E6=88=96=E6=BB=A1(Some(value))=E4=BA=8C=E9=80=89=E4=
+=B8=80=E3=80=82=E5=AE=83=E6=8F=90=E4=BE=9B=E4=BA=86=E4=BD=BF=E7=94=A8null=
+=E7=9A=84=E5=8F=A6=E4=B8=80=E7=A7=8D=E5=AE=89=E5=85=A8=E9=80=89=E6=8B=A9=EF=
+=BC=8C=E5=BA=94=E8=AF=A5=E5=B0=BD=E5=8F=AF=E8=83=BD=E7=9A=84=E6=9B=BF=E4=BB=
+=A3null=E3=80=82=E5=AE=83=E6=98=AF=E4=B8=80=E4=B8=AA=E9=9B=86=E5=90=88(=E6=
+=9C=80=E5=A4=9A=E5=8F=AA=E6=9C=89=E4=B8=80=E4=B8=AA=E5=85=83=E7=B4=A0)=E5=
+=B9=B6=E7=94=A8=E9=9B=86=E5=90=88=E6=93=8D=E6=89=80=E4=BF=AE=E9=A5=B0=EF=BC=
+=8C=E5=B0=BD=E9=87=8F=E7=94=A8Option=E3=80=82</p>
+
+<p>=E7=94=A8</p>
+
+<pre><code> var username: Option[String] =3D None
+ ...
+ username =3D Some("foobar")
+</code></pre>
+
+<p class=3D"LP">=E4=BB=A3=E6=9B=BF</p>
+
+<pre><code> var username: String =3D null
+ ...
+ username =3D "foobar"
+</code></pre>
+
+<p class=3D"LP">=E5=9B=A0=E4=B8=BA=E5=89=8D=E8=80=85=E6=9B=B4=E5=AE=89=E5=
+=85=A8=EF=BC=9AOption=E7=B1=BB=E5=9E=8B=E9=9D=99=E6=80=81=E5=9C=B0=E5=BC=BA=
+=E5=88=B6username=E5=BF=85=E9=A1=BB=E5=AF=B9=E7=A9=BA(emptyness)=E5=81=9A=
+=E6=A3=80=E6=B5=8B=E3=80=82</p>
+
+<p>=E5=AF=B9=E4=B8=80=E4=B8=AAOption=E5=80=BC=E5=81=9A=E6=9D=A1=E4=BB=B6=E5=
+=88=A4=E6=96=AD=E5=BA=94=E8=AF=A5=E7=94=A8foreach</p>
+
+<pre><code> if (opt.isDefined)
+   operate(opt.get)
+</code></pre>
+
+<p class=3D"LP">=E4=B8=8A=E9=9D=A2=E7=9A=84=E4=BB=A3=E7=A0=81=E5=BA=94=E8=
+=AF=A5=E7=94=A8=E4=B8=8B=E9=9D=A2=E7=9A=84=E6=96=B9=E5=BC=8F=E6=9B=BF=E4=BB=
+=A3=EF=BC=9A</p>
+
+<pre><code> opt foreach { value =3D&gt;
+   operate(value)}
+</code></pre>
+
+<p>=E9=A3=8E=E6=A0=BC=E5=8F=AF=E8=83=BD=E7=9C=8B=E8=B5=B7=E6=9D=A5=E6=9C=89=
+=E4=BA=9B=E5=8F=A4=E6=80=AA=EF=BC=8C=E4=BD=86=E6=9B=B4=E5=AE=89=E5=85=A8=EF=
+=BC=8C=E6=9B=B4=E7=AE=80=E6=B4=81=E3=80=82=E5=A6=82=E6=9E=9C=E4=B8=A4=E7=A7=
+=8D=E6=83=85=E5=86=B5=E9=83=BD=E6=9C=89(Option=E7=9A=84None=E6=88=96Some)=
+=EF=BC=8C=E7=94=A8=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D</p>
+
+<pre><code> opt match {
+   case Some(value) =3D&gt; operate(value)
+   case None =3D&gt; defaultAction()
+ }
+</code></pre>
+
+<p class=3D"LP">=E4=BD=86=E5=A6=82=E6=9E=9C=E7=BC=BA=E5=B0=91=E7=9A=84=E6=
+=98=AF=E7=BC=BA=E7=9C=81=E5=80=BC=EF=BC=8C=E7=94=A8getOrElse=E6=96=B9=E6=B3=
+=95=EF=BC=9A</p>
+
+<pre><code> operate(opt getOrElse defaultValue)
+</code></pre>
+
+</a><p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-Options">=E4=
+=B8=8D=E8=A6=81=E8=BF=87=E5=BA=A6=E4=BD=BF=E7=94=A8Option=EF=BC=9A =E5=A6=
+=82=E6=9E=9C=E6=9C=89=E4=B8=80=E4=B8=AA=E6=98=8E=E7=A1=AE=E7=9A=84=E7=BC=BA=
+=E7=9C=81=E5=80=BC=E2=80=94=E2=80=94=E4=B8=80=E4=B8=AA</a><a href=3D"http:/=
+/en.wikipedia.org/wiki/Null_Object_pattern"><em>Null=E5=AF=B9=E8=B1=A1</em>=
+</a>=E2=80=94=E2=80=94=E7=9B=B4=E6=8E=A5=E7=94=A8Null=E8=80=8C=E4=B8=8D=E5=
+=BF=85=E7=94=A8Option</p>
+
+<p>Option=E8=BF=98=E6=9C=89=E4=B8=80=E4=B8=AA=E6=96=B9=E4=BE=BF=E7=9A=84=E6=
+=9E=84=E9=80=A0=E5=99=A8=E7=94=A8=E4=BA=8E=E5=8C=85=E8=A3=85=E7=A9=BA=E5=80=
+=BC(nullable value)</p>
+
+<pre><code> Option(getClass.getResourceAsStream("foo"))
+</code></pre>
+
+<p class=3D"LP">=E5=BE=97=E5=88=B0=E4=B8=80=E4=B8=AA Option[InputStream] =
+=E5=81=87=E5=AE=9A=E7=A9=BA=E5=80=BC(None)=E6=97=B6getResourceAsStream=E4=
+=BC=9A=E8=BF=94=E5=9B=9Enull=E3=80=82</p>
+
+<p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E6=A8=A1=E5=BC=
+=8F=E5=8C=B9=E9=85=8D"></a></p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=
+=96=E7=A8=8B-=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D">
+
+<h3>=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D</h3>
+
+<p>=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D(x match { =E2=80=A6) =E5=9C=A8=E8=
+=89=AF=E5=A5=BD=E7=9A=84Scala=E4=BB=A3=E7=A0=81=E4=B8=AD=E6=97=A0=E5=A4=84=
+=E4=B8=8D=E5=9C=A8=EF=BC=9A=E7=94=A8=E4=BA=8E=E5=90=88=E5=B9=B6=E6=9D=A1=E4=
+=BB=B6=E6=89=A7=E8=A1=8C=E3=80=81=E8=A7=A3=E6=9E=84(destructuring) =E3=80=
+=81=E5=9C=A8=E6=9E=84=E9=80=A0=E4=B8=AD=E9=80=A0=E5=9E=8B=E3=80=82=E4=BD=BF=
+=E7=94=A8=E5=A5=BD=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D=E5=8F=AF=E4=BB=A5=E5=
+=A2=9E=E5=8A=A0=E7=A8=8B=E5=BA=8F=E7=9A=84=E6=98=8E=E6=99=B0=E5=BA=A6=E5=92=
+=8C=E5=AE=89=E5=85=A8=E6=80=A7=E3=80=82</p>
+
+<p>=E4=BD=BF=E7=94=A8=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D=E5=AE=9E=E7=8E=B0=
+=E7=B1=BB=E5=9E=8B=E8=BD=AC=E6=8D=A2=EF=BC=9A</p>
+
+<pre><code> obj match {
+   case str: String =3D&gt; ...
+   case addr: SocketAddress =3D&gt; ...
+</code></pre>
+
+<p>=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D=E5=9C=A8=E5=92=8C=E8=A7=A3=E6=9E=84=
+(destructuring)=E8=81=94=E5=90=88=E4=BD=BF=E7=94=A8=E6=97=B6=E6=95=88=E6=9E=
+=9C=E6=9C=80=E5=A5=BD=EF=BC=88=E4=BE=8B=E5=A6=82=E4=BD=A0=E8=A6=81=E5=8C=B9=
+=E9=85=8Dcase=E7=B1=BB=EF=BC=89=EF=BC=9B=E4=B8=8B=E9=9D=A2=E7=9A=84=E5=86=
+=99=E6=B3=95</p>
+
+<pre><code> animal match {
+   case dog: Dog =3D&gt; "dog (%s)".format(dog.breed)
+   case _ =3D&gt; animal.species
+   }
+</code></pre>
+
+<p class=3D"LP">=E5=BA=94=E8=AF=A5=E8=A2=AB=E6=9B=BF=E4=BB=A3=E4=B8=BA=EF=
+=BC=9A</p>
+
+<pre><code> animal match {
+   case Dog(breed) =3D&gt; "dog (%s)".format(breed)
+   case other =3D&gt; other.species
+ }
+</code></pre>
+
+</a><p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E6=A8=A1=E5=
+=BC=8F=E5=8C=B9=E9=85=8D">=E5=86=99</a><a href=3D"http://www.scala-lang.org=
+/node/112">=E8=87=AA=E5=AE=9A=E4=B9=89=E7=9A=84=E6=8A=BD=E5=8F=96=E5=99=A8<=
+/a> (extractor)=E6=97=B6=E5=BF=85=E9=A1=BB=E6=9C=89=E5=8F=8C=E9=87=8D=E6=9E=
+=84=E9=80=A0=E5=99=A8(=E8=AF=91=E6=B3=A8=EF=BC=9A=E6=88=90=E5=AF=B9=E5=87=
+=BA=E7=8E=B0=E7=9A=84apply=E6=96=B9=E6=B3=95=E4=B8=8Eunapply=E6=96=B9=E6=B3=
+=95)=EF=BC=8C=E5=90=A6=E5=88=99=E5=8F=AF=E8=83=BD=E6=98=AF=E4=B8=8D=E9=80=
+=82=E5=90=88=E7=9A=84=E3=80=82</p>
+
+<p>=E5=BD=93=E9=BB=98=E8=AE=A4=E7=9A=84=E6=96=B9=E6=B3=95=E6=9B=B4=E6=9C=89=
+=E6=84=8F=E4=B9=89=E6=97=B6=EF=BC=8C=E5=AF=B9=E6=9D=A1=E4=BB=B6=E6=89=A7=E8=
+=A1=8C=E4=B8=8D=E8=A6=81=E7=94=A8=E6=A8=A1=E5=BC=8F=E5=8C=B9=E9=85=8D=E3=80=
+=82=E9=9B=86=E5=90=88=E5=BA=93=E7=9A=84=E6=96=B9=E6=B3=95=E9=80=9A=E5=B8=B8=
+=E8=BF=94=E5=9B=9EOptions=EF=BC=8C=E9=81=BF=E5=85=8D=EF=BC=9A</p>
+
+<pre><code> val x =3D list match {
+   case head :: _ =3D&gt; head
+   case Nil =3D&gt; default
+ }
+</code></pre>
+
+<p class=3D"LP">=E5=9B=A0=E4=B8=BA</p>
+
+<pre><code> val x =3D list.headOption getOrElse default
+</code></pre>
+
+<p class=3D"LP">=E6=9B=B4=E7=9F=AD=E5=B9=B6=E4=B8=94=E6=9B=B4=E8=83=BD=E8=
+=A1=A8=E8=BE=BE=E7=9B=AE=E7=9A=84=E3=80=82</p>
+
+<p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E5=81=8F=E5=87=
+=BD=E6=95=B0"></a></p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=
+=8B-=E5=81=8F=E5=87=BD=E6=95=B0">
+
+<h3>=E5=81=8F=E5=87=BD=E6=95=B0</h3>
+
+<p>Scala=E6=8F=90=E4=BE=9B=E4=BA=86=E5=AE=9A=E4=B9=89PartialFunction=E7=9A=
+=84=E8=AF=AD=E6=B3=95=E7=AE=80=E5=86=99=EF=BC=9A</p>
+
+<pre><code> val pf: PartialFunction[Int, String] =3D {
+   case i if i%2 =3D=3D 0 =3D&gt; "even"
+ }
+</code></pre>
+
+<p class=3D"LP">=E5=AE=83=E4=BB=AC=E4=B9=9F=E5=8F=AF=E8=83=BD=E5=92=8C orEl=
+se =E7=BB=84=E5=90=88:</p>
+
+<pre><code> val tf: (Int =3D&gt; String) =3D pf orElse { case _ =3D&gt; "od=
+d"}
+
+ tf(1) =3D=3D "odd"
+ tf(2) =3D=3D "even"
+</code></pre>
+
+<p>=E5=81=8F=E5=87=BD=E6=95=B0=E5=87=BA=E7=8E=B0=E5=9C=A8=E5=BE=88=E5=A4=9A=
+=E5=9C=BA=E6=99=AF=EF=BC=8C=E5=B9=B6=E4=BB=A5PartialFunction=E6=9C=89=E6=95=
+=88=E5=9C=B0=E7=BC=96=E7=A0=81 =EF=BC=8C=E4=BE=8B=E5=A6=82 =E6=96=B9=E6=B3=
+=95=E5=8F=82=E6=95=B0=EF=BC=9A</p>
+
+<pre><code> trait Publisher[T] {
+   def subscribe(f: PartialFunction[T, Unit])
+ }
+
+ val publisher: Publisher[Int] =3D ..
+ publisher.subscribe {
+   case i if isPrime(i) =3D&gt; println("found prime", i)
+   case i if i%2 =3D=3D 0 =3D&gt; count +=3D 2
+   /* ignore the rest */
+ }
+</code></pre>
+
+<p class=3D"LP">=E6=88=96=E5=9C=A8=E8=BF=94=E5=9B=9E=E4=B8=80=E4=B8=AAOptio=
+n=E7=9A=84=E6=83=85=E5=86=B5=E4=B8=8B=EF=BC=9A</p>
+
+<pre><code> // Attempt to classify the the throwable for logging.
+ type Classifier =3D Throwable =3D&gt; Option[java.util.logging.Level]
+</code></pre>
+
+<p class=3D"LP">=E5=8F=AF=E4=BB=A5=E6=9B=B4=E5=A5=BD=E7=9A=84=E7=94=A8Parti=
+alFunction=E8=A1=A8=E8=BE=BE</p>
+
+<pre><code> type Classifier =3D PartialFunction[Throwable, java.util.Loggin=
+g.Level]
+</code></pre>
+
+<p class=3D"LP">=E5=9B=A0=E4=B8=BA=E5=AE=83=E6=8F=90=E4=BE=9B=E4=BA=86=E6=
+=9B=B4=E5=A5=BD=E7=9A=84=E5=8F=AF=E7=BB=84=E5=90=88=E6=80=A7=EF=BC=9A</p>
+
+<pre><code> val classifier1: Classifier
+ val classifier2: Classifier
+
+ val classifier =3D classifier1 orElse classifier2 orElse { _ =3D&gt; java.=
+util.Logging.Level.FINEST }
+</code></pre>
+
+</a><p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E5=81=8F=E5=
+=87=BD=E6=95=B0"></a><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B=
+-=E8=A7=A3=E6=9E=84=E7=BB=91=E5=AE=9A"></a></p><a id=3D"=E5=87=BD=E6=95=B0=
+=E5=BC=8F=E7=BC=96=E7=A8=8B-=E8=A7=A3=E6=9E=84=E7=BB=91=E5=AE=9A">
+
+<h3>=E8=A7=A3=E6=9E=84=E7=BB=91=E5=AE=9A</h3>
+
+<p>=E8=A7=A3=E6=9E=84=E7=BB=91=E5=AE=9A=E4=B8=8E=E6=A8=A1=E5=BC=8F=E5=8C=B9=
+=E9=85=8D=E6=9C=89=E5=85=B3=E3=80=82=E5=AE=83=E4=BB=AC=E7=94=A8=E4=BA=86=E7=
+=9B=B8=E5=90=8C=E7=9A=84=E6=9C=BA=E5=88=B6=EF=BC=8C=E4=BD=86=E8=A7=A3=E6=9E=
+=84=E7=BB=91=E5=AE=9A=E5=8F=AF=E5=BA=94=E7=94=A8=E5=9C=A8=E5=BD=93=E5=8C=B9=
+=E9=85=8D=E5=8F=AA=E6=9C=89=E4=B8=80=E7=A7=8D=E9=80=89=E9=A1=B9=E7=9A=84=E6=
+=97=B6=E5=80=99 (=E4=BB=A5=E5=85=8D=E4=BD=A0=E6=8E=A5=E5=8F=97=E5=BC=82=E5=
+=B8=B8=E7=9A=84=E5=8F=AF=E8=83=BD)=E3=80=82=E8=A7=A3=E6=9E=84=E7=BB=91=E5=
+=AE=9A=E7=89=B9=E5=88=AB=E9=80=82=E7=94=A8=E4=BA=8E=E5=85=83=E7=BB=84(tuple=
+)=E5=92=8C=E6=A0=B7=E6=9C=AC=E7=B1=BB(case class).</p>
+
+<pre><code> val tuple =3D ('a', 1)
+ val (char, digit) =3D tuple
+
+ val tweet =3D Tweet("just tweeting", Time.now)
+ val Tweet(text, timestamp) =3D tweet
+</code></pre>
+
+</a><p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E8=A7=A3=E6=
+=9E=84=E7=BB=91=E5=AE=9A"></a><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=
+=E7=A8=8B-=E6=83=B0=E6=80=A7=E8=B5=8B=E5=80=BC"></a></p><a id=3D"=E5=87=BD=
+=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E6=83=B0=E6=80=A7=E8=B5=8B=E5=80=BC">
+
+<h3>=E6=83=B0=E6=80=A7=E8=B5=8B=E5=80=BC</h3>
+
+<p>=E5=BD=93=E4=BD=BF=E7=94=A8lazy=E4=BF=AE=E9=A5=B0=E4=B8=80=E4=B8=AAval=
+=E6=88=90=E5=91=98=E6=97=B6=EF=BC=8C=E5=85=B6=E8=B5=8B=E5=80=BC=E6=83=85=E5=
+=86=B5=E6=98=AF=E5=9C=A8=E9=9C=80=E8=A6=81=E6=97=B6=E6=89=8D=E8=B5=8B=E5=80=
+=BC=E7=9A=84(by need)=EF=BC=8C=E5=9B=A0=E4=B8=BAScala=E4=B8=AD=E6=88=90=E5=
+=91=98=E4=B8=8E=E6=96=B9=E6=B3=95=E6=98=AF=E7=AD=89=E4=BB=B7=E7=9A=84=EF=BC=
+=88=E9=99=A4=E4=BA=86private[this]=E6=88=90=E5=91=98=EF=BC=89</p>
+
+<pre><code> lazy val field =3D computation()
+</code></pre>
+
+<p class=3D"LP">=E7=9B=B8=E5=BD=93=E4=BA=8E=E4=B8=8B=E9=9D=A2=E7=9A=84=E7=
+=AE=80=E5=86=99:</p>
+
+<pre><code> var _theField =3D None
+ def field =3D if (_theField.isDefined) _theField.get else {
+   _theField =3D Some(computation())
+   _theField.get
+ }
+</code></pre>
+
+<p class=3D"LP">=E4=B9=9F=E5=B0=B1=E6=98=AF=E8=AF=B4=EF=BC=8C=E5=AE=83=E5=
+=9C=A8=E9=9C=80=E8=A6=81=E6=97=B6=E8=AE=A1=E7=AE=97=E7=BB=93=E6=9E=9C=E5=B9=
+=B6=E4=BC=9A=E8=AE=B0=E4=BD=8F=E7=BB=93=E6=9E=9C=EF=BC=8C=E5=9C=A8=E8=A6=81=
+=E8=BE=BE=E5=88=B0=E8=BF=99=E7=A7=8D=E7=9B=AE=E7=9A=84=E6=97=B6=E4=BD=BF=E7=
+=94=A8lazy=E6=88=90=E5=91=98=EF=BC=9B=E4=BD=86=E5=BD=93=E8=AF=AD=E6=84=8F=
+=E4=B8=8A=E9=9C=80=E8=A6=81=E6=83=B0=E6=80=A7=E8=B5=8B=E5=80=BC=E6=97=B6(by=
+ semantics)=EF=BC=8C=E8=A6=81=E9=81=BF=E5=85=8D=E4=BD=BF=E7=94=A8=E6=83=B0=
+=E6=80=A7=E8=B5=8B=E5=80=BC=EF=BC=8C=E8=BF=99=E7=A7=8D=E6=83=85=E5=86=B5=E4=
+=B8=8B=EF=BC=8C=E6=9C=80=E5=A5=BD=E6=98=BE=E5=BC=8F=E8=B5=8B=E5=80=BC=E5=9B=
+=A0=E4=B8=BA=E5=AE=83=E4=BD=BF=E5=BE=97=E6=88=90=E6=9C=AC=E6=A8=A1=E5=9E=8B=
+=E6=98=AF=E6=98=8E=E7=A1=AE=E7=9A=84=EF=BC=8C=E5=B9=B6=E4=B8=94=E5=89=AF=E4=
+=BD=9C=E7=94=A8=E8=A2=AB=E4=B8=A5=E6=A0=BC=E7=9A=84=E6=8E=A7=E5=88=B6=E3=80=
+=82</p>
+
+<p>Lazy=E6=88=90=E5=91=98=E6=98=AF=E7=BA=BF=E7=A8=8B=E5=AE=89=E5=85=A8=E7=
+=9A=84=E3=80=82</p>
+
+</a><p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E6=83=B0=E6=
+=80=A7=E8=B5=8B=E5=80=BC"></a><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=
+=E7=A8=8B-=E4=BC=A0=E5=90=8D=E8=B0=83=E7=94=A8"></a></p><a id=3D"=E5=87=BD=
+=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E4=BC=A0=E5=90=8D=E8=B0=83=E7=94=A8">
+
+<h3>=E4=BC=A0=E5=90=8D=E8=B0=83=E7=94=A8</h3>
+
+<p>=E6=96=B9=E6=B3=95=E5=8F=82=E6=95=B0=E5=8F=AF=E4=BB=A5=E6=8C=87=E5=AE=9A=
+=E4=B8=BA=E4=BC=A0=E5=90=8D=E5=8F=82=E6=95=B0 (by-name) =E6=84=8F=E5=91=B3=
+=E7=9D=80=E5=8F=82=E6=95=B0=E4=B8=8D=E6=98=AF=E7=BB=91=E5=AE=9A=E5=88=B0=E4=
+=B8=80=E4=B8=AA=E5=80=BC=EF=BC=8C=E8=80=8C=E6=98=AF=E4=B8=80=E4=B8=AA=E5=8F=
+=AF=E8=83=BD=E9=9C=80=E8=A6=81=E5=8F=8D=E5=A4=8D=E8=BF=9B=E8=A1=8C=E7=9A=84=
+=E8=AE=A1=E7=AE=97=E3=80=82=E8=BF=99=E4=B8=80=E7=89=B9=E6=80=A7=E9=9C=80=E8=
+=A6=81=E5=B0=8F=E5=BF=83=E4=BD=BF=E7=94=A8=EF=BC=9B =E6=9C=9F=E5=BE=85=E4=
+=BC=A0=E5=80=BC(by-value)=E8=AF=AD=E6=B3=95=E7=9A=84=E8=B0=83=E7=94=A8=E8=
+=80=85=E4=BC=9A=E6=84=9F=E5=88=B0=E6=83=8A=E8=AE=B6=E3=80=82=E8=BF=99=E4=B8=
+=80=E7=89=B9=E6=80=A7=E7=9A=84=E5=8A=A8=E6=9C=BA=E6=98=AF=E6=9E=84=E9=80=A0=
+=E8=AF=AD=E6=B3=95=E8=87=AA=E7=84=B6=E7=9A=84 DSLs=E2=80=94=E2=80=94=E4=BD=
+=BF=E6=96=B0=E7=9A=84=E6=8E=A7=E5=88=B6=E7=BB=93=E6=9E=84=E5=8F=AF=E4=BB=A5=
+=E7=9C=8B=E8=B5=B7=E6=9D=A5=E6=9B=B4=E5=83=8F=E6=9C=AC=E5=9C=B0=E8=AF=AD=E8=
+=A8=80=E7=89=B9=E5=BE=81=E3=80=82</p>
+
+<p>=E5=8F=AA=E5=9C=A8=E4=B8=8B=E9=9D=A2=E7=9A=84=E6=8E=A7=E5=88=B6=E7=BB=93=
+=E6=9E=84=E4=B8=AD=E4=BD=BF=E7=94=A8=E4=BC=A0=E5=90=8D=E8=B0=83=E7=94=A8, =
+=E8=B0=83=E7=94=A8=E8=80=85=E6=98=8E=E6=98=BE=E4=BC=A0=E9=80=92=E7=9A=84=E6=
+=98=AF=E4=B8=80=E6=AE=B5=E4=BB=A3=E7=A0=81=E5=9D=97(block)=E8=80=8C=E9=9D=
+=9E=E4=B8=80=E4=B8=AA=E7=A1=AE=E5=AE=9A=E7=9A=84=E8=AE=A1=E7=AE=97=E7=BB=93=
+=E6=9E=9C=E3=80=82=E4=BC=A0=E5=90=8D=E5=8F=82=E6=95=B0=E5=BF=85=E9=A1=BB=E6=
+=94=BE=E5=9C=A8=E5=8F=82=E6=95=B0=E5=88=97=E8=A1=A8=E7=9A=84=E6=9C=80=E5=90=
+=8E=E4=B8=80=E4=BD=8D=E3=80=82=E5=BD=93=E4=BD=BF=E7=94=A8=E4=BC=A0=E5=90=8D=
+=E8=B0=83=E7=94=A8=E6=97=B6=EF=BC=8C=E7=A1=AE=E4=BF=9D=E6=96=B9=E6=B3=95=E5=
+=90=8D=E7=A7=B0=E8=AE=A9=E8=B0=83=E7=94=A8=E8=80=85=E6=98=8E=E6=98=BE=E6=84=
+=9F=E7=9F=A5=E5=88=B0=E6=96=B9=E6=B3=95=E5=8F=82=E6=95=B0=E6=98=AF=E4=BC=A0=
+=E5=90=8D=E5=8F=82=E6=95=B0=E3=80=82</p>
+
+<p>=E5=BD=93=E4=BD=A0=E6=83=B3=E8=A6=81=E4=B8=80=E4=B8=AA=E5=80=BC=E8=A2=AB=
+=E8=AE=A1=E7=AE=97=E5=A4=9A=E6=AC=A1=EF=BC=8C=E7=89=B9=E5=88=AB=E6=98=AF=E8=
+=BF=99=E4=B8=AA=E8=AE=A1=E7=AE=97=E4=BC=9A=E5=BC=95=E8=B5=B7=E5=89=AF=E4=BD=
+=9C=E7=94=A8=E6=97=B6=EF=BC=8C=E4=BD=BF=E7=94=A8=E6=98=BE=E5=BC=8F=E5=87=BD=
+=E6=95=B0=EF=BC=9A</p>
+
+<pre><code> class SSLConnector(mkEngine: () =3D&gt; SSLEngine)
+</code></pre>
+
+<p class=3D"LP">=E8=BF=99=E6=A0=B7=E6=84=8F=E5=9B=BE=E5=BE=88=E6=98=8E=E7=
+=A1=AE=EF=BC=8C=E8=B0=83=E7=94=A8=E8=80=85=E4=B8=8D=E4=BC=9A=E6=84=9F=E5=88=
+=B0=E6=83=8A=E5=A5=87=E3=80=82</p>
+
+</a><p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-=E4=BC=A0=E5=
+=90=8D=E8=B0=83=E7=94=A8"></a><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=
+=E7=A8=8B-`flatMap`"></a></p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=
+=E7=A8=8B-`flatMap`">
+
+<h3><code>flatMap</code></h3>
+
+<p>flatMap=E2=80=94=E2=80=94=E7=BB=93=E5=90=88=E4=BA=86map =E5=92=8C flatte=
+n =E2=80=94=E2=80=94 =E7=9A=84=E4=BD=BF=E7=94=A8=E8=A6=81=E7=89=B9=E5=88=AB=
+=E5=B0=8F=E5=BF=83=EF=BC=8C=E5=AE=83=E6=9C=89=E7=9D=80=E9=9A=BE=E4=BB=A5=E7=
+=90=A2=E7=A3=A8=E7=9A=84=E5=A8=81=E5=8A=9B=E5=92=8C=E5=BC=BA=E5=A4=A7=E7=9A=
+=84=E5=AE=9E=E7=94=A8=E6=80=A7=E3=80=82=E7=B1=BB=E4=BC=BC=E5=AE=83=E7=9A=84=
+=E5=85=84=E5=BC=9F map=EF=BC=8C=E5=AE=83=E4=B9=9F=E6=98=AF=E7=BB=8F=E5=B8=
+=B8=E5=9C=A8=E9=9D=9E=E4=BC=A0=E7=BB=9F=E7=9A=84=E9=9B=86=E5=90=88=E4=B8=AD=
+=E4=BD=BF=E7=94=A8=E7=9A=84=EF=BC=8C=E4=BE=8B=E5=A6=82 Future , Option=E3=
+=80=82=E5=AE=83=E7=9A=84=E8=A1=8C=E4=B8=BA=E7=94=B1=E5=AE=83=E7=9A=84=EF=BC=
+=88=E5=87=BD=E6=95=B0=EF=BC=89=E7=AD=BE=E5=90=8D=E6=8F=AD=E7=A4=BA=EF=BC=9B=
+=E5=AF=B9=E4=BA=8E=E4=B8=80=E4=BA=9B=E5=AE=B9=E5=99=A8 Container[A]</p>
+
+<pre><code> flatMap[B](f: A =3D&gt; Container[B]): Container[B]
+</code></pre>
+
+<p class=3D"LP">flatMap=E5=AF=B9=E9=9B=86=E5=90=88=E4=B8=AD=E7=9A=84=E6=AF=
+=8F=E4=B8=AA=E5=85=83=E7=B4=A0=E8=B0=83=E7=94=A8=E4=BA=86 =E5=87=BD=E6=95=
+=B0 f =E4=BA=A7=E7=94=9F=E4=B8=80=E4=B8=AA=E6=96=B0=E7=9A=84=E9=9B=86=E5=90=
+=88=EF=BC=8C=E5=B0=86=E5=AE=83=E4=BB=AC=E5=85=A8=E9=83=A8 flatten =E5=90=8E=
+=E6=94=BE=E5=85=A5=E7=BB=93=E6=9E=9C=E4=B8=AD=E3=80=82=E4=BE=8B=E5=A6=82=EF=
+=BC=8C=E8=8E=B7=E5=8F=96=E4=B8=A4=E4=B8=AA=E5=AD=97=E7=AC=A6=E7=9A=84=E5=AD=
+=97=E7=AC=A6=E4=B8=B2=E7=9A=84=E6=89=80=E6=9C=89=E6=8E=92=E5=88=97=EF=BC=8C=
+=E7=9B=B8=E5=90=8C=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=8D=E8=83=BD=E5=87=BA=E7=
+=8E=B0=E4=B8=A4=E6=AC=A1</p>
+
+<pre><code> val chars =3D 'a' to 'z'
+ val perms =3D chars flatMap { a =3D&gt;
+   chars flatMap { b =3D&gt;
+     if (a !=3D b) Seq("%c%c".format(a, b))
+     else Seq()
+   }
+ }
+</code></pre>
+
+<p class=3D"LP">=E7=AD=89=E4=BB=B7=E4=BA=8E=E4=B8=8B=E9=9D=A2=E8=BF=99=E6=
+=AE=B5=E6=9B=B4=E7=AE=80=E6=B4=81=E7=9A=84 for-comprehension =EF=BC=88=E5=
+=9F=BA=E6=9C=AC=E5=B0=B1=E6=98=AF=E9=92=88=E5=AF=B9=E4=B8=8A=E9=9D=A2=E7=9A=
+=84=E8=AF=AD=E6=B3=95=E7=B3=96=EF=BC=89</p>
+
+<pre><code> val perms =3D for {
+   a &lt;- chars
+   b &lt;- chars
+   if a !=3D b
+ } yield "%c%c".format(a, b)
+</code></pre>
+
+<p><code>flatMap</code>=E5=9C=A8=E5=A4=84=E7=90=86Options=E5=B8=B8=E5=B8=B8=
+=E5=BE=88=E6=9C=89=E7=94=A8=E2=80=94=E2=80=94 =E5=AE=83=E5=B0=86=E5=A4=9A=
+=E4=B8=AAoptions=E9=93=BE=E5=90=88=E5=B9=B6=E4=B8=BA=E4=B8=80=E4=B8=AA=EF=
+=BC=8C</p>
+
+<pre><code> val host: Option[String] =3D ..
+ val port: Option[Int] =3D ..
+
+ val addr: Option[InetSocketAddress] =3D
+   host flatMap { h =3D&gt;
+     port map { p =3D&gt;
+       new InetSocketAddress(h, p)
+     }
+   }
+</code></pre>
+
+<p class=3D"LP">=E4=B9=9F=E5=8F=AF=E4=BB=A5=E4=BD=BF=E7=94=A8=E6=9B=B4=E7=
+=AE=80=E6=B4=81=E7=9A=84for=E6=9D=A5=E5=AE=9E=E7=8E=B0=EF=BC=9A</p>
+
+<pre><code> val addr: Option[InetSocketAddress] =3D for {
+   h &lt;- host
+   p &lt;- port
+ } yield new InetSocketAddress(h, p)
+</code></pre>
+
+</a><p><a id=3D"=E5=87=BD=E6=95=B0=E5=BC=8F=E7=BC=96=E7=A8=8B-`flatMap`">=
+=E5=AF=B9flatMap=E5=9C=A8=E5=9C=A8Futures=E4=B8=AD=E7=9A=84=E4=BD=BF=E7=94=
+=A8</a><a href=3D"http://twitter.github.io/effectivescala/index-cn.html#Twi=
+tter's%20standard%20libraries-Futures">futures=E4=B8=80=E8=8A=82</a>=E4=B8=
+=AD=E6=9C=89=E8=AE=A8=E8=AE=BA=E3=80=82</p>
+
+<p><a id=3D"=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B=
+"></a></p><a id=3D"=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=
+=E7=A8=8B">
+
+<h2>=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B</h2>
+
+<p>Scala=E7=9A=84=E5=8D=9A=E5=A4=A7=E5=BE=88=E5=A4=A7=E7=A8=8B=E5=BA=A6=E4=
+=B8=8A=E5=9C=A8=E4=BA=8E=E5=AE=83=E7=9A=84=E5=AF=B9=E8=B1=A1=E7=B3=BB=E7=BB=
+=9F=E3=80=82Scala=E4=B8=AD=E6=89=80=E6=9C=89=E7=9A=84=E5=80=BC=E9=83=BD=E6=
+=98=AF=E5=AF=B9=E8=B1=A1=EF=BC=8C=E5=B0=B1=E8=BF=99=E4=B8=80=E6=84=8F=E4=B9=
+=89=E8=80=8C=E8=A8=80Scala=E6=98=AF=E9=97=A8=E7=BA=AF=E7=B2=B9=E7=9A=84=E8=
+=AF=AD=E8=A8=80=EF=BC=9B=E5=9F=BA=E6=9C=AC=E7=B1=BB=E5=9E=8B=E5=92=8C=E7=BB=
+=84=E5=90=88=E7=B1=BB=E5=9E=8B=E6=B2=A1=E6=9C=89=E5=8C=BA=E5=88=AB=E3=80=82=
+Scala=E4=B9=9F=E6=8F=90=E4=BE=9B=E4=BA=86mixin=E7=9A=84=E7=89=B9=E6=80=A7=
+=E5=85=81=E8=AE=B8=E6=9B=B4=E5=A4=9A=E6=AD=A3=E4=BA=A4=E5=9C=B0=E3=80=81=E7=
+=BB=86=E7=B2=92=E5=BA=A6=E5=9C=B0=E6=9E=84=E9=80=A0=E4=B8=80=E4=BA=9B=E5=9C=
+=A8=E7=BC=96=E8=AF=91=E6=97=B6=E5=8F=97=E7=9B=8A=E4=BA=8E=E9=9D=99=E6=80=81=
+=E7=B1=BB=E5=9E=8B=E6=A3=80=E6=B5=8B=E7=9A=84=E5=8F=AF=E8=A2=AB=E7=81=B5=E6=
+=B4=BB=E7=BB=84=E8=A3=85=E7=9A=84=E6=A8=A1=E5=9D=97=E3=80=82</p>
+
+</a><p><a id=3D"=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=
+=A8=8B">mixin=E7=B3=BB=E7=BB=9F=E7=9A=84=E8=83=8C=E5=90=8E=E5=8A=A8=E6=9C=
+=BA=E4=B9=8B=E4=B8=80=E6=98=AF=E6=B6=88=E9=99=A4=E4=BC=A0=E7=BB=9F=E7=9A=84=
+=E4=BE=9D=E8=B5=96=E6=B3=A8=E5=85=A5=E3=80=82=E8=BF=99=E7=A7=8D=E2=80=9C=E7=
+=BB=84=E4=BB=B6=E9=A3=8E=E6=A0=BC(component style)=E2=80=9D=E7=BC=96=E7=A8=
+=8B=E7=9A=84=E9=AB=98=E6=BD=AE=E6=98=AF=E6=98=AF</a><a href=3D"http://jonas=
+boner.com/2008/10/06/real-world-scala-dependency-injection-di/">the cake pa=
+ttern</a>.</p>
+
+<p><a id=3D"=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B=
+-=E4=BE=9D=E8=B5=96=E6=B3=A8=E5=85=A5"></a></p><a id=3D"=E9=9D=A2=E5=90=91=
+=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B-=E4=BE=9D=E8=B5=96=E6=B3=A8=
+=E5=85=A5">
+
+<h3>=E4=BE=9D=E8=B5=96=E6=B3=A8=E5=85=A5</h3>
+
+<p>=E5=9C=A8=E6=88=91=E4=BB=AC=E7=9A=84=E4=BD=BF=E7=94=A8=E4=B8=AD=EF=BC=8C=
+=E6=88=91=E4=BB=AC=E5=8F=91=E7=8E=B0Scala=E6=9C=AC=E8=BA=AB=E5=88=A0=E9=99=
+=A4=E4=BA=86=E5=BE=88=E5=A4=9A=E7=BB=8F=E5=85=B8(=E6=9E=84=E9=80=A0=E5=87=
+=BD=E6=95=B0)=E4=BE=9D=E8=B5=96=E6=B3=A8=E5=85=A5=E7=9A=84=E8=AF=AD=E6=B3=
+=95=E5=BC=80=E9=94=80=EF=BC=8C=E6=88=91=E4=BB=AC=E6=9B=B4=E6=84=BF=E6=84=8F=
+=E5=B0=B1=E8=BF=99=E6=A0=B7=E7=94=A8: =E5=AE=83=E6=9B=B4=E6=B8=85=E6=99=B0=
+=EF=BC=8C=E4=BE=9D=E8=B5=96=E4=BB=8D=E7=84=B6=E6=A4=8D=E6=A0=B9=E4=BA=8E=EF=
+=BC=88=E6=9E=84=E9=80=A0=EF=BC=89=E7=B1=BB=E5=9E=8B=EF=BC=8C=E8=80=8C=E7=B1=
+=BB=E6=9E=84=E9=80=A0=E8=AF=AD=E6=B3=95=E6=98=AF=E5=A6=82=E6=AD=A4=E5=BE=AE=
+=E4=B8=8D=E8=B6=B3=E9=81=93=E8=80=8C=E5=8F=98=E5=BE=97=E8=BD=BB=E8=80=8C=E6=
+=98=93=E4=B8=BE=E3=80=82=E6=9C=89=E4=BA=9B=E6=97=A0=E8=81=8A=EF=BC=8C=E7=AE=
+=80=E5=8D=95=EF=BC=8C=E4=BD=86=E6=9C=89=E6=95=88=E3=80=82<em>=E5=AF=B9=E6=
+=A8=A1=E5=9D=97=E5=8C=96=E7=BC=96=E7=A8=8B=E6=97=B6=E4=BD=BF=E7=94=A8=E4=BE=
+=9D=E8=B5=96=E6=B3=A8=E5=85=A5</em>=EF=BC=8C=E7=89=B9=E5=88=AB=E6=98=AF=EF=
+=BC=8C<em>=E7=BB=84=E5=90=88=E4=BC=98=E4=BA=8E=E7=BB=A7=E6=89=BF</em>=E2=80=
+=94=E8=BF=99=E4=BD=BF=E5=BE=97=E7=A8=8B=E5=BA=8F=E6=9B=B4=E5=8A=A0=E6=A8=A1=
+=E5=9D=97=E5=8C=96=E5=92=8C=E5=8F=AF=E6=B5=8B=E8=AF=95=E7=9A=84=E3=80=82=E5=
+=BD=93=E9=81=87=E5=88=B0=E9=9C=80=E8=A6=81=E7=BB=A7=E6=89=BF=E7=9A=84=E6=83=
+=85=E5=86=B5=EF=BC=8C=E9=97=AE=E9=97=AE=E8=87=AA=E5=B7=B1=EF=BC=9A=E5=9C=A8=
+=E8=AF=AD=E8=A8=80=E7=BC=BA=E4=B9=8F=E5=AF=B9=E7=BB=A7=E6=89=BF=E6=94=AF=E6=
+=8C=81=E7=9A=84=E6=83=85=E5=86=B5=E4=B8=8B=E5=A6=82=E4=BD=95=E6=9E=84=E9=80=
+=A0=E7=A8=8B=E5=BA=8F=EF=BC=9F=E7=AD=94=E6=A1=88=E5=8F=AF=E8=83=BD=E6=98=AF=
+=E4=BB=A4=E4=BA=BA=E4=BF=A1=E6=9C=8D=E7=9A=84=E3=80=82</p>
+
+<p>=E4=BE=9D=E8=B5=96=E6=B3=A8=E5=85=A5=E5=85=B8=E5=9E=8B=E7=9A=84=E4=BD=BF=
+=E7=94=A8=E5=88=B0 trait =EF=BC=88=E8=AF=91=E6=B3=A8=EF=BC=9A=E5=8F=AF=E4=
+=BB=A5=E7=90=86=E8=A7=A3=E4=B8=BA=E5=92=8CJava=E4=B8=ADInterface=E7=9B=B8=
+=E4=BC=BC=EF=BC=89</p>
+
+<pre><code> trait TweetStream {
+   def subscribe(f: Tweet =3D&gt; Unit)
+ }
+ class HosebirdStream extends TweetStream ...
+ class FileStream extends TweetStream ..
+
+ class TweetCounter(stream: TweetStream) {
+   stream.subscribe { tweet =3D&gt; count +=3D 1 }
+ }
+</code></pre>
+
+<p>=E8=BF=99=E6=98=AF=E5=B8=B8=E8=A7=81=E7=9A=84=E6=B3=A8=E5=85=A5<em>=E5=
+=B7=A5=E5=8E=82</em> =E2=80=94 =E7=94=A8=E4=BA=8E=E4=BA=A7=E7=94=9F=E5=85=
+=B6=E4=BB=96=E5=AF=B9=E8=B1=A1=E7=9A=84=E5=AF=B9=E8=B1=A1=E3=80=82=E5=9C=A8=
+=E8=BF=99=E4=BA=9B=E4=BE=8B=E5=AD=90=E4=B8=AD=EF=BC=8C=E6=9B=B4=E9=9D=92=E7=
+=9D=90=E7=94=A8=E7=AE=80=E5=8D=95=E7=9A=84=E5=87=BD=E6=95=B0=E8=80=8C=E9=9D=
+=9E=E4=B8=93=E6=9C=89=E7=9A=84=E5=B7=A5=E5=8E=82=E7=B1=BB=E5=9E=8B=E3=80=82=
+</p>
+
+<pre><code> class FilteredTweetCounter(mkStream: Filter =3D&gt; TweetStream=
+) {
+   mkStream(PublicTweets).subscribe { tweet =3D&gt; publicCount +=3D 1 }
+   mkStream(DMs).subscribe { tweet =3D&gt; dmCount +=3D 1 }
+ }
+</code></pre>
+
+</a><p><a id=3D"=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=
+=A8=8B-=E4=BE=9D=E8=B5=96=E6=B3=A8=E5=85=A5"></a><a id=3D"=E9=9D=A2=E5=90=
+=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B-Trait"></a></p><a id=3D"=
+=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B-Trait">
+
+<h3>Trait</h3>
+
+<p>=E4=BE=9D=E8=B5=96=E6=B3=A8=E5=85=A5=E4=B8=8D=E5=A6=A8=E7=A2=8D=E4=BD=BF=
+=E7=94=A8=E5=85=AC=E5=85=B1=E6=8E=A5=E5=8F=A3=EF=BC=8C=E6=88=96=E5=9C=A8tra=
+it=E4=B8=AD=E5=AE=9E=E7=8E=B0=E5=85=AC=E5=85=B1=E4=BB=A3=E7=A0=81=E3=80=82=
+=E6=81=B0=E6=81=B0=E7=9B=B8=E5=8F=8D=E2=80=94=E6=AD=A3=E6=98=AF=E5=9B=A0=E4=
+=B8=BA=E4=BB=A5=E4=B8=8B=E5=8E=9F=E5=9B=A0=E8=80=8C=E9=AB=98=E5=BA=A6=E9=BC=
+=93=E5=8A=B1=E4=BD=BF=E7=94=A8trait=EF=BC=9A=E4=B8=80=E4=B8=AA=E5=85=B7=E4=
+=BD=93=E7=9A=84=E7=B1=BB=E5=8F=AF=E4=BB=A5=E5=AE=9E=E7=8E=B0=E5=A4=9A=E6=8E=
+=A5=E5=8F=A3(traits)=EF=BC=8C=E5=85=AC=E5=85=B1=E7=9A=84=E4=BB=A3=E7=A0=81=
+=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87=E8=BF=99=E4=BA=9B=E7=B1=BB=E5=A4=8D=E7=
+=94=A8=E3=80=82</p>
+
+<p>=E4=BF=9D=E6=8C=81traits=E7=AE=80=E7=9F=AD=E5=B9=B6=E4=B8=94=E6=98=AF=E6=
+=AD=A3=E4=BA=A4=E7=9A=84=EF=BC=9A=E4=B8=8D=E8=A6=81=E6=8A=8A=E5=88=86=E7=A6=
+=BB=E7=9A=84=E5=8A=9F=E8=83=BD=E6=B7=B7=E5=9C=A8=E4=B8=80=E4=B8=AAtrait=E9=
+=87=8C=EF=BC=8C=E8=80=83=E8=99=91=E5=B0=86=E6=9C=80=E5=B0=8F=E7=9A=84=E7=9B=
+=B8=E5=85=B3=E7=9A=84=E6=84=8F=E5=9B=BE=E6=94=BE=E5=9C=A8=E4=B8=80=E8=B5=B7=
+=E3=80=82=E4=BE=8B=E5=A6=82=EF=BC=8C=E6=83=B3=E8=B1=A1=E4=B8=80=E4=B8=8B=E4=
+=BD=A0=E8=A6=81=E5=81=9A=E4=B8=80=E4=BA=9BIO=E7=9A=84=E6=93=8D=E4=BD=9C=EF=
+=BC=9A</p>
+
+<pre><code> trait IOer {
+   def write(bytes: Array[Byte])
+   def read(n: Int): Array[Byte]
+ }
+</code></pre>
+
+<p class=3D"LP">=E5=88=86=E7=A6=BB=E4=B8=A4=E4=B8=AA=E8=A1=8C=E4=B8=BA=EF=
+=BC=9A</p>
+
+<pre><code> trait Reader {
+   def read(n: Int): Array[Byte]
+ }
+ trait Writer {
+   def write(bytes: Array[Byte])
+ }
+</code></pre>
+
+<p class=3D"LP">=E5=8F=AF=E4=BB=A5=E5=B0=86=E5=AE=83=E4=BB=AC=E4=BB=A5=E6=
+=B7=B7=E5=85=A5(mix)=E7=9A=84=E6=96=B9=E5=BC=8F=E5=AE=9E=E7=8E=B0=E4=B8=80=
+=E4=B8=AAIOer : new Reader with Writer...=E6=8E=A5=E5=8F=A3=E6=9C=80=E5=B0=
+=8F=E5=8C=96=E4=BF=83=E4=BD=BF=E6=9B=B4=E5=A5=BD=E7=9A=84=E6=AD=A3=E4=BA=A4=
+=E6=80=A7=E5=92=8C=E6=9B=B4=E6=B8=85=E6=99=B0=E7=9A=84=E6=A8=A1=E5=9D=97=E5=
+=8C=96=E3=80=82</p>
+
+</a><p><a id=3D"=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=
+=A8=8B-Trait"></a><a id=3D"=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=
+=BC=96=E7=A8=8B-=E5=8F=AF=E8=A7=81=E6=80=A7"></a></p><a id=3D"=E9=9D=A2=E5=
+=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B-=E5=8F=AF=E8=A7=81=E6=
+=80=A7">
+
+<h3>=E5=8F=AF=E8=A7=81=E6=80=A7</h3>
+
+<p>Scala=E6=9C=89=E5=BE=88=E4=B8=B0=E5=AF=8C=E7=9A=84=E5=8F=AF=E8=A7=81=E6=
+=80=A7=E4=BF=AE=E9=A5=B0=E3=80=82=E4=BD=BF=E7=94=A8=E8=BF=99=E4=BA=9B=E5=8F=
+=AF=E8=A7=81=E6=80=A7=E4=BF=AE=E9=A5=B0=E5=BE=88=E9=87=8D=E8=A6=81=EF=BC=8C=
+=E5=9B=A0=E4=B8=BA=E5=AE=83=E4=BB=AC=E5=AE=9A=E4=B9=89=E4=BA=86=E5=93=AA=E4=
+=BA=9B=E6=9E=84=E6=88=90=E5=85=AC=E5=BC=80API=E3=80=82=E5=85=AC=E5=BC=80API=
+s=E5=BA=94=E8=AF=A5=E9=99=90=E5=88=B6=EF=BC=8C=E8=BF=99=E6=A0=B7=E7=94=A8=
+=E6=88=B7=E4=B8=8D=E4=BC=9A=E6=97=A0=E6=84=8F=E4=B8=AD=E4=BE=9D=E8=B5=96=E5=
+=AE=9E=E7=8E=B0=E7=BB=86=E8=8A=82=E5=B9=B6=E9=99=90=E5=88=B6=E4=BA=86=E4=BD=
+=9C=E8=80=85=E4=BF=AE=E6=94=B9=E5=AE=83=E4=BB=AC=E7=9A=84=E8=83=BD=E5=8A=9B=
+:
+=E5=AE=83=E4=BB=AC=E5=AF=B9=E4=BA=8E=E5=A5=BD=E7=9A=84=E6=A8=A1=E5=9D=97=E5=
+=8C=96=E8=AE=BE=E8=AE=A1=E6=98=AF=E8=87=B3=E5=85=B3=E9=87=8D=E8=A6=81=E7=9A=
+=84=E3=80=82=E4=B8=80=E8=88=AC=E6=9D=A5=E8=AF=B4=EF=BC=8C=E6=89=A9=E5=B1=95=
+=E5=85=AC=E5=BC=80APIs=E6=AF=94=E6=94=B6=E7=BC=A9=E5=85=AC=E5=BC=80=E7=9A=
+=84APIs=E5=AE=B9=E6=98=93=E7=9A=84=E5=A4=9A=E3=80=82=E5=B7=AE=E5=8A=B2=E7=
+=9A=84=E6=B3=A8=E9=87=8A=EF=BC=88annotation=EF=BC=89=E4=B9=9F=E8=83=BD=E5=
+=8D=B1=E5=AE=B3=E5=88=B0=E4=BD=A0=E4=BB=A3=E7=A0=81=E5=90=91=E5=90=8E=E7=9A=
+=84=E4=BA=8C=E8=BF=9B=E5=88=B6=E5=85=BC=E5=AE=B9=E6=80=A7=E3=80=82=EF=BC=88=
+=E8=AF=91=E6=B3=A8=EF=BC=9Acomments=E5=92=8Cannotation=E9=83=BD=E5=8F=AF=E7=
+=BF=BB=E8=AF=91=E6=88=90=E6=B3=A8=E9=87=8A=EF=BC=8C=E4=BD=86=E6=84=8F=E4=B9=
+=89=E4=B8=8D=E5=90=8C=E3=80=82annotation=E5=9C=A8Java=E5=92=8CScala=E6=9C=
+=89=E7=89=B9=E5=AE=9A=E7=9A=84=E5=90=AB=E4=B9=89=EF=BC=89</p>
+
+<h4><code>private[this]</code></h4>
+
+<p>=E4=B8=80=E4=B8=AA=E7=B1=BB=E7=9A=84=E6=88=90=E5=91=98=E6=A0=87=E8=AE=B0=
+=E4=B8=BA=E7=A7=81=E6=9C=89=E7=9A=84=EF=BC=8C</p>
+
+<pre><code> private val x: Int =3D ...
+</code></pre>
+
+<p class=3D"LP">=E5=AE=83=E5=AF=B9=E8=BF=99=E4=B8=AA=E7=B1=BB=E7=9A=84=E6=
+=89=80=E6=9C=89=E5=AE=9E=E4=BE=8B=E6=9D=A5=E8=AF=B4=E9=83=BD=E6=98=AF=E5=8F=
+=AF=E8=A7=81=E7=9A=84=EF=BC=88=E4=BD=86=E5=AF=B9=E5=85=B6=E5=AD=90=E7=B1=BB=
+=E4=B8=8D=E5=8F=AF=E8=A7=81=EF=BC=89=E3=80=82=E5=A4=A7=E5=A4=9A=E6=83=85=E5=
+=86=B5=EF=BC=8C=E4=BD=A0=E6=83=B3=E8=A6=81=E7=9A=84=E6=98=AF private[this] =
+=E3=80=82</p>
+
+<pre><code> private[this] val: Int =3D ..
+</code></pre>
+
+<p class=3D"LP">=E8=BF=99=E4=B8=AA=E4=BF=AE=E9=A5=B0=E9=99=90=E5=88=B6=E4=
+=BA=86=E5=AE=83=E5=8F=AA=E5=AF=B9=E5=BD=93=E5=89=8D=E7=89=B9=E5=AE=9A=E7=9A=
+=84=E5=AE=9E=E4=BE=8B=E5=8F=AF=E8=A7=81=E3=80=82Scala=E7=BC=96=E8=AF=91=E5=
+=99=A8=E4=BC=9A=E6=8A=8Aprivate[this]=E7=BF=BB=E8=AF=91=E4=B8=BA=E4=B8=80=
+=E4=B8=AA=E7=AE=80=E5=8D=95=E7=9A=84=E5=AD=97=E6=AE=B5=E8=AE=BF=E9=97=AE(=
+=E5=9B=A0=E4=B8=BA=E8=AE=BF=E9=97=AE=E4=BB=85=E9=99=90=E4=BA=8E=E9=9D=99=E6=
+=80=81=E5=AE=9A=E4=B9=89=E7=9A=84=E7=B1=BB)=EF=BC=8C=E8=BF=99=E6=A0=B7=E6=
+=9C=89=E6=97=B6=E6=9C=89=E5=8A=A9=E4=BA=8E=E6=80=A7=E8=83=BD=E4=BC=98=E5=8C=
+=96=E3=80=82</p>
+
+<h4>=E5=8D=95=E4=BE=8B=E7=B1=BB=E5=9E=8B</h4>
+
+<p>=E5=9C=A8Scala=E4=B8=AD=E5=88=9B=E5=BB=BA=E5=8D=95=E4=BE=8B=E7=B1=BB=E5=
+=9E=8B=E6=98=AF=E5=BE=88=E5=B8=B8=E8=A7=81=E7=9A=84=EF=BC=8C=E4=BE=8B=E5=A6=
+=82=EF=BC=9A</p>
+
+<pre><code> def foo() =3D new Foo with Bar with Baz {
+   ...
+ }
+</code></pre>
+
+<p class=3D"LP">=E5=9C=A8=E8=BF=99=E7=A7=8D=E6=83=85=E5=86=B5=E4=B8=8B=EF=
+=BC=8C=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87=E5=A3=B0=E6=98=8E=E8=BF=94=E5=9B=
+=9E=E7=B1=BB=E5=9E=8B=E6=9D=A5=E9=99=90=E5=88=B6=E5=8F=AF=E8=A7=81=E6=80=A7=
+=EF=BC=9A</p>
+
+<pre><code> def foo(): Foo with Bar =3D new Foo with Bar with Baz {
+   ...
+ }
+</code></pre>
+
+<p class=3D"LP">foo()=E6=96=B9=E6=B3=95=E7=9A=84=E8=B0=83=E7=94=A8=E8=80=85=
+=E4=BC=9A=E7=9C=8B=E5=88=B0=E4=BB=A5=E8=BF=94=E5=9B=9E=E5=AE=9E=E4=BE=8B(Fo=
+o with Bar)=E7=9A=84=E5=8F=97=E9=99=90=E8=A7=86=E5=9B=BE=E3=80=82</p>
+
+</a><p><a id=3D"=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=
+=A8=8B-=E5=8F=AF=E8=A7=81=E6=80=A7"></a><a id=3D"=E9=9D=A2=E5=90=91=E5=AF=
+=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=A8=8B-=E7=BB=93=E6=9E=84=E7=B1=BB=E5=9E=
+=8B"></a></p><a id=3D"=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=
+=96=E7=A8=8B-=E7=BB=93=E6=9E=84=E7=B1=BB=E5=9E=8B">
+
+<h3>=E7=BB=93=E6=9E=84=E7=B1=BB=E5=9E=8B</h3>
+
+<p>=E4=B8=8D=E8=A6=81=E5=9C=A8=E6=AD=A3=E5=B8=B8=E6=83=85=E5=86=B5=E4=B8=8B=
+=E4=BD=BF=E7=94=A8=E7=BB=93=E6=9E=84=E7=B1=BB=E5=9E=8B=E3=80=82=E7=BB=93=E6=
+=9E=84=E7=B1=BB=E5=9E=8B=E6=9C=89=E7=9D=80=E4=BE=BF=E5=88=A9=E4=B8=94=E5=BC=
+=BA=E5=A4=A7=E7=9A=84=E7=89=B9=E6=80=A7=EF=BC=8C=E4=BD=86=E4=B8=8D=E5=B9=B8=
+=E7=9A=84=E6=98=AF=E5=9C=A8JVM=E4=B8=8A=E7=9A=84=E5=AE=9E=E7=8E=B0=E4=B8=8D=
+=E6=98=AF=E5=BE=88=E9=AB=98=E6=95=88=E3=80=82
+=E7=84=B6=E8=80=8C=E2=80=94=E2=80=94=E7=94=B1=E4=BA=8E=E5=AE=9E=E7=8E=B0=E7=
+=9A=84=E6=80=AA=E7=99=96=E2=80=94=E2=80=94=E5=AE=83=E6=8F=90=E5=AF=B9=E6=89=
+=A7=E8=A1=8C=E5=8F=8D=E5=B0=84(reflection)=E4=BE=9B=E4=BA=86=E5=BE=88=E5=A5=
+=BD=E7=9A=84=E7=AE=80=E5=86=99=E5=BD=A2=E5=BC=8F=E3=80=82</p>
+
+<pre><code> val obj: AnyRef
+ obj.asInstanceOf[{def close()}].close()
+</code></pre>
+
+</a><p><a id=3D"=E9=9D=A2=E5=90=91=E5=AF=B9=E8=B1=A1=E7=9A=84=E7=BC=96=E7=
+=A8=8B-=E7=BB=93=E6=9E=84=E7=B1=BB=E5=9E=8B"></a><a id=3D"=E5=9E=83=E5=9C=
+=BE=E5=9B=9E=E6=94=B6"></a></p><a id=3D"=E5=9E=83=E5=9C=BE=E5=9B=9E=E6=94=
+=B6">
+
+<h2>=E5=9E=83=E5=9C=BE=E5=9B=9E=E6=94=B6</h2>
+
+<p>=E6=88=91=E4=BB=AC=E5=AF=B9=E7=94=9F=E4=BA=A7=E4=B8=AD=E8=8A=B1=E4=BA=86=
+=E5=BE=88=E5=A4=9A=E6=97=B6=E9=97=B4=E6=9D=A5=E8=B0=83=E6=95=B4=E5=9E=83=E5=
+=9C=BE=E5=9B=9E=E6=94=B6=E3=80=82=E5=9E=83=E5=9C=BE=E5=9B=9E=E6=94=B6=E7=9A=
+=84=E5=85=B3=E6=B3=A8=E7=82=B9=E4=B8=8EJava=E5=A4=A7=E8=87=B4=E7=9B=B8=E4=
+=BC=BC=EF=BC=8C=E5=B0=BD=E7=AE=A1=E4=B8=80=E4=BA=9B=E6=83=AF=E7=94=A8=E7=9A=
+=84Scala=E4=BB=A3=E7=A0=81=E6=AF=94=E8=B5=B7=E6=83=AF=E7=94=A8=E7=9A=84Java=
+=E4=BB=A3=E7=A0=81=E4=BC=9A=E5=AE=B9=E6=98=93=E4=BA=A7=E7=94=9F=E6=9B=B4=E5=
+=A4=9A(=E7=9F=AD=E6=9A=82=E7=9A=84)=E5=9E=83=E5=9C=BE=E2=80=94=E2=80=94=E5=
+=87=BD=E6=95=B0=E5=BC=8F=E9=A3=8E=E6=A0=BC=E7=9A=84=E5=89=AF=E4=BA=A7=E5=93=
+=81=E3=80=82Hotspot=E7=9A=84=E5=88=86=E4=BB=A3=E5=9E=83=E5=9C=BE=E6=94=B6=
+=E9=9B=86=E9=80=9A=E5=B8=B8=E4=BD=BF=E8=BF=99=E4=B8=8D=E6=88=90=E9=97=AE=E9=
+=A2=98=EF=BC=8C=E5=9B=A0=E4=B8=BA=E7=9F=AD=E6=9A=82=E7=9A=84(short-lived)=
+=E5=9E=83=E5=9C=BE=E5=9C=A8=E5=A4=A7=E5=A4=9A=E6=83=85=E5=BD=A2=E4=B8=8B=E4=
+=BC=9A=E8=A2=AB=E6=9C=89=E6=95=88=E7=9A=84=E9=87=8A=E6=94=BE=E6=8E=89=E3=80=
+=82</p>
+
+</a><p><a id=3D"=E5=9E=83=E5=9C=BE=E5=9B=9E=E6=94=B6">=E5=9C=A8=E8=B0=88GC=
+=E8=B0=83=E4=BC=98=E8=AF=9D=E9=A2=98=E5=89=8D=EF=BC=8C=E5=85=88=E7=9C=8B=E7=
+=9C=8B</a><a href=3D"http://www.infoq.com/presentations/JVM-Performance-Tun=
+ing-twitter">=E8=BF=99=E4=B8=AA</a>Attila=E7=9A=84=E6=8A=A5=E5=91=8A=EF=BC=
+=8C=E5=AE=83=E9=98=90=E8=BF=B0=E4=BA=86=E6=88=91=E4=BB=AC=E5=9C=A8GC=E6=96=
+=B9=E9=9D=A2=E7=9A=84=E4=B8=80=E4=BA=9B=E7=BB=8F=E9=AA=8C=E3=80=82</p>
+
+<p>Scala=E5=9B=BA=E6=9C=89=E7=9A=84=E9=97=AE=E9=A2=98=EF=BC=8C=E4=BD=A0=E8=
+=83=BD=E5=A4=9F=E7=BC=93=E8=A7=A3GC=E7=9A=84=E6=96=B9=E6=B3=95=E6=98=AF=E4=
+=BA=A7=E7=94=9F=E6=9B=B4=E5=B0=91=E7=9A=84=E5=9E=83=E5=9C=BE=EF=BC=9B=E4=BD=
+=86=E4=B8=8D=E8=A6=81=E5=9C=A8=E6=B2=A1=E6=9C=89=E6=95=B0=E6=8D=AE=E7=9A=84=
+=E6=83=85=E5=86=B5=E4=B8=8B=E8=A1=8C=E5=8A=A8=E3=80=82=E9=99=A4=E9=9D=9E=E4=
+=BD=A0=E5=81=9A=E4=BA=86=E6=9F=90=E4=BA=9B=E6=98=8E=E6=98=BE=E7=9A=84=E6=81=
+=B6=E5=8C=96=EF=BC=8C=E4=BD=BF=E7=94=A8=E5=90=84=E7=A7=8DJava=E7=9A=84profi=
+ling=E5=B7=A5=E5=85=B7=E2=80=94=E2=80=94=E6=88=91=E4=BB=AC=E6=8B=A5=E6=9C=
+=89=E7=9A=84=E5=8C=85=E6=8B=AC<a href=3D"https://github.com/mariusaeriksen/=
+heapster">heapster</a>=E5=92=8C<a href=3D"https://github.com/twitter/jvmgcp=
+rof">gcprof</a>=E3=80=82</p>
+
+<p><a id=3D"Java =E5=85=BC=E5=AE=B9=E6=80=A7"></a></p><a id=3D"Java =E5=85=
+=BC=E5=AE=B9=E6=80=A7">
+
+<h2>Java =E5=85=BC=E5=AE=B9=E6=80=A7</h2>
+
+<p>=E5=BD=93=E6=88=91=E4=BB=AC=E5=86=99=E7=9A=84Scala=E4=BB=A3=E7=A0=81=E8=
+=A2=ABJava=E8=B0=83=E7=94=A8=E6=97=B6=EF=BC=8C=E6=88=91=E4=BB=AC=E8=A6=81=
+=E7=A1=AE=E4=BF=9D=E4=BB=8EJava=E6=9D=A5=E7=94=A8=E4=BB=8D=E7=84=B6=E4=B9=
+=A0=E6=83=AF=E3=80=82=E8=BF=99=E5=B8=B8=E5=B8=B8=E4=B8=8D=E9=9C=80=E8=A6=81=
+=E9=A2=9D=E5=A4=96=E7=9A=84=E5=8A=AA=E5=8A=9B=E2=80=94=E2=80=94class=E5=92=
+=8C=E7=BA=AF=E7=9A=84trait=E7=AD=89=E4=BB=B7=E4=BA=8EJava=E7=9A=84=E4=B8=AD=
+=E7=9A=84=E5=AF=B9=E5=BA=94=E7=B1=BB=E5=9E=8B =E2=80=94=E2=80=94 =E4=BD=86=
+=E6=9C=89=E6=97=B6=E9=9C=80=E8=A6=81=E6=8F=90=E4=BE=9B=E7=8B=AC=E7=AB=8B=E7=
+=9A=84Java API=E3=80=82=E4=B8=80=E7=A7=8D=E6=84=9F=E5=8F=97=E4=BD=A0=E7=9A=
+=84=E5=BA=93=E4=B8=AD=E7=9A=84Java API=E5=A5=BD=E7=9A=84=E6=96=B9=E5=BC=8F=
+=E6=98=AF=E7=94=A8Java=E5=86=99=E5=8D=95=E5=85=83=E6=B5=8B=E8=AF=95(=E5=8F=
+=AA=E6=98=AF=E4=B8=BA=E4=BA=86=E5=85=BC=E5=AE=B9=E6=80=A7);=E8=BF=99=E4=B9=
+=9F=E7=A1=AE=E4=BF=9D=E4=BA=86=E4=BD=A0=E7=9A=84=E5=BA=93=E4=B8=AD=E7=9A=84=
+Java=E8=A7=86=E5=9B=BE=E4=BF=9D=E6=8C=81=E7=A8=B3=E5=AE=9A=EF=BC=8C=E5=9C=
+=A8=E8=BF=99=E4=B8=80=E7=82=B9=E4=B8=8A=E4=B8=8D=E4=BC=9A=E9=9A=8F=E7=9D=80=
+=E6=97=B6=E9=97=B4=E5=9B=A0Scala=E7=BC=96=E8=AF=91=E5=99=A8=E7=9A=84=E6=B3=
+=A2=E5=8A=A8=E8=80=8C=E5=BD=B1=E5=93=8D=E3=80=82</p>
+
+<p>=E5=8C=85=E5=90=AB=E9=83=A8=E5=88=86=E5=AE=9E=E7=8E=B0=E7=9A=84Trait=E4=
+=B8=8D=E8=83=BD=E7=9B=B4=E6=8E=A5=E8=A2=ABJava=E4=BD=BF=E7=94=A8=EF=BC=9A =
+=E6=94=B9=E4=B8=BA extends =E4=B8=80=E4=B8=AA=E6=8A=BD=E8=B1=A1=E7=B1=BB</p=
+>
+
+<pre><code> // =E4=B8=8D=E8=83=BD=E7=9B=B4=E6=8E=A5=E8=A2=ABjava=E4=BD=BF=
+=E7=94=A8
+ trait Animal {
+   def eat(other: Animal)
+   def eatMany(animals: Seq[Animal) =3D animals foreach(eat(_))
+ }
+
+ // =E6=94=B9=E4=B8=BA=E8=BF=99=E6=A0=B7:
+ abstract class JavaAnimal extends Animal
+</code></pre>
+
+</a><p><a id=3D"Java =E5=85=BC=E5=AE=B9=E6=80=A7"></a><a id=3D"Twitter=E6=
+=A0=87=E5=87=86=E5=BA=93"></a></p><a id=3D"Twitter=E6=A0=87=E5=87=86=E5=BA=
+=93">
+
+<h2>Twitter=E6=A0=87=E5=87=86=E5=BA=93</h2>
+
+</a><p><a id=3D"Twitter=E6=A0=87=E5=87=86=E5=BA=93">Twitter=E6=9C=80=E9=87=
+=8D=E8=A6=81=E7=9A=84=E6=A0=87=E5=87=86=E5=BA=93=E6=98=AF </a><a href=3D"ht=
+tp://github.com/twitter/util">Util</a> =E5=92=8C <a href=3D"https://github.=
+com/twitter/finagle">Finagle</a>=E3=80=82Util =E5=8F=AF=E4=BB=A5=E7=90=86=
+=E8=A7=A3=E4=B8=BAScala=E5=92=8CJava=E7=9A=84=E6=A0=87=E5=87=86=E5=BA=93=E6=
+=89=A9=E5=B1=95=EF=BC=8C=E6=8F=90=E4=BE=9B=E4=BA=86=E6=A0=87=E5=87=86=E5=BA=
+=93=E4=B8=AD=E6=B2=A1=E6=9C=89=E7=9A=84=E5=8A=9F=E8=83=BD=E6=88=96=E5=B7=B2=
+=E6=9C=89=E5=8A=9F=E8=83=BD=E7=9A=84=E6=9B=B4=E5=90=88=E9=80=82=E7=9A=84=E5=
+=AE=9E=E7=8E=B0=E3=80=82Finagle =E6=98=AF=E6=88=91=E4=BB=AC=E7=9A=84RPC=E7=
+=B3=BB=E7=BB=9F=EF=BC=8C=E6=A0=B8=E5=BF=83=E5=88=86=E5=B8=83=E5=BC=8F=E7=B3=
+=BB=E7=BB=9F=E7=BB=84=E4=BB=B6=E3=80=82</p>
+
+<p><a id=3D"Twitter=E6=A0=87=E5=87=86=E5=BA=93-Future"></a></p><a id=3D"Twi=
+tter=E6=A0=87=E5=87=86=E5=BA=93-Future">
+
+<h3>Future</h3>
+
+<p>Futures=E5=B7=B2=E7=BB=8F=E5=9C=A8=E5=B9=B6=E5=8F=91=E4=B8=80=E8=8A=82=
+=E4=B8=AD=E7=AE=80=E5=8D=95=E8=AE=A8=E8=AE=BA=E8=BF=87=E3=80=82=E5=AE=83=E6=
+=98=AF=E8=B0=83=E5=BC=82=E6=AD=A5=E5=A4=84=E7=90=86=E7=9A=84=E4=B8=AD=E5=BF=
+=83=E6=9C=BA=E5=88=B6=EF=BC=8C=E6=B8=97=E9=80=8F=E5=9C=A8=E6=88=91=E4=BB=AC=
+=E4=BB=A3=E7=A0=81=E5=BA=93=E4=B8=AD=EF=BC=8C=E4=B9=9F=E6=98=AFFinagle=E7=
+=9A=84=E6=A0=B8=E5=BF=83=E3=80=82Futures=E5=85=81=E8=AE=B8=E7=BB=84=E5=90=
+=88=E5=B9=B6=E5=8F=91=E4=BA=8B=E4=BB=B6=EF=BC=8C=E7=AE=80=E5=8C=96=E4=BA=86=
+=E9=AB=98=E5=B9=B6=E5=8F=91=E6=93=8D=E4=BD=9C=E3=80=82=E4=B9=9F=E6=98=AFJVM=
+=E4=B8=8A=E5=BC=82=E6=AD=A5=E5=B9=B6=E5=8F=91=E7=9A=84=E4=B8=80=E7=A7=8D=E9=
+=AB=98=E6=95=88=E7=9A=84=E5=AE=9E=E7=8E=B0=E3=80=82</p>
+
+<p>Twitter=E7=9A=84future=E6=98=AF<em>=E5=BC=82=E6=AD=A5</em>=E7=9A=84=EF=
+=BC=8C=E6=89=80=E4=BB=A5=E5=9F=BA=E6=9C=AC=E4=B8=8A=E4=BB=BB=E4=BD=95=E6=93=
+=8D=E4=BD=9C(=E9=98=BB=E5=A1=9E=E6=93=8D=E4=BD=9C)=E2=80=94=E2=80=94=E5=9F=
+=BA=E6=9C=AC=E4=B8=8A=E4=BB=BB=E4=BD=95=E5=8F=AF=E4=BB=A5suspend=E5=AE=83=
+=E7=9A=84=E7=BA=BF=E7=A8=8B=E7=9A=84=E6=89=A7=E8=A1=8C=EF=BC=9B=E7=BD=91=E7=
+=BB=9CIO=E5=92=8C=E7=A3=81=E7=9B=98IO=E6=98=AF=E5=B0=B1=E6=98=AF=E4=BE=8B=
+=E5=AD=90=E2=80=94=E2=80=94=E5=BF=85=E9=A1=BB=E7=94=B1=E7=B3=BB=E7=BB=9F=E5=
+=A4=84=E7=90=86=EF=BC=8C=E5=AE=83=E4=B8=BA=E7=BB=93=E6=9E=9C=E6=8F=90=E4=BE=
+=9Bfuture=E3=80=82Finagle=E4=B8=BA=E7=BD=91=E7=BB=9CIO=E6=8F=90=E4=BE=9B=E4=
+=BA=86=E8=BF=99=E6=A0=B7=E4=B8=80=E7=A7=8D=E7=B3=BB=E7=BB=9F=E3=80=82</p>
+
+<p>Futures=E6=B8=85=E6=99=B0=E7=AE=80=E5=8D=95=EF=BC=9A=E5=AE=83=E4=BB=AC=
+=E6=8C=81=E6=9C=89=E4=B8=80=E4=B8=AA=E5=B0=9A=E6=9C=AA=E5=AE=8C=E6=88=90=E8=
+=BF=90=E7=AE=97=E7=BB=93=E6=9E=9C=E7=9A=84 promise =E3=80=82=E5=AE=83=E4=BB=
+=AC=E6=98=AF=E4=B8=80=E4=B8=AA=E7=AE=80=E5=8D=95=E7=9A=84=E5=AE=B9=E5=99=A8=
+=E2=80=94=E2=80=94=E4=B8=80=E4=B8=AA=E5=8D=A0=E4=BD=8D=E7=AC=A6=E3=80=82=E4=
+=B8=80=E6=AC=A1=E8=AE=A1=E7=AE=97=E5=BD=93=E7=84=B6=E5=8F=AF=E8=83=BD=E4=BC=
+=9A=E5=A4=B1=E8=B4=A5=EF=BC=8C=E8=BF=99=E7=A7=8D=E7=8A=B6=E5=86=B5=E5=BF=85=
+=E9=A1=BB=E8=A2=AB=E7=BC=96=E7=A0=81=EF=BC=9A=E4=B8=80=E4=B8=AAFuture=E5=8F=
+=AF=E4=BB=A5=E6=98=AF=E4=B8=89=E7=A7=8D=E7=8A=B6=E6=80=81=E4=B9=8B=E4=B8=80=
+=EF=BC=9A pending, failed, completed=E3=80=82</p>
+
+<div class=3D"explainer">
+<h3>=E9=97=B2=E8=AF=9D: <em>=E7=BB=84=E5=90=88(composition)</em></h3>
+<p>=E8=AE=A9=E6=88=91=E4=BB=AC=E9=87=8D=E6=96=B0=E5=AE=A1=E8=A7=86=E6=88=91=
+=E4=BB=AC=E6=89=80=E8=AF=B4=E7=9A=84=E7=BB=84=E5=90=88=EF=BC=9A=E5=B0=86=E7=
+=AE=80=E5=8D=95=E7=9A=84=E7=BB=84=E4=BB=B6=E5=90=88=E6=88=90=E4=B8=80=E4=B8=
+=AA=E6=9B=B4=E5=A4=8D=E6=9D=82=E7=9A=84=E3=80=82=E5=87=BD=E6=95=B0=E7=BB=84=
+=E5=90=88=E7=9A=84=E4=B8=80=E4=B8=AA=E6=9D=83=E5=A8=81=E7=9A=84=E4=BE=8B=E5=
+=AD=90=EF=BC=9A=E7=BB=99=E5=AE=9A=E5=87=BD=E6=95=B0 f =E5=92=8C g=EF=BC=8C=
+=E7=BB=84=E5=90=88=E5=87=BD=E6=95=B0 (g=E2=88=98f)(x) =3D g(f(x))  =E2=80=
+=94=E2=80=94=E7=BB=93=E6=9E=9C=E5=85=88=E5=AF=B9 x=E4=BD=BF=E7=94=A8f=E5=87=
+=BD=E6=95=B0=EF=BC=8C=E7=84=B6=E5=90=8E=E5=9C=A8=E4=BD=BF=E7=94=A8g=E5=87=
+=BD=E6=95=B0=E2=80=94=E2=80=94=E7=94=A8Scala=E6=9D=A5=E5=86=99=EF=BC=9A</p>
+
+<pre><code>val f =3D (i: Int) =3D&gt; i.toString
+val g =3D (s: String) =3D&gt; s+s+s
+val h =3D g compose f  // : Int =3D&gt; String
+   =20
+scala&gt; h(123)
+res0: java.lang.String =3D 123123123</code></pre>
+
+<p class=3D"LP">=E5=A4=8D=E5=90=88=E5=87=BD=E6=95=B0h=EF=BC=8C=E6=98=AF=E4=
+=B8=AA=E6=96=B0=E7=9A=84=E5=87=BD=E6=95=B0=EF=BC=8C=E7=94=B1=E4=B9=8B=E5=89=
+=8D=E5=AE=9A=E4=B9=89=E7=9A=84f=E5=92=8Cg=E5=87=BD=E6=95=B0=E5=90=88=E6=88=
+=90=E3=80=82</p>
+</div>
+
+<p>Futures=E6=98=AF=E4=B8=80=E7=A7=8D=E9=9B=86=E5=90=88=E7=B1=BB=E5=9E=8B=
+=E2=80=94=E2=80=94=E5=AE=83=E6=98=AF=E4=B8=AA=E5=8C=85=E5=90=AB0=E6=88=961=
+=E4=B8=AA=E5=85=83=E7=B4=A0=E7=9A=84=E5=AE=B9=E5=99=A8=E2=80=94=E2=80=94=E4=
+=BD=A0=E5=8F=AF=E4=BB=A5=E5=8F=91=E7=8E=B0=E4=BB=96=E4=BB=AC=E6=9C=89=E6=A0=
+=87=E5=87=86=E7=9A=84=E9=9B=86=E5=90=88=E6=96=B9=E6=B3=95=EF=BC=88eg=EF=BC=
+=9Amap, filter, foreach=EF=BC=89=E3=80=82=E5=9B=A0=E4=B8=BAFuture=E7=9A=84=
+=E5=80=BC=E6=98=AF=E5=BB=B6=E8=BF=9F=E7=9A=84=EF=BC=8C=E7=BB=93=E6=9E=9C=E5=
+=BA=94=E7=94=A8=E8=BF=99=E4=BA=9B=E6=96=B9=E6=B3=95=E4=B8=AD=E7=9A=84=E4=BB=
+=BB=E4=BD=95=E4=B8=80=E7=A7=8D=E5=BF=85=E7=84=B6=E4=B9=9F=E5=BB=B6=E8=BF=9F=
+=EF=BC=9B=E5=9C=A8</p>
+
+<pre><code> val result: Future[Int]
+ val resultStr: Future[String] =3D result map { i =3D&gt; i.toString }
+</code></pre>
+
+<p class=3D"LP">=E5=87=BD=E6=95=B0 { i =3D&gt; i.toString } =E4=B8=8D=E4=BC=
+=9A=E8=A2=AB=E8=B0=83=E7=94=A8=EF=BC=8C=E7=9B=B4=E5=88=B0int=E5=80=BC=E5=8F=
+=AF=E7=94=A8=EF=BC=9B=E8=BD=AC=E6=8D=A2=E9=9B=86=E5=90=88=E7=9A=84resultStr=
+=E5=9C=A8=E5=8F=AF=E7=94=A8=E4=B9=8B=E5=89=8D=E4=B9=9F=E4=B8=80=E7=9B=B4=E6=
+=98=AF=E5=BE=85=E5=AE=9A=E7=8A=B6=E6=80=81=E3=80=82</p>
+
+<p>List=E5=8F=AF=E4=BB=A5=E8=A2=AB=E6=89=81=E5=B9=B3=E5=8C=96(flattened)=EF=
+=BC=9A</p>
+
+<pre><code> val listOfList: List[List[Int]] =3D ..
+ val list: List[Int] =3D listOfList.flatten
+</code></pre>
+
+<p class=3D"LP">=E8=BF=99=E5=AF=B9future=E4=B9=9F=E6=98=AF=E6=9C=89=E6=84=
+=8F=E4=B9=89=E7=9A=84=EF=BC=9A</p>
+
+<pre><code> val futureOfFuture: Future[Future[Int]] =3D ..
+ val future: Future[Int] =3D futureOfFuture.flatten
+</code></pre>
+
+<p class=3D"LP">=E5=9B=A0=E4=B8=BAfuture=E6=98=AF=E5=BB=B6=E8=BF=9F=E7=9A=
+=84=EF=BC=8Cflatten=E7=9A=84=E5=AE=9E=E7=8E=B0=E2=80=94=E2=80=94=E7=AB=8B=
+=E5=8D=B3=E8=BF=94=E5=9B=9E=E2=80=94=E2=80=94=E4=B8=8D=E5=BE=97=E4=B8=8D=E8=
+=BF=94=E5=9B=9E=E4=B8=80=E4=B8=AA=E7=AD=89=E5=BE=85=E5=A4=96=E9=83=A8future=
+ (<code><b>Future[</b>Future[Int]<b>]</b></code>) =E5=AE=8C=E6=88=90=E7=9A=
+=84future (<code>Future[<b>Future[Int]</b>]</code>).=E5=A6=82=E6=9E=9C=E5=
+=A4=96=E9=83=A8future=E5=A4=B1=E8=B4=A5=EF=BC=8C=E5=86=85=E9=83=A8flattened=
+ future=E4=B9=9F=E5=B0=86=E5=A4=B1=E8=B4=A5=E3=80=82</p>
+
+<p>Future (=E7=B1=BB=E4=BC=BCList) =E4=B9=9F=E5=AE=9A=E4=B9=89=E4=BA=86flat=
+Map=EF=BC=9BFuture[A] =E5=AE=9A=E4=B9=89=E6=96=B9=E6=B3=95flatMap=E7=9A=84=
+=E7=AD=BE=E5=90=8D</p>
+
+<pre><code> flatMap[B](f: A =3D&gt; Future[B]): Future[B]
+</code></pre>
+
+<p class=3D"LP">=E5=A6=82=E5=90=8C=E7=BB=84=E5=90=88 map =E5=92=8C flatten=
+=EF=BC=8C=E6=88=91=E4=BB=AC=E5=8F=AF=E4=BB=A5=E8=BF=99=E6=A0=B7=E5=AE=9E=E7=
+=8E=B0=EF=BC=9A</p>
+
+<pre><code> def flatMap[B](f: A =3D&gt; Future[B]): Future[B] =3D {
+   val mapped: Future[Future[B]] =3D this map f
+   val flattened: Future[B] =3D mapped.flatten
+   flattened
+ }
+</code></pre>
+
+<p>=E8=BF=99=E6=98=AF=E4=B8=80=E7=A7=8D=E6=9C=89=E5=A8=81=E5=8A=9B=E7=9A=84=
+=E7=BB=84=E5=90=88=EF=BC=81=E4=BD=BF=E7=94=A8flatMap=E6=88=91=E4=BB=AC=E5=
+=8F=AF=E4=BB=A5=E5=AE=9A=E4=B9=89=E4=B8=80=E4=B8=AA Future =E4=BD=9C=E4=B8=
+=BA=E4=B8=A4=E4=B8=AAFuture=E5=BA=8F=E5=88=97=E7=9A=84=E7=BB=93=E6=9E=9C=E3=
+=80=82=E7=AC=AC=E4=BA=8C=E4=B8=AAfuture =E7=9A=84=E8=AE=A1=E7=AE=97=E5=9F=
+=BA=E4=BA=8E=E7=AC=AC=E4=B8=80=E4=B8=AA=E7=9A=84=E7=BB=93=E6=9E=9C=E3=80=82=
+=E6=83=B3=E8=B1=A1=E6=88=91=E4=BB=AC=E9=9C=80=E8=A6=812=E6=AC=A1RPC=E8=B0=
+=83=E7=94=A8=E6=9D=A5=E9=AA=8C=E8=AF=81=E4=B8=80=E4=B8=AA=E7=94=A8=E6=88=B7=
+=E8=BA=AB=E4=BB=BD=EF=BC=8C=E6=88=91=E4=BB=AC=E5=8F=AF=E4=BB=A5=E7=94=A8=E4=
+=B8=8B=E9=9D=A2=E7=9A=84=E6=96=B9=E5=BC=8F=E7=BB=84=E5=90=88=E6=93=8D=E4=BD=
+=9C=EF=BC=9A</p>
+
+<pre><code> def getUser(id: Int): Future[User]
+ def authenticate(user: User): Future[Boolean]
+
+ def isIdAuthed(id: Int): Future[Boolean] =3D
+   getUser(id) flatMap { user =3D&gt; authenticate(user) }
+</code></pre>
+
+<p class=3D"LP">=E8=BF=99=E7=A7=8D=E7=BB=84=E5=90=88=E7=B1=BB=E5=9E=8B=E7=
+=9A=84=E4=B8=80=E4=B8=AA=E9=A2=9D=E5=A4=96=E7=9A=84=E5=A5=BD=E5=A4=84=E6=98=
+=AF=E9=94=99=E8=AF=AF=E5=A4=84=E7=90=86=E6=98=AF=E5=86=85=E7=BD=AE=E7=9A=84=
+=EF=BC=9A=E5=A6=82=E6=9E=9CgetUser(..)=E6=88=96authenticate(..)=E5=A4=B1=E8=
+=B4=A5=EF=BC=8Cfuture =E4=BB=8E isAuthred(..)=E8=BF=94=E5=9B=9E=E6=97=B6=E5=
+=B0=86=E4=BC=9A=E5=A4=B1=E8=B4=A5=E3=80=82=E8=BF=99=E9=87=8C=E6=88=91=E4=BB=
+=AC=E6=B2=A1=E6=9C=89=E9=A2=9D=E5=A4=96=E7=9A=84=E9=94=99=E8=AF=AF=E5=A4=84=
+=E7=90=86=E7=9A=84=E4=BB=A3=E7=A0=81=E3=80=82</p>
+
+<h4>=E9=A3=8E=E6=A0=BC</h4>
+
+<p>Future=E5=9B=9E=E8=B0=83=E6=96=B9=E6=B3=95(respond, onSuccess, onFailure=
+, ensure) =E8=BF=94=E5=9B=9E=E4=B8=80=E4=B8=AA=E6=96=B0=E7=9A=84Future=EF=
+=BC=8C=E5=B9=B6=E9=93=BE=E6=8E=A5=E5=88=B0=E8=B0=83=E7=94=A8=E8=80=85=E3=80=
+=82=E8=BF=99=E4=B8=AAFuture=E8=A2=AB=E4=BF=9D=E8=AF=81=E5=8F=AA=E6=9C=89=E5=
+=9C=A8=E5=AE=83=E8=B0=83=E7=94=A8=E8=80=85=E5=AE=8C=E6=88=90=E5=90=8E=E6=89=
+=8D=E5=AE=8C=E6=88=90=EF=BC=8C=E4=BD=BF=E7=94=A8=E6=A8=A1=E5=BC=8F=E5=A6=82=
+=E4=B8=8B=EF=BC=9A</p>
+
+<pre><code> acquireResource()
+ future onSuccess { value =3D&gt;
+   computeSomething(value)
+ } ensure {
+   freeResource()
+ }
+</code></pre>
+
+<p class=3D"LP">freeResource() =E8=A2=AB=E4=BF=9D=E8=AF=81=E5=8F=AA=E6=9C=
+=89=E5=9C=A8 computeSomething=E4=B9=8B=E5=90=8E=E6=89=8D=E6=89=A7=E8=A1=8C=
+=EF=BC=8C=E8=BF=99=E6=A0=B7=E5=B0=B1=E6=A8=A1=E6=8B=9F=E4=BA=86try-finally =
+=E6=A8=A1=E5=BC=8F=E3=80=82</p>
+
+<p>=E4=BD=BF=E7=94=A8 onSuccess=E6=9B=BF=E4=BB=A3 foreach =E2=80=94=E2=80=
+=94 =E5=AE=83=E4=B8=8E onFailure =E6=96=B9=E6=B3=95=E5=AF=B9=E7=A7=B0=EF=BC=
+=8C=E5=91=BD=E5=90=8D=E7=9A=84=E6=84=8F=E5=9B=BE=E6=9B=B4=E6=98=8E=E7=A1=AE=
+=EF=BC=8C=E5=B9=B6=E4=B8=94=E4=B9=9F=E5=85=81=E8=AE=B8 chaining=E3=80=82</p=
+>
+
+<p>=E6=B0=B8=E8=BF=9C=E9=81=BF=E5=85=8D=E7=9B=B4=E6=8E=A5=E5=88=9B=E5=BB=BA=
+Promise=E5=AE=9E=E4=BE=8B=EF=BC=9A =E5=87=A0=E4=B9=8E=E6=AF=8F=E4=B8=80=E4=
+=B8=AA=E4=BB=BB=E5=8A=A1=E9=83=BD=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87=E4=BD=
+=BF=E7=94=A8=E9=A2=84=E5=AE=9A=E4=B9=89=E7=9A=84=E7=BB=84=E5=90=88=E5=AD=90=
+=E5=AE=8C=E6=88=90=E3=80=82=E8=BF=99=E4=BA=9B=E7=BB=84=E5=90=88=E5=AD=90=E7=
+=A1=AE=E4=BF=9D=E9=94=99=E8=AF=AF=E5=92=8C=E5=8F=96=E6=B6=88=E6=98=AF=E5=8F=
+=AF=E4=BC=A0=E6=92=AD=E7=9A=84, =E9=80=9A=E5=B8=B8=E9=BC=93=E5=8A=B1=E7=9A=
+=84=E6=95=B0=E6=8D=AE=E6=B5=81=E9=A3=8E=E6=A0=BC=E7=9A=84=E7=BC=96=E7=A8=8B=
+=EF=BC=8C=E4=B8=8D=E5=86=8D=E9=9C=80=E8=A6=81=E5=90=8C=E6=AD=A5=E5=92=8Cvol=
+atility=E5=A3=B0=E6=98=8E=E3=80=82</p>
+
+<p>=E7=94=A8=E5=B0=BE=E9=80=92=E5=BD=92=E9=A3=8E=E6=A0=BC=E7=BC=96=E5=86=99=
+=E7=9A=84=E4=BB=A3=E7=A0=81=E4=B8=8D=E5=86=8D=E5=AF=BC=E8=87=B4=E5=A0=86=E6=
+=A0=88=E7=A9=BA=E9=97=B4=E6=B3=84=E6=BC=8F=EF=BC=8C=E5=B9=B6=E4=BD=BF=E5=BE=
+=97=E4=BB=A5=E6=95=B0=E6=8D=AE=E6=B5=81=E9=A3=8E=E6=A0=BC=E9=AB=98=E6=95=88=
+=E7=9A=84=E5=AE=9E=E7=8E=B0=E5=BE=AA=E7=8E=AF=E6=88=90=E4=B8=BA=E5=8F=AF=E8=
+=83=BD=EF=BC=9A</p>
+
+<pre><code> case class Node(parent: Option[Node], ...)
+ def getNode(id: Int): Future[Node] =3D ...
+
+ def getHierarchy(id: Int, nodes: List[Node] =3D Nil): Future[Node] =3D
+   getNode(id) flatMap {
+     case n@Node(Some(parent), ..) =3D&gt; getHierarchy(parent, n :: nodes)
+     case n =3D&gt; Future.value((n :: nodes).reverse)
+   }
+</code></pre>
+
+<p>Future=E5=AE=9A=E4=B9=89=E5=BE=88=E5=A4=9A=E6=9C=89=E7=94=A8=E7=9A=84=E6=
+=96=B9=E6=B3=95=EF=BC=9A =E4=BD=BF=E7=94=A8 Future.value() =E5=92=8C Future=
+.exception() =E6=9D=A5=E5=88=9B=E5=BB=BA=E6=9C=AA=E6=BB=A1=E6=84=8F(pre-sat=
+isfied) =E7=9A=84future=E3=80=82Future.collect(), Future.join() =E5=92=8C F=
+uture.select() =E6=8F=90=E4=BE=9B=E4=BA=86=E7=BB=84=E5=90=88=E5=AD=90=E5=B0=
+=86=E5=A4=9A=E4=B8=AAfuture=E5=90=88=E6=88=90=E4=B8=80=E4=B8=AA(=E4=BE=8B=
+=E5=A6=82=EF=BC=9Ascatter-gather=E6=93=8D=E4=BD=9C=E7=9A=84gather=E9=83=A8=
+=E5=88=86)=E3=80=82</p>
+
+<h4>Cancellation</h4>
+
+<p>Future=E5=AE=9E=E7=8E=B0=E4=BA=86=E4=B8=80=E7=A7=8D=E5=BC=B1=E5=BD=A2=E5=
+=BC=8F=E7=9A=84=E5=8F=96=E6=B6=88=E3=80=82=E8=B0=83=E7=94=A8Future#cancel =
+=E4=B8=8D=E4=BC=9A=E7=9B=B4=E6=8E=A5=E7=BB=88=E6=AD=A2=E8=BF=90=E7=AE=97=EF=
+=BC=8C=E8=80=8C=E6=98=AF=E5=8F=91=E9=80=81=E6=9F=90=E4=B8=AA=E7=BA=A7=E5=88=
+=AB=E7=9A=84=E5=8F=AF=E8=A2=AB=E4=BB=BB=E4=BD=95=E5=A4=84=E7=90=86=E6=9F=A5=
+=E8=AF=A2=E7=9A=84=E8=A7=A6=E5=8F=91=E4=BF=A1=E5=8F=B7=EF=BC=8C=E6=9C=80=E7=
+=BB=88=E6=BB=A1=E8=B6=B3=E8=BF=99=E4=B8=AAfuture=E3=80=82Cancellation=E4=BF=
+=A1=E5=8F=B7=E6=B5=81=E5=90=91=E7=9B=B8=E5=8F=8D=E7=9A=84=E6=96=B9=E5=90=91=
+=EF=BC=9A=E4=B8=80=E4=B8=AA=E7=94=B1=E6=B6=88=E8=B4=B9=E8=80=85=E8=AE=BE=E7=
+=BD=AE=E7=9A=84cancellation=E4=BF=A1=E5=8F=B7=EF=BC=8C=E4=BC=9A=E4=BC=A0=E6=
+=92=AD=E5=88=B0=E5=AE=83=E7=9A=84=E7=94=9F=E4=BA=A7=E8=80=85=E3=80=82=E7=94=
+=9F=E4=BA=A7=E8=80=85=E4=BD=BF=E7=94=A8 Promise=E7=9A=84onCancellation=E6=
+=9D=A5=E7=9B=91=E5=90=AC=E4=BF=A1=E5=8F=B7=E5=B9=B6=E6=89=A7=E8=A1=8C=E7=9B=
+=B8=E5=BA=94=E7=9A=84=E5=8A=A8=E4=BD=9C=E3=80=82</p>
+
+<p>=E8=BF=99=E6=84=8F=E5=91=B3=E8=BF=99cancellation=E8=AF=AD=E6=84=8F=E4=B8=
+=8A=E4=BE=9D=E8=B5=96=E7=94=9F=E4=BA=A7=E8=80=85=EF=BC=8C=E6=B2=A1=E6=9C=89=
+=E9=BB=98=E8=AE=A4=E7=9A=84=E5=AE=9E=E7=8E=B0=E3=80=82cancellation=E5=8F=AA=
+=E6=98=AF=E4=B8=80=E4=B8=AA=E6=8F=90=E7=A4=BA=E3=80=82</p>
+
+<h4>Local</h4>
+
+</a><p><a id=3D"Twitter=E6=A0=87=E5=87=86=E5=BA=93-Future">Util=E7=9A=84</a=
+><a href=3D"https://github.com/twitter/util/blob/master/util-core/src/main/=
+scala/com/twitter/util/Local.scala#L40">Local</a>=E6=8F=90=E4=BE=9B=E4=BA=
+=86=E4=B8=80=E4=B8=AA=E4=BD=8D=E4=BA=8E=E7=89=B9=E5=AE=9A=E7=9A=84future=E6=
+=B4=BE=E5=8F=91=E6=A0=91(dispatch tree)=E7=9A=84=E5=BC=95=E7=94=A8=E5=8D=95=
+=E5=85=83(cell)=E3=80=82=E8=AE=BE=E5=AE=9A=E4=B8=80=E4=B8=AAlocal=E7=9A=84=
+=E5=80=BC=EF=BC=8C=E4=BD=BF=E8=BF=99=E4=B8=AA=E5=80=BC=E5=8F=AF=E4=BB=A5=E7=
+=94=A8=E4=BA=8E=E8=A2=AB=E5=90=8C=E4=B8=80=E4=B8=AA=E7=BA=BF=E7=A8=8B=E7=9A=
+=84Future =E5=BB=B6=E8=BF=9F=E7=9A=84=E4=BB=BB=E4=BD=95=E8=AE=A1=E7=AE=97=
+=E3=80=82=E6=9C=89=E4=B8=80=E4=BA=9B=E7=B1=BB=E4=BC=BC=E4=BA=8Ethread local=
+s(=E6=B3=A8=EF=BC=9AJava=E4=B8=AD=E7=9A=84=E7=BA=BF=E7=A8=8B=E6=9C=BA=E5=88=
+=B6=EF=BC=89=EF=BC=8C=E4=B8=8D=E5=90=8C=E7=9A=84=E6=98=AF=E5=AE=83=E4=BB=AC=
+=E7=9A=84=E8=8C=83=E5=9B=B4=E4=B8=8D=E6=98=AF=E4=B8=80=E4=B8=AAJava=E7=BA=
+=BF=E7=A8=8B=EF=BC=8C=E8=80=8C=E6=98=AF=E4=B8=80=E4=B8=AA future =E7=BA=BF=
+=E7=A8=8B=E6=A0=91=E3=80=82=E5=9C=A8</p>
+
+<pre><code> trait User {
+   def name: String
+   def incrCost(points: Int)
+ }
+ val user =3D new Local[User]
+
+ ...
+
+ user() =3D currentUser
+ rpc() ensure {
+   user().incrCost(10)
+ }
+</code></pre>
+
+<p class=3D"LP">=E5=9C=A8 ensure=E5=9D=97=E4=B8=AD=E7=9A=84 user()  =E5=B0=
+=86=E5=9C=A8=E5=9B=9E=E8=B0=83=E8=A2=AB=E6=B7=BB=E5=8A=A0=E7=9A=84=E6=97=B6=
+=E5=80=99=E5=BC=95=E7=94=A8 user local=E7=9A=84=E5=80=BC=E3=80=82</p>
+
+<p>=E5=B0=B1thread locals=E6=9D=A5=E8=AF=B4=EF=BC=8C=E6=88=91=E4=BB=AC=E7=
+=9A=84Locals=E9=9D=9E=E5=B8=B8=E7=9A=84=E6=96=B9=E4=BE=BF=EF=BC=8C=E4=BD=86=
+=E8=A6=81=E5=B0=BD=E9=87=8F=E9=81=BF=E5=85=8D=E4=BD=BF=E7=94=A8=EF=BC=9A=E9=
+=99=A4=E9=9D=9E=E7=A1=AE=E4=BF=A1=E9=80=9A=E8=BF=87=E6=98=BE=E5=BC=8F=E4=BC=
+=A0=E9=80=92=E6=95=B0=E6=8D=AE=E6=97=B6=E9=97=AE=E9=A2=98=E4=B8=8D=E8=83=BD=
+=E8=A2=AB=E5=85=85=E5=88=86=E7=9A=84=E8=A7=A3=E5=86=B3=EF=BC=8C=E5=93=AA=E6=
+=80=95=E8=A7=A3=E5=86=B3=E8=B5=B7=E6=9D=A5=E6=9C=89=E4=BA=9B=E7=B9=81=E9=87=
+=8D=E3=80=82</p>
+
+<p>Locals=E6=9C=89=E6=95=88=E7=9A=84=E8=A2=AB=E6=A0=B8=E5=BF=83=E5=BA=93=E4=
+=BD=BF=E7=94=A8=E5=9C=A8=E9=9D=9E=E5=B8=B8=E5=B8=B8=E8=A7=81=E7=9A=84=E9=97=
+=AE=E9=A2=98=E4=B8=8A=E2=80=94=E2=80=94=E7=BA=BF=E7=A8=8B=E9=80=9A=E8=BF=87=
+RPC=E8=B7=9F=E8=B8=AA=EF=BC=8C=E4=BC=A0=E6=92=AD=E7=9B=91=E8=A7=86=E5=99=A8=
+=EF=BC=8C=E4=B8=BAfuture=E7=9A=84=E5=9B=9E=E8=B0=83=E5=88=9B=E5=BB=BAstack =
+traces=E2=80=94=E2=80=94=E4=BB=BB=E4=BD=95=E5=85=B6=E4=BB=96=E8=A7=A3=E5=86=
+=B3=E6=96=B9=E6=B3=95=E9=83=BD=E4=BD=BF=E5=BE=97=E7=94=A8=E6=88=B7=E8=B4=9F=
+=E6=8B=85=E8=BF=87=E5=BA=A6=E3=80=82Locals=E5=9C=A8=E5=87=A0=E4=B9=8E=E4=BB=
+=BB=E4=BD=95=E5=85=B6=E4=BB=96=E6=83=85=E5=86=B5=E4=B8=8B=E9=83=BD=E4=B8=8D=
+=E9=80=82=E5=90=88=E3=80=82</p>
+
+<p><a id=3D"Twitter=E6=A0=87=E5=87=86=E5=BA=93-Offer/Broker"></a></p><a id=
+=3D"Twitter=E6=A0=87=E5=87=86=E5=BA=93-Offer/Broker">
+
+<h3>Offer/Broker</h3>
+
+</a><p><a id=3D"Twitter=E6=A0=87=E5=87=86=E5=BA=93-Offer/Broker">=E5=B9=B6=
+=E5=8F=91=E7=B3=BB=E7=BB=9F=E7=94=B1=E4=BA=8E=E9=9C=80=E8=A6=81=E5=8D=8F=E8=
+=B0=83=E8=AE=BF=E9=97=AE=E6=95=B0=E6=8D=AE=E5=92=8C=E8=B5=84=E6=BA=90=E8=80=
+=8C=E5=8F=98=E5=BE=97=E5=A4=8D=E6=9D=82=E3=80=82</a><a href=3D"http://www.s=
+cala-lang.org/api/current/scala/actors/Actor.html">Actor</a>=E6=8F=90=E5=87=
+=BA=E4=B8=80=E7=A7=8D=E7=AE=80=E5=8C=96=E7=9A=84=E7=AD=96=E7=95=A5=EF=BC=9A=
+=E6=AF=8F=E4=B8=80=E4=B8=AAactor=E6=98=AF=E4=B8=80=E4=B8=AA=E9=A1=BA=E5=BA=
+=8F=E7=9A=84=E8=BF=9B=E7=A8=8B(process),=E4=BF=9D=E6=8C=81=E8=87=AA=E5=B7=
+=B1=E7=9A=84=E7=8A=B6=E6=80=81=E5=92=8C=E8=B5=84=E6=BA=90,=E6=95=B0=E6=8D=
+=AE=E9=80=9A=E8=BF=87=E6=B6=88=E6=81=AF=E7=9A=84=E6=96=B9=E5=BC=8F=E4=B8=8E=
+=E5=85=B6=E5=AE=83actor=E5=85=B1=E4=BA=AB=E3=80=82 =E5=85=B1=E4=BA=AB=E6=95=
+=B0=E6=8D=AE=E9=9C=80=E8=A6=81actor=E4=B9=8B=E9=97=B4=E9=80=9A=E4=BF=A1=E3=
+=80=82</p>
+
+<p>Offer/Broker =E5=BB=BA=E7=AB=8B=E4=BA=8EActor=E4=B9=8B=E4=B8=8A=EF=BC=8C=
+=E4=BB=A5=E8=BF=99=E4=B8=89=E7=A7=8D=E9=87=8D=E8=A6=81=E7=9A=84=E6=96=B9=E5=
+=BC=8F=E8=A1=A8=E7=8E=B0=EF=BC=9A1=EF=BC=8C=E9=80=9A=E4=BF=A1=E9=80=9A=E9=
+=81=93(Brokers)=E6=98=AFfirst class=E2=80=94=E2=80=94=E5=8D=B3=E5=8F=91=E9=
+=80=81=E6=B6=88=E6=81=AF=E9=9C=80=E8=A6=81=E9=80=9A=E8=BF=87Brokers=EF=BC=
+=8C=E8=80=8C=E9=9D=9E=E7=9B=B4=E6=8E=A5=E5=88=B0actor=E3=80=822, Offer/Brok=
+er =E6=98=AF=E4=B8=80=E7=A7=8D=E5=90=8C=E6=AD=A5=E6=9C=BA=E5=88=B6=EF=BC=9A=
+=E9=80=9A=E4=BF=A1=E4=BC=9A=E8=AF=9D=E6=98=AF=E5=90=8C=E6=AD=A5=E7=9A=84=E3=
+=80=82 =E8=BF=99=E6=84=8F=E5=91=B3=E6=88=91=E4=BB=AC=E5=8F=AF=E4=BB=A5=E7=
+=94=A8 Broker=E5=81=9A=E4=B8=BA=E5=8D=8F=E8=B0=83=E6=9C=BA=E5=88=B6=EF=BC=
+=9A=E5=BD=93=E8=BF=9B=E7=A8=8Ba=E5=8F=91=E9=80=81=E4=B8=80=E6=9D=A1=E4=BF=
+=A1=E6=81=AF=E7=BB=99=E8=BF=9B=E7=A8=8Bb=EF=BC=9Ba=E5=92=8Cb=E9=83=BD=E8=A6=
+=81=E5=AF=B9=E7=B3=BB=E7=BB=9F=E7=8A=B6=E6=80=81=E8=BE=BE=E6=88=90=E4=B8=80=
+=E8=87=B4=E3=80=823, =E6=9C=80=E5=90=8E=EF=BC=8C=E9=80=9A=E4=BF=A1=E5=8F=AF=
+=E4=BB=A5=E9=80=89=E6=8B=A9=E6=80=A7=E5=9C=B0=E6=89=A7=E8=A1=8C=EF=BC=9A=E4=
+=B8=80=E4=B8=AA=E8=BF=9B=E7=A8=8B=E5=8F=AF=E4=BB=A5=E6=8F=90=E5=87=BA=E5=87=
+=A0=E4=B8=AA=E4=B8=8D=E5=90=8C=E7=9A=84=E9=80=9A=E4=BF=A1=EF=BC=8C=E5=85=B6=
+=E4=B8=AD=E7=9A=84=E4=B8=80=E4=B8=AA=E5=B0=86=E8=A2=AB=E8=8E=B7=E5=8F=96=E3=
+=80=82</p>
+
+<p>=E4=B8=BA=E4=BA=86=E4=BB=A5=E4=B8=80=E7=A7=8D=E9=80=9A=E7=94=A8=E7=9A=84=
+=E6=96=B9=E5=BC=8F=E6=94=AF=E6=8C=81=E9=80=89=E6=8B=A9=E6=80=A7=E9=80=9A=E4=
+=BF=A1=EF=BC=88=E4=BB=A5=E5=8F=8A=E5=85=B6=E4=BB=96=E7=BB=84=E5=90=88=EF=BC=
+=89=EF=BC=8C=E6=88=91=E4=BB=AC=E9=9C=80=E8=A6=81=E5=B0=86=E9=80=9A=E4=BF=A1=
+=E7=9A=84=E6=8F=8F=E8=BF=B0=E5=92=8C=E6=89=A7=E8=A1=8C=E8=A7=A3=E8=80=A6=E3=
+=80=82=E8=BF=99=E6=AD=A3=E6=98=AFOffer=E5=81=9A=E7=9A=84=E2=80=94=E2=80=94=
+=E5=AE=83=E6=98=AF=E4=B8=80=E4=B8=AA=E6=8C=81=E4=B9=85=E6=95=B0=E6=8D=AE=E7=
+=94=A8=E4=BA=8E=E6=8F=8F=E8=BF=B0=E4=B8=80=E6=AC=A1=E9=80=9A=E4=BF=A1=EF=BC=
+=9B=E4=B8=BA=E4=BA=86=E6=89=A7=E8=A1=8C=E8=BF=99=E4=B8=AA=E9=80=9A=E4=BF=A1=
+=EF=BC=88offer=E6=89=A7=E8=A1=8C=EF=BC=89=EF=BC=8C=E6=88=91=E4=BB=AC=E9=80=
+=9A=E8=BF=87=E5=AE=83=E7=9A=84sync()=E6=96=B9=E6=B3=95=E5=90=8C=E6=AD=A5</p=
+>
+
+<pre><code> trait Offer[T] {
+   def sync(): Future[T]
+ }
+</code></pre>
+
+<p class=3D"LP">=E8=BF=94=E5=9B=9E Future[T] =E5=BD=93=E9=80=9A=E4=BF=A1=E8=
+=A2=AB=E8=8E=B7=E5=8F=96=E7=9A=84=E6=97=B6=E5=80=99=E7=94=9F=E6=88=90=E4=BA=
+=A4=E6=8D=A2=E5=80=BC=E3=80=82</p>
+
+<p>Broker=E9=80=9A=E8=BF=87offer=E5=8D=8F=E8=B0=83=E5=80=BC=E7=9A=84=E4=BA=
+=A4=E6=8D=A2=E2=80=94=E2=80=94=E5=AE=83=E6=98=AF=E9=80=9A=E4=BF=A1=E7=9A=84=
+=E9=80=9A=E9=81=93=EF=BC=9A</p>
+
+<pre><code> trait Broker[T] {
+   def send(msg: T): Offer[Unit]
+   val recv: Offer[T]
+ }
+</code></pre>
+
+<p class=3D"LP">=E6=89=80=E4=BB=A5=EF=BC=8C=E5=BD=93=E5=88=9B=E5=BB=BA=E4=
+=B8=A4=E4=B8=AAoffer</p>
+
+<pre><code> val b: Broker[Int]
+ val sendOf =3D b.send(1)
+ val recvOf =3D b.recv
+</code></pre>
+
+<p class=3D"LP">sendOf=E5=92=8CrecvOf=E9=83=BD=E5=90=8C=E6=AD=A5</p>
+
+<pre><code> // In process 1:
+ sendOf.sync()
+
+ // In process 2:
+ recvOf.sync()
+</code></pre>
+
+<p class=3D"LP">=E4=B8=A4=E4=B8=AAoffer=E9=83=BD=E8=8E=B7=E5=8F=96=E5=B9=B6=
+=E4=B8=94=E5=80=BC1=E8=A2=AB=E4=BA=A4=E6=8D=A2=E3=80=82</p>
+
+<p>=E9=80=9A=E8=BF=87=E5=B0=86=E5=A4=9A=E4=B8=AAoffer=E5=92=8COffer.choose=
+=E7=BB=91=E5=AE=9A=E6=9D=A5=E6=89=A7=E8=A1=8C=E5=8F=AF=E9=80=89=E6=8B=A9=E9=
+=80=9A=E4=BF=A1=E3=80=82</p>
+
+<pre><code> def choose[T](ofs: Offer[T]*): Offer[T]
+</code></pre>
+
+<p class=3D"LP">=E4=B8=8A=E9=9D=A2=E7=9A=84=E4=BB=A3=E7=A0=81=E7=94=9F=E6=
+=88=90=E4=B8=80=E4=B8=AA=E6=96=B0=E7=9A=84offer=EF=BC=8C=E5=BD=93=E5=90=8C=
+=E6=AD=A5=E6=97=B6=E8=8E=B7=E5=8F=96=E4=B8=80=E4=B8=AA=E7=89=B9=E5=AE=9A=E7=
+=9A=84ofs=E2=80=94=E2=80=94=E7=AC=AC=E4=B8=80=E4=B8=AA=E5=8F=AF=E7=94=A8=E7=
+=9A=84=E3=80=82=E5=BD=93=E5=A4=9A=E4=B8=AA=E9=83=BD=E7=AB=8B=E5=8D=B3=E5=8F=
+=AF=E7=94=A8=E6=97=B6=EF=BC=8C=E9=9A=8F=E6=9C=BA=E8=8E=B7=E5=8F=96=E4=B8=80=
+=E4=B8=AA=E3=80=82</p>
+
+<p>Offer=E5=AF=B9=E8=B1=A1=E6=9C=89=E4=BA=9B=E4=B8=80=E6=AC=A1=E6=80=A7=E7=
+=9A=84Offers=E7=94=A8=E4=BA=8E=E4=B8=8E=E6=9D=A5=E8=87=AABroker=E7=9A=84Off=
+er=E6=9E=84=E5=BB=BA=E3=80=82</p>
+
+<pre><code> Offer.timeout(duration): Offer[Unit]
+</code></pre>
+
+<p class=3D"LP">offer=E5=9C=A8=E7=BB=99=E5=AE=9A=E6=97=B6=E9=97=B4=E5=90=8E=
+=E6=BF=80=E6=B4=BB=E3=80=82Offer.never=E5=B0=86=E7=94=A8=E4=BA=8E=E4=B8=8D=
+=E4=BC=9A=E6=9C=89=E6=95=88=EF=BC=8COffer.const(value)=E5=9C=A8=E7=BB=99=E5=
+=AE=9A=E5=80=BC=E5=90=8E=E7=AB=8B=E5=8D=B3=E6=9C=89=E6=95=88=E3=80=82=E8=BF=
+=99=E4=BA=9B=E6=93=8D=E4=BD=9C=E7=94=B1=E9=80=89=E6=8B=A9=E6=80=A7=E9=80=9A=
+=E4=BF=A1=E6=9D=A5=E7=BB=84=E5=90=88=E6=98=AF=E9=9D=9E=E5=B8=B8=E6=9C=89=E7=
+=94=A8=E7=9A=84=E3=80=82=E4=BE=8B=E5=A6=82=EF=BC=8C=E5=9C=A8=E4=B8=80=E4=B8=
+=AAsend=E6=93=8D=E4=BD=9C=E4=B8=AD=E4=BD=BF=E7=94=A8=E8=B6=85=E6=97=B6=EF=
+=BC=9A</p>
+
+<pre><code> Offer.choose(
+   Offer.timeout(10.seconds),
+   broker.send("my value")
+ ).sync()
+</code></pre>
+
+<p>=E4=BA=BA=E4=BB=AC=E5=8F=AF=E8=83=BD=E4=BC=9A=E6=AF=94=E8=BE=83 Offer/Br=
+oker =E4=B8=8E<a href=3D"http://docs.oracle.com/javase/6/docs/api/java/util=
+/concurrent/SynchronousQueue.html">SynchronousQueue</a>=EF=BC=8C=E4=BB=96=
+=E4=BB=AC=E6=9C=89=E7=BB=86=E5=BE=AE=E4=BD=86=E9=9D=9E=E5=B8=B8=E9=87=8D=E8=
+=A6=81=E7=9A=84=E5=8C=BA=E5=88=AB=E3=80=82Offer=E5=8F=AF=E4=BB=A5=E8=A2=AB=
+=E7=BB=84=E5=90=88=EF=BC=8C=E8=80=8Cqueue=E4=B8=8D=E8=83=BD=E3=80=82=E4=BE=
+=8B=E5=A6=82=EF=BC=8C=E8=80=83=E8=99=91=E4=B8=80=E7=BB=84queues=EF=BC=8C=E6=
+=8F=8F=E8=BF=B0=E4=B8=BA Brokers:</p>
+
+<pre><code> val q0 =3D new Broker[Int]
+ val q1 =3D new Broker[Int]
+ val q2 =3D new Broker[Int]
+</code></pre>
+
+<p class=3D"LP">=E7=8E=B0=E5=9C=A8=E8=AE=A9=E6=88=91=E4=BB=AC=E4=B8=BA=E8=
+=AF=BB=E5=8F=96=E5=88=9B=E5=BB=BA=E4=B8=80=E4=B8=AA=E5=90=88=E5=B9=B6=E7=9A=
+=84queue</p>
+
+<pre><code> val anyq: Offer[Int] =3D Offer.choose(q0.recv, q1.recv, q2.recv=
+)
+</code></pre>
+
+<p class=3D"LP">anyq=E6=98=AF=E4=B8=80=E4=B8=AA=E5=B0=86=E4=BB=8E=E7=AC=AC=
+=E4=B8=80=E4=B8=AA=E5=8F=AF=E7=94=A8=E7=9A=84queue=E4=B8=AD=E8=AF=BB=E5=8F=
+=96=E7=9A=84offer=E3=80=82=E6=B3=A8=E6=84=8F anyq =E4=BB=8D=E6=98=AF=E5=90=
+=8C=E6=AD=A5=E7=9A=84=E2=80=94=E2=80=94=E6=88=91=E4=BB=AC=E4=BB=8D=E7=84=B6=
+=E6=8B=A5=E6=9C=89=E5=BA=95=E5=B1=82=E9=98=9F=E5=88=97=E7=9A=84=E8=AF=AD=E4=
+=B9=89=E3=80=82=E8=BF=99=E7=B1=BB=E7=BB=84=E5=90=88=E6=98=AF=E4=B8=8D=E5=8F=
+=AF=E8=83=BD=E7=94=A8queue=E5=AE=9E=E7=8E=B0=E7=9A=84=E3=80=82</p>
+
+<h4>=E4=BE=8B=E5=AD=90=EF=BC=9A=E4=B8=80=E4=B8=AA=E7=AE=80=E5=8D=95=E7=9A=
+=84=E8=BF=9E=E6=8E=A5=E6=B1=A0</h4>
+
+<p>=E8=BF=9E=E6=8E=A5=E6=B1=A0=E5=9C=A8=E7=BD=91=E7=BB=9C=E5=BA=94=E7=94=A8=
+=E4=B8=AD=E5=BE=88=E5=B8=B8=E8=A7=81=EF=BC=8C=E5=B9=B6=E4=B8=94=E5=AE=83=E4=
+=BB=AC=E7=9A=84=E5=AE=9E=E7=8E=B0=E5=B8=B8=E5=B8=B8=E9=9C=80=E8=A6=81=E6=8A=
+=80=E5=B7=A7=E2=80=94=E2=80=94=E4=BE=8B=E5=A6=82=EF=BC=8C=E5=9C=A8=E4=BB=8E=
+=E6=B1=A0=E4=B8=AD=E8=8E=B7=E5=8F=96=E4=B8=80=E4=B8=AA=E8=BF=9E=E6=8E=A5=E7=
+=9A=84=E6=97=B6=E5=80=99=EF=BC=8C=E9=80=9A=E5=B8=B8=E9=9C=80=E8=A6=81=E8=B6=
+=85=E6=97=B6=E6=9C=BA=E5=88=B6=EF=BC=8C=E5=9B=A0=E4=B8=BA=E4=B8=8D=E5=90=8C=
+=E7=9A=84=E5=AE=A2=E6=88=B7=E7=AB=AF=E6=9C=89=E4=B8=8D=E5=90=8C=E7=9A=84=E5=
+=BB=B6=E8=BF=9F=E9=9C=80=E6=B1=82=E3=80=82=E6=B1=A0=E7=9A=84=E7=AE=80=E5=8D=
+=95=E5=8E=9F=E5=88=99=EF=BC=9A=E7=BB=B4=E6=8A=A4=E4=B8=80=E4=B8=AA=E8=BF=9E=
+=E6=8E=A5=E9=98=9F=E5=88=97=EF=BC=8C=E6=BB=A1=E8=B6=B3=E9=82=A3=E4=BA=9B=E8=
+=BF=9B=E5=85=A5=E7=9A=84=E7=AD=89=E5=BE=85=E8=80=85=E3=80=82=E4=BD=BF=E7=94=
+=A8=E4=BC=A0=E7=BB=9F=E7=9A=84=E5=90=8C=E6=AD=A5=E5=8E=9F=E8=AF=AD=EF=BC=8C=
+=E8=BF=99=E9=80=9A=E5=B8=B8=E9=9C=80=E8=A6=81=E4=B8=A4=E4=B8=AA=E9=98=9F=E5=
+=88=97(queues)=EF=BC=9A=E4=B8=80=E4=B8=AA=E7=94=A8=E4=BA=8E=E7=AD=89=E5=BE=
+=85=E8=80=85(=E5=BD=93=E6=B2=A1=E6=9C=89=E8=BF=9E=E6=8E=A5=E5=8F=AF=E7=94=
+=A8=E6=97=B6)=EF=BC=8C=E4=B8=80=E4=B8=AA=E7=94=A8=E4=BA=8E=E8=BF=9E=E6=8E=
+=A5(=E5=BD=93=E6=B2=A1=E6=9C=89=E7=AD=89=E5=BE=85=E8=80=85=E6=97=B6)=E3=80=
+=82</p>
+
+<p>=E4=BD=BF=E7=94=A8 Offer/Brokers =EF=BC=8C=E5=8F=AF=E4=BB=A5=E8=A1=A8=E8=
+=BE=BE=E5=BE=97=E9=9D=9E=E5=B8=B8=E8=87=AA=E7=84=B6=EF=BC=9A</p>
+
+<pre><code> class Pool(conns: Seq[Conn]) {
+   private[this] val waiters =3D new Broker[Conn]
+   private[this] val returnConn =3D new Broker[Conn]
+
+   val get: Offer[Conn] =3D waiters.recv
+   def put(c: Conn) { returnConn ! c }
+
+   private[this] def loop(connq: Queue[Conn]) {
+     Offer.choose(
+       if (connq.isEmpty) Offer.never else {
+         val (head, rest) =3D connq.dequeue
+         waiters.send(head) { _ =3D&gt; loop(rest) }
+       },
+       returnConn.recv { c =3D&gt; loop(connq enqueue c) }
+     ).sync()
+   }
+
+   loop(Queue.empty ++ conns)
+ }
+</code></pre>
+
+<p>loop=E6=80=BB=E6=98=AF=E6=8F=90=E4=BE=9B=E4=B8=80=E4=B8=AA=E5=BD=92=E8=
+=BF=98=E7=9A=84=E8=BF=9E=E6=8E=A5=EF=BC=8C=E4=BD=86=E5=8F=AA=E6=9C=89queue=
+=E9=9D=9E=E7=A9=BA=E7=9A=84=E6=97=B6=E5=80=99=E6=89=8D=E4=BC=9Asend=E3=80=
+=82 =E4=BD=BF=E7=94=A8=E6=8C=81=E4=B9=85=E5=8C=96=E9=98=9F=E5=88=97(persist=
+ent queue)=E6=9B=B4=E8=BF=9B=E4=B8=80=E6=AD=A5=E7=AE=80=E5=8C=96=E9=80=BB=
+=E8=BE=91=E3=80=82=E4=B8=8E=E8=BF=9E=E6=8E=A5=E6=B1=A0=E7=9A=84=E6=8E=A5=E5=
+=8F=A3=E4=B9=9F=E6=98=AF=E9=80=9A=E8=BF=87Offer=E5=AE=9E=E7=8E=B0=EF=BC=8C=
+=E6=89=80=E4=BB=A5=E8=B0=83=E7=94=A8=E8=80=85=E5=A6=82=E6=9E=9C=E6=84=BF=E6=
+=84=8F=E8=AE=BE=E7=BD=AEtimeout=EF=BC=8C=E4=BB=96=E4=BB=AC=E5=8F=AF=E4=BB=
+=A5=E9=80=9A=E8=BF=87=E5=88=A9=E7=94=A8=E7=BB=84=E5=90=88=E5=AD=90(combinat=
+ors)=E6=9D=A5=E5=81=9A=EF=BC=9A</p>
+
+<pre><code>  val conn: Future[Option[Conn]] =3D Offer.choose(
+    pool.get { conn =3D&gt; Some(conn) },
+    Offer.timeout(1.second) { _ =3D&gt; None }
+  ).sync()
+</code></pre>
+
+<p>=E5=AE=9E=E7=8E=B0timeout=E4=B8=8D=E9=9C=80=E8=A6=81=E9=A2=9D=E5=A4=96=
+=E7=9A=84=E8=AE=B0=E8=B4=A6(bookkeeping)=EF=BC=9B=E8=BF=99=E6=98=AF=E5=9B=
+=A0=E4=B8=BAOffer=E7=9A=84=E8=AF=AD=E4=B9=89=EF=BC=9A=E5=A6=82=E6=9E=9COffe=
+r.timeout=E8=A2=AB=E9=80=89=E6=8B=A9=EF=BC=8C=E4=B8=8D=E4=BC=9A=E5=86=8D=E6=
+=9C=89offer=E4=BB=8E=E6=B1=A0=E4=B8=AD=E8=8E=B7=E5=BE=97=E2=80=94=E2=80=94=
+=E8=BF=9E=E6=8E=A5=E6=B1=A0=E5=92=8C=E5=AE=83=E7=9A=84=E8=B0=83=E7=94=A8=E8=
+=80=85=E5=9C=A8=E5=90=84=E8=87=AAwaiter=E7=9A=84broker=E4=B8=8A=E4=B8=8D=E5=
+=BF=85=E5=90=8C=E6=97=B6=E5=90=8C=E6=84=8F=E6=8E=A5=E5=8F=97=E5=92=8C=E5=8F=
+=91=E9=80=81=E3=80=82</p>
+
+<h4>=E5=9F=83=E6=8B=89=E6=89=98=E8=89=B2=E5=B0=BC=E7=AD=9B=E5=AD=90(Sieve o=
+f Eratosthenes =E8=AF=91=E6=B3=A8=EF=BC=9A=E4=B8=80=E7=A7=8D=E7=94=A8=E4=BA=
+=8E=E7=AD=9B=E9=80=89=E7=B4=A0=E6=95=B0=E7=9A=84=E7=AE=97=E6=B3=95)</h4>
+
+<p>=E6=8A=8A=E5=B9=B6=E5=8F=91=E7=A8=8B=E5=BA=8F=E6=9E=84=E9=80=A0=E4=B8=BA=
+=E4=B8=80=E7=BB=84=E9=A1=BA=E5=BA=8F=E7=9A=84=E5=90=8C=E6=AD=A5=E9=80=9A=E4=
+=BF=A1=E8=BF=9B=E7=A8=8B=EF=BC=8C=E9=80=9A=E5=B8=B8=E5=BE=88=E6=9C=89=E7=94=
+=A8=E2=80=94=E2=80=94=E6=9C=89=E6=97=B6=E7=A8=8B=E5=BA=8F=E8=A2=AB=E5=A4=A7=
+=E5=A4=A7=E5=9C=B0=E7=AE=80=E5=8C=96=E4=BA=86=E3=80=82Offer=E5=92=8CBroker=
+=E6=8F=90=E4=BE=9B=E4=BA=86=E4=B8=80=E7=BB=84=E5=B7=A5=E5=85=B7=E6=9D=A5=E8=
+=AE=A9=E5=AE=83=E7=AE=80=E5=8D=95=E5=B9=B6=E4=B8=80=E8=87=B4=E3=80=82=E7=A1=
+=AE=E5=AE=9E=EF=BC=8C=E5=AE=83=E4=BB=AC=E7=9A=84=E5=BA=94=E7=94=A8=E8=B6=85=
+=E8=B6=8A=E4=BA=86=E6=88=91=E4=BB=AC=E5=8F=AF=E8=83=BD=E8=AE=A4=E4=B8=BA=E6=
+=98=AF=E7=BB=8F=E5=85=B8=E5=B9=B6=E5=8F=91=E6=80=A7=E9=97=AE=E9=A2=98=E2=80=
+=94=E2=80=94=E5=B9=B6=E5=8F=91=E7=BC=96=E7=A8=8B(=E6=9C=89Offer/Broker=E7=
+=9A=84=E8=BE=85=E5=8A=A9)=E6=98=AF=E4=B8=80=E7=A7=8D=E6=9C=89=E7=94=A8=E7=
+=9A=84=E6=9E=84=E5=BB=BA=E5=B7=A5=E5=85=B7=EF=BC=8C=E6=AD=A3=E5=A6=82=E5=AD=
+=90=E4=BE=8B=E7=A8=8B(subroutines)=EF=BC=8C=E7=B1=BB=EF=BC=8C=E5=92=8C=E6=
+=A8=A1=E5=9D=97=E9=83=BD=E6=98=AF=E2=80=94=E2=80=94=E6=9D=A5=E8=87=AACSP=EF=
+=BC=88=E8=AF=91=E6=B3=A8=EF=BC=9ACommunicating sequential processes=E7=9A=
+=84=E7=BC=A9=E5=86=99=EF=BC=8C=E5=8D=B3=E9=80=9A=E4=BF=A1=E9=A1=BA=E5=BA=8F=
+=E8=BF=9B=E7=A8=8B=EF=BC=89=E7=9A=84=E9=87=8D=E8=A6=81=E6=80=9D=E6=83=B3=E3=
+=80=82</p>
+
+<p>=E8=BF=99=E9=87=8C=E6=9C=89=E4=B8=80=E4=B8=AA<a href=3D"http://ja.wikipe=
+dia.org/wiki/%E3%82%A8%E3%83%A9%E3%83%88%E3%82%B9%E3%83%86%E3%83%8D%E3%82%B=
+9%E3%81%AE%E7%AF%A9">=E5=9F=83=E6=8B=89=E6=89=98=E8=89=B2=E5=B0=BC=E7=AD=9B=
+=E5=AD=90</a>=E5=8F=AF=E4=BB=A5=E6=9E=84=E9=80=A0=E4=B8=BA=E4=B8=80=E4=B8=
+=AA=E9=92=88=E5=AF=B9=E4=B8=80=E4=B8=AA=E6=95=B4=E6=95=B0=E6=B5=81(stream o=
+f integers)=E7=9A=84=E8=BF=9E=E7=BB=AD=E7=9A=84=E5=BA=94=E7=94=A8=E8=BF=87=
+=E6=BB=A4=E5=99=A8 =E3=80=82=E9=A6=96=E5=85=88=EF=BC=8C=E6=88=91=E4=BB=AC=
+=E9=9C=80=E8=A6=81=E4=B8=80=E4=B8=AA=E6=95=B4=E6=95=B0=E7=9A=84=E6=BA=90(so=
+urce of integers)=EF=BC=9A</p>
+
+<pre><code> def integers(from: Int): Offer[Int] =3D {
+   val b =3D new Broker[Int]
+   def gen(n: Int): Unit =3D b.send(n).sync() ensure gen(n + 1)
+   gen(from)
+   b.recv
+ }
+</code></pre>
+
+<p class=3D"LP">integers(n) =E6=96=B9=E6=B3=95=E7=AE=80=E5=8D=95=E5=9C=B0=
+=E6=8F=90=E4=BE=9B=E4=BA=86=E4=BB=8En=E5=BC=80=E5=A7=8B=E7=9A=84=E6=89=80=
+=E6=9C=89=E8=BF=9E=E7=BB=AD=E7=9A=84=E6=95=B4=E6=95=B0=E3=80=82=E7=84=B6=E5=
+=90=8E=E6=88=91=E4=BB=AC=E9=9C=80=E8=A6=81=E4=B8=80=E4=B8=AA=E8=BF=87=E6=BB=
+=A4=E5=99=A8=EF=BC=9A</p>
+
+<pre><code> def filter(in: Offer[Int], prime: Int): Offer[Int] =3D {
+   val b =3D new Broker[Int]
+   def loop() {
+     in.sync() onSuccess { i =3D&gt;
+       if (i % prime !=3D 0)
+         b.send(i).sync() ensure loop()
+       else
+         loop()
+     }
+   }
+   loop()
+
+   b.recv
+ }
+</code></pre>
+
+<p class=3D"LP">filter(in, p) =E6=96=B9=E6=B3=95=E8=BF=94=E5=9B=9E=E7=9A=84=
+offer=E5=88=A0=E9=99=A4=E4=BA=86in=E4=B8=AD=E7=9A=84=E6=89=80=E6=9C=89=E8=
+=B4=A8=E6=95=B0(prime)=E7=9A=84=E5=80=8D=E6=95=B0=E3=80=82=E6=9C=80=E7=BB=
+=88=E6=88=91=E4=BB=AC=E5=AE=9A=E4=B9=89=E4=BA=86=E6=88=91=E4=BB=AC=E7=9A=84=
+=E7=AD=9B=E5=AD=90=EF=BC=88sieve=EF=BC=89=EF=BC=9A</p>
+
+<pre><code> def sieve =3D {
+   val b =3D new Broker[Int]
+   def loop(of: Offer[Int]) {
+     for (prime &lt;- of.sync(); _ &lt;- b.send(prime).sync())
+       loop(filter(of, prime))
+   }
+   loop(integers(2))
+   b.recv
+ }
+</code></pre>
+
+<p class=3D"LP">loop() =E5=B7=A5=E4=BD=9C=E5=BE=88=E7=AE=80=E5=8D=95=EF=BC=
+=9A=E4=BB=8Eof=E4=B8=AD=E8=AF=BB=E5=8F=96=E4=B8=8B=E4=B8=80=E4=B8=AA=E8=B4=
+=A8=E6=95=B0=EF=BC=8C=E7=84=B6=E5=90=8E=E5=AF=B9of=E5=BA=94=E7=94=A8=E8=BF=
+=87=E6=BB=A4=E5=99=A8=E6=8E=92=E9=99=A4=E8=BF=99=E4=B8=AA=E8=B4=A8=E6=95=B0=
+=E3=80=82loop=E4=B8=8D=E6=96=AD=E7=9A=84=E9=80=92=E5=BD=92=EF=BC=8C=E6=8C=
+=81=E7=BB=AD=E7=9A=84=E8=B4=A8=E6=95=B0=E8=A2=AB=E8=BF=87=E6=BB=A4=EF=BC=8C=
+=E4=BA=8E=E6=98=AF=E6=88=91=E4=BB=AC=E5=BE=97=E5=88=B0=E4=BA=86=E7=AD=9B=E9=
+=80=89=E7=BB=93=E6=9E=9C=E3=80=82=E6=88=91=E4=BB=AC=E7=8E=B0=E5=9C=A8=E6=89=
+=93=E5=8D=B0=E5=89=8D10000=E4=B8=AA=E8=B4=A8=E6=95=B0=EF=BC=9A</p>
+
+<pre><code> val primes =3D sieve
+ 0 until 10000 foreach { _ =3D&gt;
+   println(primes.sync()())
+ }
+</code></pre>
+
+<p>=E9=99=A4=E4=BA=86=E6=9E=84=E9=80=A0=E7=AE=80=E5=8D=95=EF=BC=8C=E7=BB=84=
+=E4=BB=B6=E6=AD=A3=E4=BA=A4=EF=BC=8C=E8=BF=99=E7=A7=8D=E5=81=9A=E6=B3=95=E4=
+=B9=9F=E7=BB=99=E4=BD=A0=E4=B8=80=E7=A7=8D=E6=B5=81=E5=BC=8F=E7=AD=9B=E5=AD=
+=90(streaming sieve)=EF=BC=9A=E4=BD=A0=E4=B8=8D=E9=9C=80=E8=A6=81=E4=BA=8B=
+=E5=85=88=E8=AE=A1=E7=AE=97=E5=87=BA=E4=BD=A0=E6=84=9F=E5=85=B4=E8=B6=A3=E7=
+=9A=84=E8=B4=A8=E6=95=B0=E9=9B=86=E5=90=88=EF=BC=8C=E4=BB=8E=E8=80=8C=E8=BF=
+=9B=E4=B8=80=E6=AD=A5=E6=8F=90=E9=AB=98=E4=BA=86=E6=A8=A1=E5=9D=97=E5=8C=96=
+=E3=80=82</p>
+
+<p><a id=3D"=E8=87=B4=E8=B0=A2"></a></p><a id=3D"=E8=87=B4=E8=B0=A2">
+
+<h2>=E8=87=B4=E8=B0=A2</h2>
+
+<p>=E6=9C=AC=E8=AF=BE=E7=A8=8B=E7=94=B1Twitter=E5=85=AC=E5=8F=B8Scala=E7=A4=
+=BE=E5=8C=BA=E8=B4=A1=E7=8C=AE=E2=80=94=E2=80=94=E6=88=91=E5=B8=8C=E6=9C=9B=
+=E6=88=91=E6=98=AF=E4=B8=AA=E5=BF=A0=E5=AE=9E=E7=9A=84=E8=AE=B0=E5=BD=95=E8=
+=80=85=E3=80=82</p>
+
+<p>Blake Matheny, Nick Kallen, Steve Gury, =E5=92=8CRaghavendra Prabhu=E6=
+=8F=90=E4=BE=9B=E4=BA=86=E5=BE=88=E5=A4=9A=E6=9C=89=E7=94=A8=E7=9A=84=E6=8C=
+=87=E5=AF=BC=E5=92=8C=E8=AE=B8=E5=A4=9A=E4=BC=98=E7=A7=80=E7=9A=84=E5=BB=BA=
+=E8=AE=AE=E3=80=82</p>
+
+<hr>
+</a><ol id=3D"notes"><a id=3D"=E8=87=B4=E8=B0=A2">
+
+</a><li id=3D"fn1"><a id=3D"=E8=87=B4=E8=B0=A2">
+</a><a href=3D"http://yourkit.com/">Yourkit</a> =E6=98=AF=E4=B8=80=E4=B8=AA=
+=E5=BE=88=E5=A5=BD=E7=9A=84profiler <a href=3D"http://twitter.github.io/eff=
+ectivescala/index-cn.html#fnref1" title=3D"Jump back to reference">[back]</=
+a></li>
+<li id=3D"fn2">
+From <a href=3D"https://github.com/twitter/finagle/blob/master/finagle-core=
+/src/main/scala/com/twitter/finagle/loadbalancer/Heap.scala#L41">Finagle=E2=
+=80=99s heap balancer</a> <a href=3D"http://twitter.github.io/effectivescal=
+a/index-cn.html#fnref2" title=3D"Jump back to reference">[back]</a></li>
+</ol>
+
+<center class=3D"footer">
+Copyright =C2=A9 2012 Twitter Inc.<br>
+Licensed under <a href=3D"http://creativecommons.org/licenses/by/3.0/">CC B=
+Y 3.0</a>
+<!--
+<a href=3D"http://creativecommons.org/licenses/by/3.0/"><img style=3D"botto=
+m: 0; right: 0; border: 0;" src=3D"http://i.creativecommons.org/l/by/3.0/80=
+x15.png" /></a>
+-->
+</center>
+
+
+
+<div id=3D"qb-sougou-search" style=3D"display: none; opacity: 0;"><p>=E6=90=
+=9C=E7=B4=A2</p><p class=3D"last-btn">=E5=A4=8D=E5=88=B6</p><iframe src=3D"=
+http://twitter.github.io/effectivescala/index-cn.html" src=3D"wyciwyg://fra=
+me/0"></iframe></div></body></html>
+------=_NextPart_000_4E99_935BFB70.279E8EBF
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png
+
+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
+------=_NextPart_000_4E99_935BFB70.279E8EBF
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://twitter.github.io/effectivescala/coll.png
+
+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
+rkJggg==
+------=_NextPart_000_4E99_935BFB70.279E8EBF
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+Content-Location: wyciwyg://frame/0
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8"></head><body></body></html>
+------=_NextPart_000_4E99_935BFB70.279E8EBF--
