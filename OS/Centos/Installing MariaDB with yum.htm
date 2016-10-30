@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head data-cookie-domain=""
+      data-cookie-path="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/kb/static/generated/images/v3/mariadb-favicon-bcd9112d9fa47e0c0ae223b6e9a49b93bebd08f6.ico" type="image/x-icon" />
+    <title>Installing MariaDB with yum - MariaDB Knowledge Base</title>
+
+    <link rel="stylesheet" type="text/css" href="/kb/static/generated/main-b4a80af32c586f612dac6735225cc04416eb187a.css" />
+    
+
+    
+
+    <!-- FB Open Graph tags -->
+    <meta property="og:title" content="Installing MariaDB with yum" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://mariadb.com/kb/en/mariadb/yum/" />
+    <meta property="og:image" content="http://mariadb.comaskmonty-logo.png" />
+    <meta property="og:site_name" content="MariaDB KnowledgeBase" />
+    <meta property="fb:admins" content="514852603" />
+    <meta property="og:description" content="Discover how simple it is to install MariaDB with yum by following these simple steps, especially recommended for CentOS RedHat and Fedora users." />
+
+    <meta name="description" content="Discover how simple it is to install MariaDB with yum by following these simple steps, especially recommended for CentOS RedHat and Fedora users." />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<!--[if lt IE 7 ]> <body class="mpkb ie6 nodes products nodes_view jqui" id="nodes_view"> <![endif]-->
+<!--[if IE 7 ]> <body class="mpkb ie7 nodes products nodes_view jqui" id="nodes_view"> <![endif]-->
+<!--[if IE 8 ]> <body class="mpkb ie8 nodes products nodes_view jqui" id="nodes_view"> <![endif]-->
+<!--[if !IE]>--> <body class="mpkb nodes products nodes_view jqui" id="nodes_view"><!--<![endif]-->
+
+
+
+
+
+<div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top navbar-fixed-top">
+    <div id="navbar-top" class="clearfix">
+        <div class="container relative">
+            <div id="header-blocks" class="row">
+                <div class="region region-header">
+                    <div id="block-search-form" class="block block-search pull-right pull-right">
+                        <div class="content">
+                            <form action="/kb/en/+search/" method="get" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+                                <h2 class="element-invisible">Search form</h2>
+                                <div class="input-append">
+                                    <input id="search" title="Enter the terms you wish to search for."
+                                           placeholder="Search" type="text"
+                                           name="q" value="" size="15" maxlength="128" class="form-text"
+                                           data-autocomplete-url="/kb/en/+search/autocomplete/">
+                                    <input type="hidden" name="quick" value="1" />
+                                    <input type="hidden" name="source" value="kb" />
+                                    <i id="search-toggler" class="fa fa-search fa-fw expanded hidden-phone"></i>
+                                    <span class="element-invisible">Search</span>
+                                </div>
+                                <div class="element-invisible form-actions form-wrapper" id="edit-actions">
+                                    <input class="btn btn-primary form-submit" type="submit" id="edit-submit" name="op" value="Search">
+                                </div>
+                                <input type="hidden" name="form_build_id" value="form-oChmruVatuzK4mj3jlIQ1JkxRNlHPyDPR8YWxqr8aVQ">
+                                <input type="hidden" name="form_id" value="search_block_form">
+                            </div>
+                            </div>
+                            </form>  </div>
+                    </div>
+                    <div id="block-nice-menus-3" class="block block-nice-menus pull-right header-links marg-right-10 pull-right header-links marg-right-10">
+                        <div class="content">
+                            <ul class="hidden-xs hidden-sm nice-menu nice-menu-down nice-menu-menu-top-nav-menu" id="nice-menu-3"><li class="menu-2051 menu-path-ssupportmariadbcom- first odd"><a href="https://support.mariadb.com/">Support</a></li>
+                                <li class="menu-2017 menuparent  menu-path-node-639  even"><a href="/resources/downloads">Resources</a><ul><li class="menu-2018 menu-path-node-639 first odd "><a href="/resources/downloads">Downloads</a></li>
+                                    <li class="menu-2043 menu-path-node-366  even "><a href="/resources/community-tools">Community Tools</a></li>
+                                    <li class="menu-2020 menu-path-node-537  odd "><a href="/resources/guides-whitepapers">Guides &amp; White Papers</a></li>
+                                    <li class="menu-2042 menu-path-node-799  even "><a href="/resources/technical-presentations">Techinical Presentations</a></li>
+                                    <li class="menu-2044 menu-path-mariadborg-  odd "><a href="http://mariadb.org/">MariaDB.org</a></li>
+                                    <li class="menu-2045 menu-path-node-442  even "><a href="/resources/mariadb-books">MariaDB Books</a></li>
+                                    <li class="menu-2046 menu-path-sjiramariadborg-secure-dashboardjspa  odd "><a href="https://jira.mariadb.org/secure/Dashboard.jspa">Report a Bug</a></li>
+                                    <li class="menu-2047 menu-path-ssupportmariadbcom-  even "><a href="https://support.mariadb.com/">24x7 Emergency Support</a></li>
+                                    <li class="menu-2048 menu-path-smariadbcom-resources-mariadb-portal  odd last"><a href="https://mariadb.com/resources/mariadb-portal">MariaDB Portal</a></li>
+                                </ul></li>
+                                <li class="menu-2019 menu-path-smariadbcom-kb-  odd"><a href="https://www.mariadb.com/kb/">Knowledge Base</a></li>
+                                <li class="menu-2037 menu-path-blog  even"><a href="/blog">Blog</a></li>
+                                <li class="menu-2098 menu-path-my-portal odd"><a href="/my_portal">My Portal</a></li>
+                                
+                                    
+                                        <li class="menu-2039 menu-path-user-login even last">
+                                            <a href="/kb/user/login/?next=/kb/en/mariadb/yum/">Login / Sign Up</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="block-locale-language" class="block block-locale pull-right pull-right">
+                        <h2>Languages</h2>
+                        <div class="content">
+                            <ul class="language-switcher-locale-url"><li class="en first active"><a href="/" class="language-link active" xml:lang="en"><img class="language-icon" typeof="foaf:Image" src="https://mariadb.com/sites/all/modules/languageicons/flags/en.png" width="16" height="12" alt="English" title="English" /></a></li>
+                                <li class="fr"><a href="/fr/" class="language-link" xml:lang="fr"><img class="language-icon" typeof="foaf:Image" src="https://mariadb.com/sites/all/modules/languageicons/flags/fr.png" width="16" height="12" alt="Français" title="Français" /></a></li>
+                                <li class="de"><a href="/de/" class="language-link" xml:lang="de"><img class="language-icon" typeof="foaf:Image" src="https://mariadb.com/sites/all/modules/languageicons/flags/de.png" width="16" height="12" alt="Deutsch" title="Deutsch" /></a></li>
+                                <li class="ja last"><a href="/ja/" class="language-link" xml:lang="ja"><img class="language-icon" typeof="foaf:Image" src="https://mariadb.com/sites/all/modules/languageicons/flags/ja.png" width="16" height="12" alt="日本語" title="日本語" /></a></li>
+                            </ul>  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="navbar-bottom">
+        <div class="navbar-inner">
+            <div class="container">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <div class="navbar-header">
+                    <a class="brand" href="/" title="MariaDB">
+                        <img src="https://mariadb.com/sites/default/files/logo_mariadb.png" alt="MariaDB">
+                        <span>MariaDB</span>
+                    </a>
+                </div>
+                <nav class="navbar-collapse collapse relative navbar-right" id="navbar-bottom">
+                    <ul class="nice-menu nice-menu-down nice-menu-main-menu" id="nice-menu-1"><li class="menu-1456 menuparent  menu-path-node-564 first odd "><a href="/products/mariadb-enterprise">Products</a><ul><li class="menu-1001 menu-path-node-564 first odd "><a href="/products/mariadb-enterprise">MariaDB Enterprise</a></li>
+<li class="menu-736 menu-path-node-426  even "><a href="/products/mariadb-enterprise-cluster">MariaDB Enterprise Cluster</a></li>
+<li class="menu-2070 menu-path-node-2473  odd "><a href="/products/mariadb-columnstore">MariaDB ColumnStore</a></li>
+<li class="menu-1595 menu-path-node-1583  even "><a href="/products/mariadb-maxscale">MariaDB MaxScale</a></li>
+<li class="menu-1805 menu-path-node-2226  odd "><a href="/products/mariadb-enterprise-cluster-on-azure">Cluster and Maxscale on Azure</a></li>
+<li class="menu-1664 menu-path-node-1863  even "><a href="/products/mariadb-ibm-power8">MariaDB on IBM POWER8</a></li>
+<li class="menu-911 menu-path-node-526  odd "><a href="/products/connectors-plugins">Connectors &amp; Plugins</a></li>
+<li class="menu-1591 menu-path-node-1548  even "><a href="/products/embedded-oems-isvs">Embedded for OEMs &amp; ISVs</a></li>
+<li class="menu-1064 menu-path-node-17  odd "><a href="/products/subscription-plans" title="Subscription Plans">Product Comparison</a></li>
+<li class="menu-826 menu-path-node-498  even last"><a href="/produits/product-faqs">Product FAQs</a></li>
+</ul></li>
+<li class="menu-2049 menuparent  menu-path-node-772  even "><a href="/services/mariadb-mysql-subscription-services">Services</a><ul><li class="menu-678 menu-path-node-400 first odd "><a href="/services/mariadb-mysql-remote-dba">Remote DBA</a></li>
+<li class="menu-2100 menu-path-node-2499  even "><a href="/services/technical-account-manager">Technical Account Manager</a></li>
+<li class="menu-445 menuparent  menu-path-node-18  odd "><a href="/services/mariadb-mysql-consulting">Consulting</a><ul><li class="menu-673 menu-path-node-395 first odd "><a href="/services/mariadb-mysql-consulting/mariadb-performance-tuning">Performance Tuning</a></li>
+<li class="menu-675 menu-path-node-397  even "><a href="/services/mariadb-mysql-consulting/mariadb-high-availability">High Availability</a></li>
+<li class="menu-676 menu-path-node-398  odd "><a href="/services/mariadb-mysql-consulting/mariadb-database-migration">Database Migration</a></li>
+<li class="menu-1964 menu-path-node-2417  even last"><a href="/solutions/mariadb-security-audit">MariaDB Security Audit</a></li>
+</ul></li>
+<li class="menu-446 menuparent  menu-path-node-19  even "><a href="/services/mariadb-mysql-training">Training</a><ul><li class="menu-679 menu-path-node-401 first odd "><a href="/services/mariadb-mysql-training/administering-mariadb">Database Administration</a></li>
+<li class="menu-1328 menu-path-node-657  even "><a href="/services/mariadb-mysql-training/mariadb-galera-cluster-administration">MariaDB Galera Cluster Administration</a></li>
+<li class="menu-680 menu-path-node-402  odd "><a href="/services/mariadb-mysql-training/performance-tuning-mariadb">Performance Tuning</a></li>
+<li class="menu-682 menu-path-node-404  even "><a href="/services/mariadb-mysql-training/developing-applications-mariadb">Developing Applications</a></li>
+<li class="menu-681 menu-path-node-403  odd last"><a href="/services/mariadb-mysql-training/high-availability-mariadb">High Availability</a></li>
+</ul></li>
+<li class="menu-718 menu-path-node-412  odd last"><a href="/services/mariadb-feature-development-nre">Custom Development</a></li>
+</ul></li>
+<li class="menu-1685 menuparent  menu-path-node-1957  odd "><a href="/solutions">Solutions</a><ul><li class="menu-1686 menu-path-node-1956 first odd "><a href="/solutions/mariadb-mysql-high-availability">High Availability</a></li>
+<li class="menu-1963 menu-path-node-2416  even last"><a href="/solutions/security-solution">Security Solutions</a></li>
+</ul></li>
+<li class="menu-1705 menu-path-about-customers  even "><a href="/about/customers">Customers</a></li>
+<li class="menu-1707 menuparent  menu-path-node-2063  odd last"><a href="/partners">Partners</a><ul><li class="menu-1798 menu-path-node-2063 first odd "><a href="/partners">Featured Partners</a></li>
+<li class="menu-1797 menu-path-node-393  even "><a href="/partners/all">Find a Partner</a></li>
+<li class="menu-1796 menu-path-node-2126  odd last"><a href="/partners/becomeapartner">Become a Partner</a></li>
+</ul></li>
+</ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+
+
+    <div class="container">
+
+        
+        <div id="subheader1" class="clearfix">
+            <div class="pull-left">
+                <div id="breadcrumbs" class="breadcrumb">
+                    <a href="/">Home</a> »
+                    <a href="/resources">Resources</a> »
+                    <a href="/kb/en/">Knowledge Base</a>
+                    
+
+
+    
+    » <a class="crumb" href="/kb/en/mariadb/">MariaDB</a>
+    
+
+    
+    » <a class="crumb" href="/kb/en/documentation/">MariaDB Documentation</a>
+    
+
+    
+    » <a class="crumb" href="/kb/en/getting-started/">Getting Started</a>
+    
+
+    
+    » <a class="crumb" href="/kb/en/getting-installing-and-upgrading-mariadb/">Getting, Installing, and Upgrading MariaDB</a>
+    
+
+    
+    » <a class="crumb" href="/kb/en/binary-packages/">MariaDB Binary Packages</a>
+    
+
+    
+    » <a class="crumb" href="/kb/en/rpm/">Installing MariaDB RPM Files</a>
+    
+
+
+    » <a class="node_link crumb" href="/kb/en/yum/">Installing MariaDB with yum</a>
+
+
+                </div>
+            </div>
+        </div>
+        
+            <h1>Installing MariaDB with yum</h1>
+        
+    </div>
+    <div class="container">
+        <div class="row">
+            
+            
+                
+                <aside id="sidebar-first" class="sidebar col-md-2 hidden-xs hidden-sm hidden-print">
+                    
+                        
+                        <ul id="category_menu" class="nav nav-pills nav-stacked">
+                            <li><a href="/kb/en/">Home</a></li>
+                            
+                                
+                                    <li><a href="/kb/en/+questions/">Open Questions</a></li>
+                                
+                                <li><a href="/kb/en/mariadb/">MariaDB</a></li>
+                                <li><a href="/kb/en/mariadb-enterprise/">MariaDB Enterprise</a></li>
+                                <li><a href="/kb/en/maxscale/">MariaDB MaxScale</a></li>
+                            
+                            <li><a href="/kb/en/+all/">All Topics</a></li>
+                        </ul>
+                    
+
+                    
+<div>
+
+
+
+<div class="well well-small box actions"><div>
+
+        <a class="btn btn-block btn-blue btn-sm" href="/kb/en/mariadb/yum/+history" rel="nofollow">History</a>
+        
+        
+        
+        <a class="btn btn-block btn-blue btn-sm" href="/kb/en/mariadb/yum/+source/">Source</a>
+        
+        <a class="btn btn-block btn-blue btn-sm flag" href="/kb/en/mariadb/yum/+flag"
+                data-flag-url="/kb/en/mariadb/yum/+flag" rel="nofollow">
+                Flag as Spam / Inappropriate</a>
+        
+        <a class="btn btn-block btn-blue btn-sm" href="/kb/en/mariadb/yum/+translate/">
+                Translate</a>
+        
+
+</div>
+</div>
+
+
+
+
+
+<div class="well well-small box node_info"><div>
+
+    <dl>
+        <dt>Created</dt>
+        <dd>
+
+<span class="datetime" title="2012-05-30 14:43">4 years, 5 months ago</span></dd>
+
+        <dt>Modified</dt>
+        <dd>
+
+<span class="datetime" title="2016-09-26 15:10">1 month ago</span></dd>
+
+        <dt>Type</dt>
+        <dd>article</dd>
+
+        <dt>Status</dt>
+        <dd>active</dd>
+
+        <dt>License</dt>
+        <dd>
+            
+                <a href="/kb/en/mariadb/yum/+license/">CC BY-SA / Gnu FDL</a>
+            
+        </dd>
+
+        
+    </dl>
+
+    
+    <ul class="rss_feeds">
+        <li><a href="/kb/en/mariadb/yum/+history/feed/">
+            History</a>
+        </li>
+        <li><a href="/kb/en/mariadb/yum/+comments/feed/">
+            Comments</a>
+        </li>
+    </ul>
+    
+
+</div>
+</div>
+
+
+
+
+    
+    
+
+<div class="well well-small box links"><div><h5>Links</h5></div><div>
+
+        <ul>
+            
+                <li><a href="https://downloads.mariadb.org/mariadb/repositories/">repository generator</a></li>
+            
+                <li><a href="/kb/en/galera-cluster/">Galera</a></li>
+            
+                <li><a href="/kb/en/enabling-tokudb/">How to Enable TokuDB in MariaDB</a></li>
+            
+
+            
+
+            
+        </ul>
+    
+</div>
+</div>
+
+
+
+    
+    
+    
+
+<div class="well well-small box attachments"><div><div class="edit_link pull-right"><a href="/kb/en/mariadb/yum/+edit/attachments/">Edit</a></div><h5>Attachments</h5></div><div>
+
+        
+            <div class="no_data">No attachments exist</div>
+        
+    
+</div>
+</div>
+
+    
+
+
+
+    
+    
+        
+
+<div class="well well-small box"><div><h5>Localized Versions</h5></div><div>
+
+        <ul>
+            
+            <li><a href="/kb/it/installing-mariadb-with-yum/">Installare MariaDB con yum</a> [it]</li>
+            
+            <li><a href="/kb/zh-cn/installing-mariadb-with-yum/">使用yum安装MariaDB</a> [zh-cn]</li>
+            
+            <li><a href="/kb/ja/yum/">yum による MariaDB のインストール</a> [ja]</li>
+            
+        </ul>
+        
+</div>
+</div>
+
+    
+
+
+
+    
+    
+
+<div class="well well-small box"><div><h5>Product Versions</h5></div><div>
+
+        <ul id="product_chooser">
+            
+                <li class="mariadb_to_10_0">
+                    <label><input type="checkbox" data-product-class="mariadb_to_10_0"
+                            >MariaDB until 10.0</label>
+                </li>
+            
+        </ul>
+    
+</div>
+</div>
+
+
+
+
+
+
+
+    
+
+
+</div>
+
+
+                    
+    <div id="social">
+
+        <div id="tweet" class="share">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal"></a>
+        </div>
+
+        <div id="g_plus" class="share">
+            <g:plusone size="medium"></g:plusone>
+        </div>
+
+        <div id="facebook" class="share">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="https://mariadb.com/kb/en/mariadb/yum/" data-width="90" data-layout="button" data-action="recommend" data-show-faces="false" data-share="false"></div>
+        </div>
+
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=186631171404592";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async=true;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        </script>
+
+    </div>
+
+                </aside>
+            
+            
+            
+                
+            
+            
+                
+            
+            <section id="content" class="limited_width col-md-8 clearfix">
+                
+
+
+
+                <div>
+                    
+    
+    
+    
+
+    <div class="node creole">
+        
+        
+
+
+    
+    <div class="answer formatted">
+        <div class="table_of_contents well well-small">
+<h3>Contents</h3>
+ <ol class="toc">
+    <li class=""><a href="#adding-the-mariadb-yum-repository" title="Adding the MariaDB YUM Repository">Adding the MariaDB YUM Repository</a></li>
+    <li class=""><a href="#installing-mariadb-with-yum" title="Installing MariaDB with YUM">Installing MariaDB with YUM</a></li>
+    <ol class="toc">
+        <li class=""><a href="#installing-tokudb-with-yum" title="Installing TokuDB with YUM">Installing TokuDB with YUM</a></li>
+    </ol>
+    <li class=""><a href="#installing-mariadb-galera-cluster-with-yum" title="Installing MariaDB Galera Cluster with YUM">Installing MariaDB Galera Cluster with YUM</a></li>
+    <li class=""><a href="#after-installation" title="After Installation">After Installation</a></li>
+    <li class=""><a href="#manually-importing-the-mariadb-signing-key" title="Manually Importing the MariaDB Signing Key">Manually Importing the MariaDB Signing Key</a></li>
+ </ol>
+</div><p>
+For CentOS, RedHat, and Fedora, it is highly recommended to install from a
+repository using <code>yum</code>. This page walks you through the simple steps.</p>
+<h2 class="anchored_heading" id="adding-the-mariadb-yum-repository">Adding the MariaDB YUM Repository</h2>
+<p>We have YUM repositories for several YUM-based Linux distributions. To easily
+generate the appropriate MariaDB.repo entry for your distribution, use our
+online
+<a href="https://downloads.mariadb.org/mariadb/repositories/">repository generator</a>.</p>
+<p>We currently have YUM repositories for CentOS 5, CentOS 6, CentOS 7, RHEL 5,
+RHEL 6, RHEL 7, and Fedora 22, 23 and 24.</p>
+<p>Once you have your MariaDB.repo entry, add it to a file under
+<code>/etc/yum.repos.d/</code>. (We suggest something like
+<code>/etc/yum.repos.d/MariaDB.repo</code>.)</p>
+<p>An example <code>MariaDB.repo</code> file for CentOS 7 is:</p>
+<pre class="fixed"><span class="k">[mariadb]</span>
+<span class="na">name</span> <span class="o">=</span> <span class="s">MariaDB</span>
+<span class="na">baseurl</span> <span class="o">=</span> <span class="s">http://yum.mariadb.org/10.1/centos7-amd64</span>
+<span class="na">gpgkey</span><span class="o">=</span><span class="s">https://yum.mariadb.org/RPM-GPG-KEY-MariaDB</span>
+<span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
+</pre><p>The example file above includes a <code>gpgkey</code> line to automatically fetch the
+GPG key we use to sign the repositories. This key enables <code>yum</code> and <code>rpm</code>
+to verify the integrity of the packages it downloads. </p>
+<p>The id of our signing key is <code>0xcbcb082a1bb943db</code>. The short form of the id
+is <code>0x1BB943DB</code> and the full key fingerprint is:</p>
+<pre class="fixed">1993 69E5 404B D5FC 7D2F E43B CBCB 082A 1BB9 43DB
+</pre><p>If you wish to fix the version to an older version, or do a <code>yum downgrade</code>, you can create a yum repo definition with a baseurl set to a specific version. <code>yum clean metadata</code> is needed if you change an existing repo definition:</p>
+<pre class="fixed"><span class="k">[mariadb]</span>
+<span class="na">name</span> <span class="o">=</span> <span class="s">MariaDB-5.5.39</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://downloads.mariadb.com/files/MariaDB/mariadb-5.5.39/yum/rhel6-amd64/</span>
+<span class="c1"># alternative: baseurl=http://archive.mariadb.org/mariadb-5.5.39/yum/rhel6-amd64/</span>
+<span class="na">gpgkey</span><span class="o">=</span><span class="s">https://yum.mariadb.org/RPM-GPG-KEY-MariaDB</span>
+<span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
+</pre><h2 class="anchored_heading" id="installing-mariadb-with-yum">Installing MariaDB with YUM</h2>
+<p>With the repo file in place you can now install MariaDB like so:</p>
+<pre class="fixed">sudo yum install MariaDB-server MariaDB-client
+</pre><p>If you don't have the MariaDB GPG Signing key installed, YUM will prompt you to
+install it after downloading the packages (but before installing them).</p>
+<p>If the server already has the MariaDB-Galera-server package installed, you
+might need to remove it prior to installing MariaDB-server
+(with '<code>sudo yum remove MariaDB-Galera-server</code>'). No databases are removed
+when the MariaDB-Galera-server rpm package is removed, but as with any upgrade,
+it is best to have backups.</p>
+<h3 class="anchored_heading" id="installing-tokudb-with-yum">Installing TokuDB with YUM</h3>
+<p>Instructions for installing TokuDB are on the <a href="/kb/en/how-to-enable-tokudb-in-mariadb/">How to Enable TokuDB in MariaDB</a> page.</p>
+<h2 class="anchored_heading" id="installing-mariadb-galera-cluster-with-yum">Installing MariaDB Galera Cluster with YUM</h2>
+<div class="mariadb_to_10_0 mariadb to_10_0 product"><h5 class="product_title">MariaDB until 10.0</h5><p>Galera Cluster is included in the default MariaDB packages from 10.1, so the instructions in this section are only required for <a href="/kb/en/what-is-mariadb-100/">MariaDB 10.0</a> and <a href="/kb/en/what-is-mariadb-55/">MariaDB 5.5</a>.</p>
+</div><p>The instructions for installing MariaDB Galera Cluster are virtually the same
+as for installing MariaDB. The setup of the repo file is the same. The only
+difference is in the install step. Instead of installing the MariaDB-server
+package, you install the MariaDB-Galera-server and galera packages, like so:</p>
+<pre class="fixed">sudo yum install MariaDB-Galera-server MariaDB-client galera
+</pre><p>As with MariaDB-server, if you don't have the MariaDB GPG Signing key
+installed, YUM will prompt you to install it after downloading the packages
+(but before installing them).</p>
+<p>If the server already has the MariaDB-server package installed, you might need
+to remove it prior to installing MariaDB-Galera-server
+(with '<code>sudo yum remove MariaDB-server</code>'). No databases are removed when the
+MariaDB-server rpm package is removed, but as with any upgrade, it is best to
+have backups.</p>
+<p>See the <a href="/kb/en/galera/">Galera</a> section of the Knowledgebase for more information on
+MariaDB Galera Cluster.</p>
+<h2 class="anchored_heading" id="after-installation">After Installation</h2>
+<p>After the installation completes, start MariaDB with:</p>
+<pre class="fixed">sudo systemctl start mariadb
+</pre><p>or if your system is not using <code>systemctl</code>:</p>
+<pre class="fixed">sudo /etc/init.d/mysql start
+</pre><h2 class="anchored_heading" id="manually-importing-the-mariadb-signing-key">Manually Importing the MariaDB Signing Key</h2>
+<p>If you like, you can manually install the GPG key using the <code>rpm</code> application
+like so:</p>
+<pre class="fixed">sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+</pre>
+    </div>
+
+
+        
+            <div id="subscribe" class="well well-small hide hidden-print"
+                 data-subscribe-url="/kb/en/mariadb/yum/+subscriptions/add"
+                 data-unsubscribe-url="/kb/en/mariadb/yum/+subscriptions/remove">
+            </div>
+        
+
+        
+    
+        <div class="simple_section_nav">
+            <ul class="nav nav-pills">
+                
+                    <li><a href="/kb/en/about-the-mariadb-rpm-files/">
+                        ← About the MariaDB RPM Files
+                    </a>
+                    </li>
+                
+                
+                    <li><a href="/kb/en/rpm/">
+                        ↑ Installing MariaDB RPM Files ↑
+                    </a>
+                    </li>
+                
+                
+                    <li class="pull-right"><a href="/kb/en/installing-mariadb-with-the-rpm-tool/">
+                        Installing MariaDB With the rpm Tool →
+                    </a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+        
+        <h2>Comments</h2>
+        
+    
+    <div id="comments" data-node-id="2768" data-comments-url="/kb/en/mariadb/yum/+comments"
+         data-reply-url="/kb/en/mariadb/yum/comments/post/">
+        Comments loading...
+    </div>
+
+        
+
+    </div>
+
+                </div>
+            </section>
+
+            
+                <div id="right_bar" class="col-md-2">
+                    
+
+        <ul class="section_navigation well well-small hidden-xs hidden-sm">
+            
+                <li class="parent"><a href="/kb/en/rpm/">
+                    ↑ Installing MariaDB RPM Files ↑
+                </a>
+                </li>
+            
+            
+                
+                    <li>
+                        <a href="/kb/en/about-the-mariadb-rpm-files/">
+                            
+                            About the MariaDB RPM Files
+                        </a>
+                    </li>
+                
+            
+                
+                    <li class="active">
+                        <span>Installing MariaDB with yum</span>
+                        
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="/kb/en/installing-mariadb-with-the-rpm-tool/">
+                            
+                            Installing MariaDB With the rpm Tool
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="/kb/en/checking-mariadb-rpm-package-signatures/">
+                            
+                            Checking MariaDB RPM Package Signatures
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="/kb/en/troubleshooting-mariadb-installs-on-red-hatcentos/">
+                            
+                            Troubleshooting MariaDB Installs on Red Hat/CentOS
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="/kb/en/mariadb-for-directadmin-using-rpms/">
+                            
+                            MariaDB for DirectAdmin Using RPMs
+                        </a>
+                    </li>
+                
+            
+                
+                    <li>
+                        <a href="/kb/en/why-mariadb-rpms-dont-include-the-source-rpm-srpms/">
+                            
+                            Why MariaDB RPMs Don&#39;t Include the Source RPM (SRPMS)
+                        </a>
+                    </li>
+                
+            
+        </ul>
+    
+
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+
+    <div id="pre_footer" class="hidden-print">
+        <div class="content">
+            <div class="container-fluid bg-dblue pad-top-20 pad-bot-20">
+                <div class="content-wrap">
+                    <h3 class="marg-top-0 text-center">Subscribe to get MariaDB tips, tricks and news updates in your inbox</h3>
+                    <div class="row no-gutter">
+                        <div class="col-xs-12 text-center">
+                            <a href="/about/newsletter-signup" class="btn btn-white marg-bot-0 marg-top-10">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Footer -->
+<footer id="footer" class="container-fluid">
+    <div class="region region-footer">
+        <div id="block-menu-block-2" class="block block-menu-block content-wrap content-wrap">
+            <div class="content">
+                <div class="menu-block-wrapper menu-block-2 menu-name-menu-primary-footer-menu parent-mlid-0 menu-level-1">
+                    <ul class="submenu level1">
+                        <li class="first expanded menu-mlid-2008"><a href="/news-events">News &amp; Events</a><ul class="submenu level2">
+                            <li class="first leaf menu-mlid-2009"><a href="/news-events/press-releases">Press Releases</a></li><li class="leaf menu-mlid-2023"><a href="/news-events/in-the-news">In the News</a></li><li class="leaf menu-mlid-2071"><a href="/news-events/events">Events</a></li><li class="leaf menu-mlid-2024"><a href="/news-events/newsletters">Newsletters</a></li><li class="last leaf menu-mlid-2072"><a href="/news-events/webinars">Webinars</a></li></ul>
+                        </li><li class="expanded menu-mlid-2010"><a href="/about">About MariaDB</a><ul class="submenu level2">
+                        <li class="first leaf menu-mlid-2012"><a href="/about/investors">Investors</a></li><li class="leaf menu-mlid-2011"><a href="/about/leadership">Leadership</a></li><li class="leaf has-children menu-mlid-2025"><a href="/about/careers">Careers</a></li><li class="leaf menu-mlid-2029"><a href="/about/contact">Contact</a></li><li class="last leaf menu-mlid-2099"><a href="http://mariadb.org">MariaDB.org</a></li></ul>
+                    </li><li class="last expanded menu-mlid-2031"><a href="/user/register">Subscribe</a><ul class="submenu level2">
+                        <li class="first last leaf menu-mlid-2034"><a href="/user/register">Sign Up</a></li></ul>
+                    </li></ul>
+                </div>
+            </div>
+        </div>
+        <div id="block-block-31" class="block block-block ">
+            <div class="content">
+                <div class="container-fluid bg-dgray pad-top-20 pad-bot-100">
+                    <div class="content-wrap">
+                        <div class="row">
+                            <div class="col-xs-6 text-left">
+                                <ul class="legal-menu">
+                                    <li><a href="/about/legal" title="Legal">Legal</a></li>
+                                    <li><a href="/about/legal/privacy-policy" title="Copyright">Copyright</a></li>
+                                    <li><a href="/about/legal/privacy-policy" title="Privacy Policy">Privacy Policy</a></li>
+                                    <li><a href="/about/legal/privacy-policy">Cookies</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6 text-right font-white">
+                                &copy; 2016 MariaDB
+                            </div>
+                        </div>
+                    </div>
+                </div>  </div>
+        </div>
+    </div>
+    <div class="footer-links pull-left">
+    </div>
+</footer>
+
+<div id="ajax_loading">
+    <img src="/kb/static/generated/images/ajax-loader-2eb3f9f430fb2a6267e0d252129ef6473d074f37.gif" alt="Loading" />
+</div>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MK2847"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MK2847');</script>
+    <!-- End Google Tag Manager -->
+
+</body>
+
+<script type="text/javascript" src="/kb/static/generated/main-430c08be87bf9da36a33e53c72fd083904fc8494.js"></script>
+
+
+
+    
+
+
+</html>
